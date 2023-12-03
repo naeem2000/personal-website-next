@@ -1,8 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* CONSTANTS START */
+
+:root {
+  --main-bg: #212121;
+  --white: #DEDEDE;
+  --border-color: #3C3C3C;
+  --purple: #7B7BC5;
+  --yellow: #E6DB74;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  background-color: var(--main-bg);
+}
+
 section {
   height: 100vh;
+  position: relative;
+  margin: 0% 4%;
+  padding: 8% 0% 4%;
+  font-family: 'VT323', monospace;
 }
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.max-width {
+  max-width: 1730px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.side-image {
+  position: fixed;
+  max-width: 76px;
+  width: 100%;
+  background: none;
+  border-right: 1px solid var(--border-color);
+  z-index: 5;
+}
+
+/* CONSTANTS END */
+
+/* NAV START */
+
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+  background-color: var(--nav-bg);
+  padding-left: 35px;
+  padding-right: 35px;
+  margin: 0% 4%;
+  font-family: 'VT323', monospace;
+  z-index: 5;
+}
+
+.mobile-nav-open {
+  position: fixed;
+  transform: translateX(30px);
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav .nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
+nav .nav-left h1 {
+  color: var(--white);
+  font-weight: lighter;
+  font-size: 25px;
+  line-height: 0.9em;
+}
+
+nav .nav-left p {
+  font-size: 25px;
+  color: var(--purple);
+  line-height: 0.8em;
+}
+
+nav .nav-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 37%;
+}
+
+nav .nav-right ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+}
+
+nav .nav-right ul li a {
+  font-size: 23px;
+  color: var(--yellow);
+  transition: all 0.2s linear;
+}
+
+nav .nav-right ul li a:hover {
+  color: var(--purple);
+}
+
+.page-active {
+  color: #244249;
+}
+
+@media screen and (max-width: 320px) {
+  nav .nav-right ul {
+    flex-direction: column;
+  }
+}
+
+/* NAV END */
