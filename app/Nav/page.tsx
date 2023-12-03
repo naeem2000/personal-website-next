@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 
 export default function Nav() {
 	const [open, setOpen] = useState<boolean>(false);
+
 	return (
-		<nav className={`nav max-width `}>
+		<nav className='nav max-width'>
 			<div className='nav-left'>
 				<h1>// naeem carr</h1>
 				<p>web_dev</p>
@@ -31,7 +32,9 @@ export default function Nav() {
 					</li>
 				</ul>
 			</div>
-			<button onClick={() => setOpen(true)}>open</button>
+			<button className='nav-open' onClick={() => setOpen(!open)}>
+				{open ? 'close' : 'open'}
+			</button>
 		</nav>
 	);
 }
