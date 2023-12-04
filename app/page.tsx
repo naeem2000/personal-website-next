@@ -1,5 +1,6 @@
 'use client';
-import { useEffect } from 'react';
+import ScrollToTop from 'react-scroll-to-top';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -31,6 +32,7 @@ export default function Home() {
 			<Nav />
 			<Hero />
 			<About />
+			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);
 }

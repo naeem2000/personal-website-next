@@ -57,6 +57,21 @@ a {
   line-height: 1.2em;
 }
 
+.scroll-to-top {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 0px var(--yellow) !important;
+  transition: .5s all ease !important;
+}
+
+.scroll-to-top svg {
+  fill: var(--yellow) !important;
+}
+
+.scroll-to-top:hover {
+
+  box-shadow: 0 9px 25px 0 var(--yellow) !important;
+}
+
 [data-aos^=fade][data-aos^=fade].aos-animate {
   overflow: hidden;
 }
@@ -73,26 +88,46 @@ a {
     width: 15px;
     font-size: 20px;
   }
+
+  .scroll-to-top {
+    right: 10px !important;
+    bottom: 10px !important;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .line-numbers {
-    width: 15px;
+    padding: 10px 10px 0px 10px;
     font-size: 20px;
+  }
+
+  .scroll-to-top {
+    right: 10px !important;
+    bottom: 10px !important;
   }
 }
 
 @media screen and (max-width: 375px) {
   .line-numbers {
-    width: 15px;
+    padding: 10px 10px 0px 10px;
     font-size: 20px;
+  }
+
+  .scroll-to-top {
+    right: 10px !important;
+    bottom: 10px !important;
   }
 }
 
 @media screen and (max-width: 320px) {
   .line-numbers {
-    width: 15px;
+    padding: 10px 10px 0px 10px;
     font-size: 20px;
+  }
+
+  .scroll-to-top {
+    right: 10px !important;
+    bottom: 10px !important;
   }
 }
 
@@ -269,7 +304,7 @@ header .mobile-nav {
     right: 0;
     left: 0;
     z-index: 5;
-    margin-left: 9.7%;
+    margin-left: 8.5%;
     margin-right: 5.5%;
     height: 100vh;
   }
@@ -367,9 +402,9 @@ header .mobile-nav {
     right: 0;
     left: 0;
     z-index: 5;
-    margin-left: 9.7%;
+    margin-left: 11.7%;
     margin-right: 5.5%;
-    height: 100vh;
+    height: auto;
   }
 
   header .mobile-nav ul li {
@@ -408,7 +443,7 @@ header .mobile-nav {
 .hero h1 {
   color: var(--white);
   font-weight: lighter;
-  font-size: 1.15vw;
+  font-size: 30px;
 }
 
 .hero h2 {
@@ -433,8 +468,22 @@ header .mobile-nav {
   height: 100%;
   max-height: 400px;
   background-attachment: fixed;
-  filter: opacity(0.2) blur(5px);
+  filter: opacity(0.3) blur(3px) brightness(1);
   border-radius: 50px;
+}
+
+@media screen and (max-width: 320px) {
+  .hero {
+    margin-left: 13.5%;
+  }
+
+  .hero h1 {
+    font-size: 18px;
+  }
+
+  .hero .header-bg {
+    height: 270px;
+  }
 }
 
 /* HERO END */
