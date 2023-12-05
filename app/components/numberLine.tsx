@@ -4,7 +4,7 @@ export default function numberLine() {
 	const [line, setLine] = useState<number[]>([]);
 
 	useEffect(() => {
-		const numbersArray = Array.from({ length: 70 }, (_, index) => index + 1);
+		const numbersArray = Array.from({ length: 700 }, (_, index) => index + 1);
 		setLine(numbersArray);
 	}, []);
 	return (
