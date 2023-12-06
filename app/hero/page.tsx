@@ -5,8 +5,8 @@ import Typewriter from 'typewriter-effect';
 export default function Hero() {
 	return (
 		<section className='hero'>
-			<h1>// Hi, I'm NAEEM, A...</h1>
-			<h2>
+			<h1 data-aos='fade-left'>// Hi, I'm NAEEM, A...</h1>
+			<h2 data-aos='fade-right'>
 				{`{"`}
 				<span>
 					<Typewriter

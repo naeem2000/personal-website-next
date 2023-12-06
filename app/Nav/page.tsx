@@ -18,7 +18,7 @@ export default function Nav() {
 							<a href=''>_home</a>
 						</li>
 						<li>
-							<a href=''>_about</a>
+							<a href='#about'>_about</a>
 						</li>
 						<li>
 							<a href=''>_portfolio</a>
