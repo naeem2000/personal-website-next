@@ -29,6 +29,7 @@ section {
   padding: 8% 0% 4%;
   font-family: 'VT323', monospace;
   position: relative;
+  overflow-x: hidden;
 }
 
 button {
@@ -88,6 +89,10 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    height: 100%;
+  }
+
   .line-numbers {
     width: 15px;
     font-size: 20px;
@@ -100,6 +105,10 @@ a {
 }
 
 @media screen and (max-width: 425px) {
+  section {
+    height: 100%;
+  }
+
   .line-numbers {
     padding: 10px 10px 0px 10px;
     font-size: 20px;
@@ -112,6 +121,10 @@ a {
 }
 
 @media screen and (max-width: 375px) {
+  section {
+    height: 100%;
+  }
+
   .line-numbers {
     padding: 10px 10px 0px 10px;
     font-size: 20px;
@@ -124,6 +137,10 @@ a {
 }
 
 @media screen and (max-width: 320px) {
+  section {
+    height: 100%;
+  }
+
   .line-numbers {
     padding: 10px 10px 0px 10px;
     font-size: 20px;
@@ -448,7 +465,7 @@ header .mobile-nav {
 .hero h1 {
   color: var(--white);
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 1.15vw;
 }
 
 .hero h2 {
@@ -478,7 +495,7 @@ header .mobile-nav {
 
 @media screen and (max-width: 1440px) {
   .hero .header-bg {
-    height: 100%;
+    height: 80vh;
     margin-top: 50px;
     background-position: -10px;
     width: 92%;
@@ -531,8 +548,9 @@ header .mobile-nav {
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
-    background-position: -50px;
+    background-position: 0px;
     width: 95%;
+    background-attachment: scroll;
   }
 }
 
@@ -548,8 +566,9 @@ header .mobile-nav {
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
-    background-position: -80px;
+    background-position: -48px;
     width: 90%;
+    background-attachment: scroll;
   }
 }
 
@@ -565,8 +584,9 @@ header .mobile-nav {
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
-    background-position: -80px;
+    background-position: -55px;
     width: 95%;
+    background-attachment: scroll;
   }
 }
 
@@ -587,23 +607,29 @@ header .mobile-nav {
 }
 
 .about div span {
-  font-size: 40px;
+  font-size: 2vw;
   line-height: 1em;
   color: var(--purple);
   font-weight: lighter;
 }
 
 .about div h1 {
-  font-size: 100px;
+  font-size: 7vw;
   color: var(--white);
   line-height: 1em;
   font-weight: lighter;
 }
 
 .about div p {
-  max-width: 550px;
+  width: 550px;
   margin-top: 15px;
   color: var(--yellow);
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.about div p span {
+  color: var(--purple);
   font-size: 20px;
   font-weight: lighter;
 }
@@ -632,11 +658,23 @@ header .mobile-nav {
   font-weight: lighter;
 }
 
+.about .about-body .about-left p span {
+  color: var(--purple);
+  font-size: 32px;
+  font-weight: lighter;
+}
+
 .about .about-body .about-right {
   border-left: 1px solid var(--border-color);
   align-self: flex-start;
   width: 50%;
   padding: 25px 30px 70px;
+}
+
+.about .about-body .about-right p span {
+  color: var(--purple);
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .about>button {
@@ -654,9 +692,43 @@ header .mobile-nav {
   background-color: var(--purple);
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width:2560px) {
   .about {
-    margin-left: 13.5%;
+    height: 100%;
+  }
+
+  .about>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about .about-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .about .about-body .about-left,
+  .about .about-body .about-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .about {
+    margin-left: 7.5%;
+  }
+
+  .about div p {
+    font-size: 17px;
+    padding: 20px;
+    width: 90%;
   }
 
   .about div span {
@@ -664,14 +736,128 @@ header .mobile-nav {
   }
 
   .about div h1 {
-    font-size: 35px;
+    margin-top: 15px;
+  }
+
+  .about .about-body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about .about-body .about-left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about .about-body .about-left p {
+    font-size: 19px;
+    padding: 20px;
+    margin: 0;
+    width: 90%;
+  }
+
+  .about .about-body .about-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about .about-body .about-right p {
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about>button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    margin-left: 7.5%;
+  }
+
+  .about div p {
+    font-size: 17px;
+    padding: 20px;
+    text-align: left;
+    width: 90%;
+  }
+
+  .about div span {
+    font-size: 25px;
+  }
+
+  .about div h1 {
+    margin-top: 15px;
+  }
+
+  .about .about-body {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .about .about-body .about-left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about .about-body .about-left p {
+    font-size: 19px;
+    padding: 20px;
+    margin: 0;
+    width: 90%;
+  }
+
+  .about .about-body .about-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about .about-body .about-right p {
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about>button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    margin-left: 7.5%;
+    padding-top: 30px;
+  }
+
+  .about div>p {
+    font-size: 17px;
+    padding: 20px;
+    text-align: left;
+    width: 90%;
+  }
+
+  .about div span {
+    font-size: 25px;
+  }
+
+  .about div h1 {
+    margin-top: 15px;
   }
 
   .about .about-body {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 20px 10px 50px;
     text-align: left;
+    margin: 0;
   }
 
   .about .about-body .about-left {
@@ -679,20 +865,220 @@ header .mobile-nav {
     padding: 0;
     border-right: none;
     border-left: none;
-    padding-top: 10px;
-    padding-bottom: 30px;
+  }
+
+  .about .about-body .about-left p {
+    font-size: 19px;
+    padding: 20px;
+    margin: 0;
+    width: 90%;
   }
 
   .about .about-body .about-right {
     width: 100%;
     border-left: none;
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 10px;
-    padding-bottom: 30px;
     border-top: 1px solid var(--border-color);
+    padding: 0;
   }
 
+  .about .about-body .about-right p {
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about>button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about {
+    margin-left: 13.5%;
+    padding-top: 30px;
+  }
+
+  .about div p {
+    font-size: 17px;
+    padding: 20px;
+    text-align: left;
+    width: 90%;
+  }
+
+  .about div span {
+    font-size: 25px;
+  }
+
+  .about div h1 {
+    margin-top: 15px;
+  }
+
+  .about .about-body {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .about .about-body .about-left {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .about .about-body .about-left p {
+    font-size: 19px;
+    padding: 20px;
+    margin: 0;
+    width: 90%;
+  }
+
+  .about .about-body .about-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding: 0;
+  }
+
+  .about .about-body .about-right p {
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about>button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about {
+    margin-left: 13.5%;
+    padding-top: 30px;
+  }
+
+  .about div p {
+    font-size: 17px;
+    padding: 20px;
+    text-align: left;
+    width: 90%;
+  }
+
+  .about div span {
+    font-size: 25px;
+  }
+
+  .about div h1 {
+    margin-top: 15px;
+  }
+
+  .about .about-body {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .about .about-body .about-left {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .about .about-body .about-left p {
+    font-size: 19px;
+    padding: 20px;
+    margin: 0;
+    width: 90%;
+  }
+
+  .about .about-body .about-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding: 0;
+  }
+
+  .about .about-body .about-right p {
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about>button {
+    padding: 10px 20px;
+    font-size: 17px;
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about {
+    margin-left: 13.5%;
+    padding-top: 30px;
+  }
+
+  .about div p {
+    font-size: 17px;
+    padding: 20px;
+    text-align: left;
+    width: 90%;
+  }
+
+  .about div span {
+    font-size: 25px;
+  }
+
+  .about div h1 {
+    margin-top: 15px;
+  }
+
+  .about .about-body {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .about .about-body .about-left {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .about .about-body .about-left p {
+    font-size: 19px;
+    padding: 20px;
+    margin: 0;
+    width: 90%;
+  }
+
+  .about .about-body .about-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding: 0;
+  }
+
+  .about .about-body .about-right p {
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about>button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
 }
 
 /* ABOUT END */
