@@ -26,7 +26,7 @@ html {
 section {
   height: 100vh;
   margin: 0% 4%;
-  padding: 8% 0% 4%;
+  padding: 4% 0% 4%;
   font-family: 'VT323', monospace;
   position: relative;
   overflow-x: hidden;
@@ -1082,3 +1082,37 @@ header .mobile-nav {
 }
 
 /* ABOUT END */
+
+/* PORTFOLIO START */
+
+.portfolio>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portfolio>div span {
+  font-size: 2vw;
+  line-height: 1em;
+  color: var(--purple);
+  font-weight: lighter;
+}
+
+.portfolio>div h1 {
+  font-size: 7vw;
+  color: var(--white);
+  line-height: 1em;
+  font-weight: lighter;
+}
+
+.portfolio>div p {
+  width: 550px;
+  margin-top: 15px;
+  color: var(--yellow);
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+/* PORTFOLIO END */
