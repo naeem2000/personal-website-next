@@ -24,7 +24,7 @@ html {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0% 4%;
   padding: 4% 0% 4%;
   font-family: 'VT323', monospace;
@@ -1085,34 +1085,78 @@ header .mobile-nav {
 
 /* PORTFOLIO START */
 
-.portfolio>div {
+.portfolio .portfolio-head {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
 }
 
-.portfolio>div span {
+.portfolio .portfolio-head span {
   font-size: 2vw;
   line-height: 1em;
   color: var(--purple);
   font-weight: lighter;
 }
 
-.portfolio>div h1 {
+.portfolio .portfolio-head h1 {
   font-size: 7vw;
   color: var(--white);
   line-height: 1em;
   font-weight: lighter;
 }
 
-.portfolio>div p {
+.portfolio .portfolio-head p {
   width: 550px;
   margin-top: 15px;
   color: var(--yellow);
   font-size: 20px;
   font-weight: lighter;
   text-align: center;
+}
+
+.portfolio .portfolio-body {
+  display: flex;
+  border-top: 1px solid var(--border-color);
+  margin-top: 80px;
+}
+
+.portfolio .portfolio-body .portfolio-left {
+  width: 50%;
+  border-right: 1px solid var(--border-color);
+  padding: 20px 20px 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.portfolio .portfolio-body .portfolio-right {
+  width: 50%;
+  padding: 20px 20px 20px 0px;
+}
+
+.portfolio .portfolio-body .portfolio-left div {
+  width: 40%;
+}
+
+.portfolio .portfolio-body .portfolio-right div h3,
+.portfolio .portfolio-body .portfolio-left div h3 {
+  color: var(--white);
+  font-size: 32px;
+}
+
+.portfolio .portfolio-body .portfolio-right div p,
+.portfolio .portfolio-body .portfolio-left div p {
+  color: var(--yellow);
+  font-size: 25px;
+}
+
+.portfolio .portfolio-body .portfolio-left div:nth-child(1) .img {
+  max-width: 100%;
+}
+
+.portfolio .portfolio-body .portfolio-left div:nth-child(2) .img {
+  max-width: 100%
 }
 
 /* PORTFOLIO END */
