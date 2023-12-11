@@ -1122,32 +1122,60 @@ header .mobile-nav {
   margin-top: 80px;
 }
 
-.portfolio .portfolio-body .portfolio-left {
+.portfolio .portfolio-body-bottom {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 40px;
+}
+
+.portfolio .portfolio-body .portfolio-left,
+.portfolio .portfolio-body-bottom .portfolio-left {
   width: 50%;
   border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 20px 20px 20px 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.portfolio .portfolio-body .portfolio-right {
+.portfolio .portfolio-body .portfolio-right,
+.portfolio .portfolio-body-bottom .portfolio-right {
   width: 50%;
-  padding: 20px 20px 20px 0px;
+  padding: 20px 0px 20px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.portfolio .portfolio-body .portfolio-left div {
+.portfolio .portfolio-body-bottom .portfolio-right,
+.portfolio .portfolio-body-bottom .portfolio-left {
+  border-bottom: none;
+}
+
+.portfolio .portfolio-body .portfolio-left div,
+.portfolio .portfolio-body .portfolio-right div,
+.portfolio .portfolio-body-bottom .portfolio-right div,
+.portfolio .portfolio-body-bottom .portfolio-left div {
   width: 40%;
 }
 
 .portfolio .portfolio-body .portfolio-right div h3,
-.portfolio .portfolio-body .portfolio-left div h3 {
+.portfolio .portfolio-body .portfolio-left div h3,
+.portfolio .portfolio-body-bottom .portfolio-right div h3,
+.portfolio .portfolio-body-bottom .portfolio-left div h3 {
   color: var(--white);
+  margin-top: 10px;
   font-size: 32px;
 }
 
 .portfolio .portfolio-body .portfolio-right div p,
-.portfolio .portfolio-body .portfolio-left div p {
+.portfolio .portfolio-body .portfolio-left div p,
+.portfolio .portfolio-body-bottom .portfolio-left div p,
+.portfolio .portfolio-body-bottom .portfolio-right div p {
   color: var(--yellow);
+  margin-top: 15px;
   font-size: 25px;
 }
 
