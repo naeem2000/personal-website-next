@@ -26,12 +26,17 @@ export default function Home() {
 		ssr: false,
 	});
 
+	const Portfolio = dynamic(() => import('./portfolio/page'), {
+		ssr: false,
+	});
+
 	return (
 		<>
 			<Line />
 			<Nav />
 			<Hero />
 			<About />
+			<Portfolio />
 			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);
