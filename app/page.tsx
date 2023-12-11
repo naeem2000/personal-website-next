@@ -1,7 +1,7 @@
 'use client';
 import ScrollToTop from 'react-scroll-to-top';
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
