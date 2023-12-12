@@ -11,23 +11,27 @@ export default function Home() {
 	});
 
 	const Line = dynamic(() => import('./components/numberLine'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const Nav = dynamic(() => import('./Nav/page'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const Hero = dynamic(() => import('./hero/page'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const About = dynamic(() => import('./about/page'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const Portfolio = dynamic(() => import('./portfolio/page'), {
-		ssr: false,
+		ssr: true,
+	});
+
+	const Services = dynamic(() => import('./services/page'), {
+		ssr: true,
 	});
 
 	return (
@@ -37,6 +41,7 @@ export default function Home() {
 			<Hero />
 			<About />
 			<Portfolio />
+			<Services />
 			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);

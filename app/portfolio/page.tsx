@@ -6,7 +6,7 @@ import { pageData } from '../components/data';
 export default function Portfolio() {
 	return (
 		<section className='portfolio' id='portfolio'>
-			<div className='portfolio-head'>
+			<div>
 				<span data-aos='fade-left'>{`(!)`}</span>
 				<h1 data-aos='fade-right'>{'<portfolio>'}</h1>
 				<p data-aos='fade-up'>
