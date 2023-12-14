@@ -37,8 +37,8 @@ export default function Nav() {
 				<div data-aos='fade-down' className='mobile-nav'>
 					{navlinks.links.map((item, index) => {
 						return (
-							<ul>
-								<li key={index} data-aos='fade-right'>
+							<ul key={index}>
+								<li data-aos='fade-right'>
 									<a href={item.link}>{item.label}</a>
 								</li>
 							</ul>
