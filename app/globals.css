@@ -24,26 +24,34 @@ html {
 }
 
 section {
-  height: 100vh;
   margin: 0% 4%;
   padding: 4% 0% 4%;
-  font-family: 'VT323', monospace;
   position: relative;
   overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+input,
+textarea {
+  font-weight: lighter;
+  font-family: 'VT323', monospace;
 }
 
 section div span {
   font-size: 2vw;
   line-height: 1em;
   color: var(--purple);
-  font-weight: lighter;
 }
 
 section div h1 {
   font-size: 4vw;
   color: var(--white);
   line-height: 1em;
-  font-weight: lighter;
 }
 
 button {
@@ -202,7 +210,6 @@ header nav .nav-left {
 
 header nav .nav-left h1 {
   color: var(--white);
-  font-weight: lighter;
   font-size: 25px;
   line-height: 0.9em;
 }
@@ -467,27 +474,18 @@ header .mobile-nav {
 
 /* HERO START */
 
-.hero {
-  margin-left: 4.5%;
-  margin-right: 2.5%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  height: 100%;
-}
-
 .hero h1 {
   color: var(--white);
-  font-weight: lighter;
   font-size: 30px;
+  text-align: center;
 }
 
 .hero h2 {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 8vw;
   color: var(--white);
-  font-weight: lighter;
   margin-top: 30px;
 }
 
@@ -615,7 +613,6 @@ header .mobile-nav {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding-top: 50px;
 }
 
 .about>div {
@@ -623,17 +620,9 @@ header .mobile-nav {
 }
 
 .about div p {
-  width: 550px;
   margin-top: 15px;
+  font-size: 20px;
   color: var(--yellow);
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-.about div p span {
-  color: var(--purple);
-  font-size: 20px;
-  font-weight: lighter;
 }
 
 .about .about-body {
@@ -657,24 +646,23 @@ header .mobile-nav {
   text-decoration: underline;
   color: var(--white);
   align-self: flex-start;
-  font-weight: lighter;
 }
 
 .about .about-body .about-right {
   border-left: 1px solid var(--border-color);
   align-self: flex-start;
   width: 50%;
+  color: var(--yellow);
   padding: 25px 30px 70px;
 }
 
 .about>button {
   border: none;
-  font-size: 25px;
-  padding: 25px;
+  font-size: 20px;
+  padding: 20px 35px;
   cursor: pointer;
   background-color: var(--blue);
   color: var(--white);
-  font-weight: lighter;
   transition: all .5s ease;
 }
 
@@ -1075,10 +1063,6 @@ header .mobile-nav {
 
 /* PORTFOLIO START */
 
-.portfolio {
-  height: 100%;
-}
-
 .portfolio>div:nth-child(1) {
   display: flex;
   align-items: center;
@@ -1090,7 +1074,6 @@ header .mobile-nav {
   margin-top: 15px;
   color: var(--yellow);
   font-size: 20px;
-  font-weight: lighter;
 }
 
 .portfolio .portfolio-body {
@@ -1102,7 +1085,6 @@ header .mobile-nav {
 .portfolio .portfolio-body-bottom {
   display: flex;
   border-bottom: 1px solid var(--border-color);
-  margin-bottom: 40px;
 }
 
 .portfolio .portfolio-body .portfolio-left,
@@ -1145,7 +1127,6 @@ header .mobile-nav {
   color: var(--white);
   margin-top: 10px;
   font-size: 32px;
-  font-weight: lighter;
 }
 
 .portfolio .portfolio-body .portfolio-right div p,
@@ -1155,7 +1136,6 @@ header .mobile-nav {
   color: var(--yellow);
   margin-top: 15px;
   font-size: 25px;
-  font-weight: lighter;
 }
 
 .portfolio .portfolio-body .portfolio-left div:nth-child(1) .img {
@@ -1499,15 +1479,17 @@ header .mobile-nav {
 
 /* SERVICES START */
 
-.services {
-  height: 100%;
-}
-
 .services div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.services>div p {
+  margin-top: 15px;
+  color: var(--yellow);
+  font-size: 20px;
 }
 
 .services .services-body {
@@ -1520,7 +1502,6 @@ header .mobile-nav {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   margin: 20px;
-  font-weight: lighter;
   font-size: 140px;
   transition: all ease .5s;
 }
@@ -1574,3 +1555,70 @@ header .mobile-nav {
 }
 
 /* SERVICES END */
+
+/* CONTACT START */
+
+.contact {
+  height: 100%;
+}
+
+.contact .contact-head {
+  text-align: center;
+}
+
+.contact .contact-head p {
+  margin-top: 15px;
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+.contact .contact-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact .contact-body input,
+textarea {
+  max-width: 1140px;
+  width: 100%;
+  color: var(--purple);
+  font-size: 22px;
+  padding: 0px 10px 14px;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 50px;
+}
+
+.contact .contact-body input::placeholder,
+textarea::placeholder {
+  color: var(--purple);
+}
+
+.contact .contact-body input:focus,
+textarea:focus {
+  transition: all .5s ease;
+  border-color: var(--purple);
+}
+
+.contact .contact-body .submit-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .contact-body .submit-area button {
+  margin-top: 60px;
+  border: none;
+  font-size: 20px;
+  padding: 20px 35px;
+  cursor: pointer;
+  background-color: var(--blue);
+  color: var(--white);
+  transition: all .5s ease;
+}
+
+/* CONTACT END */

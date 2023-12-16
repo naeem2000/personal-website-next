@@ -34,6 +34,10 @@ export default function Home() {
 		ssr: true,
 	});
 
+	const Contact = dynamic(() => import('./contact/page'), {
+		ssr: true,
+	});
+
 	return (
 		<>
 			<Line />
@@ -42,6 +46,7 @@ export default function Home() {
 			<About />
 			<Portfolio />
 			<Services />
+			<Contact />
 			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);
