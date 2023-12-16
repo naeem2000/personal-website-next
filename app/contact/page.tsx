@@ -15,8 +15,8 @@ export default function page() {
 				<input data-aos='fade-right' type='email' placeholder='_email' />
 				<textarea
 					data-aos='fade-left'
-					cols='10'
-					rows='7'
+					cols={10}
+					rows={7}
 					placeholder='_message'
 				></textarea>
 				<div className='submit-area'>
