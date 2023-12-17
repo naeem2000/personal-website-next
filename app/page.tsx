@@ -1,7 +1,9 @@
 'use client';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -11,32 +13,43 @@ export default function Home() {
 	});
 
 	const Line = dynamic(() => import('./components/numberLine'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const Nav = dynamic(() => import('./Nav/page'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const Hero = dynamic(() => import('./hero/page'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const About = dynamic(() => import('./about/page'), {
-		ssr: false,
+		ssr: true,
 	});
 
 	const Portfolio = dynamic(() => import('./portfolio/page'), {
-		ssr: false,
+		ssr: true,
+	});
+
+	const Services = dynamic(() => import('./services/page'), {
+		ssr: true,
+	});
+
+	const Contact = dynamic(() => import('./contact/page'), {
+		ssr: true,
 	});
 
 	return (
 		<>
+			<ToastContainer />
 			<Line />
 			<Nav />
 			<Hero />
 			<About />
 			<Portfolio />
+			<Services />
+			<Contact />
 			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);

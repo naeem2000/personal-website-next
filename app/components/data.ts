@@ -3,32 +3,27 @@ export const navlinks = {
 		{
 			id: 0,
 			label: '_home',
-			link: '/home',
+			link: '#hero',
 		},
 		{
 			id: 1,
 			label: '_about',
-			link: '/about',
+			link: '#about',
 		},
 		{
 			id: 2,
 			label: '_portfolio',
-			link: '/portfolio',
+			link: '#portfolio',
 		},
 		{
 			id: 3,
 			label: '_services',
-			link: '/services',
+			link: '#services',
 		},
 		{
 			id: 4,
-			label: '_cv',
-			link: '/cv',
-		},
-		{
-			id: 5,
 			label: '_contact',
-			link: '/contact',
+			link: '#contact',
 		},
 	],
 };
@@ -51,7 +46,7 @@ export const pageData = {
 			title: '{Claremont Mosque Web App}',
 			description:
 				'React.JS web app with contentful headless API to manage the content;',
-			link: 'https://www.google.com',
+			link: 'https://cmrm.netlify.app/',
 		},
 	],
 	block2: [
@@ -62,7 +57,7 @@ export const pageData = {
 			title: '{Mood Detector}',
 			description:
 				'Mood Detector web app in React.JS using Face-API.JS library;',
-			link: 'https://www.google.com',
+			link: 'https://face-detect-reactjs.netlify.app/',
 		},
 		{
 			id: 1,
@@ -70,7 +65,7 @@ export const pageData = {
 			alt: 'upload web app',
 			title: '{File Upload Web App}',
 			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://www.google.com',
+			link: 'https://younglings-uploadtofirebase.netlify.app/',
 		},
 		{
 			id: 2,
@@ -79,7 +74,7 @@ export const pageData = {
 			title: '{Job Listing Web App}',
 			description:
 				'Job Listing web app in React.JS using Firebase to store jobs asynchronously;',
-			link: 'https://www.google.com',
+			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
 			id: 3,
@@ -87,7 +82,7 @@ export const pageData = {
 			alt: 'login MUI',
 			title: '{Material Login Screen}',
 			description: 'Login screen in React.JS using Material UI',
-			link: 'https://www.google.com',
+			link: 'https://login-react-app-puma.netlify.app/',
 		},
 	],
 	block3: [
@@ -98,7 +93,7 @@ export const pageData = {
 			title: '{Mood Detector}',
 			description:
 				'Mood Detector web app in React.JS using Face-API.JS library;',
-			link: 'https://www.google.com',
+			link: 'https://shafiekscarwash.netlify.app/',
 		},
 		{
 			id: 1,
@@ -106,7 +101,7 @@ export const pageData = {
 			alt: 'upload web app',
 			title: '{File Upload Web App}',
 			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://www.google.com',
+			link: 'https://to-do-webapp011.netlify.app/',
 		},
 		{
 			id: 2,
@@ -114,7 +109,7 @@ export const pageData = {
 			alt: 'upload web app',
 			title: '{File Upload Web App}',
 			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://www.google.com',
+			link: 'https://weatherreactjsweb.netlify.app/',
 		},
 	],
 	block4: [
@@ -125,7 +120,7 @@ export const pageData = {
 			title: '{Mood Detector}',
 			description:
 				'Mood Detector web app in React.JS using Face-API.JS library;',
-			link: 'https://www.google.com',
+			link: 'https://github.com/naeem2000/React-Native-News-App',
 		},
 		{
 			id: 1,
@@ -133,7 +128,7 @@ export const pageData = {
 			alt: 'upload web app',
 			title: '{File Upload Web App}',
 			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://www.google.com',
+			link: 'https://github.com/naeem2000/react-native-todo-app',
 		},
 	],
 };
