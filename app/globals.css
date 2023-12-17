@@ -11,6 +11,7 @@
   --blue: #2fcbef;
   --nav-border-color: rgba(255, 255, 255, 0.12);
   --side-bar-color: #6E6E6E;
+  --error-red: rgb(255, 0, 0);
 }
 
 * {
@@ -1591,6 +1592,11 @@ textarea {
   outline: none;
   border-bottom: 1px solid var(--border-color);
   margin-top: 50px;
+}
+
+.contact .contact-body input.error-border,
+textarea.error-border {
+  border-color: var(--error-red);
 }
 
 .contact .contact-body input::placeholder,

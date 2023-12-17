@@ -22,11 +22,6 @@ export const navlinks = {
 		},
 		{
 			id: 4,
-			label: '_cv',
-			link: '#cv',
-		},
-		{
-			id: 5,
 			label: '_contact',
 			link: '#contact',
 		},

@@ -1,4 +1,6 @@
 'use client';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
@@ -40,6 +42,7 @@ export default function Home() {
 
 	return (
 		<>
+			<ToastContainer />
 			<Line />
 			<Nav />
 			<Hero />

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function services() {
 	return (
-		<section className='services'>
+		<section id='services' className='services'>
 			<div>
 				<span data-aos='fade-left'>{`{#}`}</span>
 				<h1 data-aos='fade-right'>{'<services>'}</h1>
