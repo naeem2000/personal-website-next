@@ -32,33 +32,33 @@ export default function Contact() {
 		e.preventDefault();
 		let hasError = false;
 
-		if (messenger.name === '') {
-			setErrors({ ...errors, nameError: true });
-			toast.error('Can I get your name please? 🤔');
-			hasError = true;
-		} else {
-			setErrors({ ...errors, nameError: false });
-		}
-		if (messenger.email === '') {
-			setErrors({ ...errors, emailError: true });
-			toast.error('I need your email to get back to you. 😉');
-			hasError = true;
-		} else {
-			setErrors({ ...errors, emailError: false });
-		}
-		if (messenger.message === '') {
-			setErrors({ ...errors, messageError: true });
-			toast.error('Maybe want to say hello? 😁');
-			hasError = true;
-		} else {
-			setErrors({ ...errors, messageError: false });
-		}
+		// if (messenger.name === '') {
+		// 	setErrors({ ...errors, nameError: true });
+		// 	toast.error('Can I get your name please? 🤔');
+		// 	hasError = true;
+		// } else {
+		// 	setErrors({ ...errors, nameError: false });
+		// }
+		// if (messenger.email === '') {
+		// 	setErrors({ ...errors, emailError: true });
+		// 	toast.error('I need your email to get back to you. 😉');
+		// 	hasError = true;
+		// } else {
+		// 	setErrors({ ...errors, emailError: false });
+		// }
+		// if (messenger.message === '') {
+		// 	setErrors({ ...errors, messageError: true });
+		// 	toast.error('Maybe want to say hello? 😁');
+		// 	hasError = true;
+		// } else {
+		// 	setErrors({ ...errors, messageError: false });
+		// }
 
-		if (!hasError) {
-			console.log(messenger);
-		} else {
-			console.error('Form failed to post!');
-		}
+		// if (!hasError) {
+		// 	console.log(messenger);
+		// } else {
+		// 	console.error('Form failed to post!');
+		// }
 	};
 
 	return (
