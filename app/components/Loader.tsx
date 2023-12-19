@@ -7,9 +7,11 @@ export default function loader() {
 			<Image
 				className='img'
 				src={'/Streamer.gif'}
-				width={350}
-				height={350}
 				alt='loader'
+				width='0'
+				height='0'
+				sizes='10px'
+				style={{ width: '30%', height: '70%' }}
 			/>
 			<p>Loading</p>
 		</section>
