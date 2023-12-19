@@ -7,7 +7,6 @@ import ScrollToTop from 'react-scroll-to-top';
 import { Routes } from './components/Routes';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
-
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -23,10 +22,10 @@ export default function Home() {
 
 	return (
 		<>
+			<ToastContainer />
 			<div className='progress-bar'>
 				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
 			</div>
-			<ToastContainer />
 			<Loader />
 			<Line />
 			<Nav />

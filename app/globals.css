@@ -48,13 +48,13 @@ textarea {
 }
 
 section div span {
-  font-size: 2vw;
+  /* font-size: 2vw; */
   line-height: 1em;
   color: var(--purple);
 }
 
 section div h1 {
-  font-size: 4vw;
+  /* font-size: 4vw; */
   color: var(--white);
   line-height: 1em;
 }
@@ -335,16 +335,21 @@ header .mobile-nav {
 
 @media screen and (max-width: 1024px) {
   header nav {
-    margin-left: 2.5%;
+    margin-left: 3%;
     height: 70px;
+  }
+
+  header nav .nav-left h1,
+  header nav .nav-left p {
+    font-size: 20px;
   }
 
   header .mobile-nav {
     display: none;
   }
 
-  header nav .nav-right {
-    width: 55%;
+  header nav .nav-right ul li a {
+    font-size: 20px;
   }
 }
 
@@ -362,6 +367,11 @@ header .mobile-nav {
     display: block;
   }
 
+  header nav .nav-left h1,
+  header nav .nav-left p {
+    font-size: 20px;
+  }
+
   header .mobile-nav {
     display: block;
     background-color: var(--main-bg);
@@ -369,7 +379,7 @@ header .mobile-nav {
     right: 0;
     left: 0;
     z-index: 5;
-    margin-left: 5%;
+    margin-left: 6%;
     margin-right: 5.5%;
     height: 100vh;
   }
@@ -406,6 +416,11 @@ header .mobile-nav {
 
   header nav .burger-button {
     display: block;
+  }
+
+  header nav .nav-left h1,
+  header nav .nav-left p {
+    font-size: 20px;
   }
 
   header .mobile-nav {
@@ -458,6 +473,11 @@ header .mobile-nav {
     display: none;
   }
 
+  header nav .nav-left h1,
+  header nav .nav-left p {
+    font-size: 20px;
+  }
+
   header .mobile-nav {
     background-color: var(--main-bg);
     position: absolute;
@@ -505,6 +525,11 @@ header .mobile-nav {
 
   header nav .nav-right {
     display: none;
+  }
+
+  header nav .nav-left h1,
+  header nav .nav-left p {
+    font-size: 20px;
   }
 
   header .mobile-nav {
@@ -575,29 +600,57 @@ header .mobile-nav {
   border-radius: 50px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
+
+  .hero h2,
+  .hero h2 span {
+    font-size: 120px;
+  }
+
   .hero .header-bg {
     height: 80vh;
     margin-top: 50px;
     background-position: -10px;
-    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .hero {
     margin-left: 5.5%;
   }
 
+  .hero h2,
+  .hero h2 span {
+    font-size: 100px;
+  }
+
+  .hero .header-bg {
+    height: 80vh;
+    margin-top: 50px;
+    background-position: -10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .hero h1 {
     font-size: 18px;
+  }
+
+  .hero h2,
+  .hero h2 span {
+    font-size: 50px;
   }
 
   .hero .header-bg {
     height: 300px;
     margin-top: 50px;
     background-position: -10px;
-    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -610,11 +663,18 @@ header .mobile-nav {
     font-size: 18px;
   }
 
+  .hero h2,
+  .hero h2 span {
+    font-size: 25px;
+  }
+
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
     background-position: -10px;
     width: 92%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -627,12 +687,18 @@ header .mobile-nav {
     font-size: 18px;
   }
 
+  .hero h2,
+  .hero h2 span {
+    font-size: 25px;
+  }
+
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
     background-position: 0px;
-    width: 95%;
     background-attachment: scroll;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -645,12 +711,19 @@ header .mobile-nav {
     font-size: 18px;
   }
 
+  .hero h2,
+  .hero h2 span {
+    font-size: 25px;
+  }
+
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
     background-position: -48px;
     width: 90%;
     background-attachment: scroll;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -663,12 +736,19 @@ header .mobile-nav {
     font-size: 18px;
   }
 
+  .hero h2,
+  .hero h2 span {
+    font-size: 25px;
+  }
+
   .hero .header-bg {
     height: 270px;
     margin-top: 50px;
     background-position: -55px;
     width: 95%;
     background-attachment: scroll;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
