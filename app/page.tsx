@@ -4,7 +4,7 @@ import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
-import { Routes } from './components/routes';
+import { Routes } from './components/Routes';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
 

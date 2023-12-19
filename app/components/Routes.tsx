@@ -3,11 +3,11 @@
 import dynamic from 'next/dynamic';
 
 export const Routes = () => {
-	const Line = dynamic(() => import('./numberLine'), {
+	const Line = dynamic(() => import('./NumberLine'), {
 		ssr: true,
 	});
 
-	const Nav = dynamic(() => import('../Nav/page'), {
+	const Nav = dynamic(() => import('../nav/page'), {
 		ssr: true,
 	});
 
