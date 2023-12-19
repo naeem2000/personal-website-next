@@ -1,48 +1,33 @@
 'use client';
-import { ToastContainer, toast } from 'react-toastify';
+
+import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
-import dynamic from 'next/dynamic';
-import { useEffect } from 'react';
+import { Routes } from './components/routes';
+import { useEffect, useState } from 'react';
+import Loader from './components/Loader';
+
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 export default function Home() {
+	const { Nav, Line, Hero, About, Portfolio, Services, Contact } = Routes();
+
 	useEffect(() => {
 		AOS.init();
-	});
-
-	const Line = dynamic(() => import('./components/numberLine'), {
-		ssr: true,
-	});
-
-	const Nav = dynamic(() => import('./Nav/page'), {
-		ssr: true,
-	});
-
-	const Hero = dynamic(() => import('./hero/page'), {
-		ssr: true,
-	});
-
-	const About = dynamic(() => import('./about/page'), {
-		ssr: true,
-	});
-
-	const Portfolio = dynamic(() => import('./portfolio/page'), {
-		ssr: true,
-	});
-
-	const Services = dynamic(() => import('./services/page'), {
-		ssr: true,
-	});
-
-	const Contact = dynamic(() => import('./contact/page'), {
-		ssr: true,
+		setTimeout(() => {
+			document.getElementById('loader')?.classList.add('slide');
+		}, 1000);
 	});
 
 	return (
 		<>
+			<div className='progress-bar'>
+				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
+			</div>
 			<ToastContainer />
+			<Loader />
 			<Line />
 			<Nav />
 			<Hero />

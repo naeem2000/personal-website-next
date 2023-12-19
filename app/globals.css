@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 section {
   margin: 0% 4%;
   padding: 4% 0% 4%;
@@ -59,7 +63,7 @@ button {
   font-family: 'VT323', monospace;
 }
 
-img {
+.img {
   height: auto;
   max-width: 100%;
 }
@@ -67,6 +71,11 @@ img {
 a {
   color: unset;
   text-decoration: none;
+}
+
+.progress-bar {
+  position: absolute;
+  z-index: 6;
 }
 
 .line-numbers {
@@ -176,6 +185,64 @@ a {
 }
 
 /* CONSTANTS END */
+
+/* LOADER START */
+
+.loader {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  transition: all 1s ease;
+  background-color: var(--main-bg);
+  z-index: 10;
+}
+
+.loader .img {
+  border-radius: 50px;
+}
+
+.loader p {
+  font-size: 45px;
+  width: 170px;
+  margin-top: 30px;
+  color: var(--blue);
+}
+
+.loader p:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+.slide {
+  transform: translateY(-110%);
+}
+
+/* LOADER END */
 
 /* NAV START */
 
