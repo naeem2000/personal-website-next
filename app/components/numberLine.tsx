@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-export default function NumberLine() {
+export default function numberLine() {
 	const [line, setLine] = useState<number[]>([]);
 
 	useEffect(() => {
