@@ -4,7 +4,7 @@ import React from 'react';
 export default function services() {
 	return (
 		<section id='services' className='services'>
-			<div>
+			<div className='services-head'>
 				<span data-aos='fade-left'>{`{#}`}</span>
 				<h1 data-aos='fade-right'>{'<services>'}</h1>
 				<p data-aos='fade-up'>

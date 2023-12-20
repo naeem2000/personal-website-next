@@ -17,7 +17,7 @@ export default function Home() {
 		AOS.init();
 		setTimeout(() => {
 			document.getElementById('loader')?.classList.add('slide');
-		}, 1000);
+		}, 500);
 	});
 
 	return (
