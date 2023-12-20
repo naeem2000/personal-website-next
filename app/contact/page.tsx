@@ -1,5 +1,6 @@
 'use client';
 
+import { useForm, ValidationError } from '@formspree/react';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -16,6 +17,8 @@ interface Errors {
 }
 
 export default function Contact() {
+	const [state, handleSubmit] = useForm('myyrgdyw');
+
 	const [messenger, setMessenger] = useState<ContactDetails>({
 		name: '',
 		email: '',
@@ -30,7 +33,7 @@ export default function Contact() {
 
 	const submitForm = (e: any) => {
 		e.preventDefault();
-		let hasError = false;
+		let hasError: boolean = false;
 
 		if (messenger.name === '') {
 			setErrors({ ...errors, nameError: true });
@@ -55,11 +58,24 @@ export default function Contact() {
 		}
 
 		if (!hasError) {
-			console.log(messenger);
+			try {
+				handleSubmit(e);
+				setMessenger({
+					name: '',
+					email: '',
+					message: '',
+				});
+			} catch (error) {
+				console.error(error);
+			}
 		} else {
 			console.error('Form failed to post!');
 		}
 	};
+
+	if (state.succeeded) {
+		return <p>Thanks for joining!</p>;
+	}
 
 	return (
 		<section className='contact' id='contact'>
