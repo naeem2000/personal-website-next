@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
 	return (
 		<section className='about' id='about'>
-			<div>
+			<div className='about-head'>
 				<span data-aos='fade-left'>{`{/}`}</span>
 				<h1 data-aos='fade-right'>{'<about_me>'}</h1>
 				<p data-aos='fade-up'>

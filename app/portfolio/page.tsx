@@ -7,7 +7,7 @@ import React from 'react';
 export default function Portfolio() {
 	return (
 		<section className='portfolio' id='portfolio'>
-			<div>
+			<div className='portfolio-head'>
 				<span data-aos='fade-left'>{`(!)`}</span>
 				<h1 data-aos='fade-right'>{'<portfolio>'}</h1>
 				<p data-aos='fade-up'>

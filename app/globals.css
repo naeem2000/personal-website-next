@@ -48,15 +48,17 @@ textarea {
 }
 
 section div span {
-  /* font-size: 2vw; */
+  font-size: 30px;
   line-height: 1em;
   color: var(--purple);
+  margin-bottom: 10px;
 }
 
 section div h1 {
-  /* font-size: 4vw; */
-  color: var(--white);
+  font-size: 45px;
   line-height: 1em;
+  color: var(--white);
+  margin-bottom: 20px;
 }
 
 button {
@@ -113,7 +115,39 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-width: 2560px) {
+  section {
+    margin: 0 5% 0% 5%;
+    padding: 5% 0 5% 2%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  section {
+    margin: 0 5% 0% 5%;
+    padding: 5% 0 5% 4%;
+    height: 100%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  section {
+    margin: 0 5% 0% 5%;
+    padding: 5% 0 5% 4%;
+    height: 100%;
+  }
+
+  section div span {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  section div h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
   .line-numbers {
     width: 20px;
     font-size: 23px;
@@ -122,7 +156,19 @@ a {
 
 @media screen and (max-width: 768px) {
   section {
+    margin: 0 5% 0% 6%;
+    padding: 5% 0 5% 4%;
     height: 100%;
+  }
+
+  section div span {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  section div h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 
   .line-numbers {
@@ -138,7 +184,19 @@ a {
 
 @media screen and (max-width: 425px) {
   section {
+    margin: 0 5% 0% 8%;
+    padding: 10% 0 10% 4%;
     height: 100%;
+  }
+
+  section div span {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  section div h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 
   .line-numbers {
@@ -154,7 +212,19 @@ a {
 
 @media screen and (max-width: 375px) {
   section {
+    margin: 0 5% 0% 9.5%;
+    padding: 10% 0 10% 4%;
     height: 100%;
+  }
+
+  section div span {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  section div h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 
   .line-numbers {
@@ -170,7 +240,19 @@ a {
 
 @media screen and (max-width: 320px) {
   section {
+    margin: 0 5% 0% 11%;
+    padding: 10% 0 10% 4%;
     height: 100%;
+  }
+
+  section div span {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  section div h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 
   .line-numbers {
@@ -189,8 +271,8 @@ a {
 /* LOADER START */
 
 .loader {
-  display: flex;
   position: fixed;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -206,7 +288,15 @@ a {
 }
 
 .loader .img {
+  background-image: url('/Streamer.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: -100px;
   border-radius: 50px;
+  box-shadow: 0 0 10px 10px var(--blue) inset;
+  width: 50%;
+  height: 60vh;
 }
 
 .loader p {
@@ -240,6 +330,98 @@ a {
 
 .slide {
   transform: translateY(-110%);
+}
+
+@media screen and (max-width: 2560px) {
+  .loader .img {
+    background-position-y: -130px;
+    width: 40%;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .loader .img {
+    background-position-y: -50px;
+    width: 40%;
+    height: 70vh;
+  }
+
+  .loader p {
+    font-size: 30px;
+    width: 115px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .loader .img {
+    background-position-y: -30px;
+    width: 50%;
+    height: 70vh;
+  }
+
+  .loader p {
+    font-size: 30px;
+    width: 115px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loader .img {
+    background-position-y: -100px;
+    width: 85%;
+    height: 70vh;
+  }
+
+  .loader p {
+    font-size: 30px;
+    width: 115px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .loader .img {
+    background-position-y: 0px;
+    width: 85%;
+    height: 50vh;
+  }
+
+  .loader p {
+    font-size: 30px;
+    width: 115px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .loader .img {
+    background-position-y: 0px;
+    width: 85%;
+    height: 50vh;
+  }
+
+  .loader p {
+    font-size: 30px;
+    width: 115px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .loader .img {
+    background-position-y: 0px;
+    width: 85%;
+    height: 50vh;
+  }
+
+  .loader p {
+    font-size: 30px;
+    width: 115px;
+    margin-top: 30px;
+  }
 }
 
 /* LOADER END */
@@ -593,8 +775,9 @@ header .mobile-nav {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 50vh;
-  background-position: center center;
+  height: 60vh;
+  background-position-y: -50px;
+  background-position-x: -50px;
   background-attachment: fixed;
   filter: opacity(0.6) blur(3px);
   border-radius: 50px;
@@ -610,16 +793,14 @@ header .mobile-nav {
   .hero .header-bg {
     height: 80vh;
     margin-top: 50px;
-    background-position: -10px;
+    background-position-y: -100px;
+    background-position-x: -50px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media screen and (max-width: 1440px) {
-  .hero {
-    margin-left: 5.5%;
-  }
 
   .hero h2,
   .hero h2 span {
@@ -629,7 +810,8 @@ header .mobile-nav {
   .hero .header-bg {
     height: 80vh;
     margin-top: 50px;
-    background-position: -10px;
+    background-position-y: -100px;
+    background-position-x: -50px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -655,10 +837,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 768px) {
-  .hero {
-    margin-left: 5.5%;
-  }
-
   .hero h1 {
     font-size: 18px;
   }
@@ -679,10 +857,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 425px) {
-  .hero {
-    margin-left: 8.5%;
-  }
-
   .hero h1 {
     font-size: 18px;
   }
@@ -693,20 +867,17 @@ header .mobile-nav {
   }
 
   .hero .header-bg {
-    height: 270px;
+    height: 250px;
     margin-top: 50px;
-    background-position: 0px;
     background-attachment: scroll;
+    background-position-y: 0px;
+    background-position-x: -7px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .hero {
-    margin-left: 10.5%;
-  }
-
   .hero h1 {
     font-size: 18px;
   }
@@ -728,9 +899,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 320px) {
-  .hero {
-    margin-left: 13.5%;
-  }
 
   .hero h1 {
     font-size: 18px;
@@ -767,8 +935,7 @@ header .mobile-nav {
   text-align: center;
 }
 
-.about div p {
-  margin-top: 15px;
+.about .about-head p {
   font-size: 20px;
   color: var(--yellow);
 }
@@ -847,22 +1014,11 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 1440px) {
-  .about {
-    margin-left: 7.5%;
-  }
 
-  .about div p {
+  .about .about-head p {
     font-size: 17px;
-    padding: 20px;
-    width: 90%;
-  }
-
-  .about div span {
-    font-size: 25px;
-  }
-
-  .about div h1 {
-    margin-top: 15px;
+    padding: 0px 20px 20px;
+    width: auto;
   }
 
   .about .about-body {
@@ -901,23 +1057,11 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 1024px) {
-  .about {
-    margin-left: 7.5%;
-  }
-
-  .about div p {
+  .about .about-head p {
     font-size: 17px;
-    padding: 20px;
+    padding: 0px 20px 20px;
     text-align: left;
-    width: 90%;
-  }
-
-  .about div span {
-    font-size: 25px;
-  }
-
-  .about div h1 {
-    margin-top: 15px;
+    width: auto;
   }
 
   .about .about-body {
@@ -957,24 +1101,12 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 768px) {
-  .about {
-    margin-left: 7.5%;
-    padding-top: 30px;
-  }
-
-  .about div>p {
+  .about .about-head p {
     font-size: 17px;
-    padding: 20px;
+    padding: 0px 20px 20px;
+    width: auto;
     text-align: left;
-    width: 90%;
-  }
 
-  .about div span {
-    font-size: 25px;
-  }
-
-  .about div h1 {
-    margin-top: 15px;
   }
 
   .about .about-body {
@@ -1021,24 +1153,12 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 425px) {
-  .about {
-    margin-left: 13.5%;
-    padding-top: 30px;
-  }
 
-  .about div p {
+  .about .about-head p {
     font-size: 17px;
-    padding: 20px;
+    padding: 0px 20px 20px;
     text-align: left;
-    width: 90%;
-  }
-
-  .about div span {
-    font-size: 25px;
-  }
-
-  .about div h1 {
-    margin-top: 15px;
+    width: auto;
   }
 
   .about .about-body {
@@ -1083,24 +1203,12 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 375px) {
-  .about {
-    margin-left: 13.5%;
-    padding-top: 30px;
-  }
 
-  .about div p {
+  .about .about-head p {
     font-size: 17px;
-    padding: 20px;
+    padding: 0px 20px 20px;
     text-align: left;
-    width: 90%;
-  }
-
-  .about div span {
-    font-size: 25px;
-  }
-
-  .about div h1 {
-    margin-top: 15px;
+    width: auto;
   }
 
   .about .about-body {
@@ -1146,24 +1254,12 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 320px) {
-  .about {
-    margin-left: 13.5%;
-    padding-top: 30px;
-  }
 
-  .about div p {
+  .about .about-head p {
     font-size: 17px;
-    padding: 20px;
+    padding: 0px 20px 20px;
     text-align: left;
-    width: 90%;
-  }
-
-  .about div span {
-    font-size: 25px;
-  }
-
-  .about div h1 {
-    margin-top: 15px;
+    width: auto;
   }
 
   .about .about-body {
@@ -1218,11 +1314,11 @@ header .mobile-nav {
   flex-direction: column;
 }
 
-.portfolio>div p {
-  margin-top: 15px;
+.portfolio .portfolio-head p {
   color: var(--yellow);
   font-size: 20px;
 }
+
 
 .portfolio .portfolio-body {
   display: flex;
@@ -1294,20 +1390,24 @@ header .mobile-nav {
   max-width: 100%
 }
 
+@media screen and (max-width: 1024px) {
+
+  .portfolio .portfolio-body .portfolio-right div h3,
+  .portfolio .portfolio-body .portfolio-left div h3,
+  .portfolio .portfolio-body-bottom .portfolio-right div h3,
+  .portfolio .portfolio-body-bottom .portfolio-left div h3 {
+    font-size: 20px;
+  }
+
+  .portfolio .portfolio-body .portfolio-right div p,
+  .portfolio .portfolio-body .portfolio-left div p,
+  .portfolio .portfolio-body-bottom .portfolio-left div p,
+  .portfolio .portfolio-body-bottom .portfolio-right div p {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .portfolio {
-    margin-left: 13.5%;
-    padding-top: 50px;
-  }
-
-  .portfolio .portfolio-head span {
-    font-size: 25px;
-  }
-
-  .portfolio .portfolio-head h1 {
-    margin-top: 15px;
-  }
-
   .portfolio .portfolio-body {
     margin-top: 40px;
     flex-direction: column;
@@ -1396,19 +1496,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 475px) {
-  .portfolio {
-    margin-left: 13.5%;
-    padding-top: 50px;
-  }
-
-  .portfolio .portfolio-head span {
-    font-size: 25px;
-  }
-
-  .portfolio .portfolio-head h1 {
-    margin-top: 15px;
-  }
-
   .portfolio .portfolio-body {
     margin-top: 40px;
     flex-direction: column;
@@ -1480,19 +1567,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 375px) {
-  .portfolio {
-    margin-left: 13.5%;
-    padding-top: 50px;
-  }
-
-  .portfolio .portfolio-head span {
-    font-size: 25px;
-  }
-
-  .portfolio .portfolio-head h1 {
-    margin-top: 15px;
-  }
-
   .portfolio .portfolio-body {
     margin-top: 40px;
     flex-direction: column;
@@ -1552,18 +1626,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 320px) {
-  .portfolio {
-    margin-left: 13.5%;
-    padding-top: 50px;
-  }
-
-  .portfolio .portfolio-head span {
-    font-size: 25px;
-  }
-
-  .portfolio .portfolio-head h1 {
-    margin-top: 15px;
-  }
 
   .portfolio .portfolio-body {
     margin-top: 40px;
@@ -1627,15 +1689,14 @@ header .mobile-nav {
 
 /* SERVICES START */
 
-.services div {
+.services .services-head {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.services>div p {
-  margin-top: 15px;
+.services .services-head p {
   color: var(--yellow);
   font-size: 20px;
 }
@@ -1649,7 +1710,6 @@ header .mobile-nav {
   text-align: center;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  margin: 20px;
   font-size: 140px;
   transition: all ease .5s;
 }
@@ -1689,10 +1749,6 @@ header .mobile-nav {
 }
 
 @media screen and (max-width: 320px) {
-  .services {
-    margin-left: 13.5%;
-  }
-
   .services .services-bottom {
     height: 270px;
     margin-top: 50px;
@@ -1715,7 +1771,6 @@ header .mobile-nav {
 }
 
 .contact .contact-head p {
-  margin-top: 15px;
   color: var(--yellow);
   font-size: 20px;
 }
