@@ -3,14 +3,14 @@
 /* CONSTANTS START */
 
 :root {
-  --main-bg: #212121;
-  --white: #DEDEDE;
-  --border-color: #3C3C3C;
-  --purple: #7B7BC5;
-  --yellow: #E6DB74;
-  --blue: #2fcbef;
+  --main-bg: rgb(33, 33, 33);
+  --white: rgb(222, 222, 222);
+  --border-color: rgb(61, 61, 61);
+  --purple: rgb(124, 124, 197);
+  --yellow: rgb(231, 219, 116);
+  --blue: rgb(46, 204, 239);
   --nav-border-color: rgba(255, 255, 255, 0.12);
-  --side-bar-color: #6E6E6E;
+  --side-bar-color: rgb(110, 110, 110);
   --error-red: rgb(255, 0, 0);
 }
 
@@ -28,23 +28,33 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-section {
-  margin: 0% 4%;
-  padding: 4% 0% 4%;
-  position: relative;
-  overflow: hidden;
-}
-
+p,
 h1,
 h2,
 h3,
 h4,
-p,
 span,
 input,
 textarea {
   font-weight: lighter;
   font-family: 'VT323', monospace;
+}
+
+a,
+div,
+body,
+input,
+button,
+section,
+textarea {
+  cursor: none;
+}
+
+section {
+  margin: 0% 4%;
+  padding: 4% 0% 4%;
+  position: relative;
+  overflow: hidden;
 }
 
 section div span {
@@ -1724,6 +1734,7 @@ header .mobile-nav {
 
 .services .services-body p:nth-child(2) {
   color: var(--yellow);
+  margin-top: 50px;
 }
 
 .services .services-body p:nth-child(2):hover {
@@ -1755,6 +1766,12 @@ header .mobile-nav {
     background-position: -55px;
     width: 100%;
     background-attachment: scroll;
+  }
+
+  .services .services-body p,
+  .services .services-body p span {
+    font-size: 23px;
+    margin-top: 20px;
   }
 }
 
@@ -1827,6 +1844,10 @@ textarea:focus {
   background-color: var(--blue);
   color: var(--white);
   transition: all .5s ease;
+}
+
+.contact .contact-body .submit-area button:hover {
+  background-color: var(--purple);
 }
 
 /* CONTACT END */
