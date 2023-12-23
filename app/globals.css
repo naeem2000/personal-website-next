@@ -22,6 +22,7 @@
 html {
   background-color: var(--main-bg);
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 html::-webkit-scrollbar {
@@ -55,6 +56,7 @@ section {
   padding: 4% 0% 4%;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 section div span {
@@ -94,16 +96,16 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: absolute;
+  position: fixed;
   left: 0;
   width: auto;
-  padding: 10px 20px 0px 10px;
+  padding: 10px 20px 0px 0px;
   background: none;
   border-right: 1px solid var(--border-color);
   z-index: 5;
   font-family: 'VT323', monospace;
   color: var(--side-bar-color);
-  font-size: 25px;
+  font-size: 22px;
   line-height: 1.2em;
 }
 
@@ -785,7 +787,7 @@ header .mobile-nav {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   background-position-y: -50px;
   background-position-x: -50px;
   background-attachment: fixed;
@@ -801,7 +803,7 @@ header .mobile-nav {
   }
 
   .hero .header-bg {
-    height: 80vh;
+    height: 60vh;
     margin-top: 50px;
     background-position-y: -100px;
     background-position-x: -50px;
@@ -1814,12 +1816,12 @@ textarea {
 }
 
 .contact .contact-body input.error-border,
-textarea.error-border {
+.contact .contact-body textarea.error-border {
   border-color: var(--error-red);
 }
 
 .contact .contact-body input::placeholder,
-textarea::placeholder {
+.contact .contact-body textarea::placeholder {
   color: var(--purple);
 }
 

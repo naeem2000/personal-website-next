@@ -6,8 +6,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { Routes } from './components/Routes';
-import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
+import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -15,9 +15,10 @@ export default function Home() {
 	const { Nav, Line, Hero, About, Portfolio, Services, Contact } = Routes();
 
 	useEffect(() => {
-		document.getElementById('loader')?.classList.add('slide');
 		AOS.init();
-		setTimeout(() => {}, 500);
+		setTimeout(() => {
+			document.getElementById('loader')?.classList.add('slide');
+		}, 500);
 	});
 
 	return (
