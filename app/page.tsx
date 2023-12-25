@@ -7,12 +7,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { Routes } from './components/Routes';
 import Loader from './components/Loader';
+import Footer from './components/Footer';
+import NumberLine from './components/numberLine';
 import { useEffect } from 'react';
+import Nav from './Nav/page';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 export default function Home() {
-	const { Nav, Line, Hero, About, Portfolio, Services, Contact } = Routes();
+	const { Hero, About, Portfolio, Services, Contact } = Routes();
 
 	useEffect(() => {
 		AOS.init();
@@ -47,15 +50,16 @@ export default function Home() {
 			<div className='progress-bar'>
 				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
 			</div>
-			<ToastContainer />
+			<ToastContainer limit={3} />
 			<Loader />
-			<Line />
+			<NumberLine />
 			<Nav />
 			<Hero />
 			<About />
 			<Portfolio />
 			<Services />
 			<Contact />
+			<Footer />
 			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);

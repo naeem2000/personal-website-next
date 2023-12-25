@@ -34,6 +34,7 @@ export default function Contact() {
 				closeOnClick: true,
 				draggable: true,
 				theme: 'colored',
+				className: 'toasty toasty1',
 			});
 			hasError = true;
 		} else {
@@ -47,6 +48,7 @@ export default function Contact() {
 				closeOnClick: true,
 				draggable: true,
 				theme: 'colored',
+				className: 'toasty toasty2',
 			});
 			hasError = true;
 		} else {
@@ -60,6 +62,7 @@ export default function Contact() {
 				closeOnClick: true,
 				draggable: true,
 				theme: 'colored',
+				className: 'toasty toasty3',
 			});
 			hasError = true;
 		} else {

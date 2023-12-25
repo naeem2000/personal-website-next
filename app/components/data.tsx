@@ -1,3 +1,5 @@
+import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
+
 export const navlinks = {
 	links: [
 		{
@@ -129,6 +131,31 @@ export const pageData = {
 			title: '{File Upload Web App}',
 			description: 'File uploading web app in React.JS and Firebase storage;',
 			link: 'https://github.com/naeem2000/react-native-todo-app',
+		},
+	],
+};
+
+export const socials = {
+	socialLink: [
+		{
+			id: 0,
+			icon: <ImFacebook />,
+			link: 'https://www.facebook.com/naeem.carr.3',
+		},
+		{
+			id: 1,
+			icon: <ImInstagram />,
+			link: 'https://www.instagram.com/naeem__carr',
+		},
+		{
+			id: 2,
+			icon: <ImLinkedin />,
+			link: 'www.linkedin.com/in/mncarr',
+		},
+		{
+			id: 3,
+			icon: <ImGithub />,
+			link: 'https://github.com/naeem2000',
 		},
 	],
 };

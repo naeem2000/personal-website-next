@@ -17,6 +17,7 @@
 		"react": "^18",
 		"react-animated-cursor": "^2.11.2",
 		"react-dom": "^18",
+		"react-icons": "^4.12.0",
 		"react-scroll-to-top": "^3.0.0",
 		"react-toastify": "^9.1.3"
 	},
