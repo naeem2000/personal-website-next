@@ -4,6 +4,7 @@
 
 :root {
   --main-bg: rgb(33, 33, 33);
+  --main-bg-trans: rgb(33, 33, 33, 0.9);
   --white: rgb(222, 222, 222);
   --border-color: rgb(61, 61, 61);
   --purple: rgb(124, 124, 197);
@@ -76,6 +77,9 @@ section div h1 {
 
 button {
   font-family: 'VT323', monospace;
+  background: none;
+  border: none;
+  cursor: none;
 }
 
 .img {
@@ -86,6 +90,7 @@ button {
 a {
   color: unset;
   text-decoration: none;
+  cursor: none;
 }
 
 .progress-bar {
@@ -186,7 +191,7 @@ a {
   }
 
   .line-numbers {
-    width: 15px;
+    padding: 10px 10px 0px 5px;
     font-size: 20px;
   }
 
@@ -223,7 +228,7 @@ a {
   }
 
   .line-numbers {
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0px 5px;
     font-size: 20px;
   }
 
@@ -271,7 +276,7 @@ a {
   }
 
   .line-numbers {
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0px 5px;
     font-size: 20px;
   }
 
@@ -319,7 +324,7 @@ a {
   }
 
   .line-numbers {
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0px 5px;
     font-size: 20px;
   }
 
@@ -525,7 +530,7 @@ header nav {
   height: 100%;
   background-color: var(--nav-bg);
   font-family: 'VT323', monospace;
-  z-index: 5;
+  z-index: 1;
   max-width: 100%;
   margin-left: 2.5%;
   margin-right: 2.5%;
@@ -583,12 +588,53 @@ header nav .nav-right ul li a:hover {
   color: var(--purple);
 }
 
-header nav .burger-button {
+header #burger-button {
   display: none;
+  position: fixed;
+  right: 70px;
+  top: 50px;
+  z-index: 8;
 }
 
 header .mobile-nav {
-  display: none;
+  background-color: var(--main-bg-trans);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 5px;
+  z-index: 7;
+  transform: translateX(120%);
+  transition: all .7s ease;
+}
+
+header .mobile-slider {
+  transform: translateX(0);
+}
+
+header .mobile-nav ul {
+  width: 50%;
+  text-align: center;
+}
+
+header .mobile-nav ul li a {
+  font-family: 'VT323', monospace;
+  display: block;
+  font-size: 25px;
+  color: var(--yellow);
+  transition: all 0.2s linear;
+  padding: 25px 20px 30px;
+  list-style: none;
+  border-bottom: 1px solid var(--nav-border-color);
+}
+
+header .mobile-nav ul li a:hover {
+  color: var(--purple);
+  border-color: var(--purple);
 }
 
 @media screen and (max-width: 1440px) {
@@ -600,7 +646,6 @@ header .mobile-nav {
 
 @media screen and (max-width: 1024px) {
   header nav {
-    margin-left: 3%;
     height: 70px;
   }
 
@@ -609,8 +654,8 @@ header .mobile-nav {
     font-size: 20px;
   }
 
-  header .mobile-nav {
-    display: none;
+  header .mobile-nav ul li a {
+    font-size: 18px;
   }
 
   header nav .nav-right ul li a {
@@ -620,19 +665,11 @@ header .mobile-nav {
 
 @media screen and (max-width: 768px) {
   header nav {
-    margin-left: 6%;
     height: 70px;
   }
 
   header nav .nav-right {
     display: none;
-  }
-
-  header nav .burger-button {
-    position: fixed;
-    display: block;
-    right: 20px;
-    z-index: 6;
   }
 
   header nav .nav-right {
@@ -644,61 +681,27 @@ header .mobile-nav {
     font-size: 20px;
   }
 
-  header .mobile-nav {
-    background-color: var(--main-bg);
+  header #burger-button {
     position: fixed;
     display: block;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 4;
-    height: auto;
-    padding-right: 5.5%;
-    transform: translateX(-120%);
-    transition: all .3s ease;
-    margin: 0 0 0 9%;
-  }
-
-  header .mobile-slider {
-    transform: translateX(0);
-  }
-
-  header .mobile-nav ul li {
-    padding: 0 20px;
-    list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid var(--nav-border-color);
+    right: 20px;
+    top: 20px;
   }
 
   header .mobile-nav ul li a {
-    font-family: 'VT323', monospace;
-    font-size: 100%;
-    color: var(--yellow);
-    transition: all 0.2s linear;
-  }
-
-  header .mobile-nav ul li a:hover {
-    color: var(--purple);
+    font-size: 18px;
+    padding: 15px 10px 20px;
   }
 }
 
 @media screen and (max-width: 425px) {
   header nav {
-    margin-left: 5.5%;
+    margin-left: 7%;
     height: 70px;
   }
 
   header nav .nav-right {
     display: none;
-  }
-
-  header nav .burger-button {
-    position: fixed;
-    display: block;
-    right: 20px;
-    z-index: 6;
   }
 
   header nav .nav-right {
@@ -710,60 +713,27 @@ header .mobile-nav {
     font-size: 20px;
   }
 
-  header .mobile-nav {
-    background-color: var(--main-bg);
+  header #burger-button {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 4;
-    height: auto;
-    padding-right: 5.5%;
-    transform: translateX(-120%);
-    transition: all .3s ease;
-    margin: 0 0 0 9%;
-  }
-
-  header .mobile-slider {
-    transform: translateX(0);
-  }
-
-  header .mobile-nav ul li {
-    padding: 0 20px;
-    list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid var(--nav-border-color);
+    display: block;
+    right: 20px;
+    top: 20px;
   }
 
   header .mobile-nav ul li a {
-    font-family: 'VT323', monospace;
-    font-size: 100%;
-    color: var(--yellow);
-    transition: all 0.2s linear;
-  }
-
-  header .mobile-nav ul li a:hover {
-    color: var(--purple);
+    font-size: 18px;
+    padding: 15px 10px 20px;
   }
 }
 
 @media screen and (max-width: 375px) {
   header nav {
-    margin-left: 5.5%;
+    margin-left: 9%;
     height: 70px;
   }
 
   header nav .nav-right {
     display: none;
-  }
-
-  header nav .burger-button {
-    position: fixed;
-    display: block;
-    right: 20px;
-    z-index: 6;
   }
 
   header nav .nav-right {
@@ -775,48 +745,22 @@ header .mobile-nav {
     font-size: 20px;
   }
 
-  header .mobile-nav {
-    background-color: var(--main-bg);
+  header #burger-button {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 4;
-    height: auto;
-    padding-right: 5.5%;
-    transform: translateX(-120%);
-    transition: all .3s ease;
-    margin: 0 0 0 9%;
-  }
-
-  header .mobile-slider {
-    transform: translateX(0);
-  }
-
-  header .mobile-nav ul li {
-    padding: 0 20px;
-    list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid var(--nav-border-color);
+    display: block;
+    right: 20px;
+    top: 20px;
   }
 
   header .mobile-nav ul li a {
-    font-family: 'VT323', monospace;
-    font-size: 100%;
-    color: var(--yellow);
-    transition: all 0.2s linear;
-  }
-
-  header .mobile-nav ul li a:hover {
-    color: var(--purple);
+    font-size: 18px;
+    padding: 15px 10px 20px;
   }
 }
 
 @media screen and (max-width: 320px) {
   header nav {
-    margin-left: 5.5%;
+    margin-left: 10.5%;
     height: 70px;
   }
 
@@ -824,11 +768,11 @@ header .mobile-nav {
     display: none;
   }
 
-  header nav .burger-button {
+  header #burger-button {
     position: fixed;
     display: block;
     right: 20px;
-    z-index: 6;
+    top: 20px;
   }
 
   header nav .nav-right {
@@ -840,43 +784,9 @@ header .mobile-nav {
     font-size: 20px;
   }
 
-  header .mobile-nav {
-    background-color: var(--main-bg);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 4;
-    height: auto;
-    padding-right: 5.5%;
-    transform: translateX(-120%);
-    transition: all .3s ease;
-    margin: 0 0 0 9%;
-  }
-
-  header .mobile-slider {
-    transform: translateX(0);
-  }
-
-  header .mobile-nav ul li {
-    padding: 0 20px;
-    list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid var(--nav-border-color);
-    margin-left: 5px;
-  }
-
   header .mobile-nav ul li a {
-    font-family: 'VT323', monospace;
-    font-size: 100%;
-    color: var(--yellow);
-    transition: all 0.2s linear;
-  }
-
-  header .mobile-nav ul li a:hover {
-    color: var(--purple);
+    font-size: 18px;
+    padding: 15px 10px 20px;
   }
 }
 
@@ -1471,7 +1381,7 @@ header .mobile-nav {
   width: 50%;
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 20px 20px 20px 0px;
+  padding: 50px 35px 50px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -1480,7 +1390,7 @@ header .mobile-nav {
 .portfolio .portfolio-body .portfolio-right,
 .portfolio .portfolio-body-bottom .portfolio-right {
   width: 50%;
-  padding: 20px 0px 20px 20px;
+  padding: 50px 35px 50px 0px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -1523,6 +1433,13 @@ header .mobile-nav {
 
 .portfolio .portfolio-body .portfolio-left div:nth-child(2) .img {
   max-width: 100%
+}
+
+.portfolio .portfolio-body .portfolio-left div:hover,
+.portfolio .portfolio-body .portfolio-right div:hover,
+.portfolio .portfolio-body-bottom .portfolio-right div:hover,
+.portfolio .portfolio-body-bottom .portfolio-left div:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1024px) {
