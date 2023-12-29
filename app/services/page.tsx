@@ -20,7 +20,7 @@ export default function services() {
 					<span>{'{"'}</span>_front end development<span>{'"}'}</span>
 				</p>
 			</div>
-			<div className='services-bottom'></div>
+			<div data-aos='zoom-in' className='services-bottom'></div>
 		</section>
 	);
 }

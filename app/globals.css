@@ -54,8 +54,8 @@ textarea {
 }
 
 section {
-  margin: 0% 4%;
-  padding: 4% 0% 4%;
+  margin: 0;
+  padding: 5% 3% 5% 5%;
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -131,29 +131,29 @@ a {
 
 
 [data-aos^=fade][data-aos^=fade].aos-animate {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 @media screen and (max-width: 2560px) {
   section {
-    margin: 0 5% 0% 5%;
-    padding: 5% 0 5% 2%;
+    margin: 0;
+    padding: 5% 3% 5% 5%;
     height: 100%;
   }
 }
 
 @media screen and (max-width: 1440px) {
   section {
-    margin: 0 5% 0% 5%;
-    padding: 5% 0 5% 4%;
+    margin: 0;
+    padding: 5% 4% 5% 6%;
     height: 100%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   section {
-    margin: 0 5% 0% 5%;
-    padding: 5% 0 5% 4%;
+    margin: 0;
+    padding: 5% 4% 5% 7%;
     height: 100%;
   }
 
@@ -175,8 +175,8 @@ a {
 
 @media screen and (max-width: 768px) {
   section {
-    margin: 0 5% 0% 6%;
-    padding: 5% 0 5% 4%;
+    margin: 0;
+    padding: 5% 4% 5% 8%;
     height: 100%;
   }
 
@@ -212,8 +212,8 @@ a {
 
 @media screen and (max-width: 425px) {
   section {
-    margin: 0 5% 0% 8%;
-    padding: 10% 0 10% 4%;
+    margin: 0;
+    padding: 10% 5% 10% 12%;
     height: 100%;
   }
 
@@ -260,8 +260,8 @@ a {
 
 @media screen and (max-width: 375px) {
   section {
-    margin: 0 5% 0% 9.5%;
-    padding: 10% 0 10% 4%;
+    margin: 0;
+    padding: 10% 6% 10% 15%;
     height: 100%;
   }
 
@@ -308,8 +308,8 @@ a {
 
 @media screen and (max-width: 320px) {
   section {
-    margin: 0 5% 0% 11%;
-    padding: 10% 0 10% 4%;
+    margin: 0;
+    padding: 10% 5% 10% 12%;
     height: 100%;
   }
 
@@ -1801,6 +1801,75 @@ header .mobile-nav ul li a:hover {
   border-radius: 50px;
 }
 
+@media screen and (max-width: 1024px) {
+  .services .services-bottom {
+    height: 270px;
+    margin-top: 30px;
+    background-position: -55px;
+    width: 100%;
+    background-attachment: scroll;
+  }
+
+  .services .services-body p:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .services .services-body p,
+  .services .services-body p span {
+    font-size: 75px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services .services-bottom {
+    height: 270px;
+    margin-top: 50px;
+    background-position: -10px;
+    width: 100%;
+    background-attachment: scroll;
+  }
+
+  .services .services-body p,
+  .services .services-body p span {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .services .services-bottom {
+    height: 270px;
+    margin-top: 50px;
+    background-position: -55px;
+    width: 100%;
+    background-attachment: scroll;
+  }
+
+  .services .services-body p,
+  .services .services-body p span {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .services .services-bottom {
+    height: 270px;
+    margin-top: 50px;
+    background-position: -55px;
+    width: 100%;
+    background-attachment: scroll;
+  }
+
+  .services .services-body p,
+  .services .services-body p span {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+}
+
+
 @media screen and (max-width: 320px) {
   .services .services-bottom {
     height: 270px;
@@ -2167,3 +2236,9 @@ footer .footer-right p {
 }
 
 /* FOOTER END */
+
+/* LANDSCAPE START */
+
+@media screen and (orientation: landscape) {}
+
+/* LANDSCAPE END */

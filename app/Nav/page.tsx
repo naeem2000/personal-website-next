@@ -24,7 +24,7 @@ export default function Nav() {
 		};
 
 		function scrollFunction() {
-			if (window.outerWidth > 720) {
+			if (window.outerWidth > 1024) {
 				if (
 					document.body.scrollTop > 200 ||
 					document.documentElement.scrollTop > 200

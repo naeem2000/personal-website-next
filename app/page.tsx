@@ -2,13 +2,13 @@
 
 import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
 import AnimatedCursor from 'react-animated-cursor';
+import NumberLine from './components/numberLine';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { Routes } from './components/Routes';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
-import NumberLine from './components/numberLine';
 import { useEffect } from 'react';
 import Nav from './Nav/page';
 import 'aos/dist/aos.css';
@@ -21,7 +21,7 @@ export default function Home() {
 		AOS.init();
 		setTimeout(() => {
 			document.getElementById('loader')?.classList.add('slide');
-		}, 500);
+		}, 1000);
 	});
 
 	return (
