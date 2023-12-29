@@ -2,19 +2,21 @@
 
 import { Sling as Hamburger } from 'hamburger-react';
 import { navlinks } from '../components/data';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Nav() {
 	const [open, setOpen] = useState<boolean>(false);
-	const openNav = document.getElementById('mobile-slide');
 
-	if (open) {
-		document.body.style.overflow = 'hidden';
-		openNav?.classList.add('mobile-slider');
-	} else {
-		document.body.style.overflow = 'scroll';
-		openNav?.classList.remove('mobile-slider');
-	}
+	useEffect(() => {
+		const openNav = document.getElementById('mobile-slide');
+		if (open) {
+			document.body.style.overflow = 'hidden';
+			openNav?.classList.add('mobile-slider');
+		} else {
+			document.body.style.overflow = 'scroll';
+			openNav?.classList.remove('mobile-slider');
+		}
+	});
 
 	const NavHead = () => {
 		return (
