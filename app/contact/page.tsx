@@ -1,5 +1,6 @@
 'use client';
 
+import { useForm } from '@formspree/react';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -9,57 +10,86 @@ interface ContactDetails {
 	message: string;
 }
 
-interface Errors {
-	nameError: boolean;
-	emailError: boolean;
-	messageError: boolean;
-}
-
 export default function Contact() {
+	const [state, handleSubmit] = useForm('myyrgdyw');
+
 	const [messenger, setMessenger] = useState<ContactDetails>({
 		name: '',
 		email: '',
 		message: '',
 	});
 
-	const [errors, setErrors] = useState<Errors>({
-		nameError: false,
-		emailError: false,
-		messageError: false,
-	});
-
-	const submitForm = (e: any) => {
+	const submitForm = async (e: any) => {
 		e.preventDefault();
-		let hasError = false;
+		let hasError: boolean = false;
+		const name = document.getElementById('name');
+		const email = document.getElementById('email');
+		const message = document.getElementById('message');
 
-		if (messenger.name === '') {
-			setErrors({ ...errors, nameError: true });
-			toast.error('Can I get your name please? 🤔');
+		if (!messenger.name) {
+			name?.classList.add('error-border');
+			toast.error('Can I get your name please?', {
+				position: 'top-center',
+				autoClose: 3000,
+				closeOnClick: true,
+				draggable: true,
+				theme: 'colored',
+				className: 'toasty toasty1',
+			});
 			hasError = true;
 		} else {
-			setErrors({ ...errors, nameError: false });
+			name?.classList.remove('error-border');
 		}
-		if (messenger.email === '') {
-			setErrors({ ...errors, emailError: true });
-			toast.error('I need your email to get back to you. 😉');
+		if (!messenger.email) {
+			email?.classList.add('error-border');
+			toast.error('I need your email to get back to you.', {
+				position: 'top-left',
+				autoClose: 3000,
+				closeOnClick: true,
+				draggable: true,
+				theme: 'colored',
+				className: 'toasty toasty2',
+			});
 			hasError = true;
 		} else {
-			setErrors({ ...errors, emailError: false });
+			email?.classList.remove('error-border');
 		}
-		if (messenger.message === '') {
-			setErrors({ ...errors, messageError: true });
-			toast.error('Maybe want to say hello? 😁');
+		if (!messenger.message) {
+			message?.classList.add('error-border');
+			toast.error('Maybe want to say hello?', {
+				position: 'top-right',
+				autoClose: 3000,
+				closeOnClick: true,
+				draggable: true,
+				theme: 'colored',
+				className: 'toasty toasty3',
+			});
 			hasError = true;
 		} else {
-			setErrors({ ...errors, messageError: false });
+			message?.classList.remove('error-border');
 		}
-
 		if (!hasError) {
-			console.log(messenger);
+			await handleSubmit(e);
+			setMessenger({
+				name: '',
+				email: '',
+				message: '',
+			});
+			toast.success('Bon voyage, message!', {
+				position: 'top-center',
+				autoClose: 3000,
+				closeOnClick: true,
+				draggable: true,
+				theme: 'colored',
+			});
 		} else {
 			console.error('Form failed to post!');
 		}
 	};
+
+	if (state.succeeded) {
+		return <p>Thanks for joining!</p>;
+	}
 
 	return (
 		<section className='contact' id='contact'>
@@ -72,6 +102,7 @@ export default function Contact() {
 			</div>
 			<form onSubmit={submitForm} className='contact-body'>
 				<input
+					id='name'
 					data-aos='fade-left'
 					name='name'
 					type='text'
@@ -82,6 +113,7 @@ export default function Contact() {
 					}
 				/>
 				<input
+					id='email'
 					data-aos='fade-right'
 					name='email'
 					type='email'
@@ -92,6 +124,7 @@ export default function Contact() {
 					}
 				/>
 				<textarea
+					id='message'
 					data-aos='fade-left'
 					name='message'
 					cols={10}
