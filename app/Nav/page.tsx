@@ -2,7 +2,6 @@
 
 import { Sling as Hamburger } from 'hamburger-react';
 import React, { useEffect, useState } from 'react';
-import { slide as Menu } from 'react-burger-menu';
 import { navlinks } from '../components/data';
 
 export default function Nav() {
