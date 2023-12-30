@@ -1,15 +1,15 @@
 'use client';
 
 import { Sling as Hamburger } from 'hamburger-react';
-import { navlinks } from '../components/data';
 import React, { useEffect, useState } from 'react';
+import { navlinks } from '../components/data';
 
 export default function Nav() {
 	const [open, setOpen] = useState<boolean>(false);
 
 	useEffect(() => {
 		const openNav = document.getElementById('mobile-slide');
-		const mybutton = document.getElementById('burger-button');
+		const burgerBtn = document.getElementById('burger-button');
 
 		if (open) {
 			document.body.style.overflow = 'hidden';
@@ -29,9 +29,9 @@ export default function Nav() {
 					document.body.scrollTop > 200 ||
 					document.documentElement.scrollTop > 200
 				) {
-					mybutton!.style.display = 'block';
+					burgerBtn!.style.display = 'block';
 				} else {
-					mybutton!.style.display = 'none';
+					burgerBtn!.style.display = 'none';
 				}
 			}
 		}

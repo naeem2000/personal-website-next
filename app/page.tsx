@@ -24,29 +24,37 @@ export default function Home() {
 		}, 1000);
 	});
 
+	const Cursor = () => {
+		if (window.outerWidth > 1024) {
+			return (
+				<AnimatedCursor
+					innerSize={17}
+					outerSize={7}
+					color='231, 219, 116'
+					innerScale={0.7}
+					outerScale={5}
+					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
+					clickables={[
+						'a',
+						'input[type="text"]',
+						'input[type="email"]',
+						'input[type="number"]',
+						'input[type="submit"]',
+						'input[type="image"]',
+						'label[for]',
+						'select',
+						'textarea',
+						'button',
+						'.link',
+					]}
+				/>
+			);
+		}
+	};
+
 	return (
 		<>
-			<AnimatedCursor
-				innerSize={17}
-				outerSize={7}
-				color='231, 219, 116'
-				innerScale={0.7}
-				outerScale={5}
-				outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
-				clickables={[
-					'a',
-					'input[type="text"]',
-					'input[type="email"]',
-					'input[type="number"]',
-					'input[type="submit"]',
-					'input[type="image"]',
-					'label[for]',
-					'select',
-					'textarea',
-					'button',
-					'.link',
-				]}
-			/>
+			<Cursor />
 			<div className='progress-bar'>
 				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
 			</div>

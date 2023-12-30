@@ -23,7 +23,6 @@
 html {
   background-color: var(--main-bg);
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 html::-webkit-scrollbar {
@@ -50,7 +49,7 @@ input,
 button,
 section,
 textarea {
-  cursor: none;
+  cursor: none !important;
 }
 
 section {
@@ -79,7 +78,6 @@ button {
   font-family: 'VT323', monospace;
   background: none;
   border: none;
-  cursor: none;
 }
 
 .img {
@@ -90,7 +88,6 @@ button {
 a {
   color: unset;
   text-decoration: none;
-  cursor: none;
 }
 
 .progress-bar {
@@ -1020,7 +1017,6 @@ header .mobile-nav ul li a:hover {
   border: none;
   font-size: 20px;
   padding: 20px 35px;
-  cursor: pointer;
   background-color: var(--blue);
   color: var(--white);
   transition: all .5s ease;
@@ -1741,6 +1737,7 @@ header .mobile-nav ul li a:hover {
 
 /* SERVICES START */
 
+
 .services .services-head {
   display: flex;
   align-items: center;
@@ -1789,16 +1786,18 @@ header .mobile-nav ul li a:hover {
 }
 
 .services .services-bottom {
-  margin-top: 100px;
   background-image: url('/working-pc.jpg');
+  margin-top: 100px;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 50vh;
-  background-position: center center;
+  background-position-y: 80%;
+  background-position-x: 0px;
   background-attachment: fixed;
-  filter: opacity(0.6) blur(2px);
+  filter: opacity(0.6) blur(3px);
   border-radius: 50px;
+  position: relative;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1951,7 +1950,6 @@ textarea:focus {
   border: none;
   font-size: 20px;
   padding: 20px 35px;
-  cursor: pointer;
   background-color: var(--blue);
   color: var(--white);
   transition: all .5s ease;
@@ -1959,6 +1957,82 @@ textarea:focus {
 
 .contact .contact-body .submit-area button:hover {
   background-color: var(--purple);
+}
+
+@media screen and (max-width: 1024px) {
+  .contact .contact-head p {
+    font-size: 17px;
+  }
+
+  .contact .contact-body input,
+  textarea {
+    width: 80%;
+    font-size: 18px;
+    padding: 0px 10px 10px;
+    margin-top: 30px;
+  }
+
+  .contact .contact-body .submit-area button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact .contact-head p {
+    font-size: 17px;
+  }
+
+  .contact .contact-body input,
+  textarea {
+    width: 80%;
+    font-size: 18px;
+    padding: 0px 10px 10px;
+    margin-top: 30px;
+  }
+
+  .contact .contact-body .submit-area button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contact .contact-head p {
+    font-size: 17px;
+  }
+
+  .contact .contact-body input,
+  textarea {
+    width: 80%;
+    font-size: 18px;
+    padding: 0px 10px 10px;
+    margin-top: 30px;
+  }
+
+  .contact .contact-body .submit-area button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contact .contact-head p {
+    font-size: 17px;
+  }
+
+  .contact .contact-body input,
+  textarea {
+    width: 80%;
+    font-size: 18px;
+    padding: 0px 10px 10px;
+    margin-top: 30px;
+  }
+
+  .contact .contact-body .submit-area button {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1972,6 +2046,11 @@ textarea:focus {
     font-size: 18px;
     padding: 0px 10px 10px;
     margin-top: 30px;
+  }
+
+  .contact .contact-body .submit-area button {
+    padding: 10px 20px;
+    font-size: 17px;
   }
 }
 
