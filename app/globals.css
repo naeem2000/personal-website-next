@@ -1026,6 +1026,50 @@ header .mobile-nav ul li a:hover {
   background-color: var(--purple);
 }
 
+.pdf-view {
+  margin: 0;
+  position: fixed;
+  background-color: var(--main-bg-trans);
+  z-index: 8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 40px;
+  transform: translateX(-100%);
+  transition: all .5s ease;
+}
+
+.pdf-slide {
+  transform: translateX(0%);
+}
+
+.pdf-view button {
+  position: absolute;
+  top: calc(50px - 10px);
+  right: calc(20% - 40px);
+  transition: all .5s ease;
+}
+
+.pdf-view button:hover {
+  transform: scale(1.3);
+}
+
+.pdf-view .pdf-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-view .pdf-body iframe {
+  height: 100vh;
+  width: 60%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
 @media screen and (max-width:2560px) {
   .about {
     height: 100%;
@@ -1139,6 +1183,20 @@ header .mobile-nav ul li a:hover {
     padding: 10px 20px;
     font-size: 17px;
   }
+
+  .pdf-view {
+    padding: 35px;
+  }
+
+  .pdf-view button {
+    top: calc(20px - 10px);
+    right: calc(5% - 45px);
+  }
+
+  .pdf-view .pdf-body iframe {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1191,6 +1249,20 @@ header .mobile-nav ul li a:hover {
     padding: 10px 20px;
     font-size: 17px;
   }
+
+  .pdf-view {
+    padding: 35px;
+  }
+
+  .pdf-view button {
+    top: calc(20px - 10px);
+    right: calc(7% - 40px);
+  }
+
+  .pdf-view .pdf-body iframe {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1240,6 +1312,20 @@ header .mobile-nav ul li a:hover {
   .about>button {
     padding: 10px 20px;
     font-size: 17px;
+  }
+
+  .pdf-view {
+    padding: 35px;
+  }
+
+  .pdf-view button {
+    top: calc(20px - 10px);
+    right: calc(13% - 40px);
+  }
+
+  .pdf-view .pdf-body iframe {
+    height: 100vh;
+    width: 100%;
   }
 }
 
@@ -1292,6 +1378,20 @@ header .mobile-nav ul li a:hover {
     font-size: 17px;
 
   }
+
+  .pdf-view {
+    padding: 35px;
+  }
+
+  .pdf-view button {
+    top: calc(20px - 10px);
+    right: calc(13% - 40px);
+  }
+
+  .pdf-view .pdf-body iframe {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1341,6 +1441,20 @@ header .mobile-nav ul li a:hover {
   .about>button {
     padding: 10px 20px;
     font-size: 17px;
+  }
+
+  .pdf-view {
+    padding: 35px;
+  }
+
+  .pdf-view button {
+    top: calc(20px - 10px);
+    right: calc(13% - 40px);
+  }
+
+  .pdf-view .pdf-body iframe {
+    height: 100vh;
+    width: 100%;
   }
 }
 
