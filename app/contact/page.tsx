@@ -1,5 +1,6 @@
 'use client';
 
+import ThankYou from '../components/ThankYou';
 import { useForm } from '@formspree/react';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -88,7 +89,7 @@ export default function Contact() {
 	};
 
 	if (state.succeeded) {
-		return <p>Thanks for joining!</p>;
+		return <ThankYou />;
 	}
 
 	return (

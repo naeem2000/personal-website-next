@@ -2,14 +2,14 @@
 
 import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
 import AnimatedCursor from 'react-animated-cursor';
+import NumberLine from './components/numberLine';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { Routes } from './components/Routes';
+import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
-import NumberLine from './components/numberLine';
-import { useEffect } from 'react';
 import Nav from './Nav/page';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -17,15 +17,23 @@ import AOS from 'aos';
 export default function Home() {
 	const { Hero, About, Portfolio, Services, Contact } = Routes();
 
+	const [size, setSize] = useState<boolean>(false);
+
 	useEffect(() => {
 		AOS.init();
 		setTimeout(() => {
 			document.getElementById('loader')?.classList.add('slide');
-		}, 500);
+		}, 1000);
+
+		if (window.outerWidth > 1024) {
+			setSize(true);
+		} else {
+			setSize(false);
+		}
 	});
 
-	return (
-		<>
+	const Cursor = () => {
+		return (
 			<AnimatedCursor
 				innerSize={17}
 				outerSize={7}
@@ -47,6 +55,12 @@ export default function Home() {
 					'.link',
 				]}
 			/>
+		);
+	};
+
+	return (
+		<>
+			{size && <Cursor />}
 			<div className='progress-bar'>
 				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
 			</div>

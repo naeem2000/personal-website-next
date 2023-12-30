@@ -1,14 +1,16 @@
 'use client';
 
 import { Sling as Hamburger } from 'hamburger-react';
-import { navlinks } from '../components/data';
 import React, { useEffect, useState } from 'react';
+import { navlinks } from '../components/data';
 
 export default function Nav() {
 	const [open, setOpen] = useState<boolean>(false);
 
 	useEffect(() => {
 		const openNav = document.getElementById('mobile-slide');
+		const burgerBtn = document.getElementById('burger-button');
+
 		if (open) {
 			document.body.style.overflow = 'hidden';
 			openNav?.classList.add('mobile-slider');
@@ -16,23 +18,32 @@ export default function Nav() {
 			document.body.style.overflow = 'scroll';
 			openNav?.classList.remove('mobile-slider');
 		}
-	});
 
-	const NavHead = () => {
-		return (
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			if (window.outerWidth > 1024) {
+				if (
+					document.body.scrollTop > 200 ||
+					document.documentElement.scrollTop > 200
+				) {
+					burgerBtn!.style.display = 'block';
+				} else {
+					burgerBtn!.style.display = 'none';
+				}
+			}
+		}
+	}, [open]);
+
+	return (
+		<header>
 			<nav className='nav'>
 				<div className='nav-left'>
 					<h1 data-aos='slide-left'>// naeem carr</h1>
 					<p data-aos='slide-right'>web_dev</p>
 				</div>
-			</nav>
-		);
-	};
-
-	return (
-		<header>
-			<nav className='nav'>
-				<NavHead />
 				<div className='nav-right'>
 					{navlinks.links.map((item) => {
 						return (
@@ -44,17 +55,11 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				<div className='burger-button'>
-					<Hamburger
-						size={20}
-						color='#2fcbef'
-						toggled={open}
-						toggle={setOpen}
-					/>
-				</div>
 			</nav>
+			<button id='burger-button'>
+				<Hamburger size={20} color='#2fcbef' toggled={open} toggle={setOpen} />
+			</button>
 			<div className='mobile-nav' id='mobile-slide'>
-				<NavHead />
 				{navlinks.links.map((item) => {
 					return (
 						<ul key={item.id}>
