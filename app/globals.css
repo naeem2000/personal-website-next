@@ -306,7 +306,7 @@ a {
 @media screen and (max-width: 320px) {
   section {
     margin: 0;
-    padding: 10% 5% 10% 12%;
+    padding: 10% 5% 10% 15%;
     height: 100%;
   }
 
@@ -1800,11 +1800,33 @@ header .mobile-nav ul li a:hover {
   position: relative;
 }
 
+@media screen and (max-width: 1440px) {
+  .services .services-bottom {
+    height: 270px;
+    margin-top: 30px;
+    background-position-y: 80%;
+    background-position-x: 0px;
+    width: 100%;
+    background-attachment: scroll;
+  }
+
+  .services .services-body p:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .services .services-body p,
+  .services .services-body p span {
+    font-size: 75px;
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .services .services-bottom {
     height: 270px;
     margin-top: 30px;
-    background-position: -55px;
+    background-position-y: 80%;
+    background-position-x: 0px;
     width: 100%;
     background-attachment: scroll;
   }
@@ -1824,7 +1846,8 @@ header .mobile-nav ul li a:hover {
   .services .services-bottom {
     height: 270px;
     margin-top: 50px;
-    background-position: -10px;
+    background-position-y: 80%;
+    background-position-x: 0px;
     width: 100%;
     background-attachment: scroll;
   }
@@ -2056,6 +2079,57 @@ textarea:focus {
 
 /* CONTACT END */
 
+/* THANK YOU START */
+
+.thank-you {
+  height: 50vh;
+}
+
+.thank-you div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.thank-you div h1 {
+  font-size: 50px;
+  color: var(--yellow);
+}
+
+@media screen and (max-width: 1024px) {
+  .thank-you div h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thank-you div h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .thank-you div h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .thank-you div h1 {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .thank-you div h1 {
+    font-size: 20px;
+  }
+}
+
+/* THANK YOU END */
+
 /* FOOTER START */
 
 footer {
@@ -2063,7 +2137,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid var(--border-color);
-  margin: 0 2.5%;
+  margin: 0 0 0 2.5%;
   padding: 1% 2%;
 }
 
@@ -2093,7 +2167,7 @@ footer .footer-left nav ul li a:hover {
 
 footer .footer-mid {
   display: flex;
-  margin-right: 3%;
+  margin-right: 6%;
 }
 
 footer .footer-mid a {
@@ -2115,14 +2189,15 @@ footer .footer-right p {
 
 @media screen and (max-width: 1440px) {
   footer {
-    margin: 0 3.2%;
+    margin: 0 0 0 3.5%;
+    padding: 2% 2% 2% 0;
   }
 }
 
 @media screen and (max-width: 1024px) {
   footer {
-    margin: 0 1% 0% 5%;
-    padding: 2% 0 1% 0%;
+    margin: 0 0 0 4%;
+    padding: 2% 2% 0 2%;
   }
 
   footer .footer-left nav ul {
@@ -2157,7 +2232,7 @@ footer .footer-right p {
 @media screen and (max-width: 768px) {
   footer {
     flex-direction: column;
-    margin: 10% 5% 0% 11%;
+    margin: 10% 0 0 5%;
     padding: 5% 0 5% 0%;
   }
 
@@ -2197,8 +2272,8 @@ footer .footer-right p {
 @media screen and (max-width: 425px) {
   footer {
     flex-direction: column;
-    margin: 10% 5% 0% 11%;
-    padding: 5% 0 1% 0%;
+    margin: 10% 0 0 9%;
+    padding: 5% 3% 1% 0%;
   }
 
   footer .footer-left nav ul {
@@ -2237,8 +2312,8 @@ footer .footer-right p {
 @media screen and (max-width: 375px) {
   footer {
     flex-direction: column;
-    margin: 10% 5% 0% 11%;
-    padding: 5% 0 1% 0%;
+    margin: 10% 0 0 11%;
+    padding: 5% 3% 1% 0%;
   }
 
   footer .footer-left nav ul {
@@ -2277,8 +2352,8 @@ footer .footer-right p {
 @media screen and (max-width: 320px) {
   footer {
     flex-direction: column;
-    margin: 10% 5% 0% 11%;
-    padding: 5% 0 1% 0%;
+    margin: 10% 0 0 11%;
+    padding: 5% 3% 1% 0%;
   }
 
   footer .footer-left nav ul {

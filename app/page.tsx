@@ -7,9 +7,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { Routes } from './components/Routes';
+import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
 import Nav from './Nav/page';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -17,44 +17,50 @@ import AOS from 'aos';
 export default function Home() {
 	const { Hero, About, Portfolio, Services, Contact } = Routes();
 
+	const [size, setSize] = useState<boolean>(false);
+
 	useEffect(() => {
 		AOS.init();
 		setTimeout(() => {
 			document.getElementById('loader')?.classList.add('slide');
 		}, 1000);
+
+		if (window.outerWidth > 1024) {
+			setSize(true);
+		} else {
+			setSize(false);
+		}
 	});
 
 	const Cursor = () => {
-		if (window.outerWidth > 1024) {
-			return (
-				<AnimatedCursor
-					innerSize={17}
-					outerSize={7}
-					color='231, 219, 116'
-					innerScale={0.7}
-					outerScale={5}
-					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
-					clickables={[
-						'a',
-						'input[type="text"]',
-						'input[type="email"]',
-						'input[type="number"]',
-						'input[type="submit"]',
-						'input[type="image"]',
-						'label[for]',
-						'select',
-						'textarea',
-						'button',
-						'.link',
-					]}
-				/>
-			);
-		}
+		return (
+			<AnimatedCursor
+				innerSize={17}
+				outerSize={7}
+				color='231, 219, 116'
+				innerScale={0.7}
+				outerScale={5}
+				outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
+				clickables={[
+					'a',
+					'input[type="text"]',
+					'input[type="email"]',
+					'input[type="number"]',
+					'input[type="submit"]',
+					'input[type="image"]',
+					'label[for]',
+					'select',
+					'textarea',
+					'button',
+					'.link',
+				]}
+			/>
+		);
 	};
 
 	return (
 		<>
-			<Cursor />
+			{size && <Cursor />}
 			<div className='progress-bar'>
 				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
 			</div>
