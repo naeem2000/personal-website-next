@@ -4,7 +4,7 @@ export const navlinks = {
 	links: [
 		{
 			id: 0,
-			label: '_home',
+			label: '_hero',
 			link: '#hero',
 		},
 		{
