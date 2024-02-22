@@ -53,6 +53,7 @@ export default function Home() {
 					'textarea',
 					'button',
 					'.link',
+					'.project',
 				]}
 			/>
 		);

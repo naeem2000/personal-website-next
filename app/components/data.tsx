@@ -39,7 +39,7 @@ export const pageData = {
 			title: '{Claremont Mosque React-Native}',
 			description:
 				'React-Native mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
-			link: 'https://www.google.com',
+			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
 		},
 		{
 			id: 1,

@@ -18,7 +18,7 @@ export default function Portfolio() {
 				<div className='portfolio-left'>
 					{pageData.block1.map((item) => {
 						return (
-							<div key={item.id} data-aos='flip-down'>
+							<div className='project' key={item.id} data-aos='flip-down'>
 								<a href={item.link} target='_blank' rel='noopener noreferrer'>
 									<Image
 										className='img'
@@ -37,7 +37,7 @@ export default function Portfolio() {
 				<div className='portfolio-right'>
 					{pageData.block2.map((item) => {
 						return (
-							<div key={item.id} data-aos='flip-down'>
+							<div className='project' key={item.id} data-aos='flip-down'>
 								<a href={item.link} target='_blank' rel='noopener noreferrer'>
 									<Image
 										className='img'
@@ -58,7 +58,7 @@ export default function Portfolio() {
 				<div className='portfolio-left'>
 					{pageData.block3.map((item) => {
 						return (
-							<div key={item.id} data-aos='flip-down'>
+							<div className='project' key={item.id} data-aos='flip-down'>
 								<a href={item.link} target='_blank' rel='noopener noreferrer'>
 									<Image
 										className='img'
@@ -77,7 +77,7 @@ export default function Portfolio() {
 				<div className='portfolio-right'>
 					{pageData.block4.map((item) => {
 						return (
-							<div key={item.id} data-aos='flip-down'>
+							<div className='project' key={item.id} data-aos='flip-down'>
 								<a href={item.link} target='_blank' rel='noopener noreferrer'>
 									<Image
 										className='img'
