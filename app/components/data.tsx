@@ -83,17 +83,17 @@ export const pageData = {
 			image: '/loginmui.jpg',
 			alt: 'login MUI',
 			title: '{Material Login Screen}',
-			description: 'Login screen in React.JS using Material UI',
+			description: 'Login screen in React.JS using Material UI;',
 			link: 'https://login-react-app-puma.netlify.app/',
 		},
 	],
 	block3: [
 		{
 			id: 0,
-			image: '/shafieks-carwash.jpg',
+			image: '/shafieks-carwash.png',
 			alt: 'shafieks car wash',
 			title: `{Shafiek's Car Wash}`,
-			description: 'Local Car Wash Web App in HTML & CSS;',
+			description: 'Local Car Wash Web App in React.Js, Next.Js and SCSS;',
 			link: 'https://shafiekscarwash.netlify.app/',
 		},
 		{
@@ -101,7 +101,7 @@ export const pageData = {
 			image: '/todoweb.jpg',
 			alt: 'todo web',
 			title: '{Todo Web App}',
-			description: 'Todo Web App in React.js and basic JS',
+			description: 'Todo Web App in React.js and basic JS;',
 			link: 'https://to-do-webapp011.netlify.app/',
 		},
 		{
