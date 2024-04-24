@@ -106,11 +106,10 @@ export const pageData = {
 		},
 		{
 			id: 2,
-			image: '/weather.jpg',
+			image: '/weather.png',
 			alt: 'weather web app',
 			title: '{Weather Web App}',
-			description:
-				'Weather App in React.Js & Accuweather API for searching countries and displaying current weather;',
+			description: `Weather App in React.Js & Accuweather API for searching countries and displaying current weather. Designed by Zaakirah Abrams;`,
 			link: 'https://weatherreactjsweb.netlify.app/',
 		},
 	],

@@ -23,7 +23,7 @@ export default function Home() {
 		AOS.init();
 		setTimeout(() => {
 			document.getElementById('loader')?.classList.add('slide');
-		}, 2000);
+		}, 2300);
 
 		if (window.outerWidth > 1024) {
 			setSize(true);
