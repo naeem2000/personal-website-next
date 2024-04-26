@@ -80,7 +80,7 @@ button {
   border: none;
 }
 
-.img {
+img {
   height: auto;
   max-width: 100%;
 }
@@ -162,6 +162,10 @@ a {
   section div h1 {
     font-size: 30px;
     margin-bottom: 15px;
+  }
+
+  .cursor {
+    display: none;
   }
 
   .line-numbers {
@@ -2255,6 +2259,14 @@ footer {
   padding: 1% 2%;
 }
 
+footer>a {
+  transition: all .5s ease;
+}
+
+footer>a:hover {
+  transform: scale(1.5);
+}
+
 footer .footer-left nav ul {
   display: flex;
   font-family: serif;
@@ -2312,6 +2324,10 @@ footer .footer-right p {
   footer {
     margin: 0 0 0 4%;
     padding: 2% 2% 0 2%;
+  }
+
+  footer>a {
+    display: none;
   }
 
   footer .footer-left nav ul {

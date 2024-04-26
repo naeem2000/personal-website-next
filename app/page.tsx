@@ -17,51 +17,39 @@ import AOS from 'aos';
 export default function Home() {
 	const { Hero, About, Portfolio, Services, Contact } = Routes();
 
-	const [size, setSize] = useState<boolean>(false);
-
 	useEffect(() => {
 		AOS.init();
 		setTimeout(() => {
 			document.getElementById('loader')?.classList.add('slide');
 		}, 2300);
-
-		if (window.outerWidth > 1024) {
-			setSize(true);
-		} else {
-			setSize(false);
-		}
 	});
-
-	const Cursor = () => {
-		return (
-			<AnimatedCursor
-				innerSize={17}
-				outerSize={7}
-				color='231, 219, 116'
-				innerScale={0.7}
-				outerScale={5}
-				outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
-				clickables={[
-					'a',
-					'input[type="text"]',
-					'input[type="email"]',
-					'input[type="number"]',
-					'input[type="submit"]',
-					'input[type="image"]',
-					'label[for]',
-					'select',
-					'textarea',
-					'button',
-					'.link',
-					'.project',
-				]}
-			/>
-		);
-	};
 
 	return (
 		<>
-			{size && <Cursor />}
+			<div className='cursor'>
+				<AnimatedCursor
+					innerSize={17}
+					outerSize={7}
+					color='231, 219, 116'
+					innerScale={0.7}
+					outerScale={5}
+					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
+					clickables={[
+						'a',
+						'input[type="text"]',
+						'input[type="email"]',
+						'input[type="number"]',
+						'input[type="submit"]',
+						'input[type="image"]',
+						'label[for]',
+						'select',
+						'textarea',
+						'button',
+						'.link',
+						'.project',
+					]}
+				/>
+			</div>
 			<div className='progress-bar'>
 				<ProgressBar position='fixed' color1='#2fcbef' color2='#E6DB74' />
 			</div>
