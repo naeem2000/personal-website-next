@@ -1,4 +1,5 @@
 import { navlinks, socials } from './data';
+import Image from 'next/image';
 import React from 'react';
 
 export default function Footer() {
@@ -17,6 +18,9 @@ export default function Footer() {
 					</ul>
 				</nav>
 			</div>
+			<a href='https://nextjs.org/' target='_blank' rel='noopener noreferrer'>
+				<Image src='/next.svg' width={50} height={50} alt='next' />
+			</a>
 			<div className='footer-mid'>
 				{socials.socialLink.map((item) => {
 					return (
@@ -31,6 +35,9 @@ export default function Footer() {
 					);
 				})}
 			</div>
+			<a href='https://react.dev/' target='_blank' rel='noopener noreferrer'>
+				<Image src='/react.svg' width={30} height={30} alt='next' />
+			</a>
 			<div className='footer-right'>
 				<p>Copyright © 2023 Naeem Carr Portfolio</p>
 			</div>

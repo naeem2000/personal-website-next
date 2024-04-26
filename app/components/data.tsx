@@ -36,19 +36,19 @@ export const pageData = {
 			id: 0,
 			image: '/cmrmrn.jpg',
 			alt: 'mosque mobile',
-			title: '{Claremont Mosque React-Native}',
+			title: '{Claremont Mosque Mobile App}',
 			description:
 				'React-Native mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
 			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
 		},
 		{
 			id: 1,
-			image: '/cmrmweb.jpg',
-			alt: 'mosque web app',
-			title: '{Claremont Mosque Web App}',
+			image: '/memory-game.png',
+			alt: 'cerebral twist mobile app',
+			title: '{Cerebral Twist Mobile App}',
 			description:
-				'React.Js mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
-			link: 'https://cmrm.netlify.app/',
+				'Memory game in React-Native, using firebase to track scores located in the scoreboard screen, using email, username & password;',
+			link: 'https://github.com/naeem2000/Cerebral-Twist',
 		},
 	],
 	block2: [
@@ -109,8 +109,17 @@ export const pageData = {
 			image: '/weather.png',
 			alt: 'weather web app',
 			title: '{Weather Web App}',
-			description: `Weather App in React.Js & Accuweather API for searching countries and displaying current weather. Designed by Zaakirah Abrams;`,
-			link: 'https://weatherreactjsweb.netlify.app/',
+			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
+			link: 'https://weather-react-next.vercel.app/',
+		},
+		{
+			id: 3,
+			image: '/cmrmweb.jpg',
+			alt: 'mosque web app',
+			title: '{Claremont Mosque Web App}',
+			description:
+				'React.Js mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
+			link: 'https://cmrm.netlify.app/',
 		},
 	],
 	block4: [
