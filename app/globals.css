@@ -197,8 +197,8 @@ a {
   }
 
   .scroll-to-top {
-    right: 10px !important;
-    bottom: 10px !important;
+    right: 20px !important;
+    bottom: 20px !important;
   }
 
   .Toastify__toast-container {
@@ -233,8 +233,8 @@ a {
   }
 
   .scroll-to-top {
-    right: 10px !important;
-    bottom: 10px !important;
+    right: 20px !important;
+    bottom: 20px !important;
   }
 
   .Toastify__toast-container {
@@ -282,8 +282,8 @@ a {
   }
 
   .scroll-to-top {
-    right: 10px !important;
-    bottom: 10px !important;
+    right: 20px !important;
+    bottom: 20px !important;
   }
 
   .Toastify__toast-container {
@@ -1608,7 +1608,8 @@ header .mobile-nav ul li a:hover {
     justify-content: center;
   }
 
-  .portfolio .portfolio-body .portfolio-left div:nth-child(1) .img {
+  .portfolio .portfolio-body .portfolio-left div:nth-child(1) .img,
+  .portfolio .portfolio-body .portfolio-left div:nth-child(2) .img {
     width: 50%;
   }
 
@@ -1628,6 +1629,10 @@ header .mobile-nav ul li a:hover {
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .portfolio .portfolio-body .portfolio-left div:nth-child(2) {
+    margin-top: 10px;
   }
 
   .portfolio .portfolio-body .portfolio-right div:nth-child(1) {
@@ -1698,7 +1703,8 @@ header .mobile-nav ul li a:hover {
     justify-content: center;
   }
 
-  .portfolio .portfolio-body .portfolio-left div:nth-child(1) .img {
+  .portfolio .portfolio-body .portfolio-left div:nth-child(1) .img,
+  .portfolio .portfolio-body .portfolio-left div:nth-child(2) .img {
     width: 50%;
   }
 
