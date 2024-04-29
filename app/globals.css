@@ -982,7 +982,7 @@ header .mobile-nav ul li a:hover {
 }
 
 .about .about-head p {
-  font-size: 20px;
+  font-size: 25px;
   color: var(--yellow);
 }
 
@@ -1015,6 +1015,10 @@ header .mobile-nav ul li a:hover {
   width: 50%;
   color: var(--yellow);
   padding: 25px 30px 70px;
+}
+
+.about .about-body .about-right p {
+  font-size: 22px;
 }
 
 .about>button {
@@ -1475,7 +1479,7 @@ header .mobile-nav ul li a:hover {
 
 .portfolio .portfolio-head p {
   color: var(--yellow);
-  font-size: 20px;
+  font-size: 23px;
 }
 
 
@@ -1871,7 +1875,7 @@ header .mobile-nav ul li a:hover {
 
 .services .services-head p {
   color: var(--yellow);
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .services .services-body {
@@ -2046,7 +2050,7 @@ header .mobile-nav ul li a:hover {
 
 .contact .contact-head p {
   color: var(--yellow);
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .contact .contact-body {
@@ -2326,14 +2330,16 @@ footer .footer-right p {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  footer>a {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   footer {
     margin: 0 0 0 4%;
     padding: 2% 2% 0 2%;
-  }
-
-  footer>a {
-    display: none;
   }
 
   footer .footer-left nav ul {
