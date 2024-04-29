@@ -95,16 +95,13 @@ export default function Contact() {
 	return (
 		<section className='contact' id='contact'>
 			<div className='contact-head'>
-				<span data-aos='fade-left'>{`(*)`}</span>
-				<h1 data-aos='fade-right'>{'<contact_me>'}</h1>
-				<p data-aos='fade-up'>
-					Get in Touch: Let's Collaborate and Innovate Together
-				</p>
+				<span>{`(*)`}</span>
+				<h1>{'<contact_me>'}</h1>
+				<p>Get in Touch: Let's Collaborate and Innovate Together</p>
 			</div>
 			<form onSubmit={submitForm} className='contact-body'>
 				<input
 					id='name'
-					data-aos='fade-left'
 					name='name'
 					type='text'
 					placeholder='_name'
@@ -115,7 +112,6 @@ export default function Contact() {
 				/>
 				<input
 					id='email'
-					data-aos='fade-right'
 					name='email'
 					type='email'
 					placeholder='_email'
@@ -126,7 +122,6 @@ export default function Contact() {
 				/>
 				<textarea
 					id='message'
-					data-aos='fade-left'
 					name='message'
 					cols={10}
 					rows={7}
