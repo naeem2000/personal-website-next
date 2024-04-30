@@ -5,22 +5,22 @@ export default function services() {
 	return (
 		<section id='services' className='services'>
 			<div className='services-head'>
-				<span data-aos='fade-left'>{`{#}`}</span>
-				<h1 data-aos='fade-right'>{'<services>'}</h1>
-				<p data-aos='fade-up'>
+				<span>{`{#}`}</span>
+				<h1>{'<services>'}</h1>
+				<p>
 					Crafting Code Excellence: Multilingual Programming Services Tailored
 					to Your Needs
 				</p>
 			</div>
 			<div className='services-body'>
-				<p data-aos='fade-left'>
+				<p>
 					<span>{'{"'}</span>_mobile development<span>{'"}'}</span>
 				</p>
-				<p data-aos='fade-right'>
+				<p>
 					<span>{'{"'}</span>_front end development<span>{'"}'}</span>
 				</p>
 			</div>
-			<div data-aos='zoom-in' className='services-bottom'></div>
+			<div className='services-bottom'></div>
 		</section>
 	);
 }
