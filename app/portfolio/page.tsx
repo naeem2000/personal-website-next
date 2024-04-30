@@ -17,10 +17,34 @@ export default function Portfolio() {
 		infinite: false,
 		slidesToScroll: 1,
 		className: 'slider',
+		adaptiveHeight: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 550,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
 	};
 
 	useEffect(() => {
-		if (window?.innerWidth < 720) {
+		if (window?.innerWidth < 1024) {
 			setMobile(true);
 		} else {
 			setMobile(false);

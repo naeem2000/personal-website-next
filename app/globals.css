@@ -362,7 +362,7 @@ a {
 
 .loader {
   position: fixed;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -446,28 +446,28 @@ a {
 
 @media screen and (max-width: 1024px) {
   .loader .img {
-    background-position-y: -30px;
-    width: 50%;
+    background-position-y: 0px;
+    width: 75%;
     height: 70vh;
   }
 
   .loader p {
-    font-size: 30px;
-    width: 115px;
+    font-size: 40px;
+    width: 150px;
     margin-top: 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .loader .img {
-    background-position-y: -100px;
+    background-position-y: -10px;
     width: 85%;
     height: 70vh;
   }
 
   .loader p {
-    font-size: 30px;
-    width: 115px;
+    font-size: 40px;
+    width: 150px;
     margin-top: 30px;
   }
 }
@@ -985,6 +985,7 @@ header .mobile-nav ul li a:hover {
 .about .about-head p {
   font-size: 25px;
   color: var(--yellow);
+  max-width: 800px;
 }
 
 .about .about-body {
@@ -1155,7 +1156,7 @@ header .mobile-nav ul li a:hover {
     font-size: 17px;
     padding: 0px 20px 20px;
     text-align: left;
-    width: auto;
+    width: 90%;
   }
 
   .about .about-body {
@@ -1212,7 +1213,7 @@ header .mobile-nav ul li a:hover {
   .about .about-head p {
     font-size: 17px;
     padding: 0px 20px 20px;
-    width: auto;
+    width: 90%;
     text-align: left;
 
   }
@@ -1553,19 +1554,169 @@ header .mobile-nav ul li a:hover {
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .portfolio .portfolio-body>h3 {
     text-align: center;
     margin: 0;
-    margin-top: 80px;
+    margin-top: 50px;
+    font-size: 35px;
   }
 
   .portfolio .portfolio-body>h3:nth-child(3) {
     text-align: center;
+    margin-top: 100px;
   }
 
   .portfolio .portfolio-body .slider {
     margin-right: 0;
+    margin-top: 20px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .portfolio .portfolio-body .slider .project {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .portfolio .portfolio-body .slider .project h3 {
+    font-size: 25px;
+  }
+
+  .portfolio .portfolio-body .slider .project p {
+    font-size: 20px;
+  }
+
+  .portfolio .portfolio-body .slider .slick-slide>div {
+    margin: 30px;
+  }
+
+  .portfolio .portfolio-body .slider .slick-prev {
+    left: -10px !important;
+  }
+
+  .portfolio .portfolio-body .slider .slick-dots {
+    left: 0;
+  }
+
+  .portfolio .portfolio-body .slider:last-child .project {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio .portfolio-body>h3 {
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+    font-size: 35px;
+  }
+
+  .portfolio .portfolio-body>h3:nth-child(3) {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .portfolio .portfolio-body .slider {
+    margin-right: 0;
+    margin-top: 20px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .portfolio .portfolio-body .slider .project {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .portfolio .portfolio-body .slider .project h3 {
+    font-size: 25px;
+  }
+
+  .portfolio .portfolio-body .slider .project p {
+    font-size: 20px;
+  }
+
+  .portfolio .portfolio-body .slider .slick-slide>div {
+    margin: 30px;
+  }
+
+  .portfolio .portfolio-body .slider .slick-prev {
+    left: -10px !important;
+  }
+
+  .portfolio .portfolio-body .slider .slick-dots {
+    left: 0;
+  }
+
+  .portfolio .portfolio-body .slider:last-child .project {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .portfolio .portfolio-body>h3 {
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+    font-size: 35px;
+  }
+
+  .portfolio .portfolio-body>h3:nth-child(3) {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .portfolio .portfolio-body .slider {
+    margin-right: 0;
+    margin-top: 20px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .portfolio .portfolio-body .slider .project {
+    margin-left: 0;
+  }
+
+  .portfolio .portfolio-body .slider .project h3 {
+    font-size: 25px;
+  }
+
+  .portfolio .portfolio-body .slider .project p {
+    font-size: 20px;
+  }
+
+  .portfolio .portfolio-body .slider .slick-slide>div {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .portfolio .portfolio-body .slider .slick-prev {
+    left: -10px !important;
+  }
+
+  .portfolio .portfolio-body .slider .slick-dots {
+    left: 0;
+  }
+
+  .portfolio .portfolio-body .slider:last-child .project {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .portfolio .portfolio-body>h3 {
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+    font-size: 35px;
+  }
+
+  .portfolio .portfolio-body>h3:nth-child(3) {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .portfolio .portfolio-body .slider {
+    margin-right: 0;
+    margin-top: 20px;
     padding: 0px 20px 0px 20px;
   }
 
