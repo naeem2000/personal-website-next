@@ -31,7 +31,7 @@ export const navlinks = {
 };
 
 export const pageData = {
-	block1: [
+	mobile: [
 		{
 			id: 0,
 			image: '/cmrmrn.jpg',
@@ -50,16 +50,31 @@ export const pageData = {
 				'Memory game in React-Native, using firebase to track scores located in the scoreboard screen, using email, username & password;',
 			link: 'https://github.com/naeem2000/Cerebral-Twist',
 		},
+		{
+			id: 2,
+			image: '/newsrn.jpg',
+			alt: 'news app',
+			title: '{News App React-Native}',
+			description: 'News Mobile App in React-Native & News24 API;',
+			link: 'https://github.com/naeem2000/React-Native-News-App',
+		},
+		{
+			id: 3,
+			image: '/todorn.jpg',
+			alt: 'todo react-native',
+			title: '{Todo App React-Native}',
+			description: 'Todo Mobile App in React-Native & basic JS;',
+			link: 'https://github.com/naeem2000/react-native-todo-app',
+		},
 	],
-	block2: [
+	web: [
 		{
 			id: 0,
-			image: '/face-det.jpg',
-			alt: 'face web app',
-			title: '{Mood Detector}',
-			description:
-				'Mood Detector web app in React.JS using Face-API.JS library;',
-			link: 'https://face-detect-reactjs.netlify.app/',
+			image: '/weather.png',
+			alt: 'weather web app',
+			title: '{Weather Web App}',
+			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
+			link: 'https://weather-react-next.vercel.app/',
 		},
 		{
 			id: 1,
@@ -86,10 +101,8 @@ export const pageData = {
 			description: 'Login screen in React.JS using Material UI;',
 			link: 'https://login-react-app-puma.netlify.app/',
 		},
-	],
-	block3: [
 		{
-			id: 0,
+			id: 4,
 			image: '/shafieks-carwash.png',
 			alt: 'shafieks car wash',
 			title: `{Shafiek's Car Wash}`,
@@ -97,23 +110,16 @@ export const pageData = {
 			link: 'https://shafiekscarwash.netlify.app/',
 		},
 		{
-			id: 1,
-			image: '/todoweb.jpg',
-			alt: 'todo web',
-			title: '{Todo Web App}',
-			description: 'Todo Web App in React.js and basic JS;',
-			link: 'https://to-do-webapp011.netlify.app/',
+			id: 5,
+			image: '/face-det.jpg',
+			alt: 'face web app',
+			title: '{Mood Detector}',
+			description:
+				'Mood Detector web app in React.JS using Face-API.JS library;',
+			link: 'https://face-detect-reactjs.netlify.app/',
 		},
 		{
-			id: 2,
-			image: '/weather.png',
-			alt: 'weather web app',
-			title: '{Weather Web App}',
-			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
-			link: 'https://weather-react-next.vercel.app/',
-		},
-		{
-			id: 3,
+			id: 6,
 			image: '/cmrmweb.jpg',
 			alt: 'mosque web app',
 			title: '{Claremont Mosque Web App}',
@@ -121,23 +127,13 @@ export const pageData = {
 				'React.Js mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
 			link: 'https://cmrm.netlify.app/',
 		},
-	],
-	block4: [
 		{
-			id: 0,
-			image: '/newsrn.jpg',
-			alt: 'news app',
-			title: '{News App React-Native}',
-			description: 'News Mobile App in React-Native & News24 API;',
-			link: 'https://github.com/naeem2000/React-Native-News-App',
-		},
-		{
-			id: 1,
-			image: '/todorn.jpg',
-			alt: 'todo react-native',
-			title: '{Todo App React-Native}',
-			description: 'Todo Mobile App in React-Native & basic JS;',
-			link: 'https://github.com/naeem2000/react-native-todo-app',
+			id: 7,
+			image: '/todoweb.jpg',
+			alt: 'todo web',
+			title: '{Todo Web App}',
+			description: 'Todo Web App in React.js and basic JS;',
+			link: 'https://to-do-webapp011.netlify.app/',
 		},
 	],
 };

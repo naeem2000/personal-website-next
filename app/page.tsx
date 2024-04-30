@@ -47,6 +47,8 @@ export default function Home() {
 						'button',
 						'.link',
 						'.project',
+						'.swiper-button-next',
+						'.swiper-button-prev',
 					]}
 				/>
 			</div>
