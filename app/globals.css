@@ -18,6 +18,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -361,7 +362,7 @@ a {
 
 .loader {
   position: fixed;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -1471,10 +1472,7 @@ header .mobile-nav ul li a:hover {
 /* PORTFOLIO START */
 
 .portfolio .portfolio-head {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .portfolio .portfolio-head p {
@@ -1482,61 +1480,115 @@ header .mobile-nav ul li a:hover {
   font-size: 23px;
 }
 
-.portfolio .portfolio-body .portfolio-items .project h3 {
+.portfolio .portfolio-body .slider {
+  margin-top: 40px;
+  margin-right: 50px;
+  padding: 0px 35px 30px 20px;
+}
+
+.portfolio .portfolio-body .slider .slick-prev:before,
+.portfolio .portfolio-body .slider .slick-next:before {
+  font-size: 30px !important;
+}
+
+.portfolio .portfolio-body .slider .slick-prev.slick-disabled::before,
+.portfolio .portfolio-body .slider .slick-next.slick-disabled::before {
+  color: var(--blue) !important;
+}
+
+.portfolio .portfolio-body .slider .slick-prev:before,
+.portfolio .portfolio-body .slider .slick-next:before {
+  color: var(--yellow) !important;
+}
+
+.portfolio .portfolio-body .slider .slick-next {
+  right: 0px !important;
+}
+
+.portfolio .portfolio-body .slider .slick-dots li button:before {
+  color: var(--blue) !important;
+  font-size: 13px;
+}
+
+.portfolio .portfolio-body .slider .slick-dots li.slick-active button:before {
+  color: var(--yellow) !important;
+}
+
+.portfolio .portfolio-body>h3 {
+  font-size: 45px;
+  line-height: 1em;
+  color: var(--yellow);
+  text-align: left;
+  margin: 50px 50px 20px 0px;
+  text-decoration: underline var(--blue);
+}
+
+.portfolio .portfolio-body>h3:nth-child(3) {
+  text-align: right;
+}
+
+.portfolio .portfolio-body .slider .project {
+  max-width: 400px;
+  transition: all ease .5s;
+  margin: 30px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portfolio .portfolio-body .slider .project h3 {
   color: var(--white);
   margin-top: 10px;
   font-size: 32px;
 }
 
-.portfolio .portfolio-body .portfolio-items .project p {
+.portfolio .portfolio-body .slider .project p {
   color: var(--yellow);
   margin-top: 15px;
   font-size: 25px;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  color: var(--yellow) !important;
-  position: absolute !important;
-  font-size: 30px !important;
+.portfolio .portfolio-body .slider .project:hover {
+  transform: scale(1.05);
 }
 
-.slick-prev:before {
-  left: 0px !important;
-}
+@media screen and (max-width: 375px) {
+  .portfolio .portfolio-body>h3 {
+    text-align: center;
+    margin: 0;
+    margin-top: 80px;
+  }
 
-.slick-next:before {
-  right: 30px !important;
-}
+  .portfolio .portfolio-body>h3:nth-child(3) {
+    text-align: center;
+  }
 
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  color: var(--blue) !important;
-}
+  .portfolio .portfolio-body .slider {
+    margin-right: 0;
+    padding: 0px 20px 0px 20px;
+  }
 
-.slick-dots li.slick-active button:before {
-  color: var(--yellow) !important;
-}
+  .portfolio .portfolio-body .slider .project {
+    margin-left: 0;
+  }
 
-.slick-dots li button:before {
-  color: var(--blue) !important;
-}
+  .portfolio .portfolio-body .slider .slick-slide>div {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 
-.slick-dots li button:before {
-  font-size: 15px !important;
-}
+  .portfolio .portfolio-body .slider .slick-prev {
+    left: -10px !important;
+  }
 
-.slick-prev,
-.slick-next {
-  z-index: 3;
-}
+  .portfolio .portfolio-body .slider .slick-dots {
+    left: 0;
+  }
 
-.slider {
-  margin: 40px 20px;
-}
-
-.slick-list {
-  margin: 0px 40px;
+  .portfolio .portfolio-body .slider:last-child .project {
+    margin-bottom: 20px;
+  }
 }
 
 /* PORTFOLIO END */
