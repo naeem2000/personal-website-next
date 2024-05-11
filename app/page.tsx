@@ -2,15 +2,15 @@
 
 import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
 import AnimatedCursor from 'react-animated-cursor';
-import NumberLine from './components/numberLine';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
-import { Routes } from './components/Routes';
-import { useEffect, useState } from 'react';
-import Loader from './components/Loader';
-import Footer from './components/Footer';
-import Nav from './Nav/page';
+import NumberLine from './global/numberLine';
+import Loader from './global/Loader';
+import Footer from './global/Footer';
+import { Routes } from './Routes';
+import { useEffect } from 'react';
+import Nav from './global/Nav';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 

@@ -1,5 +1,5 @@
 'use client';
-import { PdfViewer } from '../components/PdfViewer';
+import { PdfViewer } from './PdfViewer';
 import React, { useEffect, useState } from 'react';
 
 export default function About() {
