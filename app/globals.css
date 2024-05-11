@@ -1534,8 +1534,16 @@ header .mobile-nav ul li a:hover {
   margin: 30px;
   display: flex !important;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  background: var(--nav-border-color);
+  padding: 30px 30px 20px;
+  border-radius: 20px;
+  min-height: 330px;
+}
+
+.portfolio .portfolio-body .slider:nth-child(4) .project {
+  min-height: 790px;
 }
 
 .portfolio .portfolio-body .slider .project h3 {
