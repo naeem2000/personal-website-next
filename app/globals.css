@@ -432,7 +432,7 @@ a {
 
 @media screen and (max-width: 1440px) {
   .loader .img {
-    background-position-y: -50px;
+    background-position-y: -0px;
     width: 40%;
     height: 70vh;
   }
@@ -1539,11 +1539,15 @@ header .mobile-nav ul li a:hover {
   background: var(--nav-border-color);
   padding: 30px 30px 20px;
   border-radius: 20px;
-  min-height: 330px;
+  height: 100%;
 }
 
-.portfolio .portfolio-body .slider:nth-child(4) .project {
-  min-height: 790px;
+.portfolio .portfolio-body .slider:nth-child(2) .slick-track {
+  height: 430px !important;
+}
+
+.portfolio .portfolio-body .slider:nth-child(4) .slick-track {
+  height: 870px !important;
 }
 
 .portfolio .portfolio-body .slider .project h3 {
@@ -1560,6 +1564,19 @@ header .mobile-nav ul li a:hover {
 
 .portfolio .portfolio-body .slider .project:hover {
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 1440px) {
+  .portfolio .portfolio-body .slider .project {
+    margin-left: 0;
+    margin-right: 0;
+    width: 75% !important;
+    min-height: 100%;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(4) .project {
+    min-height: 100%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1588,8 +1605,12 @@ header .mobile-nav ul li a:hover {
     min-height: 100%;
   }
 
-  .portfolio .portfolio-body .slider:nth-child(4) .project {
-    min-height: 100%;
+  .portfolio .portfolio-body .slider:nth-child(2) .slick-track {
+    height: 395px !important;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(4) .slick-track {
+    height: 740px !important;
   }
 
   .portfolio .portfolio-body .slider .project h3 {
@@ -1636,6 +1657,14 @@ header .mobile-nav ul li a:hover {
     padding: 0px 20px 0px 20px;
   }
 
+  .portfolio .portfolio-body .slider:nth-child(2) .slick-track {
+    height: 395px !important;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(4) .slick-track {
+    height: 740px !important;
+  }
+
   .portfolio .portfolio-body .slider .project h3 {
     font-size: 25px;
   }
@@ -1678,6 +1707,14 @@ header .mobile-nav ul li a:hover {
     margin-right: 0;
     margin-top: 20px;
     padding: 0px 20px 0px 20px;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(2) .slick-track {
+    height: 395px !important;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(4) .slick-track {
+    height: 740px !important;
   }
 
   .portfolio .portfolio-body .slider .project h3 {
@@ -1727,6 +1764,14 @@ header .mobile-nav ul li a:hover {
 
   .portfolio .portfolio-body .slider .project {
     margin-left: 0;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(2) .slick-track {
+    height: 395px !important;
+  }
+
+  .portfolio .portfolio-body .slider:nth-child(4) .slick-track {
+    height: 685px !important;
   }
 
   .portfolio .portfolio-body .slider .slick-slide>div {
