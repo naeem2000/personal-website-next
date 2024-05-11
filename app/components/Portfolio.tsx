@@ -17,7 +17,7 @@ export default function Portfolio() {
 		infinite: false,
 		slidesToScroll: 1,
 		className: 'slider',
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		responsive: [
 			{
 				breakpoint: 1024,
