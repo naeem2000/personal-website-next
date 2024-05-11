@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { pageData } from '../components/data';
 import 'slick-carousel/slick/slick-theme.css';
+import { pageData } from '../global/data';
 import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import Image from 'next/image';
@@ -24,6 +24,7 @@ export default function Portfolio() {
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
+					adaptiveHeight: false,
 				},
 			},
 			{
@@ -31,6 +32,7 @@ export default function Portfolio() {
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
+					adaptiveHeight: false,
 				},
 			},
 			{
@@ -38,6 +40,7 @@ export default function Portfolio() {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					adaptiveHeight: false,
 				},
 			},
 		],

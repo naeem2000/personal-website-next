@@ -2,7 +2,7 @@
 
 import { Sling as Hamburger } from 'hamburger-react';
 import React, { useEffect, useState } from 'react';
-import { navlinks } from '../components/data';
+import { navlinks } from './data';
 
 export default function Nav() {
 	const [open, setOpen] = useState<boolean>(false);
