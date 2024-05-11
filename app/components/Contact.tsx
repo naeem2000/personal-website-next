@@ -1,6 +1,6 @@
 'use client';
 
-import ThankYou from '../components/ThankYou';
+import ThankYou from './ThankYou';
 import { useForm } from '@formspree/react';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
