@@ -71,10 +71,10 @@ export const pageData = {
 		{
 			id: 0,
 			image: '/weather.png',
-			alt: 'weather web app',
-			title: '{Weather Web App}',
+			alt: 'forecast hub',
+			title: '{Forecast Hub}',
 			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
-			link: 'https://weather-react-next.vercel.app/',
+			link: 'https://forecast-hub.vercel.app/',
 		},
 		{
 			id: 1,
