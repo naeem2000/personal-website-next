@@ -1531,7 +1531,7 @@ header .mobile-nav ul li a:hover {
 .portfolio .portfolio-body .slider .project {
   max-width: 400px;
   transition: all ease .5s;
-  margin: 30px;
+  margin: 30px 60px;
   display: flex !important;
   align-items: center;
   justify-content: flex-start;
@@ -1710,7 +1710,7 @@ header .mobile-nav ul li a:hover {
   }
 
   .portfolio .portfolio-body .slider:nth-child(2) .slick-track {
-    height: 395px !important;
+    height: 450px !important;
   }
 
   .portfolio .portfolio-body .slider:nth-child(4) .slick-track {

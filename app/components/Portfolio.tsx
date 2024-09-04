@@ -8,51 +8,39 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 
 export default function Portfolio() {
-	const [mobile, setMobile] = useState<boolean>(false);
-
 	const settings = {
-		dots: true,
+		infinite: true,
+		centerMode: true,
+		slidesToShow: 3,
 		speed: 500,
-		slidesToShow: mobile ? 1 : 3,
-		infinite: false,
-		slidesToScroll: 1,
 		className: 'slider',
 		adaptiveHeight: false,
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1778,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
-					adaptiveHeight: false,
 				},
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 500,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					adaptiveHeight: false,
-				},
-			},
-			{
-				breakpoint: 550,
-				settings: {
+					centerMode: false,
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					adaptiveHeight: false,
+				},
+			},
+			{
+				breakpoint: 344,
+				settings: {
+					centerMode: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
 				},
 			},
 		],
 	};
-
-	useEffect(() => {
-		if (window?.innerWidth < 1024) {
-			setMobile(true);
-		} else {
-			setMobile(false);
-		}
-	}, []);
 
 	return (
 		<section className='portfolio' id='portfolio'>
