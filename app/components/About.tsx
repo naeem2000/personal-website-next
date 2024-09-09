@@ -1,21 +1,9 @@
 'use client';
-import { PdfViewer } from './PdfViewer';
-import React, { useEffect, useState } from 'react';
+import { UseShowPDF } from './TS/functions';
+import PdfViewer from './PdfViewer';
 
 export default function About() {
-	const [viewPdf, setViewPdf] = useState<boolean>(false);
-
-	useEffect(() => {
-		const openPdf = document.getElementById('pdf');
-		if (viewPdf) {
-			openPdf?.classList.add('pdf-slide');
-			document.body.style.overflow = 'hidden';
-		} else {
-			openPdf?.classList.remove('pdf-slide');
-			document.body.style.overflow = 'scroll';
-		}
-	});
-
+	const { setViewPdf } = UseShowPDF();
 	return (
 		<>
 			<PdfViewer onClose={() => setViewPdf(false)} />

@@ -1,4 +1,6 @@
 'use client';
+
+import { TypeWriterConfig } from './TS/constants';
 import Typewriter from 'typewriter-effect';
 import React from 'react';
 
@@ -9,18 +11,7 @@ export default function Hero() {
 			<h2 data-aos='fade-right'>
 				{`{"`}
 				<span>
-					<Typewriter
-						options={{
-							strings: [
-								'_Front End Developer',
-								'_Mobile Developer',
-								'_Problem Solver',
-							],
-							deleteSpeed: 30,
-							autoStart: true,
-							loop: true,
-						}}
-					/>
+					<Typewriter options={TypeWriterConfig} />
 				</span>
 				{`"}`}
 			</h2>

@@ -1,47 +1,14 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { CarouselSettings } from './TS/constants';
 import 'slick-carousel/slick/slick-theme.css';
 import { pageData } from '../global/data';
 import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import Image from 'next/image';
+import React from 'react';
 
 export default function Portfolio() {
-	const settings = {
-		infinite: true,
-		centerMode: true,
-		slidesToShow: 3,
-		speed: 500,
-		className: 'slider',
-		adaptiveHeight: false,
-		responsive: [
-			{
-				breakpoint: 1778,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				},
-			},
-			{
-				breakpoint: 500,
-				settings: {
-					centerMode: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-			{
-				breakpoint: 344,
-				settings: {
-					centerMode: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	};
-
 	return (
 		<section className='portfolio' id='portfolio'>
 			<div className='portfolio-head'>
@@ -53,7 +20,7 @@ export default function Portfolio() {
 			</div>
 			<div className='portfolio-body'>
 				<h3>Web Apps</h3>
-				<Slider {...settings}>
+				<Slider {...CarouselSettings}>
 					{pageData.web.map((item) => {
 						return (
 							<div className='project' key={item.id}>
@@ -73,7 +40,7 @@ export default function Portfolio() {
 					})}
 				</Slider>
 				<h3>Mobile Apps</h3>
-				<Slider {...settings}>
+				<Slider {...CarouselSettings}>
 					{pageData.mobile.map((item) => {
 						return (
 							<div className='project' key={item.id}>

@@ -12,6 +12,7 @@
 		"@formspree/react": "^2.5.1",
 		"@nadfri/react-scroll-progress-bar": "^0.2.3",
 		"aos": "^2.3.4",
+		"framer-motion": "^11.5.4",
 		"hamburger-react": "^2.5.0",
 		"next": "14.0.3",
 		"react": "^18",
