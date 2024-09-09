@@ -3,6 +3,7 @@ import React from 'react';
 
 export default function NumberLine() {
 	const { line } = UseConstructLine();
+
 	return (
 		<div className='line-numbers'>
 			{line.map((number) => (
