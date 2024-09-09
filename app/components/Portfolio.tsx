@@ -1,5 +1,6 @@
 'use client';
 
+import SectionHeader from '../global/SectionHeader';
 import { CarouselSettings } from './TS/constants';
 import 'slick-carousel/slick/slick-theme.css';
 import { pageData } from '../global/data';
@@ -7,19 +8,20 @@ import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import React from 'react';
+import Subheader from '../global/Subheader';
 
 export default function Portfolio() {
 	return (
 		<section className='portfolio' id='portfolio'>
 			<div className='portfolio-head'>
 				<span data-aos='fade-left'>{`(!)`}</span>
-				<h1 data-aos='fade-right'>{'<portfolio>'}</h1>
+				<SectionHeader aos='fade-right' heading={'<portfolio>'} />
 				<p data-aos='fade-up'>
 					Elevating Standards, Defining Excellence: My Projects Portfolio
 				</p>
 			</div>
 			<div className='portfolio-body'>
-				<h3>Web Apps</h3>
+				<Subheader aos={'fade-right'} subHeading={'Web Apps'} />
 				<Slider {...CarouselSettings}>
 					{pageData.web.map((item) => {
 						return (
@@ -39,7 +41,7 @@ export default function Portfolio() {
 						);
 					})}
 				</Slider>
-				<h3>Mobile Apps</h3>
+				<Subheader aos={'fade-left'} subHeading={'Mobile Apps'} />
 				<Slider {...CarouselSettings}>
 					{pageData.mobile.map((item) => {
 						return (

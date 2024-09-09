@@ -1,4 +1,4 @@
-'use client';
+import SectionHeader from '../global/SectionHeader';
 import React from 'react';
 
 export default function services() {
@@ -6,7 +6,7 @@ export default function services() {
 		<section id='services' className='services'>
 			<div className='services-head'>
 				<span>{`{#}`}</span>
-				<h1>{'<services>'}</h1>
+				<SectionHeader aos='fade-left' heading={'<services>'} />
 				<p>
 					Crafting Code Excellence: Multilingual Programming Services Tailored
 					to Your Needs

@@ -2,7 +2,53 @@ import { useState, useEffect } from 'react';
 import { useForm } from '@formspree/react';
 import { ContactDetails } from './types';
 import { toast } from 'react-toastify';
-import ThankYou from '../ThankYou';
+
+export const UseConstructLine = () => {
+	const [line, setLine] = useState<number[]>([]);
+
+	useEffect(() => {
+		const numbersArray = Array.from({ length: 200 }, (_, index) => index + 1);
+		setLine(numbersArray);
+	}, []);
+
+	return { line };
+};
+
+export const UseShowNav = () => {
+	const [open, setOpen] = useState<boolean>(false);
+
+	useEffect(() => {
+		const openNav = document.getElementById('mobile-slide');
+		const burgerBtn = document.getElementById('burger-button');
+
+		if (open) {
+			document.body.style.overflow = 'hidden';
+			openNav?.classList.add('mobile-slider');
+		} else {
+			document.body.style.overflow = 'scroll';
+			openNav?.classList.remove('mobile-slider');
+		}
+
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			if (window.outerWidth > 1024) {
+				if (
+					document.body.scrollTop > 200 ||
+					document.documentElement.scrollTop > 200
+				) {
+					burgerBtn!.style.display = 'block';
+				} else {
+					burgerBtn!.style.display = 'none';
+				}
+			}
+		}
+	}, [open]);
+
+	return { setOpen, open };
+};
 
 export const UseShowPDF = () => {
 	const [viewPdf, setViewPdf] = useState<boolean>(false);

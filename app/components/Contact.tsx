@@ -1,5 +1,6 @@
 'use client';
 
+import SectionHeader from '../global/SectionHeader';
 import { UseSubmitForm } from './TS/functions';
 import ThankYou from './ThankYou';
 import React from 'react';
@@ -13,7 +14,7 @@ export default function Contact() {
 		<section className='contact' id='contact'>
 			<div className='contact-head'>
 				<span>{`(*)`}</span>
-				<h1>{'<contact_me>'}</h1>
+				<SectionHeader aos='fade-right' heading={'<contact_me>'} />
 				<p>Get in Touch: Let's Collaborate and Innovate Together</p>
 			</div>
 			<form onSubmit={submitForm} className='contact-body'>

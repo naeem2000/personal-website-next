@@ -1,6 +1,7 @@
 'use client';
 import { UseShowPDF } from './TS/functions';
 import PdfViewer from './PdfViewer';
+import SectionHeader from '../global/SectionHeader';
 
 export default function About() {
 	const { setViewPdf } = UseShowPDF();
@@ -10,7 +11,7 @@ export default function About() {
 			<section className='about' id='about'>
 				<div className='about-head'>
 					<span data-aos='fade-left'>{`{/}`}</span>
-					<h1 data-aos='fade-right'>{'<about_me>'}</h1>
+					<SectionHeader aos='fade-left' heading='<about_me>' />
 					<p data-aos='fade-up'>
 						My name is Mogamat Naeem Carr. I am a front-end Mobile and Web{' '}
 						Developer based in Cape Town, South Africa. I have developed many{' '}
