@@ -1,14 +1,9 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import { UseConstructLine } from '../components/TS/functions';
+import React from 'react';
 
 export default function NumberLine() {
-	const [line, setLine] = useState<number[]>([]);
+	const { line } = UseConstructLine();
 
-	useEffect(() => {
-		const numbersArray = Array.from({ length: 200 }, (_, index) => index + 1);
-		setLine(numbersArray);
-	}, []);
 	return (
 		<div className='line-numbers'>
 			{line.map((number) => (

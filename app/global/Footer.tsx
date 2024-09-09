@@ -39,7 +39,7 @@ export default function Footer() {
 				<Image src='/next.svg' width={50} height={50} alt='next' />
 			</a>
 			<div className='footer-right'>
-				<p>Copyright © 2023 Naeem Carr Portfolio</p>
+				<p>Copyright © 2024 Naeem Carr Portfolio</p>
 			</div>
 		</footer>
 	);

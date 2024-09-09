@@ -1,13 +1,10 @@
 'use client';
 
+import { PdfViewerProps } from './TS/types';
 import Image from 'next/image';
 import React from 'react';
 
-type PdfViewerProps = {
-	onClose: () => void;
-};
-
-export const PdfViewer: React.FC<PdfViewerProps> = ({ onClose }) => {
+export default function Portfolio({ onClose }: PdfViewerProps) {
 	return (
 		<section id='pdf' className='pdf-view'>
 			<button onClick={onClose}>
@@ -23,4 +20,4 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({ onClose }) => {
 			</div>
 		</section>
 	);
-};
+}

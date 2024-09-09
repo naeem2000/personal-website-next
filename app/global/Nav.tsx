@@ -1,46 +1,18 @@
 'use client';
 
+import { UseShowNav } from '../components/TS/functions';
 import { Sling as Hamburger } from 'hamburger-react';
-import React, { useEffect, useState } from 'react';
 import { navlinks } from './data';
+import React from 'react';
 
 export default function Nav() {
-	const [open, setOpen] = useState<boolean>(false);
-
-	useEffect(() => {
-		const openNav = document.getElementById('mobile-slide');
-		const burgerBtn = document.getElementById('burger-button');
-
-		if (open) {
-			document.body.style.overflow = 'hidden';
-			openNav?.classList.add('mobile-slider');
-		} else {
-			document.body.style.overflow = 'scroll';
-			openNav?.classList.remove('mobile-slider');
-		}
-
-		window.onscroll = function () {
-			scrollFunction();
-		};
-
-		function scrollFunction() {
-			if (window.outerWidth > 1024) {
-				if (
-					document.body.scrollTop > 200 ||
-					document.documentElement.scrollTop > 200
-				) {
-					burgerBtn!.style.display = 'block';
-				} else {
-					burgerBtn!.style.display = 'none';
-				}
-			}
-		}
-	}, [open]);
+	const { setOpen, open } = UseShowNav();
 
 	return (
 		<header>
 			<nav className='nav'>
 				<div className='nav-left'>
+					{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
 					<h1 data-aos='slide-left'>// naeem carr</h1>
 					<p data-aos='slide-right'>web_dev</p>
 				</div>

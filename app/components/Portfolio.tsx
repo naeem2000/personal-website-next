@@ -1,59 +1,28 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import SectionHeader from '../global/SectionHeader';
+import { CarouselSettings } from './TS/constants';
 import 'slick-carousel/slick/slick-theme.css';
 import { pageData } from '../global/data';
 import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import Image from 'next/image';
+import React from 'react';
+import Subheader from '../global/Subheader';
 
 export default function Portfolio() {
-	const settings = {
-		infinite: true,
-		centerMode: true,
-		slidesToShow: 3,
-		speed: 500,
-		className: 'slider',
-		adaptiveHeight: false,
-		responsive: [
-			{
-				breakpoint: 1778,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				},
-			},
-			{
-				breakpoint: 500,
-				settings: {
-					centerMode: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-			{
-				breakpoint: 344,
-				settings: {
-					centerMode: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	};
-
 	return (
 		<section className='portfolio' id='portfolio'>
 			<div className='portfolio-head'>
 				<span data-aos='fade-left'>{`(!)`}</span>
-				<h1 data-aos='fade-right'>{'<portfolio>'}</h1>
+				<SectionHeader aos='fade-right' heading={'<portfolio>'} />
 				<p data-aos='fade-up'>
 					Elevating Standards, Defining Excellence: My Projects Portfolio
 				</p>
 			</div>
 			<div className='portfolio-body'>
-				<h3>Web Apps</h3>
-				<Slider {...settings}>
+				<Subheader aos={'fade-right'} subHeading={'Web Apps'} />
+				<Slider {...CarouselSettings}>
 					{pageData.web.map((item) => {
 						return (
 							<div className='project' key={item.id}>
@@ -72,8 +41,8 @@ export default function Portfolio() {
 						);
 					})}
 				</Slider>
-				<h3>Mobile Apps</h3>
-				<Slider {...settings}>
+				<Subheader aos={'fade-left'} subHeading={'Mobile Apps'} />
+				<Slider {...CarouselSettings}>
 					{pageData.mobile.map((item) => {
 						return (
 							<div className='project' key={item.id}>
