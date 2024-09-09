@@ -12,6 +12,7 @@ export default function Nav() {
 		<header>
 			<nav className='nav'>
 				<div className='nav-left'>
+					{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
 					<h1 data-aos='slide-left'>// naeem carr</h1>
 					<p data-aos='slide-right'>web_dev</p>
 				</div>

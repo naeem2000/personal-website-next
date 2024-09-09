@@ -15,7 +15,7 @@ export default function Contact() {
 			<div className='contact-head'>
 				<span>{`(*)`}</span>
 				<SectionHeader aos='fade-right' heading={'<contact_me>'} />
-				<p>Get in Touch: Let's Collaborate and Innovate Together</p>
+				<p>Get in Touch: Let&apos;s Collaborate and Innovate Together</p>
 			</div>
 			<form onSubmit={submitForm} className='contact-body'>
 				<input

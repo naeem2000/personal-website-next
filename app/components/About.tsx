@@ -35,7 +35,7 @@ export default function About() {
 							JavaScript, TypeScript, React, React-Native & SCSS. I have a
 							proven track record of developing high-quality, responsive, and
 							user-friendly websites and mobile applications that meet
-							employers' needs and exceed their expectations. My expertise
+							employers&apos; needs and exceed their expectations. My expertise
 							includes styling and developing applications that integrate with
 							APIs, databases, and third-party services.
 						</p>
