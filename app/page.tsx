@@ -19,9 +19,10 @@ export default function Home() {
 
 	useEffect(() => {
 		AOS.init();
-		setTimeout(() => {
-			document.getElementById('loader')?.classList.add('slide');
-		}, 2300);
+		if (typeof window !== 'undefined') {
+			const loader = document.getElementById('loader');
+			if (loader) loader.classList.add('slide'); //remove the loader
+		}
 	});
 
 	return (
