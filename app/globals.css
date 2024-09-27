@@ -372,8 +372,9 @@ a {
   top: 0;
   margin: 0;
   padding: 0;
-  transition: all 1s ease;
+  transition: all .5s ease;
   background-color: var(--main-bg);
+  opacity: 1;
   z-index: 10;
 }
 
@@ -419,7 +420,7 @@ a {
 }
 
 .slide {
-  transform: translateY(-110%);
+  opacity: 0;
 }
 
 @media screen and (max-width: 2560px) {
