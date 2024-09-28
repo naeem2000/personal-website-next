@@ -21,7 +21,13 @@ export default function Home() {
 		AOS.init();
 		if (typeof window !== 'undefined') {
 			const loader = document.getElementById('loader');
-			if (loader) loader.classList.add('slide'); //remove the loader
+			if (loader)
+				setTimeout(() => {
+					loader.classList.add('slide');
+					setTimeout(() => {
+						loader.style.display = 'none';
+					}, 300);
+				}, 2000); //remove the loader when the loader exists with the dom.
 		}
 	});
 
