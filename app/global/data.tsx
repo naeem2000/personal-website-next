@@ -1,6 +1,7 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
+import { NavLinks, PageData } from '../components/TS/types';
 
-export const navlinks = {
+export const navlinks: NavLinks = {
 	links: [
 		{
 			id: 0,
@@ -30,7 +31,7 @@ export const navlinks = {
 	],
 };
 
-export const pageData = {
+export const pageData: PageData = {
 	mobile: [
 		{
 			id: 0,

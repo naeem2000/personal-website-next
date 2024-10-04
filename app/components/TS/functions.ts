@@ -76,7 +76,7 @@ export const UseSubmitForm = () => {
 		message: '',
 	});
 
-	const submitForm = async (e: any) => {
+	const submitForm = async (e: React.FormEvent) => {
 		e.preventDefault();
 		let hasError: boolean = false;
 		const name = document.getElementById('name');

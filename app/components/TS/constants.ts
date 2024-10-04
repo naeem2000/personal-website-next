@@ -1,11 +1,30 @@
-export const TypeWriterConfig = {
+import { CarouselTypes, CursorClickableTypes, TypeWriterTypes } from './types';
+
+export const CursorClickables: CursorClickableTypes = [
+	'a',
+	'input[type="text"]',
+	'input[type="email"]',
+	'input[type="number"]',
+	'input[type="submit"]',
+	'input[type="image"]',
+	'label[for]',
+	'select',
+	'textarea',
+	'button',
+	'.link',
+	'.project',
+	'.swiper-button-next',
+	'.swiper-button-prev',
+];
+
+export const TypeWriterConfig: TypeWriterTypes = {
 	strings: ['_Front End Developer', '_Mobile Developer', '_Problem Solver'],
 	deleteSpeed: 30,
 	autoStart: true,
 	loop: true,
 };
 
-export const CarouselSettings = {
+export const CarouselSettings: CarouselTypes = {
 	infinite: true,
 	centerMode: true,
 	slidesToShow: 3,
