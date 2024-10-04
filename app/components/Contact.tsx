@@ -2,6 +2,7 @@
 
 import SectionHeader from '../global/SectionHeader';
 import { UseSubmitForm } from './TS/functions';
+import { BeatLoader } from 'react-spinners';
 import ThankYou from './ThankYou';
 import React from 'react';
 
@@ -50,7 +51,13 @@ export default function Contact() {
 					}
 				></textarea>
 				<div className='submit-area'>
-					<button type='submit'>{'{submit}'}</button>
+					<button type='submit'>
+						{state.submitting ? (
+							<BeatLoader style={{ margin: 0 }} size={10} />
+						) : (
+							`{submit}`
+						)}
+					</button>
 				</div>
 			</form>
 		</section>

@@ -2029,10 +2029,14 @@ textarea:focus {
 }
 
 .contact .contact-body .submit-area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 60px;
   border: none;
   font-size: 20px;
-  padding: 20px 35px;
+  width: 110px;
+  height: 50px;
   background-color: var(--blue);
   color: var(--white);
   transition: all .5s ease;
