@@ -1,3 +1,5 @@
+'use client';
+
 import { UseConstructLine } from '../TS/functions';
 import React from 'react';
 

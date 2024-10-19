@@ -1,11 +1,5 @@
 'use client';
 
-import { CursorClickables } from './components/TS/constants';
-import AnimatedCursor from 'react-animated-cursor';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import ScrollToTop from 'react-scroll-to-top';
-import NumberLine from './components/global/numberLine';
 import Loader from './components/global/Loader';
 import Footer from './components/global/Footer';
 import { Routes } from './Routes';
@@ -35,20 +29,7 @@ export default function Home() {
 
 	return (
 		<>
-			<div className='cursor'>
-				<AnimatedCursor
-					innerSize={17}
-					outerSize={7}
-					color='231, 219, 116'
-					innerScale={0.7}
-					outerScale={5}
-					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
-					clickables={CursorClickables}
-				/>
-			</div>
-			<ToastContainer limit={3} />
 			<Loader />
-			<NumberLine />
 			<Nav />
 			<Hero />
 			<About />
@@ -56,7 +37,6 @@ export default function Home() {
 			<Services />
 			<Contact />
 			<Footer />
-			<ScrollToTop className='scroll-to-top-button' smooth />
 		</>
 	);
 }
