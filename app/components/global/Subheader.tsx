@@ -1,8 +1,8 @@
 import React from 'react';
 
 type Props = {
-	subHeading: String;
-	aos: String;
+	subHeading: string;
+	aos: string;
 };
 
 export default function Subheader({ subHeading, aos }: Props) {

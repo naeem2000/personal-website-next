@@ -25,9 +25,7 @@ export default function Contact() {
 					type='text'
 					placeholder='_name'
 					value={messenger.name}
-					onChange={(e: any) =>
-						setMessenger({ ...messenger, name: e.target.value })
-					}
+					onChange={(e) => setMessenger({ ...messenger, name: e.target.value })}
 				/>
 				<input
 					id='email'
@@ -35,7 +33,7 @@ export default function Contact() {
 					type='email'
 					placeholder='_email'
 					value={messenger.email}
-					onChange={(e: any) =>
+					onChange={(e) =>
 						setMessenger({ ...messenger, email: e.target.value })
 					}
 				/>
@@ -46,7 +44,7 @@ export default function Contact() {
 					rows={7}
 					placeholder='_message'
 					value={messenger.message}
-					onChange={(e: any) =>
+					onChange={(e) =>
 						setMessenger({ ...messenger, message: e.target.value })
 					}
 				></textarea>
