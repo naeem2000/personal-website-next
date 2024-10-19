@@ -1,14 +1,14 @@
 'use client';
 
-import SectionHeader from '../global/SectionHeader';
+import SectionHeader from './global/SectionHeader';
 import { CarouselSettings } from './TS/constants';
 import 'slick-carousel/slick/slick-theme.css';
-import { pageData } from '../global/data';
+import { pageData } from './global/data';
 import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import React from 'react';
-import Subheader from '../global/Subheader';
+import Subheader from './global/Subheader';
 
 export default function Portfolio() {
 	return (

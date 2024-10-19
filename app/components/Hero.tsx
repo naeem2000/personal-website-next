@@ -21,7 +21,7 @@ export default function Hero() {
 				</span>
 				{`"}`}
 			</h2>
-			<div className="bg-[url('/pc-setup.gif')] bg-no-repeat bg-cover w-full h-[50vh] bg-fixed opacity-60 blur-[3px] mt-[100px] rounded-[50px]"></div>
+			<div className="bg-[url('/pc-setup.gif')] bg-no-repeat bg-cover w-full h-[50vh] bg-fixed opacity-60 blur-[3px] mt-[100px]"></div>
 		</section>
 	);
 }

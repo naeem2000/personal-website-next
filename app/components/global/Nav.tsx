@@ -1,6 +1,6 @@
 'use client';
 
-import { UseShowNav } from '../components/TS/functions';
+import { UseShowNav } from '../TS/functions';
 import { Sling as Hamburger } from 'hamburger-react';
 import { navlinks } from './data';
 import React from 'react';
@@ -10,7 +10,7 @@ export default function Nav() {
 
 	return (
 		<header>
-			<nav className='flex items-center justify-between min-h-[90px] h-full bg-[color:var(--nav-bg)] z-[1] max-w-full relative overflow-hidden mx-[2.5%]'>
+			<nav className='flex items-center justify-between min-h-[90px] h-full z-[1] max-w-full relative overflow-hidden'>
 				<div>
 					{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
 					<h1
@@ -27,13 +27,10 @@ export default function Nav() {
 						web_dev
 					</p>
 				</div>
-				<div className='flex items-end justify-end w-2/5'>
+				<div className='flex items-end justify-between w-2/6'>
 					{navlinks.links.map((item) => {
 						return (
-							<ul
-								className='flex justify-center items-center mr-[10%]'
-								key={item.id}
-							>
+							<ul className='flex ml-1' key={item.id}>
 								<li data-aos='slide-left'>
 									<a
 										className='text-[23px] text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'

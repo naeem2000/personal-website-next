@@ -1,4 +1,4 @@
-import { UseConstructLine } from '../components/TS/functions';
+import { UseConstructLine } from '../TS/functions';
 import React from 'react';
 
 export default function NumberLine() {

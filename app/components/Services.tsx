@@ -1,4 +1,4 @@
-import SectionHeader from '../global/SectionHeader';
+import SectionHeader from './global/SectionHeader';
 import React from 'react';
 
 export default function services() {

@@ -1,6 +1,6 @@
 'use client';
 
-import SectionHeader from '../global/SectionHeader';
+import SectionHeader from './global/SectionHeader';
 import { UseSubmitForm } from './TS/functions';
 import { BeatLoader } from 'react-spinners';
 import ThankYou from './ThankYou';

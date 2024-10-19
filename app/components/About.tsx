@@ -1,7 +1,7 @@
 'use client';
 import { UseShowPDF } from './TS/functions';
 import PdfViewer from './PdfViewer';
-import SectionHeader from '../global/SectionHeader';
+import SectionHeader from './global/SectionHeader';
 
 export default function About() {
 	const { setViewPdf } = UseShowPDF();
