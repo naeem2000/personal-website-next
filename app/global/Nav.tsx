@@ -10,33 +10,63 @@ export default function Nav() {
 
 	return (
 		<header>
-			<nav className='nav'>
-				<div className='nav-left'>
+			<nav className='flex items-center justify-between min-h-[90px] h-full bg-[color:var(--nav-bg)] z-[1] max-w-full relative overflow-hidden mx-[2.5%]'>
+				<div>
 					{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-					<h1 data-aos='slide-left'>// naeem carr</h1>
-					<p data-aos='slide-right'>web_dev</p>
+					<h1
+						className='text-white text-[25px] leading-[0.9em]'
+						data-aos='slide-left'
+						// eslint-disable-next-line react/jsx-no-comment-textnodes
+					>
+						// naeem carr
+					</h1>
+					<p
+						className='text-[25px] text-purple leading-[0.8em] ml-8'
+						data-aos='slide-right'
+					>
+						web_dev
+					</p>
 				</div>
-				<div className='nav-right'>
+				<div className='flex items-end justify-end w-2/5'>
 					{navlinks.links.map((item) => {
 						return (
-							<ul key={item.id}>
+							<ul
+								className='flex justify-center items-center mr-[10%]'
+								key={item.id}
+							>
 								<li data-aos='slide-left'>
-									<a href={item.link}>{item.label}</a>
+									<a
+										className='text-[23px] text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'
+										href={item.link}
+									>
+										{item.label}
+									</a>
 								</li>
 							</ul>
 						);
 					})}
 				</div>
 			</nav>
-			<button id='burger-button'>
+			<button
+				className='hidden fixed z-[8] right-[70px] top-[50px]'
+				id='burger-button'
+			>
 				<Hamburger size={20} color='#2fcbef' toggled={open} toggle={setOpen} />
 			</button>
-			<div className='mobile-nav' id='mobile-slide'>
+			<div
+				className=' bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-[5px]'
+				id='mobile-slide'
+			>
 				{navlinks.links.map((item) => {
 					return (
-						<ul key={item.id}>
+						<ul className='w-6/12 text-center' key={item.id}>
 							<li onClick={() => setOpen(false)} data-aos='fade-right'>
-								<a href={item.link}>{item.label}</a>
+								<a
+									className='block text-[25px] text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color pt-[25px] pb-[30px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
+									href={item.link}
+								>
+									{item.label}
+								</a>
 							</li>
 						</ul>
 					);
