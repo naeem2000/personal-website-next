@@ -9,7 +9,7 @@ export default function Nav() {
 	const { setOpen, open } = UseShowNav();
 
 	return (
-		<header>
+		<header className='wrapper'>
 			<nav className='flex items-center justify-between min-h-[90px] h-full z-[1] max-w-full relative overflow-hidden'>
 				<div>
 					{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
