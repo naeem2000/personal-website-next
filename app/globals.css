@@ -73,13 +73,6 @@ header {
 	margin-bottom: 10px;
 }
 
-.section-heading {
-	font-size: 45px;
-	line-height: 1em;
-	color: var(--white);
-	margin-bottom: 20px;
-}
-
 .wrapper {
 	max-width: 1600px;
 	width: 100%;
@@ -101,11 +94,6 @@ img {
 a {
 	color: unset;
 	text-decoration: none;
-}
-
-.progress-bar {
-	position: absolute;
-	z-index: 6;
 }
 
 .line-numbers {
@@ -132,6 +120,7 @@ a {
 }
 
 .scroll-to-top svg {
+	margin: 0 auto;
 	fill: var(--yellow) !important;
 }
 
@@ -672,71 +661,6 @@ header .mobile-slider {
 /* HERO END */
 
 /* ABOUT START */
-
-.about {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-direction: column;
-}
-
-.about > div {
-	text-align: center;
-}
-
-.about .about-head p {
-	font-size: 25px;
-	color: var(--yellow);
-	max-width: 800px;
-}
-
-.about .about-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-top: 1px solid var(--border-color);
-	margin-top: 50px;
-	width: 70%;
-}
-
-.about .about-body .about-left {
-	width: 50%;
-	padding: 25px 30px 0px;
-	align-self: flex-start;
-}
-
-.about .about-body .about-left p {
-	font-size: 32px;
-	line-height: 1em;
-	text-decoration: underline;
-	color: var(--white);
-	align-self: flex-start;
-}
-
-.about .about-body .about-right {
-	border-left: 1px solid var(--border-color);
-	align-self: flex-start;
-	width: 50%;
-	color: var(--yellow);
-	padding: 25px 30px 70px;
-}
-
-.about .about-body .about-right p {
-	font-size: 22px;
-}
-
-.about > button {
-	border: none;
-	font-size: 20px;
-	padding: 20px 35px;
-	background-color: var(--blue);
-	color: var(--white);
-	transition: all 0.5s ease;
-}
-
-.about > button:hover {
-	background-color: var(--purple);
-}
 
 .pdf-view {
 	margin: 0;
