@@ -13,8 +13,7 @@ export default function About() {
 				id='about'
 			>
 				<div>
-					<span data-aos='fade-left'>{`{/}`}</span>
-					<SectionHeader aos='fade-left' heading='<about_me>' />
+					<SectionHeader symbol={`{/}`} aos='fade-left' heading='<about_me>' />
 					<p
 						className='text-[25px] text-yellow max-w-[800px]'
 						data-aos='fade-up'

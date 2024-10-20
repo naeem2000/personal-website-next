@@ -5,8 +5,7 @@ export default function services() {
 	return (
 		<section id='services' className='services'>
 			<div className='services-head'>
-				<span>{`{#}`}</span>
-				<SectionHeader aos='fade-left' heading={'<services>'} />
+				<SectionHeader symbol={`{#}`} aos='fade-left' heading={'<services>'} />
 				<p>
 					Crafting Code Excellence: Multilingual Programming Services Tailored
 					to Your Needs

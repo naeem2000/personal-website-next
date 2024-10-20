@@ -6,17 +6,23 @@ import React from 'react';
 
 export default function Hero() {
 	return (
-		<section className='flex items-center justify-center flex-col' id='hero'>
-			{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-			<h1 className='text-white text-3xl text-center;' data-aos='fade-left'>
+		<section
+			className='wrapper flex items-center justify-center flex-col'
+			id='hero'
+		>
+			<h1
+				className='text-white text-3xl text-center mt-28'
+				data-aos='fade-left'
+				// eslint-disable-next-line react/jsx-no-comment-textnodes
+			>
 				// Hi, I&apos;m NAEEM, A...
 			</h1>
 			<h2
-				className='flex items-center justify-center text-[8vw] text-white mt-[30px]'
+				className='flex items-center justify-center text-[8vw] text-white leading-snug'
 				data-aos='fade-right'
 			>
 				{`{"`}
-				<span className='text-9xl leading-[1em] text-yellow mb-2.5'>
+				<span className='text-9xl text-yellow'>
 					<Typewriter options={TypeWriterConfig} />
 				</span>
 				{`"}`}
