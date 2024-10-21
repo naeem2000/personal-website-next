@@ -3,6 +3,34 @@ import { useForm } from '@formspree/react';
 import { ContactDetails } from './types';
 import { toast } from 'react-toastify';
 
+//Scroll bar component
+export const UseScrollBar = () => {
+	const [scrolled, setScrolled] = useState<string>();
+
+	const scrollProgress = () => {
+		const scrollPx = document.documentElement.scrollTop;
+		const winHeightPx =
+			document.documentElement.scrollHeight -
+			document.documentElement.clientHeight;
+		const scrolledPercentage = `${(scrollPx / winHeightPx) * 100}%`;
+		setScrolled(scrolledPercentage);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', scrollProgress);
+		return () => {
+			window.removeEventListener('scroll', scrollProgress);
+		};
+	}, []);
+
+	const progressBarStyle = {
+		width: scrolled,
+	};
+
+	return { progressBarStyle };
+};
+
+//Side line function
 export const UseConstructLine = () => {
 	const [line, setLine] = useState<number[]>([]);
 
@@ -14,6 +42,7 @@ export const UseConstructLine = () => {
 	return { line };
 };
 
+//Show burger nav button on scroll function
 export const UseShowNav = () => {
 	const [open, setOpen] = useState<boolean>(false);
 
@@ -50,6 +79,7 @@ export const UseShowNav = () => {
 	return { setOpen, open };
 };
 
+//Show PDF function
 export const UseShowPDF = () => {
 	const [viewPdf, setViewPdf] = useState<boolean>(false);
 
@@ -67,6 +97,7 @@ export const UseShowPDF = () => {
 	return { setViewPdf, viewPdf };
 };
 
+//Submit contact form function
 export const UseSubmitForm = () => {
 	const [state, handleSubmit] = useForm('myyrgdyw');
 
@@ -76,7 +107,7 @@ export const UseSubmitForm = () => {
 		message: '',
 	});
 
-	const submitForm = async (e: any) => {
+	const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		let hasError: boolean = false;
 		const name = document.getElementById('name');
@@ -142,7 +173,7 @@ export const UseSubmitForm = () => {
 				});
 			}
 		} catch (e) {
-			console.error('Form failed to post!');
+			console.error('Form failed to post!', e);
 		}
 	};
 
