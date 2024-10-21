@@ -22,7 +22,7 @@ export default function Home() {
 					setTimeout(() => {
 						loader.style.display = 'none';
 					}, 300);
-				}, 2000);
+				}, 1500);
 			}
 		}
 	}, []);

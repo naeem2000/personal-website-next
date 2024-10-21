@@ -3,6 +3,7 @@
 import { PdfViewerProps } from './TS/types';
 import Image from 'next/image';
 import React from 'react';
+import Button from './global/Button';
 
 export default function Portfolio({ onClose }: PdfViewerProps) {
 	return (
@@ -10,7 +11,7 @@ export default function Portfolio({ onClose }: PdfViewerProps) {
 			id='pdf'
 			className='fixed bg-main-bg-trans z-[8] -translate-x-full transition-all duration-[0.5s] ease-[ease] m-0 p-10 inset-0'
 		>
-			<button
+			<Button
 				className='absolute top-[calc(50px_-_10px)] right-[calc(20%_-_40px)] transition-all duration-[0.5s] ease-[ease] hover:scale-[1.3]'
 				onClick={onClose}
 			>
@@ -20,7 +21,7 @@ export default function Portfolio({ onClose }: PdfViewerProps) {
 					height={30}
 					alt='close button'
 				/>
-			</button>
+			</Button>
 			<div className='flex items-center justify-center'>
 				<iframe
 					className='h-screen w-3/5 cursor-none m-0 p-0 border-[none]'

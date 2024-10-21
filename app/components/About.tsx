@@ -2,6 +2,7 @@
 import { UseShowPDF } from './TS/functions';
 import PdfViewer from './PdfViewer';
 import SectionHeader from './global/SectionHeader';
+import Button from './global/Button';
 
 export default function About() {
 	const { setViewPdf } = UseShowPDF();
@@ -9,7 +10,7 @@ export default function About() {
 		<>
 			<PdfViewer onClose={() => setViewPdf(false)} />
 			<section
-				className='flex items-center justify-start flex-col text-center'
+				className='wrapper flex items-center justify-start flex-col text-center'
 				id='about'
 			>
 				<div>
@@ -49,12 +50,12 @@ export default function About() {
 						</p>
 					</div>
 				</div>
-				<button
-					className='text-xl mt-10 bg-blue text-white transition-all duration-[0.5s] ease-[ease] px-[30px] py-3 hover:bg-purple'
+				<Button
+					className='button text-xl mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3'
 					onClick={() => setViewPdf(true)}
 				>
 					{'{'}view_cv{'}'}
-				</button>
+				</Button>
 			</section>
 		</>
 	);

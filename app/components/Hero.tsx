@@ -7,7 +7,7 @@ import React from 'react';
 export default function Hero() {
 	return (
 		<section
-			className='wrapper flex items-center justify-center flex-col'
+			className='wrapper md:flex items-center justify-center flex-col'
 			id='hero'
 		>
 			<h1

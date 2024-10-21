@@ -3,7 +3,6 @@
 import SectionHeader from './global/SectionHeader';
 import 'slick-carousel/slick/slick-theme.css';
 import React from 'react';
-import Subheader from './global/Subheader';
 
 export default function Portfolio() {
 	return (
@@ -18,20 +17,7 @@ export default function Portfolio() {
 					Elevating Standards, Defining Excellence: My Projects Portfolio
 				</p>
 			</div>
-			<div>
-				<Subheader
-					textAlign='text-left'
-					aos={'fade-left'}
-					subHeading={'Web Apps'}
-				/>
-				Projects Web
-				<Subheader
-					textAlign='text-right'
-					aos={'fade-right'}
-					subHeading={'Mobile Apps'}
-				/>
-				Projects Mobile
-			</div>
+			<div>Projects Mobile</div>
 		</section>
 	);
 }

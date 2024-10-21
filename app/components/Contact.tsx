@@ -5,6 +5,7 @@ import { UseSubmitForm } from './TS/functions';
 import { BeatLoader } from 'react-spinners';
 import ThankYou from './ThankYou';
 import React from 'react';
+import Button from './global/Button';
 
 export default function Contact() {
 	const { submitForm, messenger, setMessenger, state } = UseSubmitForm();
@@ -12,17 +13,23 @@ export default function Contact() {
 	if (state.succeeded) return <ThankYou />;
 
 	return (
-		<section className='contact' id='contact'>
-			<div className='contact-head'>
+		<section className='contact wrapper h-full' id='contact'>
+			<div className='text-center'>
 				<SectionHeader
 					symbol={`(*)`}
 					aos='fade-right'
 					heading={'<contact_me>'}
 				/>
-				<p>Get in Touch: Let&apos;s Collaborate and Innovate Together</p>
+				<p className='text-yellow text-[23px]'>
+					Get in Touch: Let&apos;s Collaborate and Innovate Together
+				</p>
 			</div>
-			<form onSubmit={submitForm} className='contact-body'>
+			<form
+				onSubmit={submitForm}
+				className='flex items-center justify-center flex-col'
+			>
 				<input
+					className='max-w-[1140px] w-full text-[color:var(--purple)] text-[22px] border-b-[color:var(--border-color)] mt-[50px] pt-0 pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
 					id='name'
 					name='name'
 					type='text'
@@ -31,6 +38,7 @@ export default function Contact() {
 					onChange={(e) => setMessenger({ ...messenger, name: e.target.value })}
 				/>
 				<input
+					className='max-w-[1140px] w-full text-[color:var(--purple)] text-[22px] border-b-[color:var(--border-color)] mt-[50px] pt-0 pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
 					id='email'
 					name='email'
 					type='email'
@@ -41,6 +49,7 @@ export default function Contact() {
 					}
 				/>
 				<textarea
+					className='max-w-[1140px] w-full text-[color:var(--purple)] text-[22px] border-b-border-color mt-[50px] pt-0 pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
 					id='message'
 					name='message'
 					cols={10}
@@ -52,13 +61,16 @@ export default function Contact() {
 					}
 				></textarea>
 				<div className='submit-area'>
-					<button type='submit'>
+					<Button
+						className='button text-xl mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3'
+						type='submit'
+					>
 						{state.submitting ? (
 							<BeatLoader style={{ margin: 0 }} size={10} />
 						) : (
 							`{submit}`
 						)}
-					</button>
+					</Button>
 				</div>
 			</form>
 		</section>
