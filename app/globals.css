@@ -66,6 +66,7 @@ section {
 }
 
 .wrapper {
+	position: relative;
 	max-width: 1750px;
 	width: 100%;
 	margin-left: auto;
@@ -74,7 +75,7 @@ section {
 
 @media screen and (max-width: 1850px) {
 	.wrapper {
-		padding: 0 4%;
+		padding: 0 4% 0 10%;
 	}
 }
 

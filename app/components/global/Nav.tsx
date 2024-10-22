@@ -27,10 +27,10 @@ export default function Nav() {
 						web_dev
 					</p>
 				</div>
-				<div className='flex items-end justify-between w-2/6'>
-					{navlinks.links.map((item) => {
+				<div className='hidden desktop:flex items-end justify-between w-2/6'>
+					{navlinks.links.map((item, index) => {
 						return (
-							<ul className='flex ml-1' key={item.id}>
+							<ul className='flex ml-1' key={index}>
 								<li data-aos='slide-left'>
 									<a
 										className='text-[23px] text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'
@@ -45,21 +45,21 @@ export default function Nav() {
 				</div>
 			</nav>
 			<button
-				className='hidden fixed z-[8] right-[70px] top-[50px]'
+				className='block desktop:hidden fixed z-[8] right-[20px] top-[20px]'
 				id='burger-button'
 			>
 				<Hamburger size={20} color='#2fcbef' toggled={open} toggle={setOpen} />
 			</button>
 			<div
-				className=' bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-[5px]'
+				className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-[5px]'
 				id='mobile-slide'
 			>
-				{navlinks.links.map((item) => {
+				{navlinks.links.map((item, index) => {
 					return (
-						<ul className='w-6/12 text-center' key={item.id}>
+						<ul className='w-6/12 text-center' key={index}>
 							<li onClick={() => setOpen(false)} data-aos='fade-right'>
 								<a
-									className='block text-[25px] text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color pt-[25px] pb-[30px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
+									className='block text-2xl tablet:text-3xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
 									href={item.link}
 								>
 									{item.label}

@@ -5,11 +5,11 @@ import React from 'react';
 
 export default function Footer() {
 	return (
-		<footer className='border-t-border-color ml-[2.5%] mr-0 my-0 pr-[5%] py-[1%] border-t border-solid'>
-			<div className='wrapper flex items-center justify-between'>
-				<div className='footer-left'>
+		<footer className='border-t-border-color ml-[8%] tablet:ml-[2.5%] mb-4 py-[1%] border-t border-solid flex items-center justify-center'>
+			<div className=' flex items-center justify-between !m-0 !p-0 flex-col desktop:flex-row'>
+				<div>
 					<nav>
-						<ul className='flex'>
+						<ul className='hidden desktop:flex'>
 							{navlinks.links.map((item) => {
 								return (
 									<li className='ml-5' key={item.id}>
@@ -26,14 +26,14 @@ export default function Footer() {
 					</nav>
 				</div>
 				<Link
-					className='transition-all duration-[0.5s] ease-[ease] hover:scale-125'
+					className='transition-all duration-[0.5s] ease-[ease] hover:scale-125 hidden desktop:block'
 					href='https://react.dev/'
 					target='_blank'
 					rel='noopener noreferrer'
 				>
 					<Image src='/react.svg' width={30} height={30} alt='next' />
 				</Link>
-				<div className='flex mr-[3%]'>
+				<div className='flex my-4 desktop:my-0'>
 					{socials.socialLink.map((item) => {
 						return (
 							<Link
@@ -49,7 +49,7 @@ export default function Footer() {
 					})}
 				</div>
 				<Link
-					className='transition-all duration-[0.5s] ease-[ease] hover:scale-125'
+					className='transition-all duration-[0.5s] ease-[ease] hover:scale-125 hidden desktop:block'
 					href='https://nextjs.org/'
 					target='_blank'
 					rel='noopener noreferrer'

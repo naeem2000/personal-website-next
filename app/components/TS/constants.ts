@@ -18,7 +18,7 @@ export const CursorClickables: CursorClickableTypes = [
 ];
 
 export const TypeWriterConfig: TypeWriterTypes = {
-	strings: ['_Front End Developer', '_Mobile Developer', '_Problem Solver'],
+	strings: ['_Front End Dev', '_Mobile Dev', '_Problem Solver', '_Pizza Lover'],
 	deleteSpeed: 30,
 	autoStart: true,
 	loop: true,

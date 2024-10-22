@@ -20,6 +20,11 @@ const config: Config = {
 				'side-bar-color': 'rgb(110, 110, 110)',
 				'error-red': 'rgb(255, 0, 0)',
 			},
+			screens: {
+				tablet: '640px',
+				laptop: '1024px',
+				desktop: '1280px',
+			},
 		},
 	},
 	plugins: [],

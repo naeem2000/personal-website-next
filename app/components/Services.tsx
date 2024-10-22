@@ -19,7 +19,7 @@ export default function services() {
 					<span>{'{"'}</span>_front end development<span>{'"}'}</span>
 				</p>
 			</div>
-			<div className="bg-[url('/working-pc.jpg')] bg-no-repeat bg-cover w-full h-[50vh] bg-fixed opacity-60 blur-[3px] relative mt-[100px] rounded-[50px] bg-[center_top_-17rem]"></div>
+			<div className="bg-[url('/working-pc.jpg')] bg-no-repeat bg-cover w-full h-[50vh] bg-fixed opacity-60 blur-[3px] relative mt-[100px] bg-[center_top_-17rem]"></div>
 		</section>
 	);
 }
