@@ -51,7 +51,7 @@ export default function Nav() {
 				<Hamburger size={20} color='#2fcbef' toggled={open} toggle={setOpen} />
 			</button>
 			<div
-				className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-[5px]'
+				className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-0'
 				id='mobile-slide'
 			>
 				{navlinks.links.map((item, index) => {
@@ -59,7 +59,7 @@ export default function Nav() {
 						<ul className='w-6/12 text-center' key={index}>
 							<li onClick={() => setOpen(false)} data-aos='fade-right'>
 								<a
-									className='block text-2xl mobile:text-3xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
+									className='block text-xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
 									href={item.link}
 								>
 									{item.label}

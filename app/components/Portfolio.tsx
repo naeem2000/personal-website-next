@@ -11,7 +11,7 @@ export default function Portfolio() {
 				<SectionHeader
 					symbol={`(!)`}
 					aos='fade-right'
-					heading={'<portfolio>'}
+					heading={'<portfolio/>'}
 				/>
 				<p
 					className='text-white text-xl desktop:text-[23px] text-center'

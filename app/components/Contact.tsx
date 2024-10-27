@@ -18,9 +18,9 @@ export default function Contact() {
 				<SectionHeader
 					symbol={`(*)`}
 					aos='fade-right'
-					heading={'<contact_me>'}
+					heading={'<contact_me/>'}
 				/>
-				<p className='text-yellow text-[23px]'>
+				<p className='text-yellow text-xl desktop:text-[23px] leading-6'>
 					Get in Touch: Let&apos;s Collaborate and Innovate Together
 				</p>
 			</div>
@@ -29,7 +29,7 @@ export default function Contact() {
 				className='flex items-center justify-center flex-col'
 			>
 				<input
-					className='max-w-[1140px] w-full text-[color:var(--purple)] text-[22px] border-b-[color:var(--border-color)] mt-[50px] pt-0 pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
+					className='max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
 					id='name'
 					name='name'
 					type='text'
@@ -38,7 +38,7 @@ export default function Contact() {
 					onChange={(e) => setMessenger({ ...messenger, name: e.target.value })}
 				/>
 				<input
-					className='max-w-[1140px] w-full text-[color:var(--purple)] text-[22px] border-b-[color:var(--border-color)] mt-[50px] pt-0 pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
+					className='max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
 					id='email'
 					name='email'
 					type='email'
@@ -49,7 +49,7 @@ export default function Contact() {
 					}
 				/>
 				<textarea
-					className='max-w-[1140px] w-full text-[color:var(--purple)] text-[22px] border-b-border-color mt-[50px] pt-0 pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
+					className='max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
 					id='message'
 					name='message'
 					cols={10}
