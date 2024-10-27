@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Footer() {
 	return (
-		<footer className='border-t-border-color ml-[8%] tablet:ml-[2.5%] mb-4 py-[1%] border-t border-solid flex items-center justify-center'>
+		<footer className='border-t-border-color ml-[8%] mobile:ml-[2.5%] mb-4 py-[1%] border-t border-solid flex items-center justify-center'>
 			<div className=' flex items-center justify-between !m-0 !p-0 flex-col desktop:flex-row'>
 				<div>
 					<nav>

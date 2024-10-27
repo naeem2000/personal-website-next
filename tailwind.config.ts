@@ -21,7 +21,7 @@ const config: Config = {
 				'error-red': 'rgb(255, 0, 0)',
 			},
 			screens: {
-				tablet: '640px',
+				mobile: '640px',
 				laptop: '1024px',
 				desktop: '1280px',
 			},

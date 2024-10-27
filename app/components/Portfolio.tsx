@@ -13,7 +13,10 @@ export default function Portfolio() {
 					aos='fade-right'
 					heading={'<portfolio>'}
 				/>
-				<p className='text-white text-[23px] text-center' data-aos='fade-up'>
+				<p
+					className='text-white text-xl desktop:text-[23px] text-center'
+					data-aos='fade-up'
+				>
 					Elevating Standards, Defining Excellence: My Projects Portfolio
 				</p>
 			</div>
