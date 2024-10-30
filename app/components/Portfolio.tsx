@@ -23,7 +23,7 @@ export default function Portfolio() {
 					Elevating Standards, Defining Excellence: My Projects Portfolio
 				</p>
 			</div>
-			<div className='mt-10'>
+			<div className='mt-10 mb-14 laptop:mb-0'>
 				<div className='flex items-center justify-center laptop:justify-between border-t border-t-border-color'>
 					<div className='flex items-end w-full laptop:w-1/2 justify-center laptop:justify-end p-7 laptop:border-r border-r-border-color flex-wrap'>
 						<Link target='_blank' href={pageData.mobile[0].link}>
@@ -69,7 +69,7 @@ export default function Portfolio() {
 					</div>
 				</div>
 				<div className='flex items-center justify-between border-t border-t-border-color border-b border-b-border-color'>
-					<div className='hidden laptop:flex items-start w-1/2 justify-start p-7 flex-col laptop:border-r border-r-border-color'>
+					<div className='hidden laptop:flex items-start w-1/2 p-7 flex-col laptop:border-r border-r-border-color'>
 						<div className='self-end'>
 							<Link target='_blank' href={pageData.web[4].link}>
 								<Image
@@ -96,9 +96,9 @@ export default function Portfolio() {
 							<Image
 								alt={pageData.web[3].alt}
 								src={pageData.web[3].image}
-								width={450}
+								width={400}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500'
+								className='m-3 hover:scale-110 transition-all duration-500 w-full h-auto'
 							/>
 						</Link>
 						<Link target='_blank' href={pageData.mobile[2].link}>
