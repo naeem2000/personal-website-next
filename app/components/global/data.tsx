@@ -1,5 +1,5 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
-import { NavLinks, PageData } from '../components/TS/types';
+import { NavLinks, PageData } from '../TS/types';
 
 export const navlinks: NavLinks = {
 	links: [

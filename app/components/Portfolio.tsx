@@ -1,66 +1,117 @@
 'use client';
 
-import SectionHeader from '../global/SectionHeader';
-import { CarouselSettings } from './TS/constants';
+import SectionHeader from './global/SectionHeader';
 import 'slick-carousel/slick/slick-theme.css';
-import { pageData } from '../global/data';
-import 'slick-carousel/slick/slick.css';
-import Slider from 'react-slick';
+import { pageData } from './global/data';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
-import Subheader from '../global/Subheader';
 
 export default function Portfolio() {
 	return (
-		<section className='portfolio' id='portfolio'>
-			<div className='portfolio-head'>
-				<span data-aos='fade-left'>{`(!)`}</span>
-				<SectionHeader aos='fade-right' heading={'<portfolio>'} />
-				<p data-aos='fade-up'>
+		<section className='wrapper' id='portfolio'>
+			<div>
+				<SectionHeader
+					symbol={`(!)`}
+					aos='fade-right'
+					heading={'<portfolio/>'}
+				/>
+				<p
+					className='text-yellow text-xl desktop:text-[23px] text-center'
+					data-aos='fade-up'
+				>
 					Elevating Standards, Defining Excellence: My Projects Portfolio
 				</p>
 			</div>
-			<div className='portfolio-body'>
-				<Subheader aos={'fade-right'} subHeading={'Web Apps'} />
-				<Slider {...CarouselSettings}>
-					{pageData.web.map((item) => {
-						return (
-							<div className='project' key={item.id}>
-								<a href={item.link} target='_blank' rel='noopener noreferrer'>
-									<Image
-										className='img'
-										src={item.image}
-										width={350}
-										height={350}
-										alt={item.alt}
-									/>
-								</a>
-								<h3>{item.title}</h3>
-								<p>{item.description}</p>
-							</div>
-						);
-					})}
-				</Slider>
-				<Subheader aos={'fade-left'} subHeading={'Mobile Apps'} />
-				<Slider {...CarouselSettings}>
-					{pageData.mobile.map((item) => {
-						return (
-							<div className='project' key={item.id}>
-								<a href={item.link} target='_blank' rel='noopener noreferrer'>
-									<Image
-										className='img'
-										src={item.image}
-										width={300}
-										height={200}
-										alt={item.alt}
-									/>
-								</a>
-								<h3>{item.title}</h3>
-								<p>{item.description}</p>
-							</div>
-						);
-					})}
-				</Slider>
+			<div className='mt-10 mb-14 laptop:mb-0'>
+				<div className='flex items-center justify-center laptop:justify-between border-t border-t-border-color'>
+					<div className='flex items-end w-full laptop:w-1/2 justify-center laptop:justify-end p-7 laptop:border-r border-r-border-color flex-wrap'>
+						<Link target='_blank' href={pageData.mobile[0].link}>
+							<Image
+								alt={pageData.mobile[0].alt}
+								src={pageData.mobile[0].image}
+								width={250}
+								height={250}
+								className='m-3 hover:scale-110 transition-all duration-500'
+							/>
+						</Link>
+						<Link target='_blank' href={pageData.web[1].link}>
+							<Image
+								alt={pageData.web[1].alt}
+								src={pageData.web[1].image}
+								width={450}
+								height={250}
+								className='m-3 hover:scale-110 transition-all duration-500'
+							/>
+						</Link>
+					</div>
+					<div className='hidden laptop:flex items-start w-1/2 justify-start p-7 flex-col'>
+						<Link target='_blank' href={pageData.web[0].link}>
+							<Image
+								alt={pageData.web[0].alt}
+								src={pageData.web[0].image}
+								width={450}
+								height={250}
+								className='m-3 hover:scale-110 transition-all duration-500'
+							/>
+						</Link>
+						<div className='self-end'>
+							<Link target='_blank' href={pageData.web[2].link}>
+								<Image
+									alt={pageData.web[2].alt}
+									src={pageData.web[2].image}
+									width={450}
+									height={250}
+									className='m-3 hover:scale-110 transition-all duration-500'
+								/>
+							</Link>
+						</div>
+					</div>
+				</div>
+				<div className='flex items-center justify-between border-t border-t-border-color border-b border-b-border-color'>
+					<div className='hidden laptop:flex items-start w-1/2 p-7 flex-col laptop:border-r border-r-border-color'>
+						<div className='self-end'>
+							<Link target='_blank' href={pageData.web[4].link}>
+								<Image
+									alt={pageData.web[4].alt}
+									src={pageData.web[4].image}
+									width={450}
+									height={250}
+									className='m-3 hover:scale-110 transition-all duration-500'
+								/>
+							</Link>
+						</div>
+						<Link target='_blank' href={pageData.web[5].link}>
+							<Image
+								alt={pageData.web[5].alt}
+								src={pageData.web[5].image}
+								width={450}
+								height={250}
+								className='m-3 hover:scale-110 transition-all duration-500'
+							/>
+						</Link>
+					</div>
+					<div className='flex items-center laptop:items-start w-full laptop:w-1/2 justify-start p-7 flex-col laptop:flex-row'>
+						<Link target='_blank' href={pageData.web[3].link}>
+							<Image
+								alt={pageData.web[3].alt}
+								src={pageData.web[3].image}
+								width={400}
+								height={250}
+								className='m-3 hover:scale-110 transition-all duration-500 w-full h-auto'
+							/>
+						</Link>
+						<Link target='_blank' href={pageData.mobile[2].link}>
+							<Image
+								alt={pageData.mobile[2].alt}
+								src={pageData.mobile[2].image}
+								width={250}
+								height={250}
+								className='m-3 hover:scale-110 transition-all duration-500'
+							/>
+						</Link>
+					</div>
+				</div>
 			</div>
 		</section>
 	);
