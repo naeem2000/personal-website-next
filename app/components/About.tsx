@@ -29,7 +29,7 @@ export default function About() {
 				<div className='flex flex-col desktop:flex-row items-center justify-center border-t-border-color w-full desktop:w-[70%] desktop:mt-[50px] border-t border-solid'>
 					<div className='w-full desktop:w-6/12 self-start py-[25px] desktop:pb-0 desktop:px-[30px]'>
 						<p
-							className='text-2xl desktop:text-[32px] leading-[1em] underline text-white self-start'
+							className='text-2xl desktop:text-[32px] leading-[1em] underline text-left text-white self-start'
 							data-aos='fade-left'
 						>
 							...I have 3 years of experience in web development, with a strong

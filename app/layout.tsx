@@ -33,6 +33,7 @@ export default function RootLayout({
 					outerScale={5}
 					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
 					clickables={CursorClickables}
+					innerStyle={{ mixBlendMode: 'difference' }}
 				/>
 				<ToastContainer limit={3} />
 				<NumberLine />
