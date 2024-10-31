@@ -25,34 +25,34 @@ export default function Portfolio() {
 			</div>
 			<div className='mt-10 mb-14 laptop:mb-0'>
 				<div className='flex items-center justify-center laptop:justify-between border-t border-t-border-color'>
-					<div className='flex items-end w-full laptop:w-1/2 justify-center laptop:justify-end p-7 laptop:border-r border-r-border-color flex-wrap'>
+					<div className='flex items-end w-full laptop:w-1/2 justify-center laptop:justify-end pl-0 laptop:p-7 laptop:border-r border-r-border-color flex-wrap'>
 						<Link target='_blank' href={pageData.mobile[0].link}>
 							<Image
 								alt={pageData.mobile[0].alt}
 								src={pageData.mobile[0].image}
 								width={250}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500'
+								className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 							/>
 						</Link>
 						<Link target='_blank' href={pageData.web[1].link}>
 							<Image
-								alt={pageData.web[1].alt}
-								src={pageData.web[1].image}
-								width={450}
+								alt={pageData.web[0].alt}
+								src={pageData.web[0].image}
+								width={350}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500'
+								className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 							/>
 						</Link>
 					</div>
 					<div className='hidden laptop:flex items-start w-1/2 justify-start p-7 flex-col'>
 						<Link target='_blank' href={pageData.web[0].link}>
 							<Image
-								alt={pageData.web[0].alt}
-								src={pageData.web[0].image}
-								width={450}
+								alt={pageData.web[1].alt}
+								src={pageData.web[1].image}
+								width={340}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500'
+								className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 							/>
 						</Link>
 						<div className='self-end'>
@@ -62,7 +62,7 @@ export default function Portfolio() {
 									src={pageData.web[2].image}
 									width={450}
 									height={250}
-									className='m-3 hover:scale-110 transition-all duration-500'
+									className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 								/>
 							</Link>
 						</div>
@@ -77,7 +77,7 @@ export default function Portfolio() {
 									src={pageData.web[4].image}
 									width={450}
 									height={250}
-									className='m-3 hover:scale-110 transition-all duration-500'
+									className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 								/>
 							</Link>
 						</div>
@@ -87,18 +87,18 @@ export default function Portfolio() {
 								src={pageData.web[5].image}
 								width={450}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500'
+								className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 							/>
 						</Link>
 					</div>
-					<div className='flex items-center laptop:items-start w-full laptop:w-1/2 justify-start p-7 flex-col laptop:flex-row'>
+					<div className='flex items-end w-full laptop:w-1/2 pl-0 laptop:p-7 justify-center laptop:justify-end flex-wrap'>
 						<Link target='_blank' href={pageData.web[3].link}>
 							<Image
 								alt={pageData.web[3].alt}
 								src={pageData.web[3].image}
-								width={400}
+								width={450}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500 w-full h-auto'
+								className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 							/>
 						</Link>
 						<Link target='_blank' href={pageData.mobile[2].link}>
@@ -107,7 +107,7 @@ export default function Portfolio() {
 								src={pageData.mobile[2].image}
 								width={250}
 								height={250}
-								className='m-3 hover:scale-110 transition-all duration-500'
+								className='p-4 hover:scale-110 transition-all duration-500 max-w-full h-auto'
 							/>
 						</Link>
 					</div>
