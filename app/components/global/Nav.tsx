@@ -4,6 +4,7 @@ import { UseShowNav } from '../TS/functions';
 import { Sling as Hamburger } from 'hamburger-react';
 import { navlinks } from './data';
 import React from 'react';
+import Link from 'next/link';
 
 export default function Nav() {
 	const { setOpen, open } = UseShowNav();
@@ -32,12 +33,12 @@ export default function Nav() {
 						return (
 							<ul className='flex ml-1' key={index}>
 								<li data-aos='slide-left'>
-									<a
+									<Link
 										className='text-[23px] text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'
 										href={item.link}
 									>
 										{item.label}
-									</a>
+									</Link>
 								</li>
 							</ul>
 						);

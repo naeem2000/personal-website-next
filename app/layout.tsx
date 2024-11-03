@@ -1,12 +1,14 @@
-import './globals.css';
-import type { Metadata } from 'next';
+import ScrollToTopButton from './components/global/ScrollToTopButton';
+import { CursorClickables } from './components/TS/constants';
+import NumberLine from './components/global/numberLine';
 import ScrollBar from './components/global/ScrollBar';
 import AnimatedCursor from 'react-animated-cursor';
-import { CursorClickables } from './components/TS/constants';
-import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import ScrollToTopButton from './components/global/ScrollToTopButton';
-import NumberLine from './components/global/numberLine';
+import 'react-toastify/dist/ReactToastify.css';
+import Nav from './components/global/Nav';
+import type { Metadata } from 'next';
+import './globals.css';
+import Footer from './components/global/Footer';
 
 export const metadata: Metadata = {
 	title: 'Naeem Carr',
@@ -24,21 +26,25 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<ScrollBar />
-				<AnimatedCursor
-					innerSize={17}
-					outerSize={7}
-					color='231, 219, 116'
-					innerScale={0.7}
-					outerScale={5}
-					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
-					clickables={CursorClickables}
-					innerStyle={{ mixBlendMode: 'difference' }}
-				/>
-				<ToastContainer limit={3} />
 				<NumberLine />
+				<ScrollBar />
+				<Nav />
+				<div className='hidden laptop:block'>
+					<AnimatedCursor
+						innerSize={17}
+						outerSize={7}
+						color='231, 219, 116'
+						innerScale={0.7}
+						outerScale={5}
+						outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
+						clickables={CursorClickables}
+						innerStyle={{ mixBlendMode: 'difference' }}
+					/>
+				</div>
+				<ToastContainer limit={3} />
 				{children}
 				<ScrollToTopButton />
+				<Footer />
 			</body>
 		</html>
 	);

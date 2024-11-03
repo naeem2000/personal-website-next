@@ -1,17 +1,18 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
 import { NavLinks, PageData } from '../TS/types';
+import { ROUTE_ABOUT, ROUTE_HOME } from '@/app/Routes';
 
 export const navlinks: NavLinks = {
 	links: [
 		{
 			id: 0,
 			label: '_hero',
-			link: '#hero',
+			link: ROUTE_HOME,
 		},
 		{
 			id: 1,
 			label: '_about',
-			link: '#about',
+			link: ROUTE_ABOUT,
 		},
 		{
 			id: 2,
