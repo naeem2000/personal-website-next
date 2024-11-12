@@ -1,17 +1,18 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
 import { NavLinks, PageData } from '../TS/types';
+import { ROUTE_ABOUT, ROUTE_HOME } from '@/app/Routes';
 
 export const navlinks: NavLinks = {
 	links: [
 		{
 			id: 0,
 			label: '_hero',
-			link: '#hero',
+			link: ROUTE_HOME,
 		},
 		{
 			id: 1,
 			label: '_about',
-			link: '#about',
+			link: ROUTE_ABOUT,
 		},
 		{
 			id: 2,
@@ -79,20 +80,20 @@ export const pageData: PageData = {
 		},
 		{
 			id: 1,
-			image: '/file-upload-to-firebase-webApp.jpg',
-			alt: 'upload web app',
-			title: '{File Upload Web App}',
-			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://younglings-uploadtofirebase.netlify.app/',
-		},
-		{
-			id: 2,
 			image: '/job-listing.png',
 			alt: 'jobs web app',
 			title: '{Job Listing Web App}',
 			description:
 				'Job Listing web app in React.JS using Firebase to store jobs asynchronously;',
 			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 2,
+			image: '/file-upload-to-firebase-webApp.jpg',
+			alt: 'upload web app',
+			title: '{File Upload Web App}',
+			description: 'File uploading web app in React.JS and Firebase storage;',
+			link: 'https://younglings-uploadtofirebase.netlify.app/',
 		},
 		{
 			id: 3,

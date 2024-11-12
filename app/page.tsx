@@ -1,10 +1,8 @@
 'use client';
 
 import Loader from './components/global/Loader';
-import Footer from './components/global/Footer';
 import { Routes } from './Routes';
 import { useEffect } from 'react';
-import Nav from './components/global/Nav';
 import 'aos/dist/aos.css';
 import React from 'react';
 import AOS from 'aos';
@@ -30,13 +28,11 @@ export default function Home() {
 	return (
 		<>
 			<Loader />
-			<Nav />
 			<Hero />
 			<About />
 			<Portfolio />
 			<Services />
 			<Contact />
-			<Footer />
 		</>
 	);
 }
