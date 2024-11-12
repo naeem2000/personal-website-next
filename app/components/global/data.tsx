@@ -80,20 +80,20 @@ export const pageData: PageData = {
 		},
 		{
 			id: 1,
-			image: '/file-upload-to-firebase-webApp.jpg',
-			alt: 'upload web app',
-			title: '{File Upload Web App}',
-			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://younglings-uploadtofirebase.netlify.app/',
-		},
-		{
-			id: 2,
 			image: '/job-listing.png',
 			alt: 'jobs web app',
 			title: '{Job Listing Web App}',
 			description:
 				'Job Listing web app in React.JS using Firebase to store jobs asynchronously;',
 			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 2,
+			image: '/file-upload-to-firebase-webApp.jpg',
+			alt: 'upload web app',
+			title: '{File Upload Web App}',
+			description: 'File uploading web app in React.JS and Firebase storage;',
+			link: 'https://younglings-uploadtofirebase.netlify.app/',
 		},
 		{
 			id: 3,

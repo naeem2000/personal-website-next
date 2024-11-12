@@ -1,4 +1,11 @@
+import { VT323 } from 'next/font/google';
 import { CarouselTypes, CursorClickableTypes, TypeWriterTypes } from './types';
+
+export const VT = VT323({
+	weight: '400',
+	subsets: ['latin'],
+	preload: true,
+});
 
 export const CursorClickables: CursorClickableTypes = [
 	'a',
