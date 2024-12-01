@@ -6,14 +6,17 @@ import { BeatLoader } from 'react-spinners';
 import ThankYou from './ThankYou';
 import React from 'react';
 import Button from './global/Button';
+import { usePathname } from 'next/navigation';
 
 export default function Contact() {
 	const { submitForm, messenger, setMessenger, state } = UseSubmitForm();
 
+	const path = usePathname();
+
 	if (state.succeeded) return <ThankYou />;
 
 	return (
-		<section className='contact wrapper h-full' id='contact'>
+		<section className={`wrapper ${path !== '/' && '!p-0'}`}>
 			<div className='text-center'>
 				<SectionHeader
 					symbol={`(*)`}

@@ -7,22 +7,34 @@ export const VT = VT323({
 	preload: true,
 });
 
-export const CursorClickables: CursorClickableTypes = [
-	'a',
-	'input[type="text"]',
-	'input[type="email"]',
-	'input[type="number"]',
-	'input[type="submit"]',
-	'input[type="image"]',
-	'label[for]',
-	'select',
-	'textarea',
-	'button',
-	'.link',
-	'.project',
-	'.swiper-button-next',
-	'.swiper-button-prev',
-];
+export const CursorClickables: CursorClickableTypes = {
+	innerSize: 10,
+	outerSize: 25,
+	innerScale: 1,
+	outerScale: 1.5,
+	outerAlpha: 0,
+	clickables: [
+		'a',
+		'input[type="text"]',
+		'input[type="email"]',
+		'input[type="number"]',
+		'input[type="submit"]',
+		'input[type="image"]',
+		'label[for]',
+		'select',
+		'textarea',
+		'button',
+		'.link',
+	],
+	innerStyle: {
+		backgroundColor: 'var(--purple)',
+		mixBlendMode: 'difference',
+	},
+	outerStyle: {
+		border: '2px solid var(--yellow)',
+		mixBlendMode: 'difference',
+	},
+};
 
 export const TypeWriterConfig: TypeWriterTypes = {
 	strings: [

@@ -11,7 +11,7 @@ export default function Hero() {
 			id='hero'
 		>
 			<h1
-				className='text-white text-2xl mobile:text-3xl text-center mt-20 desktop:mt-28'
+				className='text-white text-2xl mobile:text-3xl text-center desktop:mt-28'
 				data-aos='fade-left'
 				// eslint-disable-next-line react/jsx-no-comment-textnodes
 			>
@@ -27,7 +27,7 @@ export default function Hero() {
 				</span>
 				{`"}`}
 			</h2>
-			<div className="bg-[url('/pc-setup.gif')] bg-contain bg-center desktop:bg-[center_bottom_-25rem] bg-no-repeat desktop:bg-cover w-full h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] mt-10 desktop:mt-[100px]" />
+			<div className="bg-[url('/pc-setup.gif')] bg-contain bg-center desktop:bg-[center_bottom_-25rem] bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] mt-10 desktop:mt-[100px]" />
 		</section>
 	);
 }

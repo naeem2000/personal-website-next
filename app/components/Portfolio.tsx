@@ -30,7 +30,7 @@ export default function Portfolio() {
 			</div>
 			<div className='mt-10 mb-14 laptop:mb-0'>
 				<div className='flex items-center justify-center flex-col laptop:flex-row laptop:justify-between border-y border-t-border-color border-b-border-color'>
-					<div className='flex items-center w-full laptop:w-1/2 justify-around p-7 laptop:border-r border-r-border-color flex-wrap'>
+					<div className='flex items-center w-full laptop:w-1/2 justify-around p-7 border-b laptop:border-b-0 border-b-border-color laptop:border-r border-r-border-color flex-wrap'>
 						<Link target='_blank' href={pageData.mobile[0].link}>
 							<Image
 								alt={pageData.mobile[0].alt}

@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Footer() {
 	return (
-		<footer className='border-t-border-color ml-[8%] mobile:ml-[2.5%] mb-4 py-[1%] border-t border-solid flex items-center justify-center'>
+		<footer className='border-t-border-color py-4 border-t border-solid flex items-center justify-between wrapper'>
 			<div className=' flex items-center justify-between !m-0 !p-0 flex-col w-full desktop:flex-row max-w-[1750px]'>
 				<div>
 					<nav>
@@ -56,7 +56,7 @@ export default function Footer() {
 				>
 					<Image src='/next.svg' width={50} height={50} alt='next' />
 				</Link>
-				<div className='text-xl text-yellow'>
+				<div className='text-xl text-yellow mb-4 laptop:mb-0'>
 					<p>Copyright © 2024 Naeem Carr Portfolio</p>
 				</div>
 			</div>

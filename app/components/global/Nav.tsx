@@ -55,20 +55,24 @@ export default function Nav() {
 				className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-0'
 				id='mobile-slide'
 			>
-				{navlinks.links.map((item, index) => {
-					return (
-						<ul className='w-6/12 text-center' key={index}>
-							<li onClick={() => setOpen(false)} data-aos='fade-right'>
+				<ul className='w-6/12 text-center'>
+					{navlinks.links.map((item, index) => {
+						return (
+							<li
+								onClick={() => setOpen(false)}
+								data-aos='fade-right'
+								key={index}
+							>
 								<a
-									className='block text-xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
+									className='block text-xl laptop:text-2xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
 									href={item.link}
 								>
 									{item.label}
 								</a>
 							</li>
-						</ul>
-					);
-				})}
+						);
+					})}
+				</ul>
 			</div>
 		</header>
 	);
