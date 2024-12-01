@@ -1,13 +1,14 @@
 import ScrollToTopButton from './components/global/ScrollToTopButton';
-import { CursorClickables, VT } from './components/TS/constants';
 import NumberLine from './components/global/numberLine';
 import ScrollBar from './components/global/ScrollBar';
 import AnimatedCursor from 'react-animated-cursor';
 import { ToastContainer } from 'react-toastify';
+import Footer from './components/global/Footer';
 import 'react-toastify/dist/ReactToastify.css';
+import { VT } from './components/TS/constants';
+import Nav from './components/global/Nav';
 import type { Metadata } from 'next';
 import './globals.css';
-import Nav from './components/global/Nav';
 
 export const metadata: Metadata = {
 	title: 'Naeem Carr',
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 	icons: {
 		icon: '/icon.png',
 	},
+	robots: 'index, follow',
 };
 
 export default function RootLayout({
@@ -30,18 +32,37 @@ export default function RootLayout({
 				<NumberLine />
 				<Nav />
 				<AnimatedCursor
-					innerSize={17}
-					outerSize={7}
-					color='231, 219, 116'
-					innerScale={0.7}
-					outerScale={5}
-					outerStyle={{ background: 'rgb(46, 204, 239, 0.4)' }}
-					clickables={CursorClickables}
-					innerStyle={{ mixBlendMode: 'difference' }}
+					innerSize={10}
+					outerSize={25}
+					innerScale={1}
+					outerScale={1.5}
+					outerAlpha={0}
+					clickables={[
+						'a',
+						'input[type="text"]',
+						'input[type="email"]',
+						'input[type="number"]',
+						'input[type="submit"]',
+						'input[type="image"]',
+						'label[for]',
+						'select',
+						'textarea',
+						'button',
+						'.link',
+					]}
+					innerStyle={{
+						backgroundColor: 'var(--purple)',
+						mixBlendMode: 'difference',
+					}}
+					outerStyle={{
+						border: '2px solid var(--yellow)',
+						mixBlendMode: 'difference',
+					}}
 				/>
 				<ToastContainer limit={3} />
 				{children}
 				<ScrollToTopButton />
+				<Footer />
 			</body>
 		</html>
 	);

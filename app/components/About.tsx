@@ -10,10 +10,10 @@ export default function About() {
 		<>
 			<PdfViewer onClose={() => setViewPdf(false)} />
 			<section
-				className='wrapper flex items-center justify-start flex-col text-center mb-14'
+				className='wrapper flex items-center justify-start flex-col text-center'
 				id='about'
 			>
-				<div className='mt-10 desktop:mt-0'>
+				<div>
 					<SectionHeader symbol={`{/}`} aos='fade-left' heading='<about_me/>' />
 					<p
 						className='text-xl pb-[25px] desktop:pb-0 desktop:text-[25px] leading-6 text-yellow desktop:max-w-[800px]'
