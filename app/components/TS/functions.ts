@@ -1,7 +1,6 @@
+import { ContactDetails, ContactErrors } from './types';
 import { useState, useEffect } from 'react';
 import { useForm } from '@formspree/react';
-import { ContactDetails } from './types';
-import { toast } from 'react-toastify';
 
 //Scroll bar component
 export const UseScrollBar = () => {
@@ -107,56 +106,43 @@ export const UseSubmitForm = () => {
 		message: '',
 	});
 
+	const [isErrors, setIsErrors] = useState<ContactErrors>({
+		name: false,
+		email: false,
+		message: false,
+	});
+
 	const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		let hasError: boolean = false;
-		const name = document.getElementById('name');
-		const email = document.getElementById('email');
-		const message = document.getElementById('message');
+
+		let hasError = false;
 
 		try {
+			// Validate name
 			if (!messenger.name) {
-				name?.classList.add('error-border');
-				toast.error('Can I get your name please?', {
-					position: 'top-center',
-					autoClose: 3000,
-					closeOnClick: true,
-					draggable: true,
-					theme: 'colored',
-					className: 'toasty toasty1',
-				});
 				hasError = true;
+				setIsErrors((prev) => ({ ...prev, name: true }));
 			} else {
-				name?.classList.remove('error-border');
+				setIsErrors((prev) => ({ ...prev, name: false }));
 			}
+
+			// Validate email
 			if (!messenger.email) {
-				email?.classList.add('error-border');
-				toast.error('I need your email to get back to you.', {
-					position: 'top-left',
-					autoClose: 3000,
-					closeOnClick: true,
-					draggable: true,
-					theme: 'colored',
-					className: 'toasty toasty2',
-				});
 				hasError = true;
+				setIsErrors((prev) => ({ ...prev, email: true }));
 			} else {
-				email?.classList.remove('error-border');
+				setIsErrors((prev) => ({ ...prev, email: false }));
 			}
+
+			// Validate message
 			if (!messenger.message) {
-				message?.classList.add('error-border');
-				toast.error('Maybe want to say hello?', {
-					position: 'top-right',
-					autoClose: 3000,
-					closeOnClick: true,
-					draggable: true,
-					theme: 'colored',
-					className: 'toasty toasty3',
-				});
 				hasError = true;
+				setIsErrors((prev) => ({ ...prev, message: true }));
 			} else {
-				message?.classList.remove('error-border');
+				setIsErrors((prev) => ({ ...prev, message: false }));
 			}
+
+			// If no errors, submit the form
 			if (!hasError) {
 				await handleSubmit(e);
 				setMessenger({
@@ -164,12 +150,10 @@ export const UseSubmitForm = () => {
 					email: '',
 					message: '',
 				});
-				toast.success('Bon voyage, message!', {
-					position: 'top-center',
-					autoClose: 3000,
-					closeOnClick: true,
-					draggable: true,
-					theme: 'colored',
+				setIsErrors({
+					name: false,
+					email: false,
+					message: false,
 				});
 			}
 		} catch (e) {
@@ -177,5 +161,5 @@ export const UseSubmitForm = () => {
 		}
 	};
 
-	return { submitForm, messenger, setMessenger, state };
+	return { submitForm, messenger, setMessenger, state, isErrors };
 };

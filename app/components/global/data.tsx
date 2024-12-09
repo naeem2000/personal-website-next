@@ -1,6 +1,6 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
 import { NavLinks, PageData } from '../TS/types';
-import { ROUTE_ABOUT, ROUTE_HOME } from '@/app/Routes';
+import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_PORTFOLIO } from '@/app/Routes';
 
 export const navlinks: NavLinks = {
 	links: [
@@ -17,7 +17,7 @@ export const navlinks: NavLinks = {
 		{
 			id: 2,
 			label: '_portfolio',
-			link: '#portfolio',
+			link: ROUTE_PORTFOLIO,
 		},
 		{
 			id: 3,
@@ -31,6 +31,29 @@ export const navlinks: NavLinks = {
 		},
 	],
 };
+
+export const aboutText = [
+	{
+		symb: '{/}',
+		heading: '_team work',
+		text: '...I thrive in collaborative environments, where teamwork drives innovation and success. My approach is centered on fostering open communication, mutual respect, and shared accountability, ensuring that every team member feels valued and empowered. ',
+	},
+	{
+		symb: '{!}',
+		heading: '_innovation',
+		text: '...I am deeply committed to driving innovation by embracing creativity, challenging the status quo, and exploring new possibilities. My work focuses on identifying unique solutions to complex problems and leveraging cutting-edge technologies.',
+	},
+	{
+		symb: '{#}',
+		heading: '_excellence',
+		text: '...I am dedicated to pursuing excellence in every aspect of my work, striving to exceed expectations and deliver outstanding results. With a focus on precision, quality, and continuous improvement, I aim to raise standards and inspire those around me to do the same.',
+	},
+	{
+		symb: '{%}',
+		heading: '_hard work',
+		text: '...I firmly believe in the value of hard work as the foundation for achieving meaningful success. With a commitment to perseverance, dedication, and resilience, I tackle challenges head-on and strive to deliver exceptional results. ',
+	},
+];
 
 export const pageData: PageData = {
 	mobile: [
