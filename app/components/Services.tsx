@@ -5,7 +5,7 @@ export default function services() {
 	return (
 		<section id='services' className='services wrapper'>
 			<div className='flex items-center justify-center flex-col'>
-				<SectionHeader symbol={`{#}`} aos='fade-left' heading={'<services>'} />
+				<SectionHeader symbol={`{#}`} aos='fade-left' heading={'<services/>'} />
 				<p className='text-yellow text-center leading-6 desktop:text-left text-xl desktop:text-[23px]'>
 					Crafting Code Excellence: Multilingual Programming Services Tailored
 					to Your Needs

@@ -82,3 +82,6 @@ export const CarouselSettings: CarouselTypes = {
 		},
 	],
 };
+
+export const ContactStyles: string =
+	'max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple';

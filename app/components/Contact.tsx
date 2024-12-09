@@ -7,6 +7,7 @@ import ThankYou from './ThankYou';
 import React from 'react';
 import Button from './global/Button';
 import { usePathname } from 'next/navigation';
+import { ContactStyles } from './TS/constants';
 
 export default function Contact() {
 	const { submitForm, messenger, setMessenger, state } = UseSubmitForm();
@@ -32,7 +33,7 @@ export default function Contact() {
 				className='flex items-center justify-center flex-col'
 			>
 				<input
-					className='max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
+					className={ContactStyles}
 					id='name'
 					name='name'
 					type='text'
@@ -41,7 +42,7 @@ export default function Contact() {
 					onChange={(e) => setMessenger({ ...messenger, name: e.target.value })}
 				/>
 				<input
-					className='max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
+					className={ContactStyles}
 					id='email'
 					name='email'
 					type='email'
@@ -52,7 +53,7 @@ export default function Contact() {
 					}
 				/>
 				<textarea
-					className='max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple'
+					className={ContactStyles}
 					id='message'
 					name='message'
 					cols={10}
