@@ -1,5 +1,5 @@
-import { VT323 } from 'next/font/google';
 import { CarouselTypes, CursorClickableTypes, TypeWriterTypes } from './types';
+import { VT323 } from 'next/font/google';
 
 export const VT = VT323({
 	weight: '400',

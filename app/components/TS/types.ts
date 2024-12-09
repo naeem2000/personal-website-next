@@ -88,3 +88,9 @@ type SocialLink = {
 export type Socials = {
 	socialLink: SocialLink[];
 };
+
+export type ContactErrors = {
+	name: boolean;
+	email: boolean;
+	message: boolean;
+};

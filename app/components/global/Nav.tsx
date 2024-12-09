@@ -1,13 +1,16 @@
 'use client';
 
-import { UseShowNav } from '../TS/functions';
 import { Sling as Hamburger } from 'hamburger-react';
+import { usePathname } from 'next/navigation';
+import { UseShowNav } from '../TS/functions';
 import { navlinks } from './data';
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 export default function Nav() {
 	const { setOpen, open } = UseShowNav();
+
+	const path = usePathname();
 
 	return (
 		<header className='wrapper'>
@@ -34,7 +37,9 @@ export default function Nav() {
 							<ul className='flex ml-1' key={index}>
 								<li data-aos='slide-left'>
 									<Link
-										className='text-[23px] text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'
+										className={`text-[23px] text-yellow ${
+											item.link === path && '!text-blue'
+										} transition-all duration-[0.2s] ease-linear hover:text-purple`}
 										href={item.link}
 									>
 										{item.label}
@@ -64,7 +69,9 @@ export default function Nav() {
 								key={index}
 							>
 								<a
-									className='block text-xl laptop:text-2xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple'
+									className={`block text-xl laptop:text-2xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple ${
+										item.link === path && '!text-blue !border-b-blue'
+									}`}
 									href={item.link}
 								>
 									{item.label}

@@ -4,17 +4,27 @@ import SectionHeader from './global/SectionHeader';
 import { UseSubmitForm } from './TS/functions';
 import { BeatLoader } from 'react-spinners';
 import ThankYou from './ThankYou';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from './global/Button';
 import { usePathname } from 'next/navigation';
 import { ContactStyles } from './TS/constants';
 
 export default function Contact() {
-	const { submitForm, messenger, setMessenger, state } = UseSubmitForm();
+	const [sentEmail, setSentEmail] = useState<boolean>(false);
+	const { submitForm, messenger, setMessenger, state, isErrors } =
+		UseSubmitForm();
 
 	const path = usePathname();
 
-	if (state.succeeded) return <ThankYou />;
+	useEffect(() => {
+		if (typeof window !== undefined) {
+			setSentEmail(localStorage.getItem('sent') ? true : false);
+		}
+	}, []);
+
+	if (state.succeeded) localStorage.setItem('sent', 'emailSent');
+
+	if (state.succeeded || sentEmail === true) return <ThankYou />;
 
 	return (
 		<section className={`wrapper ${path !== '/' && '!p-0'}`}>
@@ -33,32 +43,37 @@ export default function Contact() {
 				className='flex items-center justify-center flex-col'
 			>
 				<input
-					className={ContactStyles}
-					id='name'
+					className={`${ContactStyles} ${isErrors.name && 'border-b-red-600'}`}
 					name='name'
 					type='text'
-					placeholder='_name'
+					placeholder={`${isErrors.name ? 'Can I get your name?' : '_name'}`}
 					value={messenger.name}
 					onChange={(e) => setMessenger({ ...messenger, name: e.target.value })}
 				/>
 				<input
-					className={ContactStyles}
-					id='email'
+					className={`${ContactStyles} ${isErrors.email && 'border-b-red-600'}`}
 					name='email'
 					type='email'
-					placeholder='_email'
+					placeholder={`${
+						isErrors.email == true ? 'I would like say hello back :)' : '_email'
+					}`}
 					value={messenger.email}
 					onChange={(e) =>
 						setMessenger({ ...messenger, email: e.target.value })
 					}
 				/>
 				<textarea
-					className={ContactStyles}
-					id='message'
+					className={`${ContactStyles} ${
+						isErrors.message && 'border-b-red-600'
+					}`}
 					name='message'
 					cols={10}
 					rows={7}
-					placeholder='_message'
+					placeholder={`${
+						isErrors.message
+							? 'I would like to say thank you for reaching out to me :D'
+							: '_message'
+					}`}
 					value={messenger.message}
 					onChange={(e) =>
 						setMessenger({ ...messenger, message: e.target.value })
