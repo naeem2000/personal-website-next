@@ -187,3 +187,9 @@ export const socials = {
 		},
 	],
 };
+
+export const filterButtons: string[] = [
+	'all projects',
+	'web development',
+	'mobile development',
+];

@@ -1,13 +1,13 @@
 'use client';
 
-import SectionHeader from './global/SectionHeader';
-import { UseSubmitForm } from './TS/functions';
-import { BeatLoader } from 'react-spinners';
-import ThankYou from './ThankYou';
 import React, { useEffect, useState } from 'react';
-import Button from './global/Button';
-import { usePathname } from 'next/navigation';
+import SectionHeader from './global/SectionHeader';
 import { ContactStyles } from './TS/constants';
+import { UseSubmitForm } from './TS/functions';
+import { usePathname } from 'next/navigation';
+import { BeatLoader } from 'react-spinners';
+import Button from './global/Button';
+import ThankYou from './ThankYou';
 
 export default function Contact() {
 	const [sentEmail, setSentEmail] = useState<boolean>(false);

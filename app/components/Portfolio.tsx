@@ -1,7 +1,6 @@
 'use client';
 
 import SectionHeader from './global/SectionHeader';
-import 'slick-carousel/slick/slick-theme.css';
 import { pageData } from './global/data';
 import Image from 'next/image';
 import Link from 'next/link';

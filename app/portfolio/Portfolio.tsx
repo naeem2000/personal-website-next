@@ -1,12 +1,14 @@
+import { filterButtonStyles } from '../components/TS/constants';
+import { filterButtons } from '../components/global/data';
 import PageHeader from '../components/global/PageHeader';
+import Button from '../components/global/Button';
 import Contact from '../components/Contact';
 import React from 'react';
 
 export default function Portfolio({}) {
-	const buttonStyles = 'flex item-center justify-center mr-2 text-2xl';
 	return (
-		<section>
-			<div className='wrapper'>
+		<section className='wrapper'>
+			<div>
 				<div className='flex items-center justify-center flex-col'>
 					<PageHeader text='"Portfolio"' symbol='{!}' />
 					<p className='text-center text-yellow text-2xl mt-5 max-w-5xl'>
@@ -18,12 +20,16 @@ export default function Portfolio({}) {
 				</div>
 			</div>
 			<div className='mt-14'>
-				<div className='flex items-center justify-center'>
-					<button className={buttonStyles}>awe</button>
-					<button className={buttonStyles}>awe</button>
-					<button className={buttonStyles}>awe</button>
-					<button className={buttonStyles}>awe</button>
+				<div className='flex items-center justify-center flex-wrap'>
+					{filterButtons.map((item, index) => {
+						return (
+							<Button key={index} className={filterButtonStyles}>
+								{item}
+							</Button>
+						);
+					})}
 				</div>
+				<div>//projects</div>
 			</div>
 			<Contact />
 		</section>

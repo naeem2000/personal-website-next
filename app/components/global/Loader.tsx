@@ -1,5 +1,5 @@
-import React from 'react';
 import { PacmanLoader } from 'react-spinners';
+import React from 'react';
 
 export default function Loader() {
 	return (
