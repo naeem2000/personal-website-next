@@ -1,4 +1,4 @@
-import { ContactDetails, ContactErrors } from './types';
+import { ContactDetails, ContactErrors, Project } from './types';
 import { useState, useEffect } from 'react';
 import { useForm } from '@formspree/react';
 
@@ -95,6 +95,10 @@ export const UseShowPDF = () => {
 
 	return { setViewPdf, viewPdf };
 };
+
+export function shuffleArray(array: Project[]) {
+	return [...array].sort(() => Math.random() - 0.5);
+}
 
 //Submit contact form function
 export const UseSubmitForm = () => {

@@ -1,12 +1,25 @@
 'use client';
+import { filterButtons, portolioData } from '../components/global/data';
 import { filterButtonStyles } from '../components/TS/constants';
-import { filterButtons } from '../components/global/data';
+import { shuffleArray } from '../components/TS/functions';
 import PageHeader from '../components/global/PageHeader';
+import React, { useEffect, useState } from 'react';
+import { Project } from '../components/TS/types';
 import Button from '../components/global/Button';
 import Contact from '../components/Contact';
-import React from 'react';
+import Image from 'next/image';
 
 export default function Portfolio({}) {
+	const [shuffledProjects, setShuffledProjects] = useState<Project[]>([]);
+	const [projects, setProjects] = useState<string>('all projects');
+	const fuseArrays = [...portolioData.mobile, ...portolioData.web];
+
+	useEffect(() => {
+		if (projects === 'all projects') {
+			setShuffledProjects(shuffleArray(fuseArrays));
+		}
+	}, [projects]);
+
 	return (
 		<section className='wrapper'>
 			<div>
@@ -24,13 +37,59 @@ export default function Portfolio({}) {
 				<div className='flex items-center justify-center flex-wrap'>
 					{filterButtons.map((item, index) => {
 						return (
-							<Button key={index} className={filterButtonStyles}>
+							<Button
+								onClick={() => setProjects(item)}
+								key={index}
+								className={filterButtonStyles}
+							>
 								{item}
 							</Button>
 						);
 					})}
 				</div>
-				<div>//projects</div>
+				<div className='grid grid-cols-2 md:grid-cols-3 gap-4 mt-20'>
+					{projects === 'all projects' ? (
+						<>
+							{shuffledProjects.map((item, index) => {
+								return (
+									<div key={index} className='grid gap-4 relative m-6'>
+										<Image
+											src={item.image}
+											alt={item.alt}
+											width={600}
+											height={600}
+											className='max-w-64'
+										/>
+									</div>
+								);
+							})}
+						</>
+					) : projects === 'web development' ? (
+						<>
+							{portolioData.web.map((item, index) => {
+								return (
+									<>
+										{item.title}
+										{item.description}
+									</>
+								);
+							})}
+						</>
+					) : (
+						projects === 'mobile development' && (
+							<>
+								{portolioData.mobile.map((item, index) => {
+									return (
+										<>
+											{item.title}
+											{item.description}
+										</>
+									);
+								})}
+							</>
+						)
+					)}
+				</div>
 			</div>
 			<Contact />
 		</section>

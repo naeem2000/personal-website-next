@@ -140,7 +140,7 @@ export const portolioData: PageData = {
 		},
 		{
 			id: 1,
-			image: '/projects/face-det.png',
+			image: '/projects/face-det.jpg',
 			alt: 'mood detect web app',
 			title: '{Mood Detector Web App}',
 			description: 'A mood detector in React.JS using face-api.js;',
