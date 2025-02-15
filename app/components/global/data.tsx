@@ -59,7 +59,7 @@ export const pageData: PageData = {
 	mobile: [
 		{
 			id: 0,
-			image: '/cmrmrn.jpg',
+			image: '/projects/cmrmrn.jpg',
 			alt: 'mosque mobile',
 			title: '{Claremont Mosque Mobile App}',
 			description:
@@ -68,34 +68,18 @@ export const pageData: PageData = {
 		},
 		{
 			id: 1,
-			image: '/memory-game.png',
+			image: '/projects/memory-game.png',
 			alt: 'cerebral twist mobile app',
 			title: '{Cerebral Twist Mobile App}',
 			description:
 				'Memory game in React-Native, using firebase to track scores located in the scoreboard screen, using email, username & password;',
 			link: 'https://github.com/naeem2000/Cerebral-Twist',
 		},
-		{
-			id: 2,
-			image: '/newsrn.jpg',
-			alt: 'news app',
-			title: '{News App React-Native}',
-			description: 'News Mobile App in React-Native & News24 API;',
-			link: 'https://github.com/naeem2000/React-Native-News-App',
-		},
-		{
-			id: 3,
-			image: '/todorn.jpg',
-			alt: 'todo react-native',
-			title: '{Todo App React-Native}',
-			description: 'Todo Mobile App in React-Native & basic JS;',
-			link: 'https://github.com/naeem2000/react-native-todo-app',
-		},
 	],
 	web: [
 		{
 			id: 0,
-			image: '/weather.png',
+			image: '/projects/forecast-hub.png',
 			alt: 'forecast hub',
 			title: '{Forecast Hub}',
 			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
@@ -103,62 +87,12 @@ export const pageData: PageData = {
 		},
 		{
 			id: 1,
-			image: '/job-listing.png',
+			image: '/projects/job-listing.png',
 			alt: 'jobs web app',
 			title: '{Job Listing Web App}',
 			description:
 				'Job Listing web app in React.JS using Firebase to store jobs asynchronously;',
 			link: 'https://job-listing-39b59.web.app/',
-		},
-		{
-			id: 2,
-			image: '/file-upload-to-firebase-webApp.jpg',
-			alt: 'upload web app',
-			title: '{File Upload Web App}',
-			description: 'File uploading web app in React.JS and Firebase storage;',
-			link: 'https://younglings-uploadtofirebase.netlify.app/',
-		},
-		{
-			id: 3,
-			image: '/loginmui.jpg',
-			alt: 'login MUI',
-			title: '{Material Login Screen}',
-			description: 'Login screen in React.JS using Material UI;',
-			link: 'https://login-react-app-puma.netlify.app/',
-		},
-		{
-			id: 4,
-			image: '/shafieks-carwash.png',
-			alt: 'shafieks car wash',
-			title: `{Shafiek's Car Wash}`,
-			description: 'Local Car Wash Web App in React.Js, Next.Js and SCSS;',
-			link: 'https://shafiekscarwash.netlify.app/',
-		},
-		{
-			id: 5,
-			image: '/face-det.jpg',
-			alt: 'face web app',
-			title: '{Mood Detector}',
-			description:
-				'Mood Detector web app in React.JS using Face-API.JS library;',
-			link: 'https://face-detect-reactjs.netlify.app/',
-		},
-		{
-			id: 6,
-			image: '/cmrmweb.jpg',
-			alt: 'mosque web app',
-			title: '{Claremont Mosque Web App}',
-			description:
-				'React.Js mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
-			link: 'https://cmrm.netlify.app/',
-		},
-		{
-			id: 7,
-			image: '/todoweb.jpg',
-			alt: 'todo web',
-			title: '{Todo Web App}',
-			description: 'Todo Web App in React.js and basic JS;',
-			link: 'https://to-do-webapp011.netlify.app/',
 		},
 	],
 };
@@ -193,3 +127,142 @@ export const filterButtons: string[] = [
 	'web development',
 	'mobile development',
 ];
+
+export const portolioData: PageData = {
+	web: [
+		{
+			id: 0,
+			image: '/projects/forecast-hub.png',
+			alt: 'forecast hub',
+			title: '{Forecast Hub}',
+			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
+			link: 'https://forecast-hub.vercel.app/',
+		},
+		{
+			id: 1,
+			image: '/projects/face-det.png',
+			alt: 'mood detect web app',
+			title: '{Mood Detector Web App}',
+			description: 'A mood detector in React.JS using face-api.js;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 2,
+			image: '/projects/job-listing.png',
+			alt: 'Job Listing web app',
+			title: '{Job Listing Web App}',
+			description:
+				'A job listing app in React.JS using jobs added to Firebase via the "add new job" feature;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 3,
+			image: '/projects/life-health-care.png',
+			alt: 'Life Healthcare web app',
+			title: '{Life Healthcare}',
+			description:
+				'The second largest private hospital operator assigned to me at one of my previous companies;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 4,
+			image: '/projects/magnetic.png',
+			alt: 'Magnetic BNB',
+			title: '{Life Healthcare}',
+			description:
+				'A local Air BNB provider that was one of my freelance work;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 5,
+			image: '/projects/nova.png',
+			alt: 'Nova Athletics',
+			title: '{Nova Athletics}',
+			description:
+				'A small South African company that vendors athletic gear and outfits throughout South Africa that was one of my freelance work;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 6,
+			image: '/projects/payat.png',
+			alt: 'payat',
+			title: '{PayAt}',
+			description:
+				'A payment provider that allows users to process payments to multiple companies and services throughout South Africa which was assigned to me at one of my previous companies;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 7,
+			image: '/projects/polished-lounge.png',
+			alt: 'polished lounge',
+			title: '{Polised Lounge}',
+			description:
+				'A local business that offers pedicures and manicures that was one of my freelance work;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 8,
+			image: '/projects/shafieks-carwash.png',
+			alt: 'shafieks carwash',
+			title: '{Shafieks Carwash}',
+			description: 'A local carwash that was one of my freelance work;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 9,
+			image: '/projects/smarter-britain.png',
+			alt: 'smarter britain',
+			title: '{Smarter Britain}',
+			description:
+				'A UK owned platform for students to connect with entrepreneurs and investors to receive advice, guidance and funding for their business that was assigned to me at one of my previous companies;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+		{
+			id: 10,
+			image: '/projects/taquanta.png',
+			alt: 'taquanta',
+			title: '{Taquanta}',
+			description:
+				'A South African owned business for asset management assigned to me at one of my previous companies;',
+			link: 'https://job-listing-39b59.web.app/',
+		},
+	],
+	mobile: [
+		{
+			id: 0,
+			image: '/projects/memory-game.png',
+			alt: 'cerebral twist mobile app',
+			title: '{Cerebral Twist Mobile App}',
+			description:
+				'Memory game in React-Native, using firebase to track scores located in the scoreboard screen, using email, username & password;',
+			link: 'https://github.com/naeem2000/Cerebral-Twist',
+		},
+		{
+			id: 1,
+			image: '/projects/cmrmrn.jpg',
+			alt: 'mosque mobile',
+			title: '{Claremont Mosque Mobile App}',
+			description:
+				'React-Native mobile app representing Claremont Main Road Mosque with contentful headless API to manage the content;',
+			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
+		},
+		{
+			id: 2,
+			image: '/projects/newsrn.jpg',
+			alt: 'news mobile',
+			title: '{News24 API Mobile App}',
+			description:
+				'React-Native mobile app representing a news app utilizing a News24 API;',
+			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
+		},
+		{
+			id: 3,
+			image: '/projects/todorn.jpg',
+			alt: 'Todo mobile',
+			title: '{ToDo Mobile App}',
+			description:
+				'React-Native mobile app basic ToDo app that respresented my proper use of state and array methods by updating stae in realtime without effecting performance;',
+			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
+		},
+	],
+};

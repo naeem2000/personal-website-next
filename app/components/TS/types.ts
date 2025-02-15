@@ -65,7 +65,7 @@ export type NavLinks = {
 	links: NavLink[];
 };
 
-type Project = {
+export type Project = {
 	id: number;
 	image: string;
 	alt: string;

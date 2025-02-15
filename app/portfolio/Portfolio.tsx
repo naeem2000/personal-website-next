@@ -1,3 +1,4 @@
+'use client';
 import { filterButtonStyles } from '../components/TS/constants';
 import { filterButtons } from '../components/global/data';
 import PageHeader from '../components/global/PageHeader';
