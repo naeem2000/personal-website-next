@@ -10,15 +10,7 @@ import Contact from '../components/Contact';
 import Image from 'next/image';
 
 export default function Portfolio({}) {
-	const [shuffledProjects, setShuffledProjects] = useState<Project[]>([]);
 	const [projects, setProjects] = useState<string>('all projects');
-	const fuseArrays = [...portolioData.mobile, ...portolioData.web];
-
-	useEffect(() => {
-		if (projects === 'all projects') {
-			setShuffledProjects(shuffleArray(fuseArrays));
-		}
-	}, [projects]);
 
 	return (
 		<section className='wrapper'>
@@ -47,23 +39,42 @@ export default function Portfolio({}) {
 						);
 					})}
 				</div>
-				<div className='grid grid-cols-2 md:grid-cols-3 gap-4 mt-20'>
+				<div>
 					{projects === 'all projects' ? (
-						<>
-							{shuffledProjects.map((item, index) => {
-								return (
-									<div key={index} className='grid gap-4 relative m-6'>
-										<Image
-											src={item.image}
-											alt={item.alt}
-											width={600}
-											height={600}
-											className='max-w-64'
-										/>
-									</div>
-								);
-							})}
-						</>
+						<div>
+							Web
+							<div className='grid grid-cols-4 place-items-start gap-2 mt-20'>
+								{portolioData.web.map((item, index) => {
+									return (
+										<div key={index}>
+											<Image
+												src={item.image}
+												alt={item.alt}
+												width={600}
+												height={600}
+												className='max-w-[350px]'
+											/>
+										</div>
+									);
+								})}
+							</div>
+							Mobile
+							<div className='grid grid-cols-4 place-items-start gap-2 mt-20'>
+								{portolioData.mobile.map((item, index) => {
+									return (
+										<div key={index}>
+											<Image
+												src={item.image}
+												alt={item.alt}
+												width={600}
+												height={600}
+												className='max-w-[350px]'
+											/>
+										</div>
+									);
+								})}
+							</div>
+						</div>
 					) : projects === 'web development' ? (
 						<>
 							{portolioData.web.map((item, index) => {
