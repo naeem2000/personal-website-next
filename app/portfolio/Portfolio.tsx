@@ -1,12 +1,10 @@
 'use client';
 import { filterButtons, portolioData } from '../components/global/data';
 import { filterButtonStyles } from '../components/TS/constants';
-import { shuffleArray } from '../components/TS/functions';
 import PageHeader from '../components/global/PageHeader';
-import React, { useEffect, useState } from 'react';
-import { Project } from '../components/TS/types';
 import Button from '../components/global/Button';
 import Contact from '../components/Contact';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 export default function Portfolio({}) {
@@ -32,7 +30,9 @@ export default function Portfolio({}) {
 							<Button
 								onClick={() => setProjects(item)}
 								key={index}
-								className={filterButtonStyles}
+								className={`${filterButtonStyles} ${
+									item === projects && 'border-purple !text-purple'
+								}`}
 							>
 								{item}
 							</Button>
@@ -41,63 +41,107 @@ export default function Portfolio({}) {
 				</div>
 				<div>
 					{projects === 'all projects' ? (
-						<div>
-							Web
-							<div className='grid grid-cols-4 place-items-start gap-2 mt-20'>
+						<div className='mt-20'>
+							<p className='text-yellow text-3xl mb-5'>// Web development</p>
+							<div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
 								{portolioData.web.map((item, index) => {
 									return (
-										<div key={index}>
+										<div key={index} className='image-container'>
 											<Image
 												src={item.image}
 												alt={item.alt}
 												width={600}
 												height={600}
-												className='max-w-[350px]'
+												className='w-full'
 											/>
+											<div className='overlay'>
+												<p className='text-yellow text-3xl font-medium'>
+													{item.title}
+												</p>
+												<p className='text-white text-xl max-w-96'>
+													{item.description}
+												</p>
+											</div>
 										</div>
 									);
 								})}
 							</div>
-							Mobile
-							<div className='grid grid-cols-4 place-items-start gap-2 mt-20'>
+							<p className='text-yellow text-3xl mb-5 mt-20'>
+								// Mobile development
+							</p>
+							<div className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-4 gap-4 w-full'>
 								{portolioData.mobile.map((item, index) => {
 									return (
-										<div key={index}>
+										<div key={index} className='image-container'>
 											<Image
 												src={item.image}
 												alt={item.alt}
 												width={600}
 												height={600}
-												className='max-w-[350px]'
+												className='w-full'
 											/>
+											<div className='overlay'>
+												<p className='text-yellow text-3xl font-medium'>
+													{item.title}
+												</p>
+												<p className='text-white text-xl max-w-96'>
+													{item.description}
+												</p>
+											</div>
 										</div>
 									);
 								})}
 							</div>
 						</div>
 					) : projects === 'web development' ? (
-						<>
+						<div className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-20'>
 							{portolioData.web.map((item, index) => {
 								return (
-									<>
-										{item.title}
-										{item.description}
-									</>
+									<div key={index} className='image-container'>
+										<Image
+											src={item.image}
+											alt={item.alt}
+											width={600}
+											height={600}
+											className='w-full'
+										/>
+										<div className='overlay'>
+											<p className='text-yellow text-3xl font-medium'>
+												{item.title}
+											</p>
+											<p className='text-white text-xl max-w-96'>
+												{item.description}
+											</p>
+										</div>
+									</div>
 								);
 							})}
-						</>
+						</div>
 					) : (
 						projects === 'mobile development' && (
-							<>
+							<div className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-4 gap-4 w-full mt-20'>
 								{portolioData.mobile.map((item, index) => {
 									return (
-										<>
-											{item.title}
-											{item.description}
-										</>
+										<div key={index} className='image-container'>
+											<Image
+												src={item.image}
+												alt={item.alt}
+												width={600}
+												height={600}
+												className='w-full'
+											/>
+											<div className='overlay'>
+												<p className='text-yellow text-3xl font-medium'>
+													{item.title}
+												</p>
+												<p className='text-white text-xl max-w-96'>
+													{item.description}
+												</p>
+											</div>
+										</div>
 									);
 								})}
-							</>
+							</div>
 						)
 					)}
 				</div>

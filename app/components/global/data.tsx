@@ -58,7 +58,6 @@ export const aboutText = [
 export const pageData: PageData = {
 	mobile: [
 		{
-			id: 0,
 			image: '/projects/cmrmrn.jpg',
 			alt: 'mosque mobile',
 			title: '{Claremont Mosque Mobile App}',
@@ -67,7 +66,6 @@ export const pageData: PageData = {
 			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
 		},
 		{
-			id: 1,
 			image: '/projects/memory-game.png',
 			alt: 'cerebral twist mobile app',
 			title: '{Cerebral Twist Mobile App}',
@@ -78,7 +76,6 @@ export const pageData: PageData = {
 	],
 	web: [
 		{
-			id: 0,
 			image: '/projects/forecast-hub.png',
 			alt: 'forecast hub',
 			title: '{Forecast Hub}',
@@ -86,7 +83,6 @@ export const pageData: PageData = {
 			link: 'https://forecast-hub.vercel.app/',
 		},
 		{
-			id: 1,
 			image: '/projects/job-listing.png',
 			alt: 'jobs web app',
 			title: '{Job Listing Web App}',
@@ -131,7 +127,6 @@ export const filterButtons: string[] = [
 export const portolioData: PageData = {
 	web: [
 		{
-			id: 0,
 			image: '/projects/forecast-hub.png',
 			alt: 'forecast hub',
 			title: '{Forecast Hub}',
@@ -139,7 +134,6 @@ export const portolioData: PageData = {
 			link: 'https://forecast-hub.vercel.app/',
 		},
 		{
-			id: 1,
 			image: '/projects/face-det.jpg',
 			alt: 'mood detect web app',
 			title: '{Mood Detector Web App}',
@@ -147,7 +141,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 2,
 			image: '/projects/job-listing.png',
 			alt: 'Job Listing web app',
 			title: '{Job Listing Web App}',
@@ -156,7 +149,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 3,
 			image: '/projects/life-health-care.png',
 			alt: 'Life Healthcare web app',
 			title: '{Life Healthcare}',
@@ -165,16 +157,14 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 4,
 			image: '/projects/magnetic.png',
 			alt: 'Magnetic BNB',
-			title: '{Life Healthcare}',
+			title: '{Magnetic BNB}',
 			description:
 				'A local Air BNB provider that was one of my freelance work;',
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 5,
 			image: '/projects/nova.png',
 			alt: 'Nova Athletics',
 			title: '{Nova Athletics}',
@@ -183,7 +173,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 6,
 			image: '/projects/payat.png',
 			alt: 'payat',
 			title: '{PayAt}',
@@ -192,7 +181,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 7,
 			image: '/projects/polished-lounge.png',
 			alt: 'polished lounge',
 			title: '{Polised Lounge}',
@@ -201,7 +189,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 8,
 			image: '/projects/shafieks-carwash.png',
 			alt: 'shafieks carwash',
 			title: '{Shafieks Carwash}',
@@ -209,7 +196,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 9,
 			image: '/projects/smarter-britain.png',
 			alt: 'smarter britain',
 			title: '{Smarter Britain}',
@@ -218,7 +204,6 @@ export const portolioData: PageData = {
 			link: 'https://job-listing-39b59.web.app/',
 		},
 		{
-			id: 10,
 			image: '/projects/taquanta.png',
 			alt: 'taquanta',
 			title: '{Taquanta}',
@@ -226,10 +211,16 @@ export const portolioData: PageData = {
 				'A South African owned business for asset management assigned to me at one of my previous companies;',
 			link: 'https://job-listing-39b59.web.app/',
 		},
+		{
+			image: '/projects/talent-usage.png',
+			alt: 'talent usage',
+			title: '{Talent Usage}',
+			description: `A local South African company that eases the process by identifying usages for their clients in the media industry that was assigned to me at one of my previous companies;`,
+			link: 'https://forecast-hub.vercel.app/',
+		},
 	],
 	mobile: [
 		{
-			id: 0,
 			image: '/projects/memory-game.png',
 			alt: 'cerebral twist mobile app',
 			title: '{Cerebral Twist Mobile App}',
@@ -238,7 +229,6 @@ export const portolioData: PageData = {
 			link: 'https://github.com/naeem2000/Cerebral-Twist',
 		},
 		{
-			id: 1,
 			image: '/projects/cmrmrn.jpg',
 			alt: 'mosque mobile',
 			title: '{Claremont Mosque Mobile App}',
@@ -247,7 +237,6 @@ export const portolioData: PageData = {
 			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
 		},
 		{
-			id: 2,
 			image: '/projects/newsrn.jpg',
 			alt: 'news mobile',
 			title: '{News24 API Mobile App}',
@@ -256,7 +245,6 @@ export const portolioData: PageData = {
 			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
 		},
 		{
-			id: 3,
 			image: '/projects/todorn.jpg',
 			alt: 'Todo mobile',
 			title: '{ToDo Mobile App}',
