@@ -51,7 +51,9 @@ export default function Portfolio({}) {
 							{...portfolioMotionStyles}
 							className='mt-10'
 						>
-							<p className='text-yellow text-3xl mb-5'>// Web development</p>
+							<p className='text-yellow text-3xl mb-5'>
+								{'// Web development'}
+							</p>
 							<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
 								{portolioData.web.map((item, index) => (
 									<div key={index} className='image-container'>
@@ -75,11 +77,11 @@ export default function Portfolio({}) {
 							</div>
 							<div className='mt-20'>
 								<p className='text-yellow text-3xl mb-5'>
-									// Mobile development
+									{'// Mobile development'}
 								</p>
 								<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
 									{portolioData.mobile.map((item, index) => (
-										<div className='image-container'>
+										<div key={index} className='image-container'>
 											<Image
 												src={item.image}
 												alt={item.alt}
@@ -109,7 +111,7 @@ export default function Portfolio({}) {
 							className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-10'
 						>
 							{portolioData.web.map((item, index) => (
-								<div className='image-container'>
+								<div key={index} className='image-container'>
 									<Image
 										src={item.image}
 										alt={item.alt}
@@ -137,7 +139,7 @@ export default function Portfolio({}) {
 							className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full mt-10'
 						>
 							{portolioData.mobile.map((item, index) => (
-								<div className='image-container'>
+								<div key={index} className='image-container'>
 									<Image
 										src={item.image}
 										alt={item.alt}

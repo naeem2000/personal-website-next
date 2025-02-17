@@ -9,8 +9,6 @@ import React from 'react';
 import { fadeInMotionStyles } from './utils/constants';
 
 export default function Portfolio() {
-	console.log(pageData.mobile);
-
 	return (
 		<motion.section {...fadeInMotionStyles} className='wrapper' id='portfolio'>
 			<div>
