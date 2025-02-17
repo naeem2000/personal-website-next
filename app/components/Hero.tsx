@@ -15,9 +15,8 @@ export default function Hero() {
 			<h1
 				className='text-white text-2xl mobile:text-3xl text-center desktop:mt-28'
 				data-aos='fade-left'
-				// eslint-disable-next-line react/jsx-no-comment-textnodes
 			>
-				// Hi, I&apos;m NAEEM, A...
+				{"// Hi, I'm NAEEM, A..."}
 			</h1>
 			<h2
 				className='flex items-center justify-center text-4xl mobile:text-6xl desktop:text-9xl mt-3 text-white leading-snug'

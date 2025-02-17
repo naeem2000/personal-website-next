@@ -1,4 +1,4 @@
-import { ContactDetails, ContactErrors, Project } from './types';
+import { ContactDetails, ContactErrors } from './types';
 import { useState, useEffect } from 'react';
 import { useForm } from '@formspree/react';
 
