@@ -1,9 +1,9 @@
 'use client';
 
-import { PdfViewerProps } from './TS/types';
+import { PdfViewerProps } from './utils/types';
+import Button from './global/Button';
 import Image from 'next/image';
 import React from 'react';
-import Button from './global/Button';
 
 export default function Portfolio({ onClose }: PdfViewerProps) {
 	return (

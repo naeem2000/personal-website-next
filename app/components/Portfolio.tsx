@@ -1,26 +1,20 @@
 'use client';
 
+import { motion } from 'motion/react';
 import SectionHeader from './global/SectionHeader';
-import 'slick-carousel/slick/slick-theme.css';
 import { pageData } from './global/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { fadeInMotionStyles } from './utils/constants';
 
 export default function Portfolio() {
-	const imageStyleMobile: string =
-		'mb-5 laptop:m-3 hover:scale-110 transition-all duration-500 w-full h-auto';
-	const imageStyleWeb: string =
-		'mb-5 laptop:m-3 hover:scale-110 transition-all duration-500 w-full h-full max-h-[250px]';
+	console.log(pageData.mobile);
 
 	return (
-		<section className='wrapper' id='portfolio'>
+		<motion.section {...fadeInMotionStyles} className='wrapper' id='portfolio'>
 			<div>
-				<SectionHeader
-					symbol={`(!)`}
-					aos='fade-right'
-					heading={'<portfolio/>'}
-				/>
+				<SectionHeader symbol={`(!)`} aos='fade-up' heading={'<portfolio/>'} />
 				<p
 					className='text-yellow text-xl desktop:text-[23px] text-center'
 					data-aos='fade-up'
@@ -30,48 +24,60 @@ export default function Portfolio() {
 			</div>
 			<div className='mt-10 mb-14 laptop:mb-0'>
 				<div className='flex items-center justify-center flex-col laptop:flex-row laptop:justify-between border-y border-t-border-color border-b-border-color'>
-					<div className='flex items-center w-full laptop:w-1/2 justify-around p-7 border-b laptop:border-b-0 border-b-border-color laptop:border-r border-r-border-color flex-wrap'>
-						<Link target='_blank' href={pageData.mobile[0].link}>
-							<Image
-								alt={pageData.mobile[0].alt}
-								src={pageData.mobile[0].image}
-								width={250}
-								height={250}
-								className={imageStyleMobile}
-							/>
-						</Link>
-						<Link target='_blank' href={pageData.mobile[2].link}>
-							<Image
-								alt={pageData.mobile[2].alt}
-								src={pageData.mobile[2].image}
-								width={250}
-								height={250}
-								className={`${imageStyleMobile} mb-0`}
-							/>
-						</Link>
+					<div
+						data-aos='fade-right'
+						className='flex items-center w-full laptop:w-1/2 justify-around p-7 border-b laptop:border-b-0 border-b-border-color laptop:border-r border-r-border-color flex-wrap'
+					>
+						{pageData.mobile.map((item, index) => {
+							return (
+								<div key={index} className='image-container mb-5'>
+									<Image
+										src={item.image}
+										alt={item.alt}
+										width={300}
+										height={300}
+									/>
+									<div className='overlay'>
+										<p className='text-yellow text-3xl font-medium'>
+											{item.title}
+										</p>
+										<p className='text-white text-xl max-w-96'>
+											{item.description}
+										</p>
+									</div>
+								</div>
+							);
+						})}
 					</div>
-					<div className='flex items-center w-full laptop:w-1/2 justify-around p-7 flex-wrap'>
-						<Link target='_blank' href={pageData.web[0].link}>
-							<Image
-								alt={pageData.web[0].alt}
-								src={pageData.web[0].image}
-								width={450}
-								height={250}
-								className={imageStyleWeb}
-							/>
-						</Link>
-						<Link target='_blank' href={pageData.web[1].link}>
-							<Image
-								alt={pageData.web[1].alt}
-								src={pageData.web[1].image}
-								width={650}
-								height={250}
-								className={`${imageStyleWeb} mb-0`}
-							/>
-						</Link>
+					<div
+						data-aos='fade-left'
+						className='flex items-center w-full laptop:w-1/2 justify-around p-7 flex-wrap'
+					>
+						{pageData.web.map((item, index) => {
+							return (
+								<Link key={index} target='_blank' href={item.link}>
+									<div key={index} className='image-container mb-5'>
+										<Image
+											src={item.image}
+											alt={item.alt}
+											width={550}
+											height={550}
+										/>
+										<div className='overlay'>
+											<p className='text-yellow text-3xl font-medium'>
+												{item.title}
+											</p>
+											<p className='text-white text-xl max-w-96'>
+												{item.description}
+											</p>
+										</div>
+									</div>
+								</Link>
+							);
+						})}
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }

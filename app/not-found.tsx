@@ -1,6 +1,6 @@
-import React from 'react';
 import Button from './components/global/Button';
 import Link from 'next/link';
+import React from 'react';
 
 export default function NotFound() {
 	return (

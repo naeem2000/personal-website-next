@@ -24,25 +24,17 @@ export type TypeWriterTypes = {
 	loop: boolean;
 };
 
-type ResponsiveSettingsTypes = {
-	centerMode?: boolean;
-	slidesToShow: number;
-	slidesToScroll: number;
+export type FadeInMotionStyles = {
+	initial: { opacity: number };
+	whileInView: { opacity: number };
+	transition: { duration: number };
 };
 
-type ResponsiveTypes = {
-	breakpoint: number;
-	settings: ResponsiveSettingsTypes;
-}[];
-
-export type CarouselTypes = {
-	infinite: boolean;
-	centerMode: boolean;
-	slidesToShow: number;
-	speed: number;
-	className: string;
-	adaptiveHeight: boolean;
-	responsive: ResponsiveTypes;
+export type PortfolioMotionStyles = {
+	initial: { opacity: number; y: number };
+	animate: { opacity: number; y: number };
+	exit: { opacity: number; y: number };
+	transition: { duration: number };
 };
 
 export interface ContactDetails {
@@ -56,7 +48,6 @@ export type PdfViewerProps = {
 };
 
 type NavLink = {
-	id: number;
 	label: string;
 	link: string;
 };
@@ -65,8 +56,7 @@ export type NavLinks = {
 	links: NavLink[];
 };
 
-type Project = {
-	id: number;
+export type Project = {
 	image: string;
 	alt: string;
 	title: string;
@@ -80,7 +70,6 @@ export type PageData = {
 };
 
 type SocialLink = {
-	id: number;
 	icon: ReactNode;
 	link: string;
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { UseScrollBar } from '../TS/functions';
+import { UseScrollBar } from '../utils/functions';
 
 export default function ScrollBar() {
 	const { progressBarStyle } = UseScrollBar();

@@ -1,4 +1,9 @@
-import { CarouselTypes, CursorClickableTypes, TypeWriterTypes } from './types';
+import {
+	CursorClickableTypes,
+	FadeInMotionStyles,
+	PortfolioMotionStyles,
+	TypeWriterTypes,
+} from './types';
 import { VT323 } from 'next/font/google';
 
 export const VT = VT323({
@@ -6,6 +11,12 @@ export const VT = VT323({
 	subsets: ['latin'],
 	preload: true,
 });
+
+export const fadeInMotionStyles: FadeInMotionStyles = {
+	initial: { opacity: 0 },
+	whileInView: { opacity: 1 },
+	transition: { duration: 1.3 },
+};
 
 export const CursorClickables: CursorClickableTypes = {
 	innerSize: 10,
@@ -49,39 +60,15 @@ export const TypeWriterConfig: TypeWriterTypes = {
 	loop: true,
 };
 
-export const CarouselSettings: CarouselTypes = {
-	infinite: true,
-	centerMode: true,
-	slidesToShow: 3,
-	speed: 500,
-	className: 'slider',
-	adaptiveHeight: false,
-	responsive: [
-		{
-			breakpoint: 1778,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2,
-			},
-		},
-		{
-			breakpoint: 500,
-			settings: {
-				centerMode: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			},
-		},
-		{
-			breakpoint: 344,
-			settings: {
-				centerMode: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			},
-		},
-	],
+export const portfolioMotionStyles: PortfolioMotionStyles = {
+	initial: { opacity: 0, y: 50 },
+	animate: { opacity: 1, y: 0 },
+	exit: { opacity: 0, y: -50 },
+	transition: { duration: 0.3 },
 };
 
 export const ContactStyles: string =
 	'max-w-[1140px] w-full text-purple text-lg desktop:text-[22px] border-b-border-color mt-8 desktop:mt-12 pt-0 pb-2 desktop:pb-3.5 px-2.5 border-b border-r-0 border-l-0 border-t-0 border-solid focus:border-b-purple bg-transparent outline-none placeholder:text-purple';
+
+export const filterButtonStyles: string =
+	'flex item-center justify-center mr-2 text-2xl mt-3 border-[3px] border-yellow px-3 py-[2px] transition-all duration-500 text-yellow hover:border-purple hover:text-purple';

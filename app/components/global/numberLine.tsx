@@ -1,6 +1,6 @@
 'use client';
 
-import { UseConstructLine } from '../TS/functions';
+import { UseConstructLine } from '../utils/functions';
 import React from 'react';
 
 export default function NumberLine() {
