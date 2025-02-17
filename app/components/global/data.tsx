@@ -1,31 +1,26 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
-import { NavLinks, PageData } from '../TS/types';
 import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_PORTFOLIO } from '@/app/Routes';
+import { NavLinks, PageData, Socials } from '../utils/types';
 
 export const navlinks: NavLinks = {
 	links: [
 		{
-			id: 0,
 			label: '_hero',
 			link: ROUTE_HOME,
 		},
 		{
-			id: 1,
 			label: '_about',
 			link: ROUTE_ABOUT,
 		},
 		{
-			id: 2,
 			label: '_portfolio',
 			link: ROUTE_PORTFOLIO,
 		},
 		{
-			id: 3,
 			label: '_services',
 			link: '#services',
 		},
 		{
-			id: 4,
 			label: '_contact',
 			link: '#contact',
 		},
@@ -93,25 +88,21 @@ export const pageData: PageData = {
 	],
 };
 
-export const socials = {
+export const socials: Socials = {
 	socialLink: [
 		{
-			id: 0,
 			icon: <ImFacebook />,
 			link: 'https://www.facebook.com/naeem.carr.3',
 		},
 		{
-			id: 1,
 			icon: <ImInstagram />,
 			link: 'https://www.instagram.com/naeem__carr',
 		},
 		{
-			id: 2,
 			icon: <ImLinkedin />,
 			link: 'www.linkedin.com/in/mncarr',
 		},
 		{
-			id: 3,
 			icon: <ImGithub />,
 			link: 'https://github.com/naeem2000',
 		},
@@ -120,8 +111,8 @@ export const socials = {
 
 export const filterButtons: string[] = [
 	'all projects',
-	'web development',
 	'mobile development',
+	'web development',
 ];
 
 export const portolioData: PageData = {
@@ -220,6 +211,14 @@ export const portolioData: PageData = {
 		},
 	],
 	mobile: [
+		{
+			image: '/projects/rushtush.jpg',
+			alt: 'rushtush',
+			title: '{RushTush}',
+			description:
+				'A local South African entrepreneur providing a service for women wanting to sculpt up or become fit that was assigned to me at one of my previous companies;',
+			link: 'https://github.com/naeem2000/Cerebral-Twist',
+		},
 		{
 			image: '/projects/memory-game.png',
 			alt: 'cerebral twist mobile app',

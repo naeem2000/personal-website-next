@@ -2,7 +2,7 @@
 
 import { Sling as Hamburger } from 'hamburger-react';
 import { usePathname } from 'next/navigation';
-import { UseShowNav } from '../TS/functions';
+import { UseShowNav } from '../utils/functions';
 import { navlinks } from './data';
 import Link from 'next/link';
 import React from 'react';

@@ -13,10 +13,7 @@ export default function Footer() {
 							<ul className='hidden desktop:flex'>
 								{navlinks.links.map((item, index) => {
 									return (
-										<li
-											className={`${index !== 0 ? 'ml-5' : ''}`}
-											key={item.id}
-										>
+										<li className={`${index !== 0 ? 'ml-5' : ''}`} key={index}>
 											<Link
 												className='text-xl text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'
 												href={item.link}
@@ -38,11 +35,11 @@ export default function Footer() {
 						<Image src='/react.svg' width={30} height={30} alt='next' />
 					</Link>
 					<div className='flex my-4 desktop:my-0 mr-0 desktop:mr-12'>
-						{socials.socialLink.map((item) => {
+						{socials.socialLink.map((item, index) => {
 							return (
 								<Link
 									className='text-purple transition-all duration-[0.5s] ease-[ease] text-xl mr-5 hover:text-yellow hover:scale-125'
-									key={item.id}
+									key={index}
 									href={item.link}
 									target='_blank'
 									rel='noopener noreferrer'

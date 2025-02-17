@@ -1,12 +1,15 @@
+'use client';
 import SectionHeader from '../components/global/SectionHeader';
 import PageHeader from '../components/global/PageHeader';
 import { aboutText } from '../components/global/data';
 import Contact from '../components/Contact';
 import React from 'react';
+import { fadeInMotionStyles } from '../components/utils/constants';
+import { motion } from 'motion/react';
 
 export default function About() {
 	return (
-		<section className='wrapper'>
+		<motion.section {...fadeInMotionStyles} className='wrapper'>
 			<div className='flex items-center justify-center flex-col'>
 				<PageHeader text='"About"' symbol='{/}' />
 				<p className='text-center mt-5 text-2xl laptop:text-4xl max-w-[1150px] text-yellow'>
@@ -25,40 +28,45 @@ export default function About() {
 					my problem-solving abilities for creating more efficient applications.
 				</p>
 			</div>
-			<div className="bg-[url('/about.gif')] bg-contain bg-center desktop:bg-[center_bottom_-25rem] bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] mt-10 desktop:mt-[100px]" />
-			<div className='mt-20'>
-				<SectionHeader aos='fade-left' heading='<What_drives_my_work/>' />
-			</div>
-			<div className='flex items-center justify-center'>
-				<div className='grid grid-cols-1 laptop:grid-cols-2 place-items-center max-w-[1280px] border-t border-border-color'>
-					{aboutText.map((item, index) => {
-						return (
-							<div
-								className={`${
-									index !== 1 &&
-									index !== 3 &&
-									'border-b laptop:border-r border-r-border-color'
-								} ${
-									index !== 2 &&
-									index !== 3 &&
-									'border-b laptop:border-b border-border-color'
-								} ${index === 2 && 'border-b-0'} ${
-									index === 3 &&
-									'border-t laptop:border-t-0 border-t-border-color'
-								} p-10 h-full`}
-								key={index}
-							>
-								<span className='text-4xl text-purple'>{item.symb}</span>
-								<h3 className='text-5xl mt-7 text-white leading-3'>
-									{item.heading}
-								</h3>
-								<p className='text-2xl mt-7 text-yellow'>{item.text}</p>
-							</div>
-						);
-					})}
+			<motion.div
+				{...fadeInMotionStyles}
+				className="bg-[url('/about.gif')] bg-contain bg-center desktop:bg-[center_bottom_-25rem] bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] mt-10 desktop:mt-[100px]"
+			/>
+			<motion.div {...fadeInMotionStyles}>
+				<div className='mt-20'>
+					<SectionHeader aos='fade-left' heading='<What_drives_my_work/>' />
 				</div>
-			</div>
+				<div className='flex items-center justify-center'>
+					<div className='grid grid-cols-1 laptop:grid-cols-2 place-items-center max-w-[1280px] border-t border-border-color'>
+						{aboutText.map((item, index) => {
+							return (
+								<div
+									className={`${
+										index !== 1 &&
+										index !== 3 &&
+										'border-b laptop:border-r border-r-border-color'
+									} ${
+										index !== 2 &&
+										index !== 3 &&
+										'border-b laptop:border-b border-border-color'
+									} ${index === 2 && 'border-b-0'} ${
+										index === 3 &&
+										'border-t laptop:border-t-0 border-t-border-color'
+									} p-10 h-full`}
+									key={index}
+								>
+									<span className='text-4xl text-purple'>{item.symb}</span>
+									<h3 className='text-5xl mt-7 text-white leading-3'>
+										{item.heading}
+									</h3>
+									<p className='text-2xl mt-7 text-yellow'>{item.text}</p>
+								</div>
+							);
+						})}
+					</div>
+				</div>
+			</motion.div>
 			<Contact />
-		</section>
+		</motion.section>
 	);
 }

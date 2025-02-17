@@ -1,13 +1,14 @@
 'use client';
 
+import { ContactStyles, fadeInMotionStyles } from './utils/constants';
 import React, { useEffect, useState } from 'react';
 import SectionHeader from './global/SectionHeader';
-import { ContactStyles } from './TS/constants';
-import { UseSubmitForm } from './TS/functions';
+import { UseSubmitForm } from './utils/functions';
 import { usePathname } from 'next/navigation';
 import { BeatLoader } from 'react-spinners';
 import Button from './global/Button';
 import ThankYou from './ThankYou';
+import { motion } from 'motion/react';
 
 export default function Contact() {
 	const [sentEmail, setSentEmail] = useState<boolean>(false);
@@ -27,14 +28,16 @@ export default function Contact() {
 	if (state.succeeded || sentEmail === true) return <ThankYou />;
 
 	return (
-		<section className={`wrapper ${path !== '/' && '!p-0'}`}>
+		<motion.section
+			{...fadeInMotionStyles}
+			className={`wrapper ${path !== '/' && '!p-0'}`}
+		>
 			<div className='text-center'>
-				<SectionHeader
-					symbol={`(*)`}
-					aos='fade-right'
-					heading={'<contact_me/>'}
-				/>
-				<p className='text-yellow text-xl desktop:text-[23px] leading-6'>
+				<SectionHeader symbol={`(*)`} aos='fade-up' heading={'<contact_me/>'} />
+				<p
+					data-aos='fade-up'
+					className='text-yellow text-xl desktop:text-[23px] leading-6'
+				>
 					Get in Touch: Let&apos;s Collaborate and Innovate Together
 				</p>
 			</div>
@@ -92,6 +95,6 @@ export default function Contact() {
 					</Button>
 				</div>
 			</form>
-		</section>
+		</motion.section>
 	);
 }

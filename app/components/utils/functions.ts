@@ -96,9 +96,9 @@ export const UseShowPDF = () => {
 	return { setViewPdf, viewPdf };
 };
 
-export function shuffleArray(array: Project[]) {
-	return [...array].sort(() => Math.random() - 0.5);
-}
+// export function shuffleArray(array: Project[]) {
+// 	return [...array].sort(() => Math.random() - 0.5);
+// }
 
 //Submit contact form function
 export const UseSubmitForm = () => {

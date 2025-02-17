@@ -1,12 +1,14 @@
 'use client';
 
-import { TypeWriterConfig } from './TS/constants';
+import { fadeInMotionStyles, TypeWriterConfig } from './utils/constants';
 import Typewriter from 'typewriter-effect';
 import React from 'react';
+import { motion } from 'motion/react';
 
 export default function Hero() {
 	return (
-		<section
+		<motion.section
+			{...fadeInMotionStyles}
 			className='wrapper flex items-center justify-center flex-col'
 			id='hero'
 		>
@@ -28,6 +30,6 @@ export default function Hero() {
 				{`"}`}
 			</h2>
 			<div className="bg-[url('/pc-setup.gif')] bg-contain bg-center desktop:bg-[center_bottom_-25rem] bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] mt-10 desktop:mt-[100px]" />
-		</section>
+		</motion.section>
 	);
 }
