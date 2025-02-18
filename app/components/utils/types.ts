@@ -70,6 +70,7 @@ export type PageData = {
 };
 
 type SocialLink = {
+	name: string;
 	icon: ReactNode;
 	link: string;
 };

@@ -1,13 +1,15 @@
 'use client';
+import { fadeInMotionStyles } from '../components/utils/constants';
 import SectionHeader from '../components/global/SectionHeader';
 import PageHeader from '../components/global/PageHeader';
 import { aboutText } from '../components/global/data';
-import Contact from '../components/Contact';
-import React from 'react';
-import { fadeInMotionStyles } from '../components/utils/constants';
 import { motion } from 'motion/react';
+import { Routes } from '../Routes';
+import React from 'react';
 
 export default function About() {
+	const { Contact } = Routes();
+
 	return (
 		<motion.section {...fadeInMotionStyles} className='wrapper'>
 			<div className='flex items-center justify-center flex-col'>
@@ -34,7 +36,7 @@ export default function About() {
 			/>
 			<motion.div {...fadeInMotionStyles}>
 				<div className='mt-20'>
-					<SectionHeader aos='fade-left' heading='<What_drives_my_work/>' />
+					<SectionHeader aos='fade-up' heading='<What_drives_my_work/>' />
 				</div>
 				<div className='flex items-center justify-center'>
 					<div className='grid grid-cols-1 laptop:grid-cols-2 place-items-center max-w-[1280px] border-t border-border-color'>
@@ -52,7 +54,7 @@ export default function About() {
 									} ${index === 2 && 'border-b-0'} ${
 										index === 3 &&
 										'border-t laptop:border-t-0 border-t-border-color'
-									} p-10 h-full`}
+									} p-5 laptop:p-10 h-full`}
 									key={index}
 								>
 									<span className='text-4xl text-purple'>{item.symb}</span>

@@ -42,6 +42,7 @@ export default function Footer() {
 									key={index}
 									href={item.link}
 									target='_blank'
+									aria-label={item.name}
 									rel='noopener noreferrer'
 								>
 									{item.icon}
