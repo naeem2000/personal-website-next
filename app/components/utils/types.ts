@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 export type CursorClickableTypes = {
 	innerSize: number;
@@ -30,11 +30,13 @@ export type FadeInMotionStyles = {
 	transition: { duration: number };
 };
 
-export type PortfolioMotionStyles = {
-	initial: { opacity: number; y: number };
-	animate: { opacity: number; y: number };
-	exit: { opacity: number; y: number };
-	transition: { duration: number };
+export type ProjectMotionStyles = {
+	initial: { opacity: number; scale: number };
+	animate: { opacity: number; scale: number };
+	transition: {
+		duration: number;
+		scale: { type: string; visualDuration: number; bounce: number };
+	};
 };
 
 export interface ContactDetails {

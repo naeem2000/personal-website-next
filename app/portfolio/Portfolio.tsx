@@ -9,7 +9,7 @@ import Image from 'next/image';
 import {
 	fadeInMotionStyles,
 	filterButtonStyles,
-	portfolioMotionStyles,
+	projectMotionStyles,
 } from '../components/utils/constants';
 import Link from 'next/link';
 
@@ -50,7 +50,7 @@ export default function Portfolio({}) {
 					{projects === 'all projects' && (
 						<motion.div
 							key='all-projects'
-							{...portfolioMotionStyles}
+							{...projectMotionStyles}
 							className='mt-10'
 						>
 							<p className='text-yellow text-3xl mb-5'>
@@ -58,8 +58,8 @@ export default function Portfolio({}) {
 							</p>
 							<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
 								{portolioData.web.map((item, index) => (
-									<Link href={item.link} target='_blank'>
-										<div key={index} className='image-container'>
+									<Link key={index} href={item.link} target='_blank'>
+										<div className='image-container'>
 											<Image
 												src={item.image}
 												alt={item.alt}
@@ -85,8 +85,8 @@ export default function Portfolio({}) {
 								</p>
 								<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
 									{portolioData.mobile.map((item, index) => (
-										<Link href={item.link} target='_blank'>
-											<div key={index} className='image-container'>
+										<Link key={index} href={item.link} target='_blank'>
+											<div className='image-container'>
 												<Image
 													src={item.image}
 													alt={item.alt}
@@ -113,12 +113,12 @@ export default function Portfolio({}) {
 					{projects === 'web development' && (
 						<motion.div
 							key='web-development'
-							{...portfolioMotionStyles}
+							{...projectMotionStyles}
 							className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-10'
 						>
 							{portolioData.web.map((item, index) => (
-								<Link href={item.link} target='_blank'>
-									<div key={index} className='image-container'>
+								<Link key={index} href={item.link} target='_blank'>
+									<div className='image-container'>
 										<Image
 											src={item.image}
 											alt={item.alt}
@@ -143,12 +143,12 @@ export default function Portfolio({}) {
 					{projects === 'mobile development' && (
 						<motion.div
 							key='mobile-development'
-							{...portfolioMotionStyles}
+							{...projectMotionStyles}
 							className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full mt-10'
 						>
 							{portolioData.mobile.map((item, index) => (
-								<Link href={item.link} target='_blank'>
-									<div key={index} className='image-container'>
+								<Link key={index} href={item.link} target='_blank'>
+									<div className='image-container'>
 										<Image
 											src={item.image}
 											alt={item.alt}

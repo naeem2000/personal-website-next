@@ -4,11 +4,9 @@ import React from 'react';
 import { fadeInMotionStyles } from '../components/utils/constants';
 import PageHeader from '../components/global/PageHeader';
 import { Routes } from '../Routes';
-import { aboutText, services } from '../components/global/data';
+import { services } from '../components/global/data';
 
-type Props = {};
-
-export default function Services({}: Props) {
+export default function Services() {
 	const { Contact } = Routes();
 
 	return (
