@@ -1,11 +1,23 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
-import { NavLinks, PageData, Socials } from '../utils/types';
+import { NavLinks, PageData, Services, Socials } from '../utils/types';
+import { SiMui, SiTypescript } from 'react-icons/si';
+import { IoLogoJavascript } from 'react-icons/io';
+import { IoLogoFirebase } from 'react-icons/io5';
 import {
 	ROUTE_HOME,
 	ROUTE_ABOUT,
 	ROUTE_SERVICES,
 	ROUTE_PORTFOLIO,
 } from '@/app/Routes';
+import {
+	FaCss3,
+	FaSass,
+	FaNode,
+	FaReact,
+	FaHtml5,
+	FaAngular,
+} from 'react-icons/fa';
+import { FiFramer } from 'react-icons/fi';
 
 export const navlinks: NavLinks = {
 	links: [
@@ -96,17 +108,25 @@ export const pageData: PageData = {
 export const socials: Socials = {
 	socialLink: [
 		{
-			name: 'awe',
+			name: 'Facebook',
 			icon: <ImFacebook />,
 			link: 'https://www.facebook.com/naeem.carr.3',
 		},
 		{
-			name: 'awe',
+			name: 'Instagram',
 			icon: <ImInstagram />,
 			link: 'https://www.instagram.com/naeem__carr',
 		},
-		{ name: 'awe', icon: <ImLinkedin />, link: 'www.linkedin.com/in/mncarr' },
-		{ name: 'awe', icon: <ImGithub />, link: 'https://github.com/naeem2000' },
+		{
+			name: 'LinkedIn',
+			icon: <ImLinkedin />,
+			link: 'www.linkedin.com/in/mncarr',
+		},
+		{
+			name: 'Github',
+			icon: <ImGithub />,
+			link: 'https://github.com/naeem2000',
+		},
 	],
 };
 
@@ -114,6 +134,49 @@ export const filterButtons: string[] = [
 	'all projects',
 	'mobile development',
 	'web development',
+];
+
+export const services: Services = [
+	{ number: '01', name: 'HTML', icon: <FaHtml5 color='#DB4C23' size={70} /> },
+	{ number: '02', name: 'CSS', icon: <FaCss3 color='#234CDD' size={70} /> },
+	{ number: '03', name: 'Sass', icon: <FaSass color='#CE6B9B' size={70} /> },
+	{
+		number: '04',
+		name: 'JavaScript',
+		icon: <IoLogoJavascript color='#F1DC55' size={70} />,
+	},
+	{
+		number: '05',
+		name: 'TypeScript',
+		icon: <SiTypescript color='#397CC8' size={70} />,
+	},
+	{ number: '06', name: 'React', icon: <FaReact color='#67DBFB' size={70} /> },
+	{
+		number: '07',
+		name: 'Angular',
+		icon: <FaAngular color='#C50C35' size={70} />,
+	},
+	{
+		number: '08',
+		name: 'React-Native',
+		icon: <FaReact color='#67DBFB' size={70} />,
+	},
+	{ number: '09', name: 'Node', icon: <FaNode color='#8FC716' size={70} /> },
+	{
+		number: '10',
+		name: 'Firebase',
+		icon: <IoLogoFirebase color='#FFCE35' size={70} />,
+	},
+	{
+		number: '11',
+		name: 'Material UI',
+		icon: <SiMui color='#1683FF' size={70} />,
+	},
+	{
+		number: '12',
+		name: 'Framer Motion',
+		icon: <FiFramer color='#1683FF' size={70} />,
+	},
 ];
 
 export const portolioData: PageData = {

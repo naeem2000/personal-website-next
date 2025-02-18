@@ -4,6 +4,7 @@ import React from 'react';
 import { fadeInMotionStyles } from '../components/utils/constants';
 import PageHeader from '../components/global/PageHeader';
 import { Routes } from '../Routes';
+import { aboutText, services } from '../components/global/data';
 
 type Props = {};
 
@@ -22,6 +23,32 @@ export default function Services({}: Props) {
 					Services Tailored to Your Unique Needs.
 				</p>
 			</div>
+			<motion.div
+				{...fadeInMotionStyles}
+				className='flex items-center justify-center mt-10 flex-col'
+			>
+				<div className='grid grid-cols-1 md:grid-cols-2 place-items-center'>
+					{services.map((item, index) => {
+						return (
+							<div
+								className='flex items-center p-5 laptop:p-10 min-w-72 laptop:min-w-96 justify-between border border-border-color'
+								key={index}
+							>
+								<span className='text-4xl text-purple'>
+									{'{'}
+									{item.number}
+									{'}'}
+								</span>
+								<div className='laptop:mx-auto flex flex-col items-center text-center'>
+									{item.icon}
+									<h3 className='text-3xl text-white'>{item.name}</h3>
+								</div>
+							</div>
+						);
+					})}
+				</div>
+				<p className='text-4xl text-purple mt-10'>And more to come!</p>
+			</motion.div>
 			<Contact />
 		</motion.section>
 	);

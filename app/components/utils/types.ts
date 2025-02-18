@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export type CursorClickableTypes = {
 	innerSize: number;
@@ -55,6 +55,12 @@ type NavLink = {
 export type NavLinks = {
 	links: NavLink[];
 };
+
+export type Services = {
+	number: string;
+	icon: ReactNode;
+	name: string;
+}[];
 
 export type Project = {
 	image: string;
