@@ -4,7 +4,7 @@ import React from 'react';
 type Props = {
 	heading: string;
 	aos: string;
-	link: string;
+	link?: string;
 	symbol?: string;
 };
 

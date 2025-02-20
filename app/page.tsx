@@ -1,6 +1,5 @@
 'use client';
 
-import Loader from './components/global/Loader';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import Contact from './components/Contact';
