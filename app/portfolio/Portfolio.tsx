@@ -6,6 +6,7 @@ import Button from '../components/global/Button';
 import React, { useState } from 'react';
 import { Routes } from '../Routes';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
 	fadeInMotionStyles,
 	filterButtonStyles,
@@ -18,17 +19,18 @@ export default function Portfolio({}) {
 
 	return (
 		<motion.section {...fadeInMotionStyles} className='wrapper'>
-			<div>
-				<div className='flex items-center justify-center flex-col'>
-					<PageHeader text='"Portfolio"' symbol='{!}' />
-					<p className='text-center text-yellow text-2xl mt-5 max-w-5xl'>
-						…Welcome to My Portfolio: A Deep Dive Into My Creative Journey,
-						Professional Expertise, and Passion-Driven Projects. Here, I invite
-						you to explore a collection of my best work, where creativity meets
-						precision, and innovation drives impactful results.
-					</p>
-				</div>
-			</div>
+			<motion.div
+				{...fadeInMotionStyles}
+				className='flex items-center justify-center flex-col'
+			>
+				<PageHeader text='"Portfolio"' symbol='{!}' />
+				<p className='text-center text-yellow text-2xl mt-5 max-w-5xl'>
+					…Welcome to My Portfolio: A Deep Dive Into My Creative Journey,
+					Professional Expertise, and Passion-Driven Projects. Here, I invite
+					you to explore a collection of my best work, where creativity meets
+					precision, and innovation drives impactful results.
+				</p>
+			</motion.div>
 			<motion.div
 				{...fadeInMotionStyles}
 				className="bg-[url('/tenor.gif')] bg-contain bg-center bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] desktop:mt-[100px]"
@@ -61,11 +63,9 @@ export default function Portfolio({}) {
 							</p>
 							<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
 								{portolioData.web.map((item, index) => (
-									<motion.a
-										whileHover={{
-											scale: 1.03,
-										}}
+									<Link
 										key={index}
+										className='hover:scale-[1.03] transition-all duration-150'
 										href={item.link}
 										target='_blank'
 									>
@@ -86,7 +86,7 @@ export default function Portfolio({}) {
 												</p>
 											</div>
 										</div>
-									</motion.a>
+									</Link>
 								))}
 							</div>
 							<div className='mt-20'>
@@ -95,11 +95,9 @@ export default function Portfolio({}) {
 								</p>
 								<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
 									{portolioData.mobile.map((item, index) => (
-										<motion.a
-											whileHover={{
-												scale: 1.03,
-											}}
+										<Link
 											key={index}
+											className='hover:scale-[1.03] transition-all duration-150'
 											href={item.link}
 											target='_blank'
 										>
@@ -120,7 +118,7 @@ export default function Portfolio({}) {
 													</p>
 												</div>
 											</div>
-										</motion.a>
+										</Link>
 									))}
 								</div>
 							</div>
@@ -134,11 +132,9 @@ export default function Portfolio({}) {
 							className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-10'
 						>
 							{portolioData.web.map((item, index) => (
-								<motion.a
-									whileHover={{
-										scale: 1.03,
-									}}
+								<Link
 									key={index}
+									className='hover:scale-[1.03] transition-all duration-150'
 									href={item.link}
 									target='_blank'
 								>
@@ -159,7 +155,7 @@ export default function Portfolio({}) {
 											</p>
 										</div>
 									</div>
-								</motion.a>
+								</Link>
 							))}
 						</motion.div>
 					)}
@@ -171,11 +167,9 @@ export default function Portfolio({}) {
 							className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full mt-10'
 						>
 							{portolioData.mobile.map((item, index) => (
-								<motion.a
-									whileHover={{
-										scale: 1.03,
-									}}
+								<Link
 									key={index}
+									className='hover:scale-[1.03] transition-all duration-150'
 									href={item.link}
 									target='_blank'
 								>
@@ -196,7 +190,7 @@ export default function Portfolio({}) {
 											</p>
 										</div>
 									</div>
-								</motion.a>
+								</Link>
 							))}
 						</motion.div>
 					)}

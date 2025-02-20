@@ -17,7 +17,12 @@ export default function About() {
 				id='about'
 			>
 				<div>
-					<SectionHeader symbol={`{/}`} aos='fade-up' heading='<about_me/>' />
+					<SectionHeader
+						symbol={`{/}`}
+						aos='fade-up'
+						link='/about'
+						heading='<about_me/>'
+					/>
 					<p
 						className='text-xl pb-[25px] desktop:pb-0 desktop:text-[25px] leading-6 text-yellow desktop:max-w-[800px]'
 						data-aos='fade-up'

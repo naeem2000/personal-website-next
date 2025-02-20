@@ -33,7 +33,12 @@ export default function Contact() {
 			className={`wrapper ${path !== '/' && '!p-0'}`}
 		>
 			<div className='text-center'>
-				<SectionHeader symbol={`(*)`} aos='' heading={'<contact_me/>'} />
+				<SectionHeader
+					symbol={`(*)`}
+					aos=''
+					link='/contact'
+					heading={'<contact_me/>'}
+				/>
 				<p className='text-yellow text-xl desktop:text-[23px] leading-6'>
 					Get in Touch: Let&apos;s Collaborate and Innovate Together
 				</p>

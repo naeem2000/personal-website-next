@@ -1,6 +1,5 @@
 'use client';
 
-import Loader from './components/global/Loader';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import Contact from './components/Contact';
@@ -14,22 +13,19 @@ import AOS from 'aos';
 export default function Home() {
 	useEffect(() => {
 		AOS.init();
-		if (typeof window !== 'undefined') {
-			const loader = document.getElementById('loader');
-			if (loader) {
-				setTimeout(() => {
-					loader.classList.add('slide');
-					setTimeout(() => {
-						loader.style.display = 'none';
-					}, 300);
-				}, 1500);
-			}
-		}
+		// if (typeof window !== 'undefined') {
+		// 	const loader = document.getElementById('loader');
+		// 	if (loader) {
+		// 		loader.classList.add('slide');
+
+		// 		loader.style.display = 'none';
+		// 	}
+		// }
 	}, []);
 
 	return (
 		<>
-			<Loader />
+			{/* <Loader /> */}
 			<Hero />
 			<About />
 			<Portfolio />
