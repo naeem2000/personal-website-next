@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Nav from './components/global/Nav';
 import type { Metadata } from 'next';
 import './globals.css';
+import NextTopLoader from 'nextjs-toploader';
 
 export const metadata: Metadata = {
 	title: 'Naeem Carr',
@@ -28,6 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={VT.className}>
+				<NextTopLoader color='var(--purple)' height={4} />
 				<ScrollBar />
 				<NumberLine />
 				<Nav />

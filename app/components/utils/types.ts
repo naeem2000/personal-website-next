@@ -45,6 +45,7 @@ export type Services = {
 	number: string;
 	icon: ReactNode;
 	name: string;
+	link: string;
 }[];
 
 export type Project = {

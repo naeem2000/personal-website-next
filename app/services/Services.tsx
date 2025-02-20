@@ -1,17 +1,21 @@
 'use client';
-import { motion } from 'motion/react';
-import React from 'react';
 import { fadeInMotionStyles } from '../components/utils/constants';
 import PageHeader from '../components/global/PageHeader';
-import { Routes } from '../Routes';
 import { services } from '../components/global/data';
+import { motion } from 'motion/react';
+import { Routes } from '../Routes';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Services() {
 	const { Contact } = Routes();
 
 	return (
 		<motion.section {...fadeInMotionStyles} className='wrapper'>
-			<div className='flex items-center justify-center flex-col'>
+			<motion.div
+				{...fadeInMotionStyles}
+				className='flex items-center justify-center flex-col'
+			>
 				<PageHeader text='"Services"' symbol='{#}' />
 				<p className='text-center text-yellow text-2xl mt-5 max-w-5xl'>
 					...My Web & Mobile Development Services | Crafting High-Performance
@@ -20,7 +24,7 @@ export default function Services() {
 					to API Integrations, I Provide End-to-End Front-end Development
 					Services Tailored to Your Unique Needs.
 				</p>
-			</div>
+			</motion.div>
 			<motion.div
 				{...fadeInMotionStyles}
 				className="bg-[url('/languages.gif')]  bg-contain bg-center bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] desktop:mt-[100px]"
@@ -32,12 +36,10 @@ export default function Services() {
 				<div className='grid grid-cols-1 md:grid-cols-2 place-items-center'>
 					{services.map((item, index) => {
 						return (
-							<motion.div
-								whileHover={{
-									background: 'var(--blue)',
-									scale: 1.03,
-								}}
-								className='flex items-center p-5 laptop:p-10 min-w-72 laptop:min-w-96 justify-between border border-border-color'
+							<Link
+								href={item.link}
+								target='_blank'
+								className='flex items-center p-5 laptop:p-10 min-w-72 laptop:min-w-96 justify-between border border-border-color hover:bg-blue transition-all duration-200 hover:scale-[1.03]'
 								key={index}
 							>
 								<span className='text-4xl text-purple mix-blend-difference'>
@@ -51,7 +53,7 @@ export default function Services() {
 										{item.name}
 									</h3>
 								</div>
-							</motion.div>
+							</Link>
 						);
 					})}
 				</div>

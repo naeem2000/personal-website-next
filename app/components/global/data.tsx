@@ -93,7 +93,7 @@ export const pageData: PageData = {
 			alt: 'forecast hub',
 			title: '{Forecast Hub}',
 			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast;`,
-			link: 'https://forecast-hub.vercel.app/',
+			link: 'https://forecast-hub-web.netlify.app/',
 		},
 		{
 			image: '/projects/job-listing.png',
@@ -138,32 +138,47 @@ export const filterButtons: string[] = [
 ];
 
 export const services: Services = [
-	{ number: '01', name: 'HTML', icon: <FaHtml5 color='#DB4C23' size={70} /> },
-	{ number: '02', name: 'CSS', icon: <FaCss3 color='#234CDD' size={70} /> },
+	{
+		number: '01',
+		name: 'HTML',
+		icon: <FaHtml5 color='#DB4C23' size={70} />,
+		link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+	},
+	{
+		number: '02',
+		name: 'CSS',
+		icon: <FaCss3 color='#234CDD' size={70} />,
+		link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+	},
 	{
 		number: '03',
 		name: 'JavaScript',
 		icon: <IoLogoJavascript color='#F1DC55' size={70} />,
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
 	},
 	{
 		number: '04',
 		name: 'TypeScript',
 		icon: <SiTypescript color='#397CC8' size={70} />,
+		link: 'https://www.typescriptlang.org/',
 	},
 	{
 		number: '05',
 		name: 'React.JS',
 		icon: <FaReact color='#67DBFB' size={70} />,
+		link: 'https://react.dev/',
 	},
 	{
 		number: '06',
 		name: 'Angular.JS',
 		icon: <FaAngular color='#C50C35' size={70} />,
+		link: 'https://angularjs.org/',
 	},
 	{
 		number: '07',
 		name: 'React-Native',
 		icon: <FaReact color='#67DBFB' size={70} />,
+		link: 'https://reactnative.dev/',
 	},
 	{
 		number: '08',
@@ -175,28 +190,43 @@ export const services: Services = [
 				size={70}
 			/>
 		),
+		link: 'https://nextjs.org/',
 	},
-	{ number: '09', name: 'Sass', icon: <FaSass color='#CE6B9B' size={70} /> },
+	{
+		number: '09',
+		name: 'Sass',
+		icon: <FaSass color='#CE6B9B' size={70} />,
+		link: 'https://sass-lang.com/',
+	},
 	{
 		number: '10',
 		name: 'Tailwind CSS',
 		icon: <RiTailwindCssFill color='#35B7F0' size={70} />,
+		link: 'https://tailwindcss.com/',
 	},
-	{ number: '11', name: 'Node.JS', icon: <FaNode color='#8FC716' size={70} /> },
+	{
+		number: '11',
+		name: 'Node.JS',
+		icon: <FaNode color='#8FC716' size={70} />,
+		link: 'https://nodejs.org/en',
+	},
 	{
 		number: '12',
 		name: 'Firebase',
 		icon: <IoLogoFirebase color='#FFCE35' size={70} />,
+		link: 'https://firebase.google.com/',
 	},
 	{
 		number: '13',
 		name: 'Material UI',
 		icon: <SiMui color='#1683FF' size={70} />,
+		link: 'https://mui.com/',
 	},
 	{
 		number: '14',
 		name: 'Framer Motion',
 		icon: <FiFramer color='#1683FF' size={70} />,
+		link: 'https://motion.dev/',
 	},
 ];
 

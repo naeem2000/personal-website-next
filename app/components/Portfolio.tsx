@@ -12,7 +12,12 @@ export default function Portfolio() {
 	return (
 		<motion.section {...fadeInMotionStyles} className='wrapper' id='portfolio'>
 			<div>
-				<SectionHeader symbol={`(!)`} aos='fade-up' heading={'<portfolio/>'} />
+				<SectionHeader
+					symbol={`(!)`}
+					aos='fade-up'
+					link='/portfolio'
+					heading={'<portfolio/>'}
+				/>
 				<p
 					className='text-yellow text-xl desktop:text-[23px] text-center'
 					data-aos='fade-up'
@@ -28,7 +33,12 @@ export default function Portfolio() {
 					>
 						{pageData.mobile.map((item, index) => {
 							return (
-								<div key={index} className='image-container mb-5'>
+								<Link
+									key={index}
+									href={item.link}
+									className='image-container mb-5 hover:scale-[1.03] transition-all duration-150'
+									target='_blank'
+								>
 									<Image
 										src={item.image}
 										alt={item.alt}
@@ -43,7 +53,7 @@ export default function Portfolio() {
 											{item.description}
 										</p>
 									</div>
-								</div>
+								</Link>
 							);
 						})}
 					</div>
@@ -53,22 +63,25 @@ export default function Portfolio() {
 					>
 						{pageData.web.map((item, index) => {
 							return (
-								<Link key={index} target='_blank' href={item.link}>
-									<div key={index} className='image-container mb-5'>
-										<Image
-											src={item.image}
-											alt={item.alt}
-											width={550}
-											height={550}
-										/>
-										<div className='overlay'>
-											<p className='text-yellow text-3xl font-medium'>
-												{item.title}
-											</p>
-											<p className='text-white text-xl max-w-96'>
-												{item.description}
-											</p>
-										</div>
+								<Link
+									key={index}
+									target='_blank'
+									href={item.link}
+									className='image-container mb-5 hover:scale-[1.03] transition-all duration-150'
+								>
+									<Image
+										src={item.image}
+										alt={item.alt}
+										width={550}
+										height={550}
+									/>
+									<div className='overlay'>
+										<p className='text-yellow text-3xl font-medium'>
+											{item.title}
+										</p>
+										<p className='text-white text-xl max-w-96'>
+											{item.description}
+										</p>
 									</div>
 								</Link>
 							);

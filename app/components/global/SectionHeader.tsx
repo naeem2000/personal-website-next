@@ -1,12 +1,14 @@
+import Link from 'next/link';
 import React from 'react';
 
 type Props = {
 	heading: string;
 	aos: string;
+	link: string;
 	symbol?: string;
 };
 
-export default function SectionHeader({ heading, aos, symbol }: Props) {
+export default function SectionHeader({ heading, aos, symbol, link }: Props) {
 	return (
 		<div className='text-center'>
 			<span
@@ -19,7 +21,9 @@ export default function SectionHeader({ heading, aos, symbol }: Props) {
 				className='text-4xl desktop:text-7xl leading-[1em] text-white my-4 desktop:mb-5'
 				data-aos={aos}
 			>
-				{heading}
+				<Link className='hover:underline' href={link || ''}>
+					{heading}
+				</Link>
 			</h1>
 		</div>
 	);
