@@ -1,6 +1,6 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
 import { NavLinks, PageData, Services, Socials } from '../utils/types';
-import { SiMui, SiTypescript } from 'react-icons/si';
+import { SiMui, SiNextdotjs, SiTypescript } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io';
 import { IoLogoFirebase } from 'react-icons/io5';
 import {
@@ -18,6 +18,7 @@ import {
 	FaAngular,
 } from 'react-icons/fa';
 import { FiFramer } from 'react-icons/fi';
+import { RiTailwindCssFill } from 'react-icons/ri';
 
 export const navlinks: NavLinks = {
 	links: [
@@ -139,41 +140,61 @@ export const filterButtons: string[] = [
 export const services: Services = [
 	{ number: '01', name: 'HTML', icon: <FaHtml5 color='#DB4C23' size={70} /> },
 	{ number: '02', name: 'CSS', icon: <FaCss3 color='#234CDD' size={70} /> },
-	{ number: '03', name: 'Sass', icon: <FaSass color='#CE6B9B' size={70} /> },
 	{
-		number: '04',
+		number: '03',
 		name: 'JavaScript',
 		icon: <IoLogoJavascript color='#F1DC55' size={70} />,
 	},
 	{
-		number: '05',
+		number: '04',
 		name: 'TypeScript',
 		icon: <SiTypescript color='#397CC8' size={70} />,
 	},
-	{ number: '06', name: 'React', icon: <FaReact color='#67DBFB' size={70} /> },
 	{
-		number: '07',
-		name: 'Angular',
+		number: '05',
+		name: 'React.JS',
+		icon: <FaReact color='#67DBFB' size={70} />,
+	},
+	{
+		number: '06',
+		name: 'Angular.JS',
 		icon: <FaAngular color='#C50C35' size={70} />,
 	},
 	{
-		number: '08',
+		number: '07',
 		name: 'React-Native',
 		icon: <FaReact color='#67DBFB' size={70} />,
 	},
-	{ number: '09', name: 'Node', icon: <FaNode color='#8FC716' size={70} /> },
+	{
+		number: '08',
+		name: 'Next.Js',
+		icon: (
+			<SiNextdotjs
+				color='#00000'
+				className='bg-slate-50 rounded-full'
+				size={70}
+			/>
+		),
+	},
+	{ number: '09', name: 'Sass', icon: <FaSass color='#CE6B9B' size={70} /> },
 	{
 		number: '10',
+		name: 'Tailwind CSS',
+		icon: <RiTailwindCssFill color='#35B7F0' size={70} />,
+	},
+	{ number: '11', name: 'Node.JS', icon: <FaNode color='#8FC716' size={70} /> },
+	{
+		number: '12',
 		name: 'Firebase',
 		icon: <IoLogoFirebase color='#FFCE35' size={70} />,
 	},
 	{
-		number: '11',
+		number: '13',
 		name: 'Material UI',
 		icon: <SiMui color='#1683FF' size={70} />,
 	},
 	{
-		number: '12',
+		number: '14',
 		name: 'Framer Motion',
 		icon: <FiFramer color='#1683FF' size={70} />,
 	},
