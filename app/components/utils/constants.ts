@@ -27,7 +27,7 @@ export const projectMotionStyles: ProjectMotionStyles = {
 	},
 };
 
-export const CursorClickables: CursorClickableTypes = {
+export const cursorClickables: CursorClickableTypes = {
 	innerSize: 10,
 	outerSize: 25,
 	innerScale: 1,

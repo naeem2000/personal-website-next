@@ -23,25 +23,35 @@ export default function Services() {
 			</div>
 			<motion.div
 				{...fadeInMotionStyles}
-				className='flex items-center justify-center mt-10 flex-col'
+				className="bg-[url('/languages.gif')]  bg-contain bg-center bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] desktop:mt-[100px]"
+			/>
+			<motion.div
+				{...fadeInMotionStyles}
+				className='flex items-center justify-center desktop:mt-10 flex-col'
 			>
 				<div className='grid grid-cols-1 md:grid-cols-2 place-items-center'>
 					{services.map((item, index) => {
 						return (
-							<div
+							<motion.div
+								whileHover={{
+									background: 'var(--blue)',
+									scale: 1.03,
+								}}
 								className='flex items-center p-5 laptop:p-10 min-w-72 laptop:min-w-96 justify-between border border-border-color'
 								key={index}
 							>
-								<span className='text-4xl text-purple'>
+								<span className='text-4xl text-purple mix-blend-difference'>
 									{'{'}
 									{item.number}
 									{'}'}
 								</span>
 								<div className='laptop:mx-auto flex flex-col items-center text-center'>
-									{item.icon}
-									<h3 className='text-3xl text-white'>{item.name}</h3>
+									<div>{item.icon}</div>
+									<h3 className='text-3xl text-white mix-blend-difference'>
+										{item.name}
+									</h3>
 								</div>
-							</div>
+							</motion.div>
 						);
 					})}
 				</div>
