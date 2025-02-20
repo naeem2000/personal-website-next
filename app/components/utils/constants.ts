@@ -1,7 +1,7 @@
 import {
 	CursorClickableTypes,
+	ProjectMotionStyles,
 	FadeInMotionStyles,
-	PortfolioMotionStyles,
 	TypeWriterTypes,
 } from './types';
 import { VT323 } from 'next/font/google';
@@ -16,6 +16,15 @@ export const fadeInMotionStyles: FadeInMotionStyles = {
 	initial: { opacity: 0 },
 	whileInView: { opacity: 1 },
 	transition: { duration: 1.3 },
+};
+
+export const projectMotionStyles: ProjectMotionStyles = {
+	initial: { opacity: 0, scale: 0 },
+	animate: { opacity: 1, scale: 1 },
+	transition: {
+		duration: 0.4,
+		scale: { type: 'spring', visualDuration: 0.4, bounce: 0.2 },
+	},
 };
 
 export const CursorClickables: CursorClickableTypes = {
@@ -58,13 +67,6 @@ export const TypeWriterConfig: TypeWriterTypes = {
 	deleteSpeed: 30,
 	autoStart: true,
 	loop: true,
-};
-
-export const portfolioMotionStyles: PortfolioMotionStyles = {
-	initial: { opacity: 0, y: 50 },
-	animate: { opacity: 1, y: 0 },
-	exit: { opacity: 0, y: -50 },
-	transition: { duration: 0.3 },
 };
 
 export const ContactStyles: string =

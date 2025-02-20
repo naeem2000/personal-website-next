@@ -24,6 +24,7 @@ export default function Portfolio({ onClose }: PdfViewerProps) {
 			</Button>
 			<div className='flex items-center justify-center'>
 				<iframe
+					title='pdf viewer'
 					className='h-screen w-3/5 cursor-none m-0 p-0 border-[none]'
 					src='/Curriculum Vitae of Mogamat Naeem Carr.pdf'
 				></iframe>

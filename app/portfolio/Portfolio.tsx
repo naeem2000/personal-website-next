@@ -3,16 +3,18 @@ import { filterButtons, portolioData } from '../components/global/data';
 import PageHeader from '../components/global/PageHeader';
 import { AnimatePresence, motion } from 'motion/react';
 import Button from '../components/global/Button';
-import Contact from '../components/Contact';
 import React, { useState } from 'react';
+import { Routes } from '../Routes';
+import Image from 'next/image';
 import {
 	fadeInMotionStyles,
 	filterButtonStyles,
-	portfolioMotionStyles,
+	projectMotionStyles,
 } from '../components/utils/constants';
-import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Portfolio({}) {
+	const { Contact } = Routes();
 	const [projects, setProjects] = useState<string>('all projects');
 
 	return (
@@ -48,7 +50,7 @@ export default function Portfolio({}) {
 					{projects === 'all projects' && (
 						<motion.div
 							key='all-projects'
-							{...portfolioMotionStyles}
+							{...projectMotionStyles}
 							className='mt-10'
 						>
 							<p className='text-yellow text-3xl mb-5'>
@@ -56,32 +58,8 @@ export default function Portfolio({}) {
 							</p>
 							<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
 								{portolioData.web.map((item, index) => (
-									<div key={index} className='image-container'>
-										<Image
-											src={item.image}
-											alt={item.alt}
-											width={600}
-											height={600}
-											className='w-full'
-										/>
-										<div className='overlay'>
-											<p className='text-yellow text-3xl font-medium'>
-												{item.title}
-											</p>
-											<p className='text-white text-xl max-w-96'>
-												{item.description}
-											</p>
-										</div>
-									</div>
-								))}
-							</div>
-							<div className='mt-20'>
-								<p className='text-yellow text-3xl mb-5'>
-									{'// Mobile development'}
-								</p>
-								<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
-									{portolioData.mobile.map((item, index) => (
-										<div key={index} className='image-container'>
+									<Link key={index} href={item.link} target='_blank'>
+										<div className='image-container'>
 											<Image
 												src={item.image}
 												alt={item.alt}
@@ -98,6 +76,34 @@ export default function Portfolio({}) {
 												</p>
 											</div>
 										</div>
+									</Link>
+								))}
+							</div>
+							<div className='mt-20'>
+								<p className='text-yellow text-3xl mb-5'>
+									{'// Mobile development'}
+								</p>
+								<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
+									{portolioData.mobile.map((item, index) => (
+										<Link key={index} href={item.link} target='_blank'>
+											<div className='image-container'>
+												<Image
+													src={item.image}
+													alt={item.alt}
+													width={600}
+													height={600}
+													className='w-full'
+												/>
+												<div className='overlay'>
+													<p className='text-yellow text-3xl font-medium'>
+														{item.title}
+													</p>
+													<p className='text-white text-xl max-w-96'>
+														{item.description}
+													</p>
+												</div>
+											</div>
+										</Link>
 									))}
 								</div>
 							</div>
@@ -107,27 +113,29 @@ export default function Portfolio({}) {
 					{projects === 'web development' && (
 						<motion.div
 							key='web-development'
-							{...portfolioMotionStyles}
+							{...projectMotionStyles}
 							className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-10'
 						>
 							{portolioData.web.map((item, index) => (
-								<div key={index} className='image-container'>
-									<Image
-										src={item.image}
-										alt={item.alt}
-										width={600}
-										height={600}
-										className='w-full'
-									/>
-									<div className='overlay'>
-										<p className='text-yellow text-3xl font-medium'>
-											{item.title}
-										</p>
-										<p className='text-white text-xl max-w-96'>
-											{item.description}
-										</p>
+								<Link key={index} href={item.link} target='_blank'>
+									<div className='image-container'>
+										<Image
+											src={item.image}
+											alt={item.alt}
+											width={600}
+											height={600}
+											className='w-full'
+										/>
+										<div className='overlay'>
+											<p className='text-yellow text-3xl font-medium'>
+												{item.title}
+											</p>
+											<p className='text-white text-xl max-w-96'>
+												{item.description}
+											</p>
+										</div>
 									</div>
-								</div>
+								</Link>
 							))}
 						</motion.div>
 					)}
@@ -135,27 +143,29 @@ export default function Portfolio({}) {
 					{projects === 'mobile development' && (
 						<motion.div
 							key='mobile-development'
-							{...portfolioMotionStyles}
+							{...projectMotionStyles}
 							className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full mt-10'
 						>
 							{portolioData.mobile.map((item, index) => (
-								<div key={index} className='image-container'>
-									<Image
-										src={item.image}
-										alt={item.alt}
-										width={600}
-										height={600}
-										className='w-full'
-									/>
-									<div className='overlay'>
-										<p className='text-yellow text-3xl font-medium'>
-											{item.title}
-										</p>
-										<p className='text-white text-xl max-w-96'>
-											{item.description}
-										</p>
+								<Link key={index} href={item.link} target='_blank'>
+									<div className='image-container'>
+										<Image
+											src={item.image}
+											alt={item.alt}
+											width={600}
+											height={600}
+											className='w-full'
+										/>
+										<div className='overlay'>
+											<p className='text-yellow text-3xl font-medium'>
+												{item.title}
+											</p>
+											<p className='text-white text-xl max-w-96'>
+												{item.description}
+											</p>
+										</div>
 									</div>
-								</div>
+								</Link>
 							))}
 						</motion.div>
 					)}

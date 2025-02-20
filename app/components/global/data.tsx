@@ -1,6 +1,23 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
-import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_PORTFOLIO } from '@/app/Routes';
-import { NavLinks, PageData, Socials } from '../utils/types';
+import { NavLinks, PageData, Services, Socials } from '../utils/types';
+import { SiMui, SiTypescript } from 'react-icons/si';
+import { IoLogoJavascript } from 'react-icons/io';
+import { IoLogoFirebase } from 'react-icons/io5';
+import {
+	ROUTE_HOME,
+	ROUTE_ABOUT,
+	ROUTE_SERVICES,
+	ROUTE_PORTFOLIO,
+} from '@/app/Routes';
+import {
+	FaCss3,
+	FaSass,
+	FaNode,
+	FaReact,
+	FaHtml5,
+	FaAngular,
+} from 'react-icons/fa';
+import { FiFramer } from 'react-icons/fi';
 
 export const navlinks: NavLinks = {
 	links: [
@@ -18,7 +35,7 @@ export const navlinks: NavLinks = {
 		},
 		{
 			label: '_services',
-			link: '#services',
+			link: ROUTE_SERVICES,
 		},
 		{
 			label: '_contact',
@@ -74,7 +91,7 @@ export const pageData: PageData = {
 			image: '/projects/forecast-hub.png',
 			alt: 'forecast hub',
 			title: '{Forecast Hub}',
-			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
+			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast;`,
 			link: 'https://forecast-hub.vercel.app/',
 		},
 		{
@@ -91,18 +108,22 @@ export const pageData: PageData = {
 export const socials: Socials = {
 	socialLink: [
 		{
+			name: 'Facebook',
 			icon: <ImFacebook />,
 			link: 'https://www.facebook.com/naeem.carr.3',
 		},
 		{
+			name: 'Instagram',
 			icon: <ImInstagram />,
 			link: 'https://www.instagram.com/naeem__carr',
 		},
 		{
+			name: 'LinkedIn',
 			icon: <ImLinkedin />,
 			link: 'www.linkedin.com/in/mncarr',
 		},
 		{
+			name: 'Github',
 			icon: <ImGithub />,
 			link: 'https://github.com/naeem2000',
 		},
@@ -115,21 +136,64 @@ export const filterButtons: string[] = [
 	'web development',
 ];
 
+export const services: Services = [
+	{ number: '01', name: 'HTML', icon: <FaHtml5 color='#DB4C23' size={70} /> },
+	{ number: '02', name: 'CSS', icon: <FaCss3 color='#234CDD' size={70} /> },
+	{ number: '03', name: 'Sass', icon: <FaSass color='#CE6B9B' size={70} /> },
+	{
+		number: '04',
+		name: 'JavaScript',
+		icon: <IoLogoJavascript color='#F1DC55' size={70} />,
+	},
+	{
+		number: '05',
+		name: 'TypeScript',
+		icon: <SiTypescript color='#397CC8' size={70} />,
+	},
+	{ number: '06', name: 'React', icon: <FaReact color='#67DBFB' size={70} /> },
+	{
+		number: '07',
+		name: 'Angular',
+		icon: <FaAngular color='#C50C35' size={70} />,
+	},
+	{
+		number: '08',
+		name: 'React-Native',
+		icon: <FaReact color='#67DBFB' size={70} />,
+	},
+	{ number: '09', name: 'Node', icon: <FaNode color='#8FC716' size={70} /> },
+	{
+		number: '10',
+		name: 'Firebase',
+		icon: <IoLogoFirebase color='#FFCE35' size={70} />,
+	},
+	{
+		number: '11',
+		name: 'Material UI',
+		icon: <SiMui color='#1683FF' size={70} />,
+	},
+	{
+		number: '12',
+		name: 'Framer Motion',
+		icon: <FiFramer color='#1683FF' size={70} />,
+	},
+];
+
 export const portolioData: PageData = {
 	web: [
 		{
 			image: '/projects/forecast-hub.png',
 			alt: 'forecast hub',
 			title: '{Forecast Hub}',
-			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast. Designed by Zaakirah Abrams;`,
-			link: 'https://forecast-hub.vercel.app/',
+			description: `Weather App in React.Js & OpenWeatherMap API for searching countries and displaying current weather & 5 day forecast;`,
+			link: 'https://forecast-hub-web.netlify.app/',
 		},
 		{
 			image: '/projects/face-det.jpg',
 			alt: 'mood detect web app',
 			title: '{Mood Detector Web App}',
 			description: 'A mood detector in React.JS using face-api.js;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://face-detect-reactjs.netlify.app/',
 		},
 		{
 			image: '/projects/job-listing.png',
@@ -145,7 +209,7 @@ export const portolioData: PageData = {
 			title: '{Life Healthcare}',
 			description:
 				'The second largest private hospital operator assigned to me at one of my previous companies;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://www.lifehealthcare.co.za/',
 		},
 		{
 			image: '/projects/magnetic.png',
@@ -153,7 +217,7 @@ export const portolioData: PageData = {
 			title: '{Magnetic BNB}',
 			description:
 				'A local Air BNB provider that was one of my freelance work;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://www.magneticproperty.co.za/',
 		},
 		{
 			image: '/projects/nova.png',
@@ -161,7 +225,7 @@ export const portolioData: PageData = {
 			title: '{Nova Athletics}',
 			description:
 				'A small South African company that vendors athletic gear and outfits throughout South Africa that was one of my freelance work;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://nova-athletics.vercel.app/',
 		},
 		{
 			image: '/projects/payat.png',
@@ -169,7 +233,15 @@ export const portolioData: PageData = {
 			title: '{PayAt}',
 			description:
 				'A payment provider that allows users to process payments to multiple companies and services throughout South Africa which was assigned to me at one of my previous companies;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://payat.co.za/',
+		},
+		{
+			image: '/projects/mira.png',
+			alt: 'Mira',
+			title: '{Mira}',
+			description:
+				'A todo app, using Jira as inspiration for teams, and Mira for individuals;',
+			link: 'https://mira-todo.netlify.app/',
 		},
 		{
 			image: '/projects/polished-lounge.png',
@@ -177,14 +249,14 @@ export const portolioData: PageData = {
 			title: '{Polised Lounge}',
 			description:
 				'A local business that offers pedicures and manicures that was one of my freelance work;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://polished-lounge.netlify.app/',
 		},
 		{
 			image: '/projects/shafieks-carwash.png',
 			alt: 'shafieks carwash',
 			title: '{Shafieks Carwash}',
 			description: 'A local carwash that was one of my freelance work;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://shafiekscarwash.netlify.app/',
 		},
 		{
 			image: '/projects/smarter-britain.png',
@@ -192,7 +264,7 @@ export const portolioData: PageData = {
 			title: '{Smarter Britain}',
 			description:
 				'A UK owned platform for students to connect with entrepreneurs and investors to receive advice, guidance and funding for their business that was assigned to me at one of my previous companies;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://smarterbritain.co.uk/',
 		},
 		{
 			image: '/projects/taquanta.png',
@@ -200,14 +272,14 @@ export const portolioData: PageData = {
 			title: '{Taquanta}',
 			description:
 				'A South African owned business for asset management assigned to me at one of my previous companies;',
-			link: 'https://job-listing-39b59.web.app/',
+			link: 'https://taquanta.co.za/',
 		},
 		{
 			image: '/projects/talent-usage.png',
 			alt: 'talent usage',
 			title: '{Talent Usage}',
 			description: `A local South African company that eases the process by identifying usages for their clients in the media industry that was assigned to me at one of my previous companies;`,
-			link: 'https://forecast-hub.vercel.app/',
+			link: 'https://talentusage.com/',
 		},
 	],
 	mobile: [
@@ -217,7 +289,7 @@ export const portolioData: PageData = {
 			title: '{RushTush}',
 			description:
 				'A local South African entrepreneur providing a service for women wanting to sculpt up or become fit that was assigned to me at one of my previous companies;',
-			link: 'https://github.com/naeem2000/Cerebral-Twist',
+			link: 'private',
 		},
 		{
 			image: '/projects/memory-game.png',
@@ -241,7 +313,7 @@ export const portolioData: PageData = {
 			title: '{News24 API Mobile App}',
 			description:
 				'React-Native mobile app representing a news app utilizing a News24 API;',
-			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
+			link: 'https://github.com/naeem2000/React-Native-News-App',
 		},
 		{
 			image: '/projects/todorn.jpg',
@@ -249,7 +321,7 @@ export const portolioData: PageData = {
 			title: '{ToDo Mobile App}',
 			description:
 				'React-Native mobile app basic ToDo app that respresented my proper use of state and array methods by updating stae in realtime without effecting performance;',
-			link: 'https://github.com/naeem2000/Claremont-Mosque-React-Native',
+			link: 'https://github.com/naeem2000/react-native-todo-app',
 		},
 	],
 };

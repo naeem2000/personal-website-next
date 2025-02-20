@@ -30,11 +30,13 @@ export type FadeInMotionStyles = {
 	transition: { duration: number };
 };
 
-export type PortfolioMotionStyles = {
-	initial: { opacity: number; y: number };
-	animate: { opacity: number; y: number };
-	exit: { opacity: number; y: number };
-	transition: { duration: number };
+export type ProjectMotionStyles = {
+	initial: { opacity: number; scale: number };
+	animate: { opacity: number; scale: number };
+	transition: {
+		duration: number;
+		scale: { type: string; visualDuration: number; bounce: number };
+	};
 };
 
 export interface ContactDetails {
@@ -56,6 +58,12 @@ export type NavLinks = {
 	links: NavLink[];
 };
 
+export type Services = {
+	number: string;
+	icon: ReactNode;
+	name: string;
+}[];
+
 export type Project = {
 	image: string;
 	alt: string;
@@ -70,6 +78,7 @@ export type PageData = {
 };
 
 type SocialLink = {
+	name: string;
 	icon: ReactNode;
 	link: string;
 };
