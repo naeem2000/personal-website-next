@@ -1,22 +1,5 @@
 import { ReactNode } from 'react';
 
-export type CursorClickableTypes = {
-	innerSize: number;
-	outerSize: number;
-	innerScale: number;
-	outerScale: number;
-	outerAlpha: number;
-	clickables: string[];
-	innerStyle: {
-		backgroundColor: string;
-		mixBlendMode: string;
-	};
-	outerStyle: {
-		border: string;
-		mixBlendMode: string;
-	};
-};
-
 export type TypeWriterTypes = {
 	strings: string[];
 	deleteSpeed: number;

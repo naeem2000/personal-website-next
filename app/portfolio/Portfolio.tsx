@@ -11,7 +11,6 @@ import {
 	filterButtonStyles,
 	projectMotionStyles,
 } from '../components/utils/constants';
-import Link from 'next/link';
 
 export default function Portfolio({}) {
 	const { Contact } = Routes();

@@ -1,5 +1,4 @@
 import {
-	CursorClickableTypes,
 	ProjectMotionStyles,
 	FadeInMotionStyles,
 	TypeWriterTypes,
@@ -24,35 +23,6 @@ export const projectMotionStyles: ProjectMotionStyles = {
 	transition: {
 		duration: 0.4,
 		scale: { type: 'spring', visualDuration: 0.4, bounce: 0.2 },
-	},
-};
-
-export const cursorClickables: CursorClickableTypes = {
-	innerSize: 10,
-	outerSize: 25,
-	innerScale: 1,
-	outerScale: 1.5,
-	outerAlpha: 0,
-	clickables: [
-		'a',
-		'input[type="text"]',
-		'input[type="email"]',
-		'input[type="number"]',
-		'input[type="submit"]',
-		'input[type="image"]',
-		'label[for]',
-		'select',
-		'textarea',
-		'button',
-		'.link',
-	],
-	innerStyle: {
-		backgroundColor: 'var(--purple)',
-		mixBlendMode: 'difference',
-	},
-	outerStyle: {
-		border: '2px solid var(--yellow)',
-		mixBlendMode: 'difference',
 	},
 };
 
