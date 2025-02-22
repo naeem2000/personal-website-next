@@ -1,8 +1,8 @@
 'use client';
 
 import { Sling as Hamburger } from 'hamburger-react';
-import { usePathname } from 'next/navigation';
 import { UseShowNav } from '../utils/functions';
+import { usePathname } from 'next/navigation';
 import { navlinks } from './data';
 import Link from 'next/link';
 import React from 'react';
@@ -31,13 +31,15 @@ export default function Nav() {
 						web_dev
 					</p>
 				</div>
-				<div className='hidden desktop:flex items-end justify-between w-2/6'>
+				<div className='hidden desktop:flex items-end'>
 					{navlinks.links.map((item, index) => {
 						return (
 							<ul className='flex ml-1' key={index}>
 								<li data-aos='slide-left'>
 									<Link
 										className={`text-[23px] text-yellow ${
+											index !== 5 && 'mr-5'
+										} ${
 											item.link === path && '!text-blue'
 										} transition-all duration-[0.2s] ease-linear hover:text-purple`}
 										href={item.link}

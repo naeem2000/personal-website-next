@@ -29,14 +29,14 @@ export default function Portfolio() {
 				<div className='flex items-center justify-center flex-col laptop:flex-row laptop:justify-between border-y border-t-border-color border-b-border-color'>
 					<div
 						data-aos='fade-right'
-						className='flex items-center w-full laptop:w-1/2 justify-around p-7 border-b laptop:border-b-0 border-b-border-color laptop:border-r border-r-border-color flex-wrap'
+						className='flex items-center w-full laptop:w-1/2 justify-around p-7 border-b laptop:border-b-0 border-b-border-color laptop:border-r border-r-border-color flex-col md:flex-row'
 					>
 						{pageData.mobile.map((item, index) => {
 							return (
 								<Link
 									key={index}
 									href={item.link}
-									className='image-container mb-5 hover:scale-[1.03] transition-all duration-150'
+									className='image-container m-3 hover:scale-[1.03] transition-all duration-150'
 									target='_blank'
 								>
 									<Image

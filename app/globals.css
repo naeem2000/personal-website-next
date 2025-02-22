@@ -75,7 +75,13 @@ footer {
 
 @media screen and (max-width: 1850px) {
 	.wrapper {
-		padding: 0 4% 0 10%;
+		padding: 0 2% 0 4%;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.wrapper {
+		padding: 0 2% 0 10%;
 	}
 }
 
