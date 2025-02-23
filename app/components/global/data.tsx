@@ -1,11 +1,14 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
 import { NavLinks, PageData, Services, Socials } from '../utils/types';
 import { SiMui, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import { RiTailwindCssFill } from 'react-icons/ri';
 import { IoLogoJavascript } from 'react-icons/io';
 import { IoLogoFirebase } from 'react-icons/io5';
+import { FiFramer } from 'react-icons/fi';
 import {
 	ROUTE_HOME,
 	ROUTE_ABOUT,
+	ROUTE_CONTACT,
 	ROUTE_SERVICES,
 	ROUTE_PORTFOLIO,
 } from '@/app/Routes';
@@ -17,8 +20,6 @@ import {
 	FaHtml5,
 	FaAngular,
 } from 'react-icons/fa';
-import { FiFramer } from 'react-icons/fi';
-import { RiTailwindCssFill } from 'react-icons/ri';
 
 export const navlinks: NavLinks = {
 	links: [
@@ -40,7 +41,7 @@ export const navlinks: NavLinks = {
 		},
 		{
 			label: '_contact',
-			link: '#contact',
+			link: ROUTE_CONTACT,
 		},
 	],
 };
