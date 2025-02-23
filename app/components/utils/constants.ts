@@ -44,3 +44,6 @@ export const ContactStyles: string =
 
 export const filterButtonStyles: string =
 	'flex item-center justify-center mr-2 text-2xl mt-3 border-[3px] border-yellow px-3 py-[2px] transition-all duration-500 text-yellow hover:border-purple hover:text-purple';
+
+export const mapsLocation: string =
+	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1199104.5231630912!2d18.43627393270634!3d-33.88734597373842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town!5e0!3m2!1sen!2sza!4v1740339826595!5m2!1sen!2sza';
