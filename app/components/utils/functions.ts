@@ -44,38 +44,34 @@ export const UseConstructLine = () => {
 //Show burger nav button on scroll function
 export const UseShowNav = () => {
 	const [open, setOpen] = useState<boolean>(false);
+	const [showButton, setShowButton] = useState<boolean>(false);
 
 	useEffect(() => {
-		const openNav = document.getElementById('mobile-slide');
-		const burgerBtn = document.getElementById('burger-button');
-
-		if (open) {
-			document.body.style.overflow = 'hidden';
-			openNav?.classList.add('mobile-slider');
-		} else {
-			document.body.style.overflow = 'scroll';
-			openNav?.classList.remove('mobile-slider');
-		}
-
 		window.onscroll = function () {
 			scrollFunction();
 		};
 
+		if (window.outerWidth < 1024) {
+			setShowButton(true);
+		}
+
 		function scrollFunction() {
 			if (window.outerWidth > 1024) {
 				if (
-					document.body.scrollTop > 200 ||
-					document.documentElement.scrollTop > 200
+					document.body.scrollTop > 50 ||
+					document.documentElement.scrollTop > 50
 				) {
-					burgerBtn!.style.display = 'block';
+					setShowButton(true);
 				} else {
-					burgerBtn!.style.display = 'none';
+					setShowButton(false);
 				}
+			} else if (window.outerWidth < 1024) {
+				setShowButton(true);
 			}
 		}
 	}, [open]);
 
-	return { setOpen, open };
+	return { setOpen, open, showButton };
 };
 
 //Show PDF function

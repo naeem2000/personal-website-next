@@ -1,10 +1,11 @@
 'use client';
+
+import { fadeInMotionStyles } from './utils/constants';
 import SectionHeader from './global/SectionHeader';
 import { UseShowPDF } from './utils/functions';
+import { motion } from 'motion/react';
 import Button from './global/Button';
 import PdfViewer from './PdfViewer';
-import { fadeInMotionStyles } from './utils/constants';
-import { motion } from 'motion/react';
 
 export default function About() {
 	const { setViewPdf } = UseShowPDF();

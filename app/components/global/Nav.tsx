@@ -1,5 +1,6 @@
 'use client';
 
+import { AnimatePresence, motion } from 'motion/react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { UseShowNav } from '../utils/functions';
 import { usePathname } from 'next/navigation';
@@ -8,7 +9,7 @@ import Link from 'next/link';
 import React from 'react';
 
 export default function Nav() {
-	const { setOpen, open } = UseShowNav();
+	const { setOpen, open, showButton } = UseShowNav();
 
 	const path = usePathname();
 
@@ -52,37 +53,51 @@ export default function Nav() {
 					})}
 				</div>
 			</nav>
-			<button
-				className='block desktop:hidden fixed z-[8] right-[20px] top-[20px]'
-				id='burger-button'
-			>
-				<Hamburger size={20} color='#2fcbef' toggled={open} toggle={setOpen} />
-			</button>
-			<div
-				className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] translate-x-[120%] transition-all duration-[0.7s] ease-[ease] right-0 top-0'
-				id='mobile-slide'
-			>
-				<ul className='w-6/12 text-center'>
-					{navlinks.links.map((item, index) => {
-						return (
-							<li
-								onClick={() => setOpen(false)}
-								data-aos='fade-right'
-								key={index}
-							>
-								<a
-									className={`block text-xl laptop:text-2xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple ${
-										item.link === path && '!text-blue !border-b-blue'
-									}`}
-									href={item.link}
-								>
-									{item.label}
-								</a>
-							</li>
-						);
-					})}
-				</ul>
-			</div>
+			<AnimatePresence>
+				{showButton && (
+					<motion.button
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						exit={{ opacity: 0, scale: 0 }}
+						className='fixed z-[8] right-[20px] top-[20px]'
+					>
+						<Hamburger
+							size={20}
+							color='#2fcbef'
+							toggled={open}
+							toggle={setOpen}
+						/>
+					</motion.button>
+				)}
+			</AnimatePresence>
+
+			<AnimatePresence initial={false}>
+				{open ? (
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						exit={{ opacity: 0, scale: 0 }}
+						className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] right-0 top-0'
+					>
+						<ul className='w-6/12 text-center'>
+							{navlinks.links.map((item, index) => {
+								return (
+									<li onClick={() => setOpen(false)} key={index}>
+										<a
+											className={`block text-xl laptop:text-2xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple ${
+												item.link === path && '!text-blue !border-b-blue'
+											}`}
+											href={item.link}
+										>
+											{item.label}
+										</a>
+									</li>
+								);
+							})}
+						</ul>
+					</motion.div>
+				) : null}
+			</AnimatePresence>
 		</header>
 	);
 }

@@ -1,5 +1,6 @@
 'use client';
-import { filterButtons, portolioData } from '../components/global/data';
+
+import { filterButtons, portfolioData } from '../components/global/data';
 import PageHeader from '../components/global/PageHeader';
 import { AnimatePresence, motion } from 'motion/react';
 import Button from '../components/global/Button';
@@ -63,7 +64,7 @@ export default function Portfolio({}) {
 									{'// Web development'}
 								</p>
 								<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
-									{portolioData.web.map((item, index) => (
+									{portfolioData.web.map((item, index) => (
 										<Link
 											key={index}
 											className='hover:scale-[1.03] transition-all duration-150'
@@ -95,7 +96,7 @@ export default function Portfolio({}) {
 										{'// Mobile development'}
 									</p>
 									<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
-										{portolioData.mobile.map((item, index) => (
+										{portfolioData.mobile.map((item, index) => (
 											<Link
 												key={index}
 												className='hover:scale-[1.03] transition-all duration-150'
@@ -132,7 +133,7 @@ export default function Portfolio({}) {
 								{...projectMotionStyles}
 								className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-10'
 							>
-								{portolioData.web.map((item, index) => (
+								{portfolioData.web.map((item, index) => (
 									<Link
 										key={index}
 										className='hover:scale-[1.03] transition-all duration-150'
@@ -167,7 +168,7 @@ export default function Portfolio({}) {
 								{...projectMotionStyles}
 								className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full mt-10'
 							>
-								{portolioData.mobile.map((item, index) => (
+								{portfolioData.mobile.map((item, index) => (
 									<Link
 										key={index}
 										className='hover:scale-[1.03] transition-all duration-150'
