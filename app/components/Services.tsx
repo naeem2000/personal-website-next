@@ -1,7 +1,7 @@
-import SectionHeader from './global/SectionHeader';
-import React from 'react';
 import { fadeInMotionStyles } from './utils/constants';
+import SectionHeader from './global/SectionHeader';
 import { motion } from 'motion/react';
+import React from 'react';
 
 export default function services() {
 	return (

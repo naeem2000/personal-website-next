@@ -2,8 +2,8 @@
 
 import { fadeInMotionStyles, TypeWriterConfig } from './utils/constants';
 import Typewriter from 'typewriter-effect';
-import React from 'react';
 import { motion } from 'motion/react';
+import React from 'react';
 
 export default function Hero() {
 	return (

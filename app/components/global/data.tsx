@@ -231,7 +231,7 @@ export const services: Services = [
 	},
 ];
 
-export const portolioData: PageData = {
+export const portfolioData: PageData = {
 	web: [
 		{
 			image: '/projects/forecast-hub.png',

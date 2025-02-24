@@ -1,12 +1,12 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { fadeInMotionStyles } from './utils/constants';
 import SectionHeader from './global/SectionHeader';
 import { pageData } from './global/data';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { fadeInMotionStyles } from './utils/constants';
 
 export default function Portfolio() {
 	return (
@@ -46,10 +46,10 @@ export default function Portfolio() {
 										height={300}
 									/>
 									<div className='overlay'>
-										<p className='text-yellow text-3xl font-medium'>
+										<p className='text-yellow text-xl md:text-3xl font-medium'>
 											{item.title}
 										</p>
-										<p className='text-white text-xl max-w-96'>
+										<p className='text-white text-sm md:text-xl max-w-96'>
 											{item.description}
 										</p>
 									</div>
@@ -76,10 +76,10 @@ export default function Portfolio() {
 										height={550}
 									/>
 									<div className='overlay'>
-										<p className='text-yellow text-3xl font-medium'>
+										<p className='text-yellow text-xl md:text-3xl font-medium'>
 											{item.title}
 										</p>
-										<p className='text-white text-xl max-w-96'>
+										<p className='text-white text-sm md:text-xl max-w-96'>
 											{item.description}
 										</p>
 									</div>

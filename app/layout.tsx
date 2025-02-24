@@ -4,10 +4,10 @@ import ScrollBar from './components/global/ScrollBar';
 import AnimatedCursor from 'react-animated-cursor';
 import { VT } from './components/utils/constants';
 import Footer from './components/global/Footer';
+import NextTopLoader from 'nextjs-toploader';
 import Nav from './components/global/Nav';
 import type { Metadata } from 'next';
 import './globals.css';
-import NextTopLoader from 'nextjs-toploader';
 
 export const metadata: Metadata = {
 	title: 'Naeem Carr',
