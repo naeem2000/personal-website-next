@@ -1,15 +1,23 @@
 'use client';
 
+import { IoSunnySharp, IoMoon } from 'react-icons/io5';
 import { AnimatePresence, motion } from 'motion/react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { UseShowNav } from '../utils/functions';
 import { usePathname } from 'next/navigation';
+import React, { useState } from 'react';
 import { navlinks } from './data';
+import Toggle from 'react-toggle';
 import Link from 'next/link';
-import React from 'react';
 
 export default function Nav() {
+	const [isDark, setIsDark] = useState<boolean>(false);
 	const { setOpen, open, showButton } = UseShowNav();
+
+	const handleDarkMode = (bool: boolean) => {
+		setIsDark(bool);
+		document.documentElement.classList.toggle('dark');
+	};
 
 	const path = usePathname();
 
@@ -19,7 +27,7 @@ export default function Nav() {
 				<div>
 					{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
 					<h1
-						className='text-white text-[25px] leading-[0.9em]'
+						className='text-white text-[25px] leading-[0.9em] dark:text-black'
 						data-aos='slide-left'
 						// eslint-disable-next-line react/jsx-no-comment-textnodes
 					>
@@ -38,8 +46,8 @@ export default function Nav() {
 							<ul className='flex ml-1' key={index}>
 								<li data-aos='slide-left'>
 									<Link
-										className={`text-[23px] text-yellow ${
-											index !== 5 && 'mr-5'
+										className={`text-[23px] text-yellow dark:text-black ${
+											index !== 4 && 'mr-5'
 										} ${
 											item.link === path && '!text-blue'
 										} transition-all duration-[0.2s] ease-linear hover:text-purple`}
@@ -52,22 +60,47 @@ export default function Nav() {
 						);
 					})}
 				</div>
+				<Toggle
+					checked={isDark}
+					defaultChecked={false}
+					onChange={(bool) => handleDarkMode(bool.target.checked)}
+					className='!hidden desktop:!block'
+					icons={{
+						checked: (
+							<IoSunnySharp size={25} className='-mt-2' color='#000000' />
+						),
+						unchecked: <IoMoon size={25} className='-mt-2' color='#FFFFFF' />,
+					}}
+				/>
 			</nav>
 			<AnimatePresence>
 				{showButton && (
-					<motion.button
+					<motion.div
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
 						className='fixed z-[8] right-[20px] top-[20px]'
 					>
+						<Toggle
+							checked={isDark}
+							defaultChecked={false}
+							onChange={(bool) => handleDarkMode(bool.target.checked)}
+							icons={{
+								checked: (
+									<IoSunnySharp size={25} className='-mt-2' color='#000000' />
+								),
+								unchecked: (
+									<IoMoon size={25} className='-mt-2' color='#FFFFFF' />
+								),
+							}}
+						/>
 						<Hamburger
 							size={20}
 							color='#2fcbef'
 							toggled={open}
 							toggle={setOpen}
 						/>
-					</motion.button>
+					</motion.div>
 				)}
 			</AnimatePresence>
 

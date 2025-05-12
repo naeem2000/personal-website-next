@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={VT.className}>
+			<body className={`${VT.className} dark:bg-white`}>
 				<NextTopLoader color='var(--purple)' height={4} />
 				<ScrollBar />
 				<NumberLine />
@@ -39,17 +39,18 @@ export default function RootLayout({
 						outerScale={1.5}
 						outerAlpha={0}
 						clickables={[
-							'a',
 							'input[type="text"]',
 							'input[type="email"]',
 							'input[type="number"]',
 							'input[type="submit"]',
 							'input[type="image"]',
+							'.react-toggle',
 							'label[for]',
-							'select',
 							'textarea',
 							'button',
+							'select',
 							'.link',
+							'a',
 						]}
 						innerStyle={{
 							backgroundColor: 'var(--purple)',
