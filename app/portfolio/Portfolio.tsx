@@ -26,7 +26,7 @@ export default function Portfolio({}) {
 					className='flex items-center justify-center flex-col'
 				>
 					<PageHeader text='"Portfolio"' symbol='{!}' />
-					<p className='text-center text-yellow text-2xl mt-5 max-w-5xl'>
+					<p className='text-center text-yellow text-2xl mt-5 max-w-5xl dark:text-black'>
 						…Welcome to My Portfolio: A Deep Dive Into My Creative Journey,
 						Professional Expertise, and Passion-Driven Projects. Here, I invite
 						you to explore a collection of my best work, where creativity meets
@@ -45,7 +45,7 @@ export default function Portfolio({}) {
 									onClick={() => setProjects(item)}
 									key={index}
 									className={`${filterButtonStyles} ${
-										item === projects && '!border-purple !text-purple'
+										item === projects && '!border-purple !text-purple '
 									}`}
 								>
 									{item}
@@ -60,7 +60,7 @@ export default function Portfolio({}) {
 								{...projectMotionStyles}
 								className='mt-10'
 							>
-								<p className='text-yellow text-3xl mb-5'>
+								<p className='text-yellow text-3xl mb-5 dark:text-black'>
 									{'// Web development'}
 								</p>
 								<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
@@ -92,7 +92,7 @@ export default function Portfolio({}) {
 									))}
 								</div>
 								<div className='mt-20'>
-									<p className='text-yellow text-3xl mb-5'>
+									<p className='text-yellow text-3xl mb-5 dark:text-black'>
 										{'// Mobile development'}
 									</p>
 									<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>

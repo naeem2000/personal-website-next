@@ -14,17 +14,17 @@ export default function Hero() {
 		>
 			<motion.div {...fadeInMotionStyles}>
 				<h1
-					className='text-white text-2xl mobile:text-3xl text-center desktop:mt-28'
+					className='text-white text-2xl mobile:text-3xl text-center desktop:mt-28 dark:text-black'
 					data-aos='fade-left'
 				>
 					{"// Hi, I'm NAEEM, A..."}
 				</h1>
 				<h2
-					className='flex items-center justify-center text-4xl mobile:text-6xl desktop:text-9xl mt-3 text-white leading-snug'
+					className='flex items-center justify-center text-4xl mobile:text-6xl desktop:text-9xl mt-3 text-white leading-snug dark:text-black'
 					data-aos='fade-right'
 				>
 					{`{"`}
-					<span className='text-yellow'>
+					<span className='text-yellow dark:text-black'>
 						<Typewriter options={TypeWriterConfig} />
 					</span>
 					{`"}`}

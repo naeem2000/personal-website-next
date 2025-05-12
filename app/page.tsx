@@ -3,7 +3,7 @@
 import Loader from './components/global/Loader';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
-import Contact from './components/Contact';
+import ContactForm from './components/ContactForm';
 import About from './components/About';
 import Hero from './components/Hero';
 import { useEffect } from 'react';
@@ -23,7 +23,7 @@ export default function Home() {
 			<About />
 			<Portfolio />
 			<Services />
-			<Contact />
+			<ContactForm />
 		</>
 	);
 }

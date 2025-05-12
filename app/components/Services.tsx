@@ -15,7 +15,7 @@ export default function services() {
 				/>
 				<p
 					data-aos='fade-up'
-					className='text-yellow text-center leading-6 desktop:text-left text-xl desktop:text-[23px]'
+					className='text-yellow text-center leading-6 desktop:text-left text-xl desktop:text-[23px] dark:text-black'
 				>
 					Crafting Code Excellence: Multilingual Programming Services Tailored
 					to Your Needs
@@ -30,7 +30,7 @@ export default function services() {
 				</p>
 				<p
 					data-aos='fade-left'
-					className='text-yellow text-3xl desktop:text-9xl transition-all ease-in hover:bg-blue mt-12 border-y-[1px] border-border-color'
+					className='text-yellow text-3xl desktop:text-9xl transition-all ease-in hover:bg-blue mt-12 border-y-[1px] border-border-color dark:text-black'
 				>
 					<span>{'{"'}</span>_front end development<span>{'"}'}</span>
 				</p>
