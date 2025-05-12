@@ -15,13 +15,13 @@ export default function About() {
 			<motion.section {...fadeInMotionStyles} className='wrapper'>
 				<div className='flex items-center justify-center flex-col'>
 					<PageHeader text='"About"' symbol='{/}' />
-					<p className='text-center mt-5 text-2xl laptop:text-4xl max-w-[1150px] text-yellow'>
+					<p className='text-center mt-5 text-2xl laptop:text-4xl max-w-[1150px] text-yellow dark:text-black'>
 						...I have three years of experience in web development, focusing
 						primarily on front-end technologies. My background includes a solid
 						understanding of HTML, CSS, and JavaScript, along with hands-on
 						experience with modern frameworks like React, Next.JS and Angular.
 					</p>
-					<p className='max-w-[1150px] text-center mt-5 text-white text-xl laptop:text-2xl'>
+					<p className='max-w-[1150px] text-center mt-5 text-white text-xl laptop:text-2xl dark:text-black'>
 						I am committed to continuously improving my skills and staying
 						updated with industry trends. I am actively extending my knowledge
 						in both front-end and back-end development. With the goal of
@@ -60,10 +60,12 @@ export default function About() {
 										key={index}
 									>
 										<span className='text-4xl text-purple'>{item.symb}</span>
-										<h3 className='text-5xl mt-7 text-white leading-3'>
+										<h3 className='text-5xl mt-7 text-white leading-3 dark:text-black'>
 											{item.heading}
 										</h3>
-										<p className='text-2xl mt-7 text-yellow'>{item.text}</p>
+										<p className='text-2xl mt-7 text-yellow dark:text-black'>
+											{item.text}
+										</p>
 									</div>
 								);
 							})}

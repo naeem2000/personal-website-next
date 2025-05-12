@@ -47,28 +47,34 @@ export const UseShowNav = () => {
 	const [showButton, setShowButton] = useState<boolean>(false);
 
 	useEffect(() => {
-		window.onscroll = function () {
-			scrollFunction();
-		};
-
-		if (window.outerWidth < 1024) {
-			setShowButton(true);
-		}
-
-		function scrollFunction() {
-			if (window.outerWidth > 1024) {
-				if (
-					document.body.scrollTop > 50 ||
-					document.documentElement.scrollTop > 50
-				) {
+		const handleScroll = () => {
+			if (window.innerWidth >= 1280) {
+				if (window.scrollY > 50) {
 					setShowButton(true);
 				} else {
 					setShowButton(false);
 				}
-			} else if (window.outerWidth < 1024) {
-				setShowButton(true);
 			}
-		}
+		};
+
+		const handleResize = () => {
+			if (window.innerWidth < 1280) {
+				setShowButton(true);
+			} else {
+				handleScroll(); // Only show if scrolled
+			}
+		};
+
+		// Initial check
+		handleResize();
+
+		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', handleResize);
+		};
 	}, [open]);
 
 	return { setOpen, open, showButton };

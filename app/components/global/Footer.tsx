@@ -1,5 +1,5 @@
+import { RiNextjsFill, RiReactjsFill } from 'react-icons/ri';
 import { navlinks, socials } from './data';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -15,7 +15,7 @@ export default function Footer() {
 									return (
 										<li className={`${index !== 0 ? 'ml-5' : ''}`} key={index}>
 											<Link
-												className='text-xl text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple'
+												className='text-xl text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple dark:!text-black'
 												href={item.link}
 											>
 												{item.label}
@@ -32,13 +32,13 @@ export default function Footer() {
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						<Image src='/react.svg' width={30} height={30} alt='next' />
+						<RiReactjsFill size={40} color='#58C4DC' />
 					</Link>
 					<div className='flex my-4 desktop:my-0 mr-0 desktop:mr-12'>
 						{socials.socialLink.map((item, index) => {
 							return (
 								<Link
-									className='text-purple transition-all duration-[0.5s] ease-[ease] text-xl mr-5 hover:text-yellow hover:scale-125'
+									className='text-purple transition-all duration-[0.5s] ease-[ease] text-xl mr-5 hover:text-yellow hover:scale-125 dark:hover:text-black'
 									key={index}
 									href={item.link}
 									target='_blank'
@@ -56,9 +56,9 @@ export default function Footer() {
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						<Image src='/next.svg' width={50} height={50} alt='next' />
+						<RiNextjsFill size={40} />
 					</Link>
-					<div className='text-xl text-yellow mb-4 laptop:mb-0'>
+					<div className='text-xl text-yellow mb-4 laptop:mb-0 dark:text-black'>
 						<p>Copyright © 2024 Naeem Carr Portfolio</p>
 					</div>
 				</div>

@@ -21,7 +21,7 @@ export const Routes = () => {
 		ssr: true,
 	});
 
-	const Contact = dynamic(() => import('./components/Contact'), {
+	const Contact = dynamic(() => import('./components/ContactForm'), {
 		ssr: true,
 	});
 

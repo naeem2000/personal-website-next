@@ -19,7 +19,7 @@ export default function Portfolio() {
 					heading={'<portfolio/>'}
 				/>
 				<p
-					className='text-yellow text-xl desktop:text-[23px] text-center'
+					className='text-yellow text-xl desktop:text-[23px] text-center dark:text-black'
 					data-aos='fade-up'
 				>
 					Elevating Standards, Defining Excellence: My Projects Portfolio

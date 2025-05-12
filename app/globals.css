@@ -15,6 +15,7 @@
 	--nav-border-color: rgba(255, 255, 255, 0.12);
 	--side-bar-color: rgb(138, 138, 138);
 	--error-red: rgb(255, 0, 0);
+	--black: #000000;
 }
 
 * {
@@ -51,7 +52,7 @@ section {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
-	margin: 0% 4% 0% 4%;
+	margin: 0 4% 0 4%;
 	margin-top: 80px;
 }
 
@@ -76,13 +77,25 @@ footer {
 	margin-right: auto;
 }
 
-@media screen and (max-width: 1850px) {
+@media screen and (min-width: 1500px) and (max-width: 1900px) {
 	.wrapper {
 		padding: 0 2% 0 4%;
 	}
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+	.wrapper {
+		padding: 0 2% 0 6%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.wrapper {
+		padding: 0 2% 0 6%;
+	}
+}
+
+@media screen and (max-width: 800px) {
 	.wrapper {
 		padding: 0 2% 0 10%;
 	}
@@ -215,7 +228,7 @@ a {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: var(--black);
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -241,19 +254,20 @@ a {
 	width: 70px;
 	height: 30px;
 	padding: 0;
+	border: 1px solid var(--border-color);
 	border-radius: 30px;
-	background-color: #4d4d4d;
+	background-color: var(--border-color);
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-	background-color: #000000;
+	background-color: var(--black);
 }
 
 .react-toggle--checked .react-toggle-track {
-	background-color: #d4e300cd;
+	background-color: var(--yellow);
 }
 
 .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
@@ -310,9 +324,9 @@ a {
 	left: 1px;
 	width: 28px;
 	height: 28px;
-	border: 1px solid #4d4d4d;
+	border: 1px solid var(--border-color);
 	border-radius: 50%;
-	background-color: #fafafa;
+	background-color: var(--white);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;

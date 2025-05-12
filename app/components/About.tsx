@@ -25,7 +25,7 @@ export default function About() {
 						heading='<about_me/>'
 					/>
 					<p
-						className='text-xl pb-[25px] desktop:pb-0 desktop:text-[25px] leading-6 text-yellow desktop:max-w-[800px]'
+						className='text-xl pb-[25px] desktop:pb-0 desktop:text-[25px] leading-6 text-yellow desktop:max-w-[800px] dark:text-black'
 						data-aos='fade-up'
 					>
 						My name is Naeem, a front-end Mobile and Web Developer based in Cape
@@ -37,7 +37,7 @@ export default function About() {
 				<div className='flex flex-col desktop:flex-row items-center justify-center border-t-border-color w-full desktop:w-[70%] desktop:mt-[50px] border-t border-solid'>
 					<div className='w-full desktop:w-6/12 self-start py-[25px] desktop:pb-0 desktop:px-[30px]'>
 						<p
-							className='text-2xl desktop:text-[32px] leading-[1em] underline text-left text-white self-start'
+							className='text-2xl desktop:text-[32px] leading-[1em] underline text-left text-white self-start dark:text-black'
 							data-aos='fade-left'
 						>
 							...As a web & mobile developer with hands-on expereince, I possess
@@ -46,7 +46,7 @@ export default function About() {
 							deprecated problems;
 						</p>
 					</div>
-					<div className='border-t-border-color desktop:border-l-border-color self-start w-full leading-6 desktop:w-6/12 text-yellow py-[25px] desktop:px-[30px] border-t desktop:border-l border-solid'>
+					<div className='border-t-border-color desktop:border-t-0 desktop:border-l-border-color self-start w-full leading-6 desktop:w-6/12 text-yellow py-[25px] desktop:px-[30px] border-t desktop:border-l border-solid dark:text-black'>
 						<p className='text-[22px]' data-aos='fade-right'>
 							As a web and mobile developer with 4 years of experience, I am
 							well-versed in various programming languages such as HTML, CSS,
