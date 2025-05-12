@@ -260,7 +260,7 @@ export const portfolioData: PageData = {
 			alt: 'Life Healthcare web app',
 			title: '{Life Healthcare}',
 			description:
-				'The second largest private hospital operator assigned to me at one of my previous companies;',
+				'The second largest private hospital operator assigned to me at Liquid Thought;',
 			link: 'https://www.lifehealthcare.co.za/',
 		},
 		{
@@ -284,8 +284,16 @@ export const portfolioData: PageData = {
 			alt: 'payat',
 			title: '{PayAt}',
 			description:
-				'A payment provider that allows users to process payments to multiple companies and services throughout South Africa which was assigned to me at one of my previous companies;',
+				'A payment provider that allows users to process payments to multiple companies and services throughout South Africa which was assigned to me at Liquid Thought;',
 			link: 'https://payat.co.za/',
+		},
+		{
+			image: '/projects/good-energy.PNG',
+			alt: 'good-energy',
+			title: '{Good Energy}',
+			description:
+				'A heat pump provider company that provides heat pumps in the UK which was assigned to me at Bitcube;',
+			link: 'https://heat.goodenergy.co.uk/questionnaire/address',
 		},
 		{
 			image: '/projects/mira.png',
@@ -304,6 +312,14 @@ export const portfolioData: PageData = {
 			link: 'https://polished-lounge.netlify.app/',
 		},
 		{
+			image: '/projects/women-in-payments.PNG',
+			alt: 'women in payments',
+			title: '{Women in Payments}',
+			description:
+				'A landing page that provides resources to female business owners/entrepreneurs provided by Nedbank which was assigned to me at Liquid Thought;',
+			link: 'https://www.womeninpayments.co.za/',
+		},
+		{
 			image: '/projects/shafieks-carwash.png',
 			alt: 'shafieks carwash',
 			title: '{Shafieks Carwash}',
@@ -315,7 +331,7 @@ export const portfolioData: PageData = {
 			alt: 'smarter britain',
 			title: '{Smarter Britain}',
 			description:
-				'A UK owned platform for students to connect with entrepreneurs and investors to receive advice, guidance and funding for their business that was assigned to me at one of my previous companies;',
+				'A UK owned platform for students to connect with entrepreneurs and investors to receive advice, guidance and funding for their business that was assigned to me at Bitcube;',
 			link: 'https://smarterbritain.co.uk/',
 		},
 		{
@@ -323,14 +339,14 @@ export const portfolioData: PageData = {
 			alt: 'taquanta',
 			title: '{Taquanta}',
 			description:
-				'A South African owned business for asset management assigned to me at one of my previous companies;',
+				'A South African owned business for asset management assigned to me at Liquid Thought;',
 			link: 'https://taquanta.co.za/',
 		},
 		{
 			image: '/projects/talent-usage.png',
 			alt: 'talent usage',
 			title: '{Talent Usage}',
-			description: `A local South African company that eases the process by identifying usages for their clients in the media industry that was assigned to me at one of my previous companies;`,
+			description: `A local South African company that eases the process by identifying usages for their clients in the media industry that was assigned to me at Liquid Thought;`,
 			link: 'https://talentusage.com/',
 		},
 	],
@@ -340,8 +356,8 @@ export const portfolioData: PageData = {
 			alt: 'rushtush',
 			title: '{RushTush}',
 			description:
-				'A local South African entrepreneur providing a service for women wanting to sculpt up or become fit that was assigned to me at one of my previous companies;',
-			link: 'private',
+				'A local South African entrepreneur providing a service for women wanting to sculpt up or become fit that was assigned to me at Liquid Thought;',
+			link: 'https://rushtush.com/rushtushfit-app/',
 		},
 		{
 			image: '/projects/memory-game.png',
@@ -350,6 +366,14 @@ export const portfolioData: PageData = {
 			description:
 				'Memory game in React-Native, using firebase to track scores located in the scoreboard screen, using email, username & password;',
 			link: 'https://github.com/naeem2000/Cerebral-Twist',
+		},
+		{
+			image: '/projects/vans.PNG',
+			alt: 'vans',
+			title: '{Vans Mobile App}',
+			description:
+				'React-Native mobile app basic Vans shop to showcase my react-native using expo skills;',
+			link: 'https://github.com/naeem2000/vans-react-native',
 		},
 		{
 			image: '/projects/cmrmrn.jpg',
@@ -366,14 +390,6 @@ export const portfolioData: PageData = {
 			description:
 				'React-Native mobile app representing a news app utilizing a News24 API;',
 			link: 'https://github.com/naeem2000/React-Native-News-App',
-		},
-		{
-			image: '/projects/todorn.jpg',
-			alt: 'Todo mobile',
-			title: '{ToDo Mobile App}',
-			description:
-				'React-Native mobile app basic ToDo app that respresented my proper use of state and array methods by updating stae in realtime without effecting performance;',
-			link: 'https://github.com/naeem2000/react-native-todo-app',
 		},
 	],
 };
