@@ -31,7 +31,7 @@ export default function ContactForm() {
 			{...fadeInMotionStyles}
 			className={path !== '/contact' ? 'wrapper' : ''}
 		>
-			{state.succeeded || !sentEmail ? (
+			{state.succeeded || sentEmail ? (
 				<ThankYou />
 			) : (
 				<motion.section {...fadeInMotionStyles}>
