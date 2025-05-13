@@ -11,7 +11,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
 	title: 'Naeem Carr',
-	description: 'Developed in Next.Js',
+	description: 'Front-end web/mobile developer',
 	creator: 'Naeem Carr',
 	icons: {
 		icon: '/icon.png',
