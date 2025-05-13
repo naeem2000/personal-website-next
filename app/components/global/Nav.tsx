@@ -81,9 +81,11 @@ export default function Nav() {
 					className='!hidden desktop:!block'
 					icons={{
 						checked: (
-							<IoSunnySharp size={25} className='-mt-2' color='#000000' />
+							<IoSunnySharp size={25} className='-mt-2' color='var(--black)' />
 						),
-						unchecked: <IoMoon size={25} className='-mt-2' color='#FFFFFF' />,
+						unchecked: (
+							<IoMoon size={25} className='-mt-2' color='var(--white)' />
+						),
 					}}
 				/>
 			</nav>
@@ -93,7 +95,7 @@ export default function Nav() {
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
-						className='fixed z-[8] right-[20px] top-[20px]'
+						className='fixed z-[8] right-[20px] top-[20px] flex items-center justify-center'
 					>
 						<Toggle
 							checked={isDark}
@@ -101,16 +103,20 @@ export default function Nav() {
 							onChange={(bool) => handleDarkMode(bool.target.checked)}
 							icons={{
 								checked: (
-									<IoSunnySharp size={25} className='-mt-2' color='#000000' />
+									<IoSunnySharp
+										size={25}
+										className='-mt-2'
+										color='var(--black)'
+									/>
 								),
 								unchecked: (
-									<IoMoon size={25} className='-mt-2' color='#FFFFFF' />
+									<IoMoon size={25} className='-mt-2' color='var(--white)' />
 								),
 							}}
 						/>
 						<Hamburger
-							size={20}
-							color='#2fcbef'
+							size={25}
+							color='var(--blue)'
 							toggled={open}
 							toggle={setOpen}
 						/>
