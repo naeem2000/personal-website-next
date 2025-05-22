@@ -86,7 +86,7 @@ export interface StoryButtonProps {
 	color?: string;
 	onClick?: () => void;
 	children?: ReactNode;
-	toggle?: () => void;
+	toggle?: React.Dispatch<React.SetStateAction<boolean>>;
 	toggled?: boolean;
 	checked?: boolean;
 	handleDarkMode?: (value: boolean) => void;

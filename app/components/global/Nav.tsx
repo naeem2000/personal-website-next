@@ -1,13 +1,10 @@
 'use client';
 
-import { IoSunnySharp, IoMoon } from 'react-icons/io5';
 import { AnimatePresence, motion } from 'motion/react';
-import { Sling as Hamburger } from 'hamburger-react';
 import { UseShowNav } from '../utils/functions';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { navlinks } from './data';
-import Toggle from 'react-toggle';
 import Link from 'next/link';
 import { Button } from '@/stories/Button';
 
@@ -95,11 +92,7 @@ export default function Nav() {
 							checked={isDark}
 							handleDarkMode={(bool) => handleDarkMode(bool)}
 						/>
-						<Button
-							toggled={open}
-							toggle={setOpen as any}
-							variant='nav-button'
-						/>
+						<Button toggled={open} toggle={setOpen} variant='nav-button' />
 					</motion.div>
 				)}
 			</AnimatePresence>
