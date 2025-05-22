@@ -76,3 +76,18 @@ export type ContactErrors = {
 	email: boolean;
 	message: boolean;
 };
+
+export interface StoryButtonProps {
+	type?: 'submit' | 'button';
+	primary?: boolean;
+	label?: string | ReactNode;
+	variant: 'button' | 'nav-button' | 'link' | 'icon' | 'toggle';
+	className?: string;
+	color?: string;
+	onClick?: () => void;
+	children?: ReactNode;
+	toggle?: React.Dispatch<React.SetStateAction<boolean>>;
+	toggled?: boolean;
+	checked?: boolean;
+	handleDarkMode?: (value: boolean) => void;
+}

@@ -277,7 +277,7 @@ a {
 .react-toggle-track-check {
 	position: absolute;
 	width: 14px;
-	height: 10px;
+	height: 25px;
 	top: 0px;
 	bottom: 0px;
 	margin-top: auto;
@@ -300,7 +300,7 @@ a {
 .react-toggle-track-x {
 	position: absolute;
 	width: 25px;
-	height: 10px;
+	height: 27px;
 	top: 0px;
 	bottom: 0px;
 	margin-top: auto;

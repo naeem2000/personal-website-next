@@ -4,8 +4,8 @@ import { fadeInMotionStyles } from './utils/constants';
 import SectionHeader from './global/SectionHeader';
 import { UseShowPDF } from './utils/functions';
 import { motion } from 'motion/react';
-import Button from './global/Button';
 import PdfViewer from './PdfViewer';
+import { Button } from '@/stories/Button';
 
 export default function About() {
 	const { setViewPdf } = UseShowPDF();
@@ -60,11 +60,17 @@ export default function About() {
 					</div>
 				</div>
 				<Button
+					label={`{'view_cv'}`}
+					variant={'button'}
+					className='mt-5 desktop:mt-10'
+					onClick={() => setViewPdf(true)}
+				></Button>
+				{/* <Button
 					className='button text-xl mt-5 desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3'
 					onClick={() => setViewPdf(true)}
 				>
 					{'{'}view_cv{'}'}
-				</Button>
+				</Button> */}
 			</motion.section>
 		</>
 	);

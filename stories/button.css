@@ -1,0 +1,8 @@
+div,
+body,
+input,
+button,
+section,
+textarea {
+	cursor: pointer !important;
+}
