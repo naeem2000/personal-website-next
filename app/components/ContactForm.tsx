@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation';
 import PageHeader from './global/PageHeader';
 import { BeatLoader } from 'react-spinners';
 import { motion } from 'motion/react';
-import Button from './global/Button';
 import ThankYou from './ThankYou';
+import { Button } from '@/stories/Button';
 
 export default function ContactForm() {
 	const [sentEmail, setSentEmail] = useState<boolean>(false);
@@ -103,8 +103,16 @@ export default function ContactForm() {
 						></textarea>
 						<div className='mb-10'>
 							<Button
-								className='button text-xl mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-5 py-2 desktop:px-[30px] desktop:py-3'
 								type='submit'
+								label={
+									state.submitting ? (
+										<BeatLoader style={{ margin: 0 }} size={10} />
+									) : (
+										`{submit}`
+									)
+								}
+								variant='button'
+								className='mt-10 px-5 py-2 desktop:px-[30px] desktop:py-3'
 							>
 								{state.submitting ? (
 									<BeatLoader style={{ margin: 0 }} size={10} />

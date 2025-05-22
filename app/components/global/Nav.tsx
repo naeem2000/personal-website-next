@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { navlinks } from './data';
 import Toggle from 'react-toggle';
 import Link from 'next/link';
+import { Button } from '@/stories/Button';
 
 export default function Nav() {
 	const [isDark, setIsDark] = useState<boolean>(false);
@@ -74,19 +75,11 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				<Toggle
+				<Button
+					variant='toggle'
 					checked={isDark}
-					defaultChecked={false}
-					onChange={(bool) => handleDarkMode(bool.target.checked)}
+					handleDarkMode={(bool) => handleDarkMode(bool)}
 					className='!hidden desktop:!block'
-					icons={{
-						checked: (
-							<IoSunnySharp size={25} className='-mt-2' color='var(--black)' />
-						),
-						unchecked: (
-							<IoMoon size={25} className='-mt-2' color='var(--white)' />
-						),
-					}}
 				/>
 			</nav>
 			<AnimatePresence>
@@ -97,28 +90,15 @@ export default function Nav() {
 						exit={{ opacity: 0, scale: 0 }}
 						className='fixed z-[8] right-[20px] top-[20px] flex items-center justify-center'
 					>
-						<Toggle
+						<Button
+							variant='toggle'
 							checked={isDark}
-							defaultChecked={false}
-							onChange={(bool) => handleDarkMode(bool.target.checked)}
-							icons={{
-								checked: (
-									<IoSunnySharp
-										size={25}
-										className='-mt-2'
-										color='var(--black)'
-									/>
-								),
-								unchecked: (
-									<IoMoon size={25} className='-mt-2' color='var(--white)' />
-								),
-							}}
+							handleDarkMode={(bool) => handleDarkMode(bool)}
 						/>
-						<Hamburger
-							size={25}
-							color='var(--blue)'
+						<Button
 							toggled={open}
-							toggle={setOpen}
+							toggle={setOpen as any}
+							variant='nav-button'
 						/>
 					</motion.div>
 				)}

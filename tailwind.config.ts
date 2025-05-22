@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import { VT } from './app/components/utils/constants';
 
 const config: Config = {
 	content: [

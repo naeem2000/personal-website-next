@@ -1,39 +1,58 @@
-import React from 'react';
-
-import './button.css';
-import Hamburger from 'hamburger-react';
+import { StoryButtonProps } from '@/app/components/utils/types';
 import { UseShowNav } from '@/app/components/utils/functions';
+import Hamburger from 'hamburger-react';
+import React from 'react';
+import './button.css';
+import Toggle from 'react-toggle';
+import { IoSunnySharp, IoMoon } from 'react-icons/io5';
 
-export interface ButtonProps {
-	primary?: boolean;
-	label: string;
-	variant: 'button' | 'nav-button' | 'link' | 'icon' | 'toggle';
-	className?: string;
-	color?: string;
-	onClick?: () => void;
-}
-
-/** Primary UI component for user interaction */
 export const Button = ({
 	variant,
 	label,
 	className,
-	color,
+	toggle,
+	toggled,
+	type,
 	onClick,
-}: ButtonProps) => {
-	const { setOpen, open } = UseShowNav();
+	checked,
+	handleDarkMode,
+}: StoryButtonProps) => {
+	const baseButtonClass: string =
+		'button text-xl desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3';
 
 	return variant === 'button' ? (
-		<button className={className} type='button'>
+		<button
+			className={`${baseButtonClass} ${className}`}
+			type={type ? type : 'button'}
+			onClick={onClick}
+		>
 			{label}
 		</button>
 	) : variant === 'nav-button' ? (
-		<Hamburger size={25} color={color} toggled={open} toggle={setOpen} />
+		<Hamburger
+			size={25}
+			color={'var(--blue)'}
+			toggled={toggled}
+			toggle={toggle}
+		/>
 	) : variant === 'link' ? (
 		<p>link</p>
 	) : variant === 'icon' ? (
-		<p>icon button</p>
+		<button>icon</button>
 	) : variant === 'toggle' ? (
-		<p>toggle</p>
+		<Toggle
+			className={className}
+			checked={checked}
+			defaultChecked={false}
+			onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+				handleDarkMode!(e.target.checked)
+			}
+			icons={{
+				checked: (
+					<IoSunnySharp size={25} className='-mt-2' color='var(--black)' />
+				),
+				unchecked: <IoMoon size={25} className='-mt-2' color='var(--white)' />,
+			}}
+		/>
 	) : null;
 };
