@@ -9,6 +9,7 @@ export const VT = VT323({
 	weight: '400',
 	subsets: ['latin'],
 	preload: true,
+	variable: '--font-vt',
 });
 
 export const fadeInMotionStyles: FadeInMotionStyles = {
