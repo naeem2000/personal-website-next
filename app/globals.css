@@ -24,7 +24,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-html {
+.main-site * {
 	scroll-behavior: smooth;
 	cursor: none;
 }
@@ -35,16 +35,6 @@ html::-webkit-scrollbar {
 
 body {
 	background-color: var(--main-bg);
-}
-
-a,
-div,
-body,
-input,
-button,
-section,
-textarea {
-	cursor: none !important;
 }
 
 section {

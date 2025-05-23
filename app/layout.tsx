@@ -25,7 +25,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
+		<html lang='en' className='main-site'>
 			<body className={`${VT.className} dark:bg-white`}>
 				<NextTopLoader color='var(--purple)' height={4} />
 				<ScrollBar />

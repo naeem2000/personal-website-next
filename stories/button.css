@@ -1,8 +1,3 @@
-div,
-body,
-input,
-button,
-section,
-textarea {
+.sb-show-main .sb-main-centered {
 	cursor: pointer !important;
 }
