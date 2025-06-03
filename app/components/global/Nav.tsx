@@ -27,10 +27,10 @@ export default function Nav() {
 		}
 	}, []);
 
-	const handleDarkMode = (bool: boolean) => {
-		setIsDark(bool);
+	const handleDarkMode = (checked: boolean) => {
+		setIsDark(!isDark);
 		document.documentElement.classList.toggle('dark');
-		localStorage.setItem('dark', JSON.stringify(bool));
+		localStorage.setItem('dark', checked.toString());
 	};
 
 	const path = usePathname();
@@ -74,26 +74,10 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				{/* <Button
+				<Button
+					onChange={(e) => handleDarkMode(e.target.checked)}
 					variant='toggle'
-					checked={isDark}
-					handleDarkMode={(bool) => handleDarkMode(bool)}
-					className='!hidden desktop:!block'
-				/> */}
-				<Toggle
-					checked={isDark}
-					defaultChecked={false}
-					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-						handleDarkMode!(e.target.checked)
-					}
-					icons={{
-						checked: (
-							<IoSunnySharp size={25} className='-mt-0' color='var(--black)' />
-						),
-						unchecked: (
-							<IoMoon size={25} className='-mt-0' color='var(--white)' />
-						),
-					}}
+					isDark={isDark}
 				/>
 			</nav>
 			<AnimatePresence>
@@ -104,29 +88,10 @@ export default function Nav() {
 						exit={{ opacity: 0, scale: 0 }}
 						className='fixed z-[8] right-[20px] top-[20px] flex items-center justify-center'
 					>
-						{/* <Button
+						<Button
+							onChange={(e) => handleDarkMode(e.target.checked)}
 							variant='toggle'
-							checked={isDark}
-							handleDarkMode={(bool) => handleDarkMode(bool)}
-						/> */}
-						<Toggle
-							checked={isDark}
-							defaultChecked={false}
-							onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-								handleDarkMode!(e.target.checked)
-							}
-							icons={{
-								checked: (
-									<IoSunnySharp
-										size={25}
-										className='-mt-0'
-										color='var(--black)'
-									/>
-								),
-								unchecked: (
-									<IoMoon size={25} className='-mt-0' color='var(--white)' />
-								),
-							}}
+							isDark={isDark}
 						/>
 						<Button toggled={open} toggle={setOpen} variant='nav-button' />
 					</motion.div>
