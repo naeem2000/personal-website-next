@@ -97,7 +97,6 @@ export default function Nav() {
 					</motion.div>
 				)}
 			</AnimatePresence>
-
 			<AnimatePresence initial={false}>
 				{open ? (
 					<motion.div
