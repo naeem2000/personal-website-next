@@ -7,6 +7,8 @@ import React, { useEffect, useState } from 'react';
 import { navlinks } from './data';
 import Link from 'next/link';
 import { Button } from '@/stories/Button';
+import { IoSunnySharp, IoMoon } from 'react-icons/io5';
+import Toggle from 'react-toggle';
 
 export default function Nav() {
 	const [isDark, setIsDark] = useState<boolean>(false);
@@ -72,11 +74,26 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				<Button
+				{/* <Button
 					variant='toggle'
 					checked={isDark}
 					handleDarkMode={(bool) => handleDarkMode(bool)}
 					className='!hidden desktop:!block'
+				/> */}
+				<Toggle
+					checked={isDark}
+					defaultChecked={false}
+					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+						handleDarkMode!(e.target.checked)
+					}
+					icons={{
+						checked: (
+							<IoSunnySharp size={25} className='-mt-0' color='var(--black)' />
+						),
+						unchecked: (
+							<IoMoon size={25} className='-mt-0' color='var(--white)' />
+						),
+					}}
 				/>
 			</nav>
 			<AnimatePresence>
@@ -87,10 +104,29 @@ export default function Nav() {
 						exit={{ opacity: 0, scale: 0 }}
 						className='fixed z-[8] right-[20px] top-[20px] flex items-center justify-center'
 					>
-						<Button
+						{/* <Button
 							variant='toggle'
 							checked={isDark}
 							handleDarkMode={(bool) => handleDarkMode(bool)}
+						/> */}
+						<Toggle
+							checked={isDark}
+							defaultChecked={false}
+							onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+								handleDarkMode!(e.target.checked)
+							}
+							icons={{
+								checked: (
+									<IoSunnySharp
+										size={25}
+										className='-mt-0'
+										color='var(--black)'
+									/>
+								),
+								unchecked: (
+									<IoMoon size={25} className='-mt-0' color='var(--white)' />
+								),
+							}}
 						/>
 						<Button toggled={open} toggle={setOpen} variant='nav-button' />
 					</motion.div>

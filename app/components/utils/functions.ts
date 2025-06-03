@@ -58,10 +58,11 @@ export const UseShowNav = () => {
 		};
 
 		const handleResize = () => {
-			if (window.innerWidth < 1280) {
+			if (window.innerWidth > 1280) {
 				setShowButton(true);
 			} else {
 				handleScroll(); // Only show if scrolled
+				setShowButton(false);
 			}
 		};
 
