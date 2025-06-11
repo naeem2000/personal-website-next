@@ -349,6 +349,13 @@ export const portfolioData: PageData = {
 			description: `A local South African company that eases the process by identifying usages for their clients in the media industry that was assigned to me at Liquid Thought;`,
 			link: 'https://talentusage.com/',
 		},
+		{
+			image: '/projects/skin-and-sage.png',
+			alt: 'skin and sage',
+			title: '{Skin & Sage}',
+			description: `A local South African business providing a service for women wanting to take more care of their skin at their beauty botique in the Cape Town CBD that was one of my freelance work;`,
+			link: 'https://skin-and-sage.vercel.app/',
+		},
 	],
 	mobile: [
 		{
