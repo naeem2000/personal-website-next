@@ -90,7 +90,7 @@ export default function Nav() {
 						/>
 						<Button
 							toggled={open}
-							toggle={setOpen}
+							toggle={() => setOpen((prev) => !prev)}
 							variant='nav-button'
 							className='!cursor-none'
 						/>

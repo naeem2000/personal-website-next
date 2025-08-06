@@ -1,9 +1,22 @@
-import { StoryButtonProps } from '@/app/components/utils/types';
 import { IoSunnySharp, IoMoon } from 'react-icons/io5';
 import Hamburger from 'hamburger-react';
 import Toggle from 'react-toggle';
 import Link from 'next/link';
 import React from 'react';
+
+interface Props {
+	type?: 'button' | 'submit' | 'reset';
+	label?: string | React.ReactNode;
+	toggle?: () => void;
+	isDark?: boolean;
+	toggled?: boolean;
+	variant: 'button' | 'nav-button' | 'link' | 'icon' | 'toggle';
+	onClick?: () => void;
+	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	target?: string;
+	href?: string;
+	className?: string;
+}
 
 export const Button = ({
 	type,
@@ -17,6 +30,8 @@ export const Button = ({
 	target,
 	href,
 	className,
+}: Props) => {
+=======
 }: StoryButtonProps) => {
 	const baseButtonClass: string =
 		'button text-xl desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3';

@@ -27,7 +27,8 @@ export const NavButton: Story = {
 	args: {
 		variant: 'nav-button',
 		label: 'Button',
-		onClick: fn(),
+		toggled: false,
+		toggle: fn(),
 	},
 };
 
