@@ -2,7 +2,7 @@ import ScrollToTopButton from './components/global/ScrollToTopButton';
 import ScrollBar from './components/global/ScrollBar';
 import AnimatedCursor from 'react-animated-cursor';
 import { VT } from './components/utils/constants';
-import NumberLine from '@/stories/numberLine';
+import NumberLine from '@/stories/NumberLine';
 import NextTopLoader from 'nextjs-toploader';
 import Footer from '@/stories/Footer';
 import type { Metadata } from 'next';
