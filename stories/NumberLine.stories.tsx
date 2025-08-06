@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import NumberLine from './numberLine';
+import NumberLine from './NumberLine';
 
 const meta = {
 	component: NumberLine,
