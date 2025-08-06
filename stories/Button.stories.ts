@@ -29,7 +29,6 @@ export const NavButton: Story = {
 		label: 'Button',
 		toggled: false,
 		toggle: fn(),
-
 	},
 };
 

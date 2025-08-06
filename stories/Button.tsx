@@ -31,6 +31,8 @@ export const Button = ({
 	href,
 	className,
 }: Props) => {
+=======
+}: StoryButtonProps) => {
 	const baseButtonClass: string =
 		'button text-xl desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3';
 
