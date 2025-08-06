@@ -1,6 +1,6 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
 import { NavLinks, PageData, Services, Socials } from '../utils/types';
-import { SiMui, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import { SiMui, SiNextdotjs, SiStorybook, SiTypescript } from 'react-icons/si';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { IoLogoJavascript } from 'react-icons/io';
 import { IoLogoFirebase } from 'react-icons/io5';
@@ -21,7 +21,7 @@ import {
 	FaAngular,
 } from 'react-icons/fa';
 
-export const navlinks: NavLinks = {
+export const navLinks: NavLinks = {
 	links: [
 		{
 			label: '_hero',
@@ -228,6 +228,12 @@ export const services: Services = [
 		name: 'Framer Motion',
 		icon: <FiFramer color='#1683FF' size={70} />,
 		link: 'https://motion.dev/',
+	},
+	{
+		number: '15',
+		name: 'Storybook UI',
+		icon: <SiStorybook color='#FF4785' size={70} />,
+		link: 'https://storybook.js.org/',
 	},
 ];
 

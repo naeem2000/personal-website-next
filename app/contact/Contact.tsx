@@ -2,12 +2,12 @@
 
 import ContactForm from '../components/ContactForm';
 import { motion } from 'motion/react';
-import Link from 'next/link';
 import React from 'react';
 import {
 	mapsLocation,
 	fadeInMotionStyles,
 } from '../components/utils/constants';
+import { Button } from '@/stories/Button';
 
 export default function Contact() {
 	return (
@@ -21,25 +21,25 @@ export default function Contact() {
 					<p className='text-purple text-xl'>
 						{'{'}EMAIL{'}'}
 					</p>
-					<Link
+					<Button
+						label='mogamatnaeemcarr@gmail.com'
+						variant='link'
 						href='mailto:mogamatnaeemcarr@gmail.com'
 						target='_blank'
 						className='hover:underline text-yellow text-2xl dark:text-black'
-					>
-						mogamatnaeemcarr@gmail.com
-					</Link>
+					/>
 				</div>
 				<div className='pt-10 pl-0 laptop:pl-10 pb-10'>
 					<p className='text-purple text-xl'>
 						{'{'}LOCATION{'}'}
 					</p>
-					<Link
+					<Button
+						label='Cape Town'
+						variant='link'
 						href='https://maps.app.goo.gl/fexn2woZnbfkfDt56'
 						target='_blank'
 						className='hover:underline text-yellow text-2xl dark:text-black'
-					>
-						Cape Town
-					</Link>
+					/>
 				</div>
 			</motion.div>
 			<motion.div {...fadeInMotionStyles}>

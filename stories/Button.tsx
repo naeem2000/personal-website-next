@@ -1,10 +1,9 @@
 import { StoryButtonProps } from '@/app/components/utils/types';
-import { UseShowNav } from '@/app/components/utils/functions';
-import Hamburger from 'hamburger-react';
-import React from 'react';
-import './button.css';
-import Toggle from 'react-toggle';
 import { IoSunnySharp, IoMoon } from 'react-icons/io5';
+import Hamburger from 'hamburger-react';
+import Toggle from 'react-toggle';
+import Link from 'next/link';
+import React from 'react';
 
 export const Button = ({
 	type,
@@ -15,10 +14,15 @@ export const Button = ({
 	variant,
 	onClick,
 	onChange,
+	target,
+	href,
 	className,
 }: StoryButtonProps) => {
 	const baseButtonClass: string =
 		'button text-xl desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3';
+
+	const baseLinkClass: string =
+		'text-[23px] text-yellow dark:text-black transition-all duration-[0.2s] ease-linear hover:!text-purple';
 
 	return variant === 'button' ? (
 		<button
@@ -36,7 +40,13 @@ export const Button = ({
 			toggle={toggle}
 		/>
 	) : variant === 'link' ? (
-		<p>link</p>
+		<Link
+			className={`${baseLinkClass} ${className}`}
+			href={href || ''}
+			target={target}
+		>
+			{label}
+		</Link>
 	) : variant === 'icon' ? (
 		<button>icon</button>
 	) : variant === 'toggle' ? (

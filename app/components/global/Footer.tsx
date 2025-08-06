@@ -1,5 +1,7 @@
+'use client';
 import { RiNextjsFill, RiReactjsFill } from 'react-icons/ri';
-import { navlinks, socials } from './data';
+import { navLinks, socials } from './data';
+import { Button } from '@/stories/Button';
 import Link from 'next/link';
 import React from 'react';
 
@@ -10,16 +12,16 @@ export default function Footer() {
 				<div className='flex items-center justify-between !m-0 !p-0 flex-col w-full desktop:flex-row'>
 					<div>
 						<nav>
-							<ul className='hidden desktop:flex'>
-								{navlinks.links.map((item, index) => {
+							<ul className='hidden desktop:flex gap-5'>
+								{navLinks.links.map((item, index) => {
 									return (
-										<li className={`${index !== 0 ? 'ml-5' : ''}`} key={index}>
-											<Link
-												className='text-xl text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple dark:!text-black'
+										<li key={index}>
+											<Button
+												variant='link'
 												href={item.link}
-											>
-												{item.label}
-											</Link>
+												label={item.label}
+												className='text-xl text-yellow transition-all duration-[0.2s] ease-linear hover:text-purple dark:!text-black'
+											/>
 										</li>
 									);
 								})}
@@ -34,11 +36,11 @@ export default function Footer() {
 					>
 						<RiReactjsFill size={40} color='#58C4DC' />
 					</Link>
-					<div className='flex my-4 desktop:my-0 mr-0 desktop:mr-12'>
+					<div className='flex my-4 desktop:my-0 mr-0 desktop:mr-12 gap-5'>
 						{socials.socialLink.map((item, index) => {
 							return (
 								<Link
-									className='text-purple transition-all duration-[0.5s] ease-[ease] text-xl mr-5 hover:text-yellow hover:scale-125 dark:hover:text-black'
+									className='text-purple transition-all duration-[0.5s] ease-[ease] text-xl hover:text-yellow hover:scale-125 dark:hover:text-black'
 									key={index}
 									href={item.link}
 									target='_blank'

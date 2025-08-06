@@ -113,13 +113,7 @@ export default function ContactForm() {
 								}
 								variant='button'
 								className='mt-10 px-5 py-2 desktop:px-[30px] desktop:py-3'
-							>
-								{state.submitting ? (
-									<BeatLoader style={{ margin: 0 }} size={10} />
-								) : (
-									`{submit}`
-								)}
-							</Button>
+							/>
 						</div>
 					</form>
 				</motion.section>

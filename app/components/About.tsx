@@ -64,13 +64,7 @@ export default function About() {
 					variant={'button'}
 					className='mt-5 desktop:mt-10'
 					onClick={() => setViewPdf(true)}
-				></Button>
-				{/* <Button
-					className='button text-xl mt-5 desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3'
-					onClick={() => setViewPdf(true)}
-				>
-					{'{'}view_cv{'}'}
-				</Button> */}
+				/>
 			</motion.section>
 		</>
 	);

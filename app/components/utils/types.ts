@@ -80,8 +80,11 @@ export type ContactErrors = {
 export interface StoryButtonProps {
 	isDark?: boolean;
 	toggled?: boolean;
+	children?: ReactNode;
 	className?: string;
 	onClick?: () => void;
+	href?: string;
+	target?: '_blank' | '_self' | '_parent' | '_top';
 	type?: 'submit' | 'button';
 	label?: string | ReactNode;
 	toggle?: React.Dispatch<React.SetStateAction<boolean>>;

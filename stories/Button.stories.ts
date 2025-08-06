@@ -34,7 +34,7 @@ export const NavButton: Story = {
 export const LinkButton: Story = {
 	args: {
 		variant: 'link',
-		label: 'Button',
+		label: 'Link',
 		onClick: fn(),
 	},
 };
@@ -50,7 +50,8 @@ export const IconButton: Story = {
 export const ToggleButton: Story = {
 	args: {
 		variant: 'toggle',
-		label: 'Button',
 		onChange: fn(),
+		toggle: fn(),
+		toggled: true,
 	},
 };

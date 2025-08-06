@@ -5,8 +5,8 @@ import SectionHeader from './global/SectionHeader';
 import { pageData } from './global/data';
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import { Button } from '@/stories/Button';
 
 export default function Portfolio() {
 	return (
@@ -33,7 +33,8 @@ export default function Portfolio() {
 					>
 						{pageData.mobile.map((item, index) => {
 							return (
-								<Link
+								<Button
+									variant='link'
 									key={index}
 									href={item.link}
 									className='image-container m-3 hover:scale-[1.03] transition-all duration-150'
@@ -53,7 +54,7 @@ export default function Portfolio() {
 											{item.description}
 										</p>
 									</div>
-								</Link>
+								</Button>
 							);
 						})}
 					</div>
@@ -63,7 +64,8 @@ export default function Portfolio() {
 					>
 						{pageData.web.map((item, index) => {
 							return (
-								<Link
+								<Button
+									variant='link'
 									key={index}
 									target='_blank'
 									href={item.link}
@@ -83,7 +85,7 @@ export default function Portfolio() {
 											{item.description}
 										</p>
 									</div>
-								</Link>
+								</Button>
 							);
 						})}
 					</div>

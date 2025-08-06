@@ -1,14 +1,11 @@
 'use client';
 
 import { AnimatePresence, motion } from 'motion/react';
+import React, { useEffect, useState } from 'react';
 import { UseShowNav } from '../utils/functions';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
-import { navlinks } from './data';
-import Link from 'next/link';
 import { Button } from '@/stories/Button';
-import { IoSunnySharp, IoMoon } from 'react-icons/io5';
-import Toggle from 'react-toggle';
+import { navLinks } from './data';
 
 export default function Nav() {
 	const [isDark, setIsDark] = useState<boolean>(false);
@@ -55,24 +52,22 @@ export default function Nav() {
 					</p>
 				</div>
 				<div className='hidden desktop:flex items-end'>
-					{navlinks.links.map((item, index) => {
-						return (
-							<ul className='flex ml-1' key={index}>
-								<li data-aos='slide-left'>
-									<Link
-										className={`text-[23px] text-yellow dark:text-black ${
-											index !== 4 && 'mr-5'
-										} ${
-											item.link === path && '!text-blue'
-										} transition-all duration-[0.2s] ease-linear hover:text-purple`}
-										href={item.link}
-									>
-										{item.label}
-									</Link>
-								</li>
-							</ul>
-						);
-					})}
+					<ul className='flex gap-5'>
+						{navLinks.links.map((item, index) => (
+							<li data-aos='slide-left' key={index}>
+								<Button
+									variant='link'
+									className={`text-[23px] text-yellow dark:text-black ${
+										index !== 4 && 'mr-5'
+									} ${
+										item.link === path && '!text-blue'
+									} transition-all duration-[0.2s] ease-linear hover:text-purple`}
+									href={item.link}
+									label={item.label}
+								/>
+							</li>
+						))}
+					</ul>
 				</div>
 				<Button
 					onChange={(e) => handleDarkMode(e.target.checked)}
@@ -81,12 +76,12 @@ export default function Nav() {
 				/>
 			</nav>
 			<AnimatePresence>
-				{showButton && (
+				{(open || showButton) && (
 					<motion.div
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
-						className='fixed z-[8] right-[20px] top-[20px] flex items-center justify-center'
+						className='fixed z-[20] right-[20px] top-[20px] flex items-center justify-center'
 					>
 						<Button
 							onChange={(e) => handleDarkMode(e.target.checked)}
@@ -106,17 +101,17 @@ export default function Nav() {
 						className='bg-main-bg-trans fixed flex items-center justify-center flex-col w-full h-full z-[7] right-0 top-0'
 					>
 						<ul className='w-6/12 text-center'>
-							{navlinks.links.map((item, index) => {
+							{navLinks.links.map((item, index) => {
 								return (
 									<li onClick={() => setOpen(false)} key={index}>
-										<a
-											className={`block text-xl laptop:text-2xl text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple ${
+										<Button
+											variant='link'
+											href={item.link}
+											label={item.label}
+											className={`block text-xl laptop:text-2xl !text-yellow transition-all duration-[0.2s] ease-linear border-b-border-color mt-10 pb-[5px] px-5 border-b border-solid hover:text-purple hover:border-b-purple ${
 												item.link === path && '!text-blue !border-b-blue'
 											}`}
-											href={item.link}
-										>
-											{item.label}
-										</a>
+										/>
 									</li>
 								);
 							})}
