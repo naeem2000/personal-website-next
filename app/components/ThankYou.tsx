@@ -1,7 +1,7 @@
 import { fadeInMotionStyles } from './utils/constants';
 import { BiMailSend } from 'react-icons/bi';
-import React from 'react';
 import { motion } from 'motion/react';
+import React from 'react';
 
 export default function ThankYou() {
 	return (

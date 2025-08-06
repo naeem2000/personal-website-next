@@ -1,11 +1,11 @@
 'use client';
 
+import { UseShowNav } from '@/app/components/utils/functions';
 import { AnimatePresence, motion } from 'motion/react';
 import React, { useEffect, useState } from 'react';
-import { UseShowNav } from '../utils/functions';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/stories/Button';
-import { navLinks } from './data';
+import { navLinks } from '@/public/data';
 
 export default function Nav() {
 	const [isDark, setIsDark] = useState<boolean>(false);
@@ -76,7 +76,7 @@ export default function Nav() {
 				/>
 			</nav>
 			<AnimatePresence>
-				{(open || showButton) && (
+				{showButton && (
 					<motion.div
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
@@ -88,7 +88,12 @@ export default function Nav() {
 							variant='toggle'
 							isDark={isDark}
 						/>
-						<Button toggled={open} toggle={setOpen} variant='nav-button' />
+						<Button
+							toggled={open}
+							toggle={setOpen}
+							variant='nav-button'
+							className='!cursor-none'
+						/>
 					</motion.div>
 				)}
 			</AnimatePresence>

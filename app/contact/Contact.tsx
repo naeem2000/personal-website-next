@@ -1,13 +1,13 @@
 'use client';
 
 import ContactForm from '../components/ContactForm';
+import { Button } from '@/stories/Button';
 import { motion } from 'motion/react';
 import React from 'react';
 import {
 	mapsLocation,
 	fadeInMotionStyles,
 } from '../components/utils/constants';
-import { Button } from '@/stories/Button';
 
 export default function Contact() {
 	return (

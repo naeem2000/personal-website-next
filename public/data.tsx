@@ -1,5 +1,10 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
-import { NavLinks, PageData, Services, Socials } from '../utils/types';
+import {
+	NavLinks,
+	PageData,
+	Services,
+	Socials,
+} from '../app/components/utils/types';
 import { SiMui, SiNextdotjs, SiStorybook, SiTypescript } from 'react-icons/si';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { IoLogoJavascript } from 'react-icons/io';
@@ -24,7 +29,7 @@ import {
 export const navLinks: NavLinks = {
 	links: [
 		{
-			label: '_hero',
+			label: '_home',
 			link: ROUTE_HOME,
 		},
 		{

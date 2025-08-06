@@ -1,12 +1,12 @@
 'use client';
 
 import { fadeInMotionStyles } from '../components/utils/constants';
-import PageHeader from '../components/global/PageHeader';
-import { services } from '../components/global/data';
+import PageHeader from '../../stories/PageHeader';
+import { services } from '../../public/data';
+import { Button } from '@/stories/Button';
 import { motion } from 'motion/react';
 import { Routes } from '../Routes';
 import React from 'react';
-import { Button } from '@/stories/Button';
 
 export default function Services() {
 	const { Contact } = Routes();

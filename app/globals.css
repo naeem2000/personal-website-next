@@ -134,6 +134,10 @@ button {
 	top: 2px;
 }
 
+.hamburger-react {
+	cursor: none !important;
+}
+
 img {
 	height: auto;
 	max-width: 100%;

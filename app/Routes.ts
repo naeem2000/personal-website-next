@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 export const Routes = () => {
-	const Hero = dynamic(() => import('./components/Hero'), {
+	const home = dynamic(() => import('./components/HomeScreen'), {
 		ssr: true,
 	});
 
@@ -25,7 +25,7 @@ export const Routes = () => {
 		ssr: true,
 	});
 
-	return { Hero, About, PdfViewer, Portfolio, Services, Contact };
+	return { home, About, PdfViewer, Portfolio, Services, Contact };
 };
 
 export const ROUTE_HOME = '/';

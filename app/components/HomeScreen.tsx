@@ -5,12 +5,12 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'motion/react';
 import React from 'react';
 
-export default function Hero() {
+export default function HomeScreen() {
 	return (
 		<motion.section
 			{...fadeInMotionStyles}
 			className='wrapper flex items-center justify-center flex-col'
-			id='hero'
+			id='home'
 		>
 			<motion.div {...fadeInMotionStyles}>
 				<h1

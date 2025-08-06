@@ -1,6 +1,6 @@
 'use client';
 import { RiNextjsFill, RiReactjsFill } from 'react-icons/ri';
-import { navLinks, socials } from './data';
+import { navLinks, socials } from '@/public/data';
 import { Button } from '@/stories/Button';
 import Link from 'next/link';
 import React from 'react';

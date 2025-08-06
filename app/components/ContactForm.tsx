@@ -1,15 +1,15 @@
 'use client';
 
 import { ContactStyles, fadeInMotionStyles } from './utils/constants';
+import SectionHeader from '../../stories/SectionHeader';
 import React, { useEffect, useState } from 'react';
-import SectionHeader from './global/SectionHeader';
 import { UseSubmitForm } from './utils/functions';
+import PageHeader from '../../stories/PageHeader';
 import { usePathname } from 'next/navigation';
-import PageHeader from './global/PageHeader';
 import { BeatLoader } from 'react-spinners';
+import { Button } from '@/stories/Button';
 import { motion } from 'motion/react';
 import ThankYou from './ThankYou';
-import { Button } from '@/stories/Button';
 
 export default function ContactForm() {
 	const [sentEmail, setSentEmail] = useState<boolean>(false);

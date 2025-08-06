@@ -1,12 +1,12 @@
 'use client';
 
+import SectionHeader from '../../stories/SectionHeader';
 import { fadeInMotionStyles } from './utils/constants';
-import SectionHeader from './global/SectionHeader';
-import { pageData } from './global/data';
+import { pageData } from '../../public/data';
+import { Button } from '@/stories/Button';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import React from 'react';
-import { Button } from '@/stories/Button';
 
 export default function Portfolio() {
 	return (

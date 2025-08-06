@@ -1,8 +1,9 @@
 'use client';
 
-import { filterButtons, portfolioData } from '../components/global/data';
-import PageHeader from '../components/global/PageHeader';
+import { filterButtons, portfolioData } from '../../public/data';
 import { AnimatePresence, motion } from 'motion/react';
+import PageHeader from '../../stories/PageHeader';
+import { Button } from '@/stories/Button';
 import React, { useState } from 'react';
 import { Routes } from '../Routes';
 import Image from 'next/image';
@@ -11,7 +12,6 @@ import {
 	filterButtonStyles,
 	projectMotionStyles,
 } from '../components/utils/constants';
-import { Button } from '@/stories/Button';
 
 export default function Portfolio({}) {
 	const [projects, setProjects] = useState<string>('all projects');
