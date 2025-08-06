@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Button } from '@/stories/Button';
 import React from 'react';
 
 type Props = {
@@ -17,13 +17,13 @@ export default function SectionHeader({ heading, aos, symbol, link }: Props) {
 			>
 				{symbol}
 			</span>
-			<h1
-				className='text-4xl desktop:text-7xl leading-[1em] text-white my-4 desktop:mb-5 dark:text-black'
-				data-aos={aos}
-			>
-				<Link className='hover:underline' href={link || ''}>
-					{heading}
-				</Link>
+			<h1 data-aos={aos}>
+				<Button
+					className='hover:underline text-4xl desktop:text-7xl leading-[1em] text-white my-4 desktop:mb-5 dark:text-black'
+					label={heading}
+					variant='link'
+					href={link}
+				/>
 			</h1>
 		</div>
 	);

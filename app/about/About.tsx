@@ -1,8 +1,8 @@
 'use client';
 import { fadeInMotionStyles } from '../components/utils/constants';
-import SectionHeader from '../components/global/SectionHeader';
-import PageHeader from '../components/global/PageHeader';
-import { aboutText } from '../components/global/data';
+import SectionHeader from '../../stories/SectionHeader';
+import PageHeader from '../../stories/PageHeader';
+import { aboutText } from '../../public/data';
 import { motion } from 'motion/react';
 import { Routes } from '../Routes';
 import React from 'react';

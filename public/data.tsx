@@ -1,6 +1,11 @@
 import { ImFacebook, ImInstagram, ImLinkedin, ImGithub } from 'react-icons/im';
-import { NavLinks, PageData, Services, Socials } from '../utils/types';
-import { SiMui, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import {
+	NavLinks,
+	PageData,
+	Services,
+	Socials,
+} from '../app/components/utils/types';
+import { SiMui, SiNextdotjs, SiStorybook, SiTypescript } from 'react-icons/si';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { IoLogoJavascript } from 'react-icons/io';
 import { IoLogoFirebase } from 'react-icons/io5';
@@ -21,10 +26,10 @@ import {
 	FaAngular,
 } from 'react-icons/fa';
 
-export const navlinks: NavLinks = {
+export const navLinks: NavLinks = {
 	links: [
 		{
-			label: '_hero',
+			label: '_home',
 			link: ROUTE_HOME,
 		},
 		{
@@ -229,6 +234,12 @@ export const services: Services = [
 		icon: <FiFramer color='#1683FF' size={70} />,
 		link: 'https://motion.dev/',
 	},
+	{
+		number: '15',
+		name: 'Storybook UI',
+		icon: <SiStorybook color='#FF4785' size={70} />,
+		link: 'https://storybook.js.org/',
+	},
 ];
 
 export const portfolioData: PageData = {
@@ -348,6 +359,13 @@ export const portfolioData: PageData = {
 			title: '{Talent Usage}',
 			description: `A local South African company that eases the process by identifying usages for their clients in the media industry that was assigned to me at Liquid Thought;`,
 			link: 'https://talentusage.com/',
+		},
+		{
+			image: '/projects/skin-and-sage.png',
+			alt: 'skin and sage',
+			title: '{Skin & Sage}',
+			description: `A local South African business providing a service for women wanting to take more care of their skin at their beauty botique in the Cape Town CBD that was one of my freelance work;`,
+			link: 'https://skin-and-sage.vercel.app/',
 		},
 	],
 	mobile: [

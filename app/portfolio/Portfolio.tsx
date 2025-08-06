@@ -1,13 +1,12 @@
 'use client';
 
-import { filterButtons, portfolioData } from '../components/global/data';
-import PageHeader from '../components/global/PageHeader';
+import { filterButtons, portfolioData } from '../../public/data';
 import { AnimatePresence, motion } from 'motion/react';
-import Button from '../components/global/Button';
+import PageHeader from '../../stories/PageHeader';
+import { Button } from '@/stories/Button';
 import React, { useState } from 'react';
 import { Routes } from '../Routes';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
 	fadeInMotionStyles,
 	filterButtonStyles,
@@ -15,8 +14,8 @@ import {
 } from '../components/utils/constants';
 
 export default function Portfolio({}) {
-	const { Contact } = Routes();
 	const [projects, setProjects] = useState<string>('all projects');
+	const { Contact } = Routes();
 
 	return (
 		<>
@@ -38,18 +37,18 @@ export default function Portfolio({}) {
 					className="bg-[url('/tenor.gif')] bg-contain bg-center bg-no-repeat desktop:bg-cover w-full h-[40vh] laptop:h-[50vh] desktop:bg-fixed opacity-60 blur-[1px] desktop:blur-[3px] desktop:mt-[100px]"
 				/>
 				<div className='md:mt-10'>
-					<div className='flex items-center justify-center flex-wrap'>
+					<div className='flex items-center gap-5 justify-center flex-wrap'>
 						{filterButtons.map((item, index) => {
 							return (
 								<Button
+									variant='button'
+									label={item}
 									onClick={() => setProjects(item)}
 									key={index}
 									className={`${filterButtonStyles} ${
 										item === projects && '!border-purple !text-purple '
 									}`}
-								>
-									{item}
-								</Button>
+								/>
 							);
 						})}
 					</div>
@@ -65,44 +64,13 @@ export default function Portfolio({}) {
 								</p>
 								<div className='grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-4 w-full'>
 									{portfolioData.web.map((item, index) => (
-										<Link
+										<Button
+											variant='link'
 											key={index}
 											className='hover:scale-[1.03] transition-all duration-150'
 											href={item.link}
 											target='_blank'
-										>
-											<div className='image-container'>
-												<Image
-													src={item.image}
-													alt={item.alt}
-													width={600}
-													height={600}
-													className='w-full'
-												/>
-												<div className='overlay'>
-													<p className='text-yellow text-xl md:text-3xl font-medium'>
-														{item.title}
-													</p>
-													<p className='text-white text-sm md:text-xl max-w-96'>
-														{item.description}
-													</p>
-												</div>
-											</div>
-										</Link>
-									))}
-								</div>
-								<div className='mt-20'>
-									<p className='text-yellow text-3xl mb-5 dark:text-black'>
-										{'// Mobile development'}
-									</p>
-									<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
-										{portfolioData.mobile.map((item, index) => (
-											<Link
-												key={index}
-												className='hover:scale-[1.03] transition-all duration-150'
-												href={item.link}
-												target='_blank'
-											>
+											label={
 												<div className='image-container'>
 													<Image
 														src={item.image}
@@ -120,7 +88,42 @@ export default function Portfolio({}) {
 														</p>
 													</div>
 												</div>
-											</Link>
+											}
+										/>
+									))}
+								</div>
+								<div className='mt-20'>
+									<p className='text-yellow text-3xl mb-5 dark:text-black'>
+										{'// Mobile development'}
+									</p>
+									<div className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full'>
+										{portfolioData.mobile.map((item, index) => (
+											<Button
+												variant='link'
+												key={index}
+												className='hover:scale-[1.03] transition-all duration-150'
+												href={item.link}
+												target='_blank'
+												label={
+													<div className='image-container'>
+														<Image
+															src={item.image}
+															alt={item.alt}
+															width={600}
+															height={600}
+															className='w-full'
+														/>
+														<div className='overlay'>
+															<p className='text-yellow text-xl md:text-3xl font-medium'>
+																{item.title}
+															</p>
+															<p className='text-white text-sm md:text-xl max-w-96'>
+																{item.description}
+															</p>
+														</div>
+													</div>
+												}
+											/>
 										))}
 									</div>
 								</div>
@@ -134,30 +137,32 @@ export default function Portfolio({}) {
 								className='grid grid-cols-1 place-items-center sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full mt-10'
 							>
 								{portfolioData.web.map((item, index) => (
-									<Link
+									<Button
+										variant='link'
 										key={index}
 										className='hover:scale-[1.03] transition-all duration-150'
 										href={item.link}
 										target='_blank'
-									>
-										<div className='image-container'>
-											<Image
-												src={item.image}
-												alt={item.alt}
-												width={600}
-												height={600}
-												className='w-full'
-											/>
-											<div className='overlay'>
-												<p className='text-yellow text-xl md:text-3xl font-medium'>
-													{item.title}
-												</p>
-												<p className='text-white text-sm md:text-xl max-w-96'>
-													{item.description}
-												</p>
+										label={
+											<div className='image-container'>
+												<Image
+													src={item.image}
+													alt={item.alt}
+													width={600}
+													height={600}
+													className='w-full'
+												/>
+												<div className='overlay'>
+													<p className='text-yellow text-xl md:text-3xl font-medium'>
+														{item.title}
+													</p>
+													<p className='text-white text-sm md:text-xl max-w-96'>
+														{item.description}
+													</p>
+												</div>
 											</div>
-										</div>
-									</Link>
+										}
+									/>
 								))}
 							</motion.div>
 						)}
@@ -169,30 +174,32 @@ export default function Portfolio({}) {
 								className='grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-5 gap-4 w-full mt-10'
 							>
 								{portfolioData.mobile.map((item, index) => (
-									<Link
+									<Button
+										variant='link'
 										key={index}
 										className='hover:scale-[1.03] transition-all duration-150'
 										href={item.link}
 										target='_blank'
-									>
-										<div className='image-container'>
-											<Image
-												src={item.image}
-												alt={item.alt}
-												width={600}
-												height={600}
-												className='w-full'
-											/>
-											<div className='overlay'>
-												<p className='text-yellow text-xl md:text-3xl font-medium'>
-													{item.title}
-												</p>
-												<p className='text-white text-sm md:text-xl max-w-96'>
-													{item.description}
-												</p>
+										label={
+											<div className='image-container'>
+												<Image
+													src={item.image}
+													alt={item.alt}
+													width={600}
+													height={600}
+													className='w-full'
+												/>
+												<div className='overlay'>
+													<p className='text-yellow text-xl md:text-3xl font-medium'>
+														{item.title}
+													</p>
+													<p className='text-white text-sm md:text-xl max-w-96'>
+														{item.description}
+													</p>
+												</div>
 											</div>
-										</div>
-									</Link>
+										}
+									/>
 								))}
 							</motion.div>
 						)}

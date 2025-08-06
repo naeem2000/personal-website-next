@@ -9,6 +9,9 @@ const config: Config = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily: {
+				vt: ['var(--font-vt)'],
+			},
 			colors: {
 				'main-bg': 'var(--main-bg)',
 				'main-bg-trans': 'var(--main-bg-trans)',

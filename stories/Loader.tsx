@@ -1,14 +1,21 @@
+import { AnimatePresence, motion } from 'motion/react';
 import { PacmanLoader } from 'react-spinners';
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
 
-export default function Loader() {
+interface Props {
+	isStorybook: boolean;
+}
+
+export default function Loader({ isStorybook }: Props) {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		const hasSeenLoader = sessionStorage.getItem('hasSeenLoader');
-
-		if (!hasSeenLoader) {
+		if (isStorybook) {
+			setIsLoading(true);
+			return;
+		}
+		if (!hasSeenLoader && !isStorybook) {
 			sessionStorage.setItem('hasSeenLoader', 'true');
 			setIsLoading(true);
 
@@ -20,7 +27,7 @@ export default function Loader() {
 		} else {
 			setIsLoading(false);
 		}
-	}, []);
+	}, [isStorybook]);
 
 	return (
 		<AnimatePresence>

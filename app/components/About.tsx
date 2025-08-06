@@ -1,17 +1,19 @@
 'use client';
 
+import SectionHeader from '../../stories/SectionHeader';
 import { fadeInMotionStyles } from './utils/constants';
-import SectionHeader from './global/SectionHeader';
+import { AnimatePresence, motion } from 'motion/react';
 import { UseShowPDF } from './utils/functions';
-import { motion } from 'motion/react';
-import Button from './global/Button';
+import { Button } from '@/stories/Button';
 import PdfViewer from './PdfViewer';
 
 export default function About() {
-	const { setViewPdf } = UseShowPDF();
+	const { setViewPdf, viewPdf } = UseShowPDF();
 	return (
 		<>
-			<PdfViewer onClose={() => setViewPdf(false)} />
+			<AnimatePresence>
+				{viewPdf && <PdfViewer onClose={() => setViewPdf(false)} />}{' '}
+			</AnimatePresence>
 			<motion.section
 				{...fadeInMotionStyles}
 				className='wrapper flex items-center justify-start flex-col text-center'
@@ -40,7 +42,7 @@ export default function About() {
 							className='text-2xl desktop:text-[32px] leading-[1em] underline text-left text-white self-start dark:text-black'
 							data-aos='fade-left'
 						>
-							...As a web & mobile developer with hands-on expereince, I possess
+							...As a web & mobile developer with hands-on experience, I possess
 							a strong background in both front-end and mobile technologies and
 							always eager to learn more ways in solving various modern &
 							deprecated problems;
@@ -60,11 +62,11 @@ export default function About() {
 					</div>
 				</div>
 				<Button
-					className='button text-xl mt-5 desktop:mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-[30px] py-3'
+					label={`{'view_cv'}`}
+					variant={'button'}
+					className='mt-5 desktop:mt-10 !text-xl'
 					onClick={() => setViewPdf(true)}
-				>
-					{'{'}view_cv{'}'}
-				</Button>
+				/>
 			</motion.section>
 		</>
 	);
