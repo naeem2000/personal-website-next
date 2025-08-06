@@ -1,12 +1,12 @@
 import ScrollToTopButton from './components/global/ScrollToTopButton';
-import NumberLine from './components/global/numberLine';
 import ScrollBar from './components/global/ScrollBar';
 import AnimatedCursor from 'react-animated-cursor';
 import { VT } from './components/utils/constants';
-import Footer from './components/global/Footer';
+import NumberLine from '@/stories/NumberLine';
 import NextTopLoader from 'nextjs-toploader';
-import Nav from './components/global/Nav';
+import Footer from '@/stories/Footer';
 import type { Metadata } from 'next';
+import Nav from '@/stories/Nav';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
+		<html lang='en' className='main-site'>
 			<body className={`${VT.className} dark:bg-white`}>
 				<NextTopLoader color='var(--purple)' height={4} />
 				<ScrollBar />
@@ -44,6 +44,7 @@ export default function RootLayout({
 							'input[type="number"]',
 							'input[type="submit"]',
 							'input[type="image"]',
+							'.hamburger-react',
 							'.react-toggle',
 							'label[for]',
 							'textarea',

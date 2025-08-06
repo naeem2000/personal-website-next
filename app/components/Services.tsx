@@ -1,5 +1,5 @@
+import SectionHeader from '../../stories/SectionHeader';
 import { fadeInMotionStyles } from './utils/constants';
-import SectionHeader from './global/SectionHeader';
 import { motion } from 'motion/react';
 import React from 'react';
 

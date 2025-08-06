@@ -1,14 +1,14 @@
 'use client';
 
 import { ContactStyles, fadeInMotionStyles } from './utils/constants';
+import SectionHeader from '../../stories/SectionHeader';
 import React, { useEffect, useState } from 'react';
-import SectionHeader from './global/SectionHeader';
 import { UseSubmitForm } from './utils/functions';
+import PageHeader from '../../stories/PageHeader';
 import { usePathname } from 'next/navigation';
-import PageHeader from './global/PageHeader';
 import { BeatLoader } from 'react-spinners';
+import { Button } from '@/stories/Button';
 import { motion } from 'motion/react';
-import Button from './global/Button';
 import ThankYou from './ThankYou';
 
 export default function ContactForm() {
@@ -103,15 +103,17 @@ export default function ContactForm() {
 						></textarea>
 						<div className='mb-10'>
 							<Button
-								className='button text-xl mt-10 bg-blue text-black transition-all duration-[0.5s] ease-[ease] px-5 py-2 desktop:px-[30px] desktop:py-3'
 								type='submit'
-							>
-								{state.submitting ? (
-									<BeatLoader style={{ margin: 0 }} size={10} />
-								) : (
-									`{submit}`
-								)}
-							</Button>
+								label={
+									state.submitting ? (
+										<BeatLoader style={{ margin: 0 }} size={10} />
+									) : (
+										`{submit}`
+									)
+								}
+								variant='button'
+								className='mt-10 px-5 py-2 desktop:px-[30px] desktop:py-3'
+							/>
 						</div>
 					</form>
 				</motion.section>

@@ -24,7 +24,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-html {
+.main-site * {
 	scroll-behavior: smooth;
 	cursor: none;
 }
@@ -35,16 +35,6 @@ html::-webkit-scrollbar {
 
 body {
 	background-color: var(--main-bg);
-}
-
-a,
-div,
-body,
-input,
-button,
-section,
-textarea {
-	cursor: none !important;
 }
 
 section {
@@ -91,13 +81,13 @@ footer {
 
 @media screen and (max-width: 1280px) {
 	.wrapper {
-		padding: 0 2% 0 6%;
+		padding: 0 5% 0 8%;
 	}
 }
 
 @media screen and (max-width: 800px) {
 	.wrapper {
-		padding: 0 2% 0 10%;
+		padding: 0 5% 0 10%;
 	}
 }
 
@@ -142,6 +132,10 @@ button {
 
 .button:active {
 	top: 2px;
+}
+
+.hamburger-react {
+	cursor: none !important;
 }
 
 img {
@@ -277,7 +271,7 @@ a {
 .react-toggle-track-check {
 	position: absolute;
 	width: 14px;
-	height: 10px;
+	height: 25px;
 	top: 0px;
 	bottom: 0px;
 	margin-top: auto;
@@ -300,7 +294,7 @@ a {
 .react-toggle-track-x {
 	position: absolute;
 	width: 25px;
-	height: 10px;
+	height: 27px;
 	top: 0px;
 	bottom: 0px;
 	margin-top: auto;
