@@ -1,49 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+	--main-bg: rgb(33, 33, 33);
+	--main-bg-trans: rgb(33, 33, 33, 0.9);
+	--white: rgb(222, 222, 222);
+	--border-color: rgb(61, 61, 61);
+	--purple: rgb(124, 124, 197);
+	--yellow: rgb(231, 219, 116);
+	--blue: rgb(46, 204, 239);
+	--nav-border-color: rgba(255, 255, 255, 0.12);
+	--side-bar-color: rgb(138, 138, 138);
+	--error-red: rgb(255, 0, 0);
+	--black: #000000;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* Font */
+	--vt: 'VT323', monospace;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--vt);
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: var(--main-bg);
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.container {
+	max-width: calc(1440px + 60px);
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 60px;
+	padding-right: 40px;
+	position: relative;
 }
